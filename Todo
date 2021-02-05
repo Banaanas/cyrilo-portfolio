@@ -1,0 +1,76 @@
+- Changer Couleur Logo
+- Internationalisation
+- DarkMode Icon
+    * Attention - Darkmode localStorage bug
+    * https://github.com/vercel/next.js/discussions/12533
+- Changer Couleur Dessin Cyrilo (Couleur Visage - T-Shirt)
+- Animations
+    * All Transition
+    * SideMenu Animation
+    * Burger Menu
+    --> https://www.akufen.ca/
+    Enlever l'animation du début
+    * Observer Animations
+    --> https://www.smashingmagazine.com/2020/10/introduction-to-framer-motion/
+    * Down Arrows Work Link
+    * Some shining stars
+    * Animated Cursor
+    --> https://dev.to/andrewchmr/awesome-animated-cursor-with-react-hooks-5ec3
+    --> https://medium.com/swlh/cool-custom-cursors-with-react-framer-motion-part-1-228126bcae68
+- Overflow Hidden
+- About Me : https://www.youtube.com/watch?v=gRFOstDXl1s&t=206s&ab_channel=SamSelikoff
+- Borders https://freefrontend.com/css-border-examples/
+
+
+*** DÉPLOIEMENT***
+- SEO
+    * Général
+    * Meta Tags
+    * Traduire Meta Tags
+    * OpenGraph tags
+- XML SiteMap
+--> https://leerob.io/blog/nextjs-sitemap-robots
+- Favicon
+- Images Optimisation
+- Analytics
+- Readme
+- Vérifier les textes alt
+- Semantic HTML
+- GitHub
+
+// Optimize Font
+https://www.youtube.com/watch?v=G0cOQ79WKZE&t=436s&ab_channel=LeeRobinson
+
+
+
+CSS ->
+scroll-behavior: smooth;
+scroll-snap-type: y mandatory;
+scroll-snap-align: center;
+Compatibilité : installer Librairie.
+Tester si la librairie fonctionne et APRÈS modifier le Global CSS en ajoutant "scroll-behavior: smooth"
+- Up Arrow
+
+// SEO
+- Général
+https://github.com/garmeeh/next-seo
+https://codedamn.com/news/nextjs-production-tips
+https://blog.maximeheckel.com/posts/seo-mistakes-i-have-made-and-how-i-fixed-them/
+- Meta Tags
+https://www.searchenginejournal.com/important-tags-seo/156440/
+- OpenGraph tags
+https://www.youtube.com/watch?v=fJL1K14F8R8&ab_channel=LeeRobinson
+https://www.youtube.com/watch?v=QwEQKM4YRnU&ab_channel=ColbyFayock
+- XML SiteMap
+https://leerob.io/blog/nextjs-sitemap-robots
+https://medium.com/frontend-digest/how-to-build-a-dynamic-sitemap-for-your-next-js-app-c69836c91f8a
+https://www.youtube.com/watch?v=R59e1Vl5lO8&ab_channel=LeeRobinson
+- Vérifier si le SEO change en fonction du language choisi
+- Tester si les tags fonctionnent, notamment avec les outils Facebook et Twitter
+
+
+FIN :
+- Image Planet Cyril + Shadow
+- Padding Main
+- Vérifier toutes les shadows
+- Corriger si restent White ou Black ou Colors normales
