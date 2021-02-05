@@ -44,6 +44,7 @@ const appTheme = {
     md: "768px",
     lg: "992px",
     xl: "1200px",
+    heroBannerSection: "750px",
   },
   globalMinWidth: "320px",
   globalMaxWidth: "1100px",

@@ -12,8 +12,6 @@ import HeroBannerDivider from "../../Dividers/HeroBannerDivider";
 import GenericStyledH2 from "../../StyledComponents/StyledH2";
 import PlanetCyril from "./PlanetCyril";
 
-const minWidthQuery = "750px";
-
 const StyledSection = styled(GenericStyledSection)`
   display: flex;
   flex-direction: column;
@@ -23,7 +21,7 @@ const StyledSection = styled(GenericStyledSection)`
   padding-right: 0;
   padding-left: 0;
 
-  @media (min-width: ${minWidthQuery}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
     flex-direction: row;
     justify-content: space-around;
     padding: 1rem;
@@ -31,14 +29,14 @@ const StyledSection = styled(GenericStyledSection)`
 
   #first-link {
     display: none;
-    @media (min-width: ${minWidthQuery}) {
+    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
       display: flex;
     }
   }
 
   #second-link {
     display: flex;
-    @media (min-width: ${minWidthQuery}) {
+    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
       display: none;
     }
   }
@@ -51,7 +49,7 @@ const StyledContainer = styled.div`
   justify-content: space-around;
   width: min-content;
 
-  @media (min-width: ${minWidthQuery}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
     height: 500px;
   }
 `;
@@ -196,12 +194,13 @@ const HeroBannerSection = () => {
           </NextLink>
         </StyledContainer>
 
-        <Image
+        <PlanetCyril />
+        {/*<Image
           src="/images/Planet-Cyril.svg"
           width={500}
           height={500}
           alt="Cyril Logo"
-        />
+        />*/}
         <NextLink href={navLinks[1].href} passHref>
           <StyledLink
             id="second-link"
