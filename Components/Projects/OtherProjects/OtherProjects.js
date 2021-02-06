@@ -49,28 +49,25 @@ const OtherProjects = ({ otherProjects }) => {
     <>
       <OtherProjectsStar />
       {showOtherProjects ? null : <OtherProjectsButton />}
-      <OtherProjectsButton />
 
-      <AnimatePresence>
-        {showOtherProjects ? (
-          <>
-            <StyledTitle>Other Projects</StyledTitle>
-            <StyledProjectsContainer>
-              {otherProjects.map((project, index) => (
-                <React.Fragment key={project.id}>
-                  <ProjectCard
-                    project={project}
-                    key={project.id}
-                    backgroundColor={findIndexMultiple(index)}
-                    otherProject
-                  />
-                </React.Fragment>
-              ))}
-            </StyledProjectsContainer>
-            <OtherProjectsButton />
-          </>
-        ) : null}
-      </AnimatePresence>
+      {showOtherProjects ? (
+        <>
+          <StyledTitle>Other Projects</StyledTitle>
+          <StyledProjectsContainer>
+            {otherProjects.map((project, index) => (
+              <React.Fragment key={project.id}>
+                <ProjectCard
+                  project={project}
+                  key={project.id}
+                  backgroundColor={findIndexMultiple(index)}
+                  otherProject
+                />
+              </React.Fragment>
+            ))}
+          </StyledProjectsContainer>
+          <OtherProjectsButton />
+        </>
+      ) : null}
       <OtherProjectsStar secondary />
     </>
   );

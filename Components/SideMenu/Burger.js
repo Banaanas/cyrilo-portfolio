@@ -70,7 +70,7 @@ const buttonVariants = {
     },
   },
   animate: {
-    rotate: 360,
+    rotate: 180,
     transition: {
       duration: 0.2,
     },

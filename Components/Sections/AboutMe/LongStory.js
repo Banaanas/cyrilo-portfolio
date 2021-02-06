@@ -82,24 +82,25 @@ const ProjectsLink = () => {
 const longStoryVariants = {
   initial: {
     height: 0,
-    opacity: 1,
+    opacity: 0,
   },
   animate: {
-    height: "auto",
     opacity: 1,
+    height: "auto",
   },
   transition: {
     type: "spring",
-    delay: 1000,
   },
 };
 
 const paragraphVariants = {
   initial: {
-    x: "-100vw",
+    opacity: 0,
+    pointerEvents: "none",
   },
   animate: {
-    x: 0,
+    opacity: 1,
+    pointerEvents: "auto",
   },
   transition: {
     type: "spring",
