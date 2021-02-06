@@ -1,0 +1,41 @@
+<svg fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 2000 2000">
+  <defs/>
+  <path fill="none" d="M0 0h2000v2000H0z"/>
+  <path fill="url(#_Linear1)" fill-rule="nonzero" d="M.687-.204a.212.212 0 110 .408L-.004 0l.691-.204z" transform="matrix(0 1056.25 1056.25 0 1000 239.196)"/>
+  <path fill="url(#_Linear2)" fill-rule="nonzero" d="M.634-.338l.163.389.025.058-.098.229H.709L.397-.338h.237z" transform="scale(1056.38) rotate(90 .666 .827)"/>
+  <path fill="url(#_Linear3)" fill-rule="nonzero" d="M-.098-.112L.266-.13H.265l.029-.002.192-.01.491-.027.152.31-1.09.028-.137-.281z" transform="scale(-719.886 719.886) rotate(26.1 -4.385 -5.003)"/>
+  <path fill-rule="nonzero" d="M1934.58 918.248l-259.762 111.702-36.633 15.75-.347-.555 36.426-15.472-23.798-9.99-18.803-7.911 302.917-93.524z" opacity=".25"/>
+  <path fill="url(#_Linear4)" fill-rule="nonzero" d="M.709.338h.015L.822.109.797.051.634-.338H.397l.312.676z" transform="rotate(90 126.228 295.954) scale(1056.38)"/>
+  <path fill="url(#_Linear5)" fill-rule="nonzero" d="M-.098-.112l.137.281 1.09-.028-.152-.31-.491.027-.192.01-.029.002h.001l-.364.018z" transform="scale(719.886) rotate(26.1 -2.996 .99)"/>
+  <path fill-rule="nonzero" d="M65.424 918.248l259.762 111.702 36.634 15.75.347-.555-36.426-15.472 23.798-9.99 18.802-7.911-302.917-93.524z" opacity=".25"/>
+  <path fill-rule="nonzero" d="M1221 839.157l713.582 79.095L1221 589.039v250.118z" opacity=".2"/>
+  <path fill-rule="nonzero" d="M1221 1470.314l713.582-552.063.07 224.656L1221 1470.314zM65.424 918.247l713.583 552.063v-248.315L65.424 918.247z" opacity=".2"/>
+  <path fill-rule="nonzero" d="M779.007 839.16L65.424 918.255l260.317 111.425 453.266-190.52z" opacity=".2"/>
+  <defs>
+    <linearGradient id="_Linear1" x1="0" x2="1" y1="0" y2="0" gradientTransform="matrix(1 0 0 -1 0 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#febfd4"/>
+      <stop offset=".01" stop-color="#febfd4"/>
+      <stop offset="1" stop-color="#ed1c24"/>
+    </linearGradient>
+    <linearGradient id="_Linear2" x1="0" x2="1" y1="0" y2="0" gradientTransform="matrix(1 0 0 -1 0 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#febfd4"/>
+      <stop offset=".01" stop-color="#febfd4"/>
+      <stop offset="1" stop-color="#ed1c24"/>
+    </linearGradient>
+    <linearGradient id="_Linear3" x1="0" x2="1" y1="0" y2="0" gradientTransform="matrix(1 0 0 -1 0 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#febfd4"/>
+      <stop offset=".01" stop-color="#febfd4"/>
+      <stop offset="1" stop-color="#ed1c24"/>
+    </linearGradient>
+    <linearGradient id="_Linear4" x1="0" x2="1" y1="0" y2="0" gradientTransform="matrix(1 0 0 -1 0 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#febfd4"/>
+      <stop offset=".01" stop-color="#febfd4"/>
+      <stop offset="1" stop-color="#ed1c24"/>
+    </linearGradient>
+    <linearGradient id="_Linear5" x1="0" x2="1" y1="0" y2="0" gradientTransform="matrix(1 0 0 -1 0 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#febfd4"/>
+      <stop offset=".01" stop-color="#febfd4"/>
+      <stop offset="1" stop-color="#ed1c24"/>
+    </linearGradient>
+  </defs>
+</svg>

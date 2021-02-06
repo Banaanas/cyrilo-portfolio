@@ -1,7 +1,7 @@
-import {useState} from "react";
+import { useState } from "react";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
-import {useThrottledFn, useWindowScroll} from "beautiful-react-hooks";
+import { useThrottledFn, useWindowScroll } from "beautiful-react-hooks";
 import SideMenu from "../SideMenu/SideMenu";
 import NavBar from "./NavBar";
 import HalfMoon from "./HalfMoon";
