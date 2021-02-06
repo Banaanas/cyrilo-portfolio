@@ -1,9 +1,124 @@
 import styled from "@emotion/styled";
 
 const StyledSVG = styled.svg`
-  width: 4rem;
+  width: 4.5rem;
+  height: auto;
+  margin-top: 1rem;
 `;
 
+const CyriLogo = () => {
+  return (
+    <StyledSVG
+      width="272"
+      height="272"
+      viewBox="0 0 272 272"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clipPath="url(#clip0)">
+        <path
+          d="M106.695 131.218C105.415 135.747 105.201 140.512 106.071 145.137C106.942 149.763 108.873 154.123 111.712 157.877C114.551 161.631 118.222 164.676 122.436 166.772C126.651 168.868 131.293 169.959 136 169.959C140.707 169.959 145.349 168.868 149.563 166.772C153.778 164.676 157.448 161.631 160.288 157.877C163.127 154.123 165.058 149.763 165.928 145.137C166.799 140.512 166.585 135.747 165.305 131.218L136 31.9561L106.695 131.218Z"
+          fill="url(#paint0_linear)"
+        />
+        <path
+          d="M8.85698 124.943V127.098L41.7569 141.178L50.0896 137.586L105.976 114.168V80.1188L8.85698 124.943Z"
+          fill="url(#paint1_linear)"
+        />
+        <path
+          d="M264.794 124.77V126.925L231.894 141.005L223.561 137.413L167.674 113.995V79.946L264.794 124.77Z"
+          fill="url(#paint2_linear)"
+        />
+        <path
+          d="M8.93845 124.859L8.88038 155.466L105.92 199.953L105.909 166.15L61.5764 147.376L44.2649 139.985L41.629 138.912L41.717 138.955L8.93845 124.859Z"
+          fill="url(#paint3_linear)"
+        />
+        <path
+          d="M264.712 124.686L264.77 155.293L167.731 199.78L167.742 165.977L212.074 147.203L229.386 139.812L232.022 138.739L231.934 138.782L264.712 124.686Z"
+          fill="url(#paint4_linear)"
+        />
+        <path
+          opacity="0.25"
+          d="M8.89771 124.882L44.2253 140.073L49.2076 142.215L49.2548 142.14L44.3008 140.036L47.5373 138.677L50.0944 137.601L8.89771 124.882Z"
+          fill="black"
+        />
+        <path
+          opacity="0.2"
+          d="M105.945 114.126L8.89771 124.883L44.3008 140.036L105.945 114.126Z"
+          fill="black"
+        />
+      </g>
+      <defs>
+        <linearGradient
+          id="paint0_linear"
+          x1="136"
+          y1="32.5307"
+          x2="136"
+          y2="176.181"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FEBFD4" />
+          <stop offset="0.01" stopColor="#FEBFD4" />
+          <stop offset="1" stopColor="#ED1C24" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear"
+          x1="57.4166"
+          y1="23.0828"
+          x2="57.4166"
+          y2="166.75"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FEBFD4" />
+          <stop offset="0.01" stopColor="#FEBFD4" />
+          <stop offset="1" stopColor="#ED1C24" />
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear"
+          x1="216.234"
+          y1="22.9099"
+          x2="216.234"
+          y2="166.578"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FEBFD4" />
+          <stop offset="0.01" stopColor="#FEBFD4" />
+          <stop offset="1" stopColor="#ED1C24" />
+        </linearGradient>
+        <linearGradient
+          id="paint3_linear"
+          x1="12.7306"
+          y1="138.928"
+          x2="100.652"
+          y2="182"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FEBFD4" />
+          <stop offset="0.01" stopColor="#FEBFD4" />
+          <stop offset="1" stopColor="#ED1C24" />
+        </linearGradient>
+        <linearGradient
+          id="paint4_linear"
+          x1="260.92"
+          y1="138.755"
+          x2="172.999"
+          y2="181.827"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FEBFD4" />
+          <stop offset="0.01" stopColor="#FEBFD4" />
+          <stop offset="1" stopColor="#ED1C24" />
+        </linearGradient>
+        <clipPath id="clip0">
+          <rect width="272" height="272" fill="white" />
+        </clipPath>
+      </defs>
+    </StyledSVG>
+  );
+};
+
+export default CyriLogo;
+
+/*
 const CyriLogo = () => {
   return (
     <StyledSVG
@@ -323,3 +438,4 @@ const CyriLogo = () => {
 };
 
 export default CyriLogo;
+*/

@@ -86,14 +86,14 @@ const PlanetCyril = () => {
         width="448"
         height="437"
         transform="translate(48.646 75.499)"
-        xlinkHref="#_Image1"
+        href="#Cyril-drawing"
       />
       <defs>
         <image
-          id="_Image1"
+          id="Cyril-drawing"
           width="448"
           height="437"
-          href="https://raw.githubusercontent.com/Banaanas/cyrilo-portfolio/a4bd3db45c46e5498c453ce84402da09c52d5154/public/images/Cyrilo.svg"
+          href="/images/Cyrilo.svg"
         />
       </defs>
     </StyledSVG>

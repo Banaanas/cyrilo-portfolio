@@ -22,11 +22,12 @@ const StyledProjectContainer = styled(motion.div)`
 `;
 
 const StyledImage = styled.div`
+  position: relative;
   width: 15rem;
   height: 10rem;
   overflow: hidden;
   border-radius: 10px;
-  filter: contrast(150%);
+  filter: contrast(110%);
 `;
 
 const StyledContainer = styled.div`
