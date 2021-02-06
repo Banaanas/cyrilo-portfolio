@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 5000 5000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fillRule:evenodd;clipRule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+<svg width="100%" height="100%" viewBox="0 0 5000 5000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <g transform="matrix(3.10855,0,0,2.98108,-9537.81,-5251.37)">
         <ellipse cx="3872.48" cy="2600.19" rx="727.273" ry="755.981"/>
     </g>
@@ -15,7 +15,7 @@
         <path d="M261.116,795.058L261.114,795.058L302.979,777.461L302.986,777.463L284.185,785.374L261.116,795.058Z" style="fill:url(#_Linear8);"/>
         <path d="M1869.22,683.939L1155.64,604.844L1155.64,354.726L1869.22,683.939Z" style="fill:url(#_Linear9);"/>
         <path d="M1155.64,1236L1869.22,683.939L1869.29,908.594L1155.64,1236Z" style="fill:url(#_Linear10);"/>
-        <path d="M713.652,987.687L387.632,849.412L296.812,810.835L260.387,795.364L261.116,795.058L713.652,987.687Z" style="fill:rgb(204,204,204);fillRule:nonzero;"/>
+        <path d="M713.652,987.687L387.632,849.412L296.812,810.835L260.387,795.364L261.116,795.058L713.652,987.687Z" style="fill:rgb(204,204,204);fill-rule:nonzero;"/>
         <path d="M713.652,1236L0.069,683.939L259.832,795.641L296.465,811.391L296.812,810.835L260.387,795.364L296.812,810.835L387.632,849.412L713.652,987.687L713.652,1236Z" style="fill:url(#_Linear11);"/>
         <path d="M260.387,795.364L261.114,795.058L261.116,795.058L260.387,795.364ZM260.387,795.364L241.029,787.177L241.168,787.137L260.387,795.364Z" style="fill:url(#_Linear12);"/>
         <path d="M296.465,811.391L259.832,795.641L0.069,683.939L241.168,787.137L241.029,787.177L260.387,795.364L296.812,810.835L296.465,811.391Z" style="fill:url(#_Linear13);"/>
