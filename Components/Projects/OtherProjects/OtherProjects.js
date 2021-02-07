@@ -57,6 +57,7 @@ const OtherProjects = ({ otherProjects }) => {
             {otherProjects.map((project, index) => (
               <React.Fragment key={project.id}>
                 <ProjectCard
+                  eager
                   project={project}
                   key={project.id}
                   backgroundColor={findIndexMultiple(index)}
