@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 import appTheme from "../../../styles/appTheme";
 
-const StyledSVG = styled.svg`
+const StyledSVG = styled(motion.svg)`
+  position: relative;
   width: 100%;
   max-width: 32rem;
   padding: 1rem;
@@ -42,6 +44,14 @@ const PlanetCyril = () => {
       strokeMiterlimit="2"
       clipRule="evenodd"
       viewBox="0 0 584 546"
+      initial={{ opacity: 0.9995, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        type: "spring",
+        duration: 5,
+        repeat: Infinity,
+        repeatType: "mirror",
+      }}
     >
       <filter id="glow-filter">
         <feFlood id="glow" in="SourceGraphic" />
@@ -61,7 +71,15 @@ const PlanetCyril = () => {
         ry="252"
         transform="matrix(1 0 .00256 1 272.646 293.999)"
       />
-      <path
+      <motion.path
+        initial={{ pathLength: 1, pathOffset: 0, opacity: 0.5 }}
+        animate={{ pathLength: 0, pathOffset: 1, opacity: 1 }}
+        transition={{
+          type: "spring",
+          duration: 1,
+          repeat: Infinity,
+          repeatType: "mirror",
+        }}
         fill={appTheme.colors.primary.main}
         fillRule="nonzero"
         d="M576.019 64.029l-6.721 7.846 6.721 7.875-9.144-5.798-9.144 5.798 6.721-7.875-6.721-7.846 9.144 5.769 9.144-5.769zm-24.173.029L547 61l3.548 4.154L547 69.308l4.846-3.058 4.846 3.058-3.577-4.154L556.663 61l-4.817 3.058zm28.875 10.73l-3.202-2.019 2.365 2.769-2.365 2.77 3.202-2.02 3.202 2.02-2.366-2.77 2.366-2.769-3.202 2.019z"

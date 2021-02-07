@@ -6,7 +6,7 @@ const projectsList = [
     url: "https://rock-paper-scissors.cyrilo.app/",
     gitHubURL: "https://github.com/Banaanas/rock-paper-scissors-TOP",
     softwareStack: ["JavaScript", "HTML", "CSS"],
-    imageSource: "/images/featured-projects/01-rock-paper-scissors.png",
+    imageSource: "/images/featured-projects2/01-rock-paper-scissors.png",
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ const projectsList = [
     url: "https://etch-a-sketch.cyrilo.app/",
     gitHubURL: "https://github.com/Banaanas/etch-a-sketch-TOP",
     softwareStack: ["JavaScript", "HTML", "CSS"],
-    imageSource: "/images/featured-projects/02-etch-a-sketch.png",
+    imageSource: "/images/featured-projects2/02-etch-a-sketch.png",
   },
   {
     id: 3,
@@ -22,7 +22,7 @@ const projectsList = [
     url: "https://calculator.cyrilo.app/",
     gitHubURL: "https://github.com/Banaanas/calculator-TOP",
     softwareStack: ["JavaScript", "HTML", "CSS"],
-    imageSource: "/images/featured-projects/03-calculator.png",
+    imageSource: "/images/featured-projects2/03-calculator.png",
   },
   {
     id: 4,
@@ -30,7 +30,7 @@ const projectsList = [
     url: "https://pomodoro-timer.cyrilo.app/",
     gitHubURL: "https://github.com/Banaanas/pomodoro-timer-TOP",
     softwareStack: ["JavaScript", "HTML", "CSS"],
-    imageSource: "/images/featured-projects/04-pomodoro-timer.png",
+    imageSource: "/images/featured-projects2/04-pomodoro-timer.png",
   },
   {
     id: 5,
@@ -38,7 +38,7 @@ const projectsList = [
     url: "https://library.cyrilo.app/",
     gitHubURL: "https://github.com/Banaanas/library-TOP",
     softwareStack: ["JavaScript", "HTML", "CSS"],
-    imageSource: "/images/featured-projects/05-library.png",
+    imageSource: "/images/featured-projects2/05-library.png",
   },
   {
     id: 6,
@@ -46,7 +46,7 @@ const projectsList = [
     url: "https://tic-tac-toe.cyrilo.app/",
     gitHubURL: "https://github.com/Banaanas/tic-tac-toe-TOP",
     softwareStack: ["JavaScript", "HTML", "CSS"],
-    imageSource: "/images/featured-projects/06-tic-tac-toe.png",
+    imageSource: "/images/featured-projects2/06-tic-tac-toe.png",
   },
   {
     id: 7,
@@ -54,7 +54,7 @@ const projectsList = [
     url: "https://restaurant-page.cyrilo.app/",
     gitHubURL: "https://github.com/Banaanas/restaurant-page-TOP",
     softwareStack: ["JavaScript", "HTML", "CSS"],
-    imageSource: "/images/featured-projects/07-restaurant-page.png",
+    imageSource: "/images/featured-projects2/07-restaurant-page.png",
   },
   {
     id: 8,
@@ -62,7 +62,7 @@ const projectsList = [
     url: "https://todo-list.cyrilo.app/",
     gitHubURL: "https://github.com/Banaanas/todo-list-TOP",
     softwareStack: ["JavaScript", "HTML", "CSS"],
-    imageSource: "/images/featured-projects/08-todo-list.png",
+    imageSource: "/images/featured-projects2/08-todo-list.png",
   },
   {
     id: 9,
@@ -70,7 +70,7 @@ const projectsList = [
     url: "https://form-browser.cyrilo.app/",
     gitHubURL: "https://github.com/Banaanas/form-browser-TOP",
     softwareStack: ["JavaScript", "HTML", "CSS"],
-    imageSource: "/images/featured-projects/09-form-browser.png",
+    imageSource: "/images/featured-projects2/09-form-browser.png",
   },
   {
     id: 10,
@@ -78,7 +78,7 @@ const projectsList = [
     url: "https://googifgle.cyrilo.app/",
     gitHubURL: "https://github.com/Banaanas/GooGIFGle-TOP",
     softwareStack: ["JavaScript", "HTML", "CSS"],
-    imageSource: "/images/featured-projects/10-GooGIFGle.png",
+    imageSource: "/images/featured-projects2/10-GooGIFGle.png",
   },
   {
     id: 11,
@@ -86,7 +86,7 @@ const projectsList = [
     url: "https://my-weather.cyrilo.app/",
     gitHubURL: "https://github.com/Banaanas/my-weather-TOP",
     softwareStack: ["JavaScript", "HTML", "CSS"],
-    imageSource: "/images/featured-projects/11-my-weather.png",
+    imageSource: "/images/featured-projects2/11-my-weather.png",
   },
   {
     id: 12,
@@ -94,7 +94,7 @@ const projectsList = [
     url: "https://battleship.cyrilo.app/",
     gitHubURL: "https://github.com/Banaanas/battleship-TOP",
     softwareStack: ["JavaScript", "HTML", "CSS"],
-    imageSource: "/images/featured-projects/12-battleship.png",
+    imageSource: "/images/featured-projects2/12-battleship.png",
   },
   {
     id: 13,
@@ -102,7 +102,7 @@ const projectsList = [
     url: "https://blogslist-app.cyrilo.app/",
     gitHubURL: "https://github.com/Banaanas/blogslist-app-frontend-FSO",
     softwareStack: ["React", "Node.js", "MongoDB", "Express.js", "Redux"],
-    imageSource: "/images/featured-projects/13-blogslist-app.png",
+    imageSource: "/images/featured-projects2/13-blogslist-app.png",
   },
   {
     id: 14,
@@ -110,7 +110,7 @@ const projectsList = [
     url: "https://cyrilo.dev/",
     gitHubURL: "https://github.com/Banaanas/cyrilo-portfolio",
     softwareStack: ["React", "Next.js", "Redux", "Framer Motion"],
-    imageSource: "/images/featured-projects/14-cyrilo-portfolio.png",
+    imageSource: "/images/featured-projects2/14-cyrilo-portfolio.png",
   },
 ];
 
