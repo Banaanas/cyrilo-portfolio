@@ -1,7 +1,9 @@
-import appTheme from "../../styles/appTheme";
+import { useTheme } from "@emotion/react";
 import StyledDividerContainer from "../StyledComponents/StyledDividerContainer";
 
 const FeaturedProjectsDivider = () => {
+  const appTheme = useTheme();
+
   return (
     <StyledDividerContainer>
       <svg

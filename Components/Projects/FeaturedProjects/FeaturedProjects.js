@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
+import { useTheme } from "@emotion/react";
 import { motion } from "framer-motion";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import FeaturedProjectsStar from "./FeaturedProjectsStar";
-import appTheme from "../../../styles/appTheme";
 
 const StyledProjectsContainer = styled.div`
   display: grid;
@@ -31,6 +31,8 @@ const StarWrapper = styled(motion.div)`
 `;
 
 const FeaturedProjects = ({ featuredProjects }) => {
+  const appTheme = useTheme();
+
   return (
     <StyledProjectsContainer>
       {featuredProjects.map((project) => (

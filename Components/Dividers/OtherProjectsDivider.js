@@ -1,8 +1,9 @@
-import styled from "@emotion/styled";
-import appTheme from "../../styles/appTheme";
+import { useTheme } from "@emotion/react";
 import StyledDividerContainer from "../StyledComponents/StyledDividerContainer";
 
 const HeroBannerDivider = () => {
+  const appTheme = useTheme();
+
   return (
     <StyledDividerContainer>
       <svg

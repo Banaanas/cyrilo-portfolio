@@ -1,6 +1,8 @@
-import appTheme from "../../../styles/appTheme";
+import { useTheme } from "@emotion/react";
 
 const FeaturedProjectsStar = () => {
+  const appTheme = useTheme();
+
   return (
     <svg
       width="128"

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
+import { useTheme } from "@emotion/react";
 import { motion } from "framer-motion";
-import appTheme from "../../../styles/appTheme";
 
 const StyledSVG = styled(motion.svg)`
   position: relative;
@@ -26,15 +26,17 @@ const StyledSVG = styled(motion.svg)`
 
   @keyframes glowing {
     0% {
-      flood-color: ${({ theme }) => theme.colors.primary.main};
+      flood-color: ${({ theme }) => theme.colors.secondary.main};
     }
 
     100% {
-      flood-color: ${({ theme }) => theme.colors.secondary.main};
+      flood-color: ${({ theme }) => theme.colors.primary.main};
     }
   }
 `;
 const PlanetCyril = () => {
+  const appTheme = useTheme();
+
   return (
     <StyledSVG
       xmlns="http://www.w3.org/2000/svg"

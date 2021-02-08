@@ -1,27 +1,27 @@
-const appTheme = {
+const appTheme3 = {
   colors: {
-    backgroundColor: "#fff2f6",
     primary: {
-      darker: "#7f002a",
-      dark: "#be003f",
-      main: "#fd0054",
-      light: "#fe7fa9",
-      lighter: "#febfd4",
-      lightest1: "#ffe5ee",
-      lightest2: "#fff2f6",
+      darker: "#77221c",
+      dark: "#b25f4b",
+      main: "#f8b595",
+      light: "#faccaf",
+      lighter: "#fcdbc0",
+      lightest1: "#feead5",
+      lightest2: "#fef6ea",
     },
     secondary: {
-      darker: "#161012",
-      dark: "#20181b",
-      main: "#2b2024",
-      light: "#958f91",
-      lighter: "#cac7c8",
-      lightest1: "#e9e8e9",
-      lightest2: "#f4f4f4",
+      darker: "#1e113b",
+      dark: "#3f2d59",
+      main: "#6c5b7c",
+      light: "#a18db0",
+      lighter: "#cab5d7",
+      lightest1: "#e9d8f1",
+      lightest2: "#f4ebf8",
     },
     default: {
       white: "#fbf9fa",
     },
+    backgroundColor: "#fef6ea",
   },
   fontSizes: {
     xs: "0.75rem",
@@ -50,4 +50,4 @@ const appTheme = {
   globalMaxWidth: "1100px",
 };
 
-export default appTheme;
+export default appTheme3;

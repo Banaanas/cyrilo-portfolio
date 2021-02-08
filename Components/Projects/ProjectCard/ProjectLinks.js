@@ -3,21 +3,7 @@ import {
   VscLinkExternal as ExternalLinkIcon,
 } from "react-icons/vsc";
 import styled from "@emotion/styled";
-import appTheme from "../../../styles/appTheme";
 import ExternalLink from "../../Links/ExternalLink";
-
-const handleBackgroundColor = (backgroundColor) => {
-  switch (backgroundColor) {
-    case "third":
-      return appTheme.colors.primary.darker;
-    case "second":
-      return appTheme.colors.primary.light;
-    case "first":
-      return appTheme.colors.primary.dark;
-    default:
-      return appTheme.colors.secondary.darker;
-  }
-};
 
 const StyledSocialIconsContainer = styled.div`
   display: flex;

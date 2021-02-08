@@ -14,7 +14,7 @@ const StyledSkillsList = styled(StyledTextContainer)`
     white-space: nowrap; /* To wrap the double colon --> ":" */
   }
   li {
-    color: ${({ theme }) => theme.colors.primary.lightest2};
+    color: ${({ theme }) => theme.colors.default.white};
   }
 
   @media (max-width: 350px) {

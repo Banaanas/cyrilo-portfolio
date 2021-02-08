@@ -1,12 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import styled from "@emotion/styled";
-import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "@emotion/react";
+import { motion } from "framer-motion";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import OtherProjectsStar from "./OtherProjectsStar";
 import OtherProjectsButton from "./OtherProjectsButton";
 import StyledTitle from "../../StyledComponents/StyledTitle";
-import appTheme from "../../../styles/appTheme";
 
 const StyledProjectsContainer = styled(motion.div)`
   display: grid;
@@ -38,6 +38,8 @@ const OtherProjects = ({ otherProjects }) => {
   );
 
   // Project Card background color will change in function of the Inde
+  const appTheme = useTheme();
+
   const findIndexMultiple = (index) => {
     if (index === 0) return appTheme.colors.primary.darker;
     if (index % 3 === 0) return appTheme.colors.primary.darker;
@@ -57,7 +59,6 @@ const OtherProjects = ({ otherProjects }) => {
             {otherProjects.map((project, index) => (
               <React.Fragment key={project.id}>
                 <ProjectCard
-                  eager
                   project={project}
                   key={project.id}
                   backgroundColor={findIndexMultiple(index)}

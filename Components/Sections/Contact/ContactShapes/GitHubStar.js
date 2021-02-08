@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import appTheme from "../../../../styles/appTheme";
+import { useTheme } from "@emotion/react";
 import LinkedInCircle from "./LinkedInCircle";
 import StyledVerticalLine from "../../../StyledComponents/StyledVerticalLine";
 import ExternalLink from "../../../Links/ExternalLink";
@@ -9,6 +9,8 @@ const StyledSVG = styled.svg`
 `;
 
 const GitHubStar = () => {
+  const appTheme = useTheme();
+
   return (
     <StyledSVG
       width="266"

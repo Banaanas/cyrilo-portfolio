@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import appTheme from "../../../../styles/appTheme";
+import { useTheme } from "@emotion/react";
 import ExternalLink from "../../../Links/ExternalLink";
 
 const StyledSVG = styled.svg`
@@ -7,6 +7,8 @@ const StyledSVG = styled.svg`
 `;
 
 const LinkedInCircle = () => {
+  const appTheme = useTheme();
+
   return (
     <StyledSVG
       width="256"

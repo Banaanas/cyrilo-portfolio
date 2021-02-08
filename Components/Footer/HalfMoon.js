@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import appTheme from "../../styles/appTheme";
+import { useTheme } from "@emotion/react";
 
 //* ** Half Moon Shape for Footer ***//
 
@@ -20,6 +20,7 @@ const StyledDiv = styled.div`
 `;
 
 const HalfMoon = () => {
+  const appTheme = useTheme();
   return (
     <StyledDiv>
       <svg

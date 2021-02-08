@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import appTheme from "../../../styles/appTheme";
+import { useTheme } from "@emotion/react";
 
 const StyledSVG = styled.svg`
   width: 100%;
@@ -16,6 +16,8 @@ const StyledSVG = styled.svg`
 `;
 
 const AboutMeImage = () => {
+  const appTheme = useTheme();
+
   return (
     <>
       <StyledSVG
