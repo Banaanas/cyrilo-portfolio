@@ -19,7 +19,6 @@ const CyriloMail = () => {
   const appTheme = useTheme();
 
   const mailColors = {
-    background: appTheme.colors.backgroundColor,
     letters: appTheme.colors.secondary.darker,
     line: appTheme.colors.primary.main,
   };
@@ -40,8 +39,11 @@ const CyriloMail = () => {
         {/* Transparent Rectangle around the letters to make the whole mail
         clickable */}
         <path
+          id="big-background"
           d="M817 23H12V174.958L413.517 189L817 165.931V23Z"
+          /*
           fill={mailColors.background}
+*/
         />
         <path
           d="M25.1807 71.5197C19.6982 69.653 16.0405 66.757 14.2079 62.8318C12.395 58.9134 12.4319 54.1833 14.3189 48.6415C16.2125 43.0801 19.2081 39.2913 23.3057 37.2753C27.4034 35.2593 32.2724 35.2115 37.9127 37.132C41.7979 38.4549 45.1675 40.5485 48.0215 43.413L41.7086 50.8039C40.5166 49.7158 39.3893 48.7928 38.3269 48.0349C37.2712 47.2573 36.1024 46.6502 34.8205 46.2138C32.947 45.5758 31.249 45.812 29.7266 46.9222C28.2041 48.0324 26.9897 49.9187 26.0831 52.5811C24.2567 57.9454 25.3255 61.3023 29.2895 62.6521C32.6816 63.807 36.2714 63.9289 40.0589 63.0177L36.9263 72.2178C33.2769 73.176 29.3617 72.9433 25.1807 71.5197Z"

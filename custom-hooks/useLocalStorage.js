@@ -6,6 +6,8 @@ const useLocalStorage = (key, initialValue) => {
   // Pass initial state function to useState so logic is only executed once
   const [storedValue, setStoredValue] = useState(() => {
     try {
+      // If SSR, Return (because Window is NOT defined on the Node.js Server)
+      if (typeof window === "undefined") return;
       // Get from local storage by key
       const item = window.localStorage.getItem(key);
       // Parse stored json or if none return initialValue

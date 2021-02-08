@@ -9,7 +9,6 @@ const StyledDiv = styled.div`
   min-width: ${({ theme }) => theme.globalMinWidth};
   height: 8rem;
   color: ${({ theme }) => theme.colors.primary.lighter};
-  background-color: ${({ theme }) => theme.colors.backgroundColor};
 
   svg {
     position: absolute;

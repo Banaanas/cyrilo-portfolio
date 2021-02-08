@@ -15,6 +15,7 @@ const StyledSVG = styled(motion.svg)`
   }
 
   ellipse {
+    transition: var(--svg-fill-transition);
     fill: ${({ theme }) => theme.colors.primary.main};
     stroke: none;
   }

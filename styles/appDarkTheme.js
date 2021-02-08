@@ -1,6 +1,7 @@
-const appTheme5 = {
+const appDarkTheme = {
   colors: {
-    backgroundColor: "#cffbd8",
+    backgroundColor: "#2C0000", /* #2C0000
+ */
     primary: {
       darker: "#045858",
       dark: "#0b856c",
@@ -50,4 +51,4 @@ const appTheme5 = {
   globalMaxWidth: "1100px",
 };
 
-export default appTheme5;
+export default appDarkTheme;

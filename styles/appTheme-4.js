@@ -1,5 +1,6 @@
 const appTheme4 = {
   colors: {
+    backgroundColor: "#ffddcc",
     primary: {
       darker: "#7a002a",
       dark: "#b7001f",
@@ -21,7 +22,6 @@ const appTheme4 = {
     default: {
       white: "#fbf9fa",
     },
-    backgroundColor: "#ffddcc",
   },
   fontSizes: {
     xs: "0.75rem",

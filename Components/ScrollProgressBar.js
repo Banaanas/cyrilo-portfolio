@@ -6,8 +6,8 @@ const StyledProgressBar = styled.div`
   position: fixed;
   z-index: 5000;
   width: 100%;
-  height: 2px;
-  background: ${({ theme }) => theme.colors.default.white};
+  height: 5px;
+  background: transparent;
   transform: rotate(90);
 `;
 

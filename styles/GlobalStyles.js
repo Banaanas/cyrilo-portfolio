@@ -13,6 +13,10 @@ const GlobalStyles = () => {
         *::before,
         *::after {
           box-sizing: inherit;
+
+          /* Use of CSS Variables to centralize Colors Transitions between appThemes */
+          --background-transition: background-color 500ms ease; /* Body */
+          --svg-fill-transition: fill 500ms ease; /* PlanetCyril */
         }
 
         /* Text Selection */
@@ -39,6 +43,8 @@ const GlobalStyles = () => {
             "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
             "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
           background-color: ${theme.colors.backgroundColor};
+          transition: var(--background-transition);
+          --chocolat: rebeccapurple;
         }
 
         #__next {
