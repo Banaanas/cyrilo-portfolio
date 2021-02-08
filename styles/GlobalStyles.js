@@ -44,7 +44,6 @@ const GlobalStyles = () => {
             "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
           background-color: ${theme.colors.backgroundColor};
           transition: var(--background-transition);
-          --chocolat: rebeccapurple;
         }
 
         #__next {

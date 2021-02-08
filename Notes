@@ -1,5 +1,9 @@
 ***** NOTES *****
 
+- Flashing Dark Mode
+https://blog.maximeheckel.com/posts/switching-off-the-lights-part-2-fixing-dark-mode-flashing-on-servered-rendered-website
+The Default Theme is required for the pre-rendered HTML and styles
+
 - When Use with an <a> styled by Emotion, the Next.js Link Component
 does not pass the href, and Tab Key Navigation, among others, becomes impossible.
 A Work-Around is to used the passHref prop inside the Link.
@@ -15,7 +19,7 @@ Header just take a -100% TranslateY when scroll down.
 But here, because Scroll is disabled when the Burger Menu is open, the Bug
 can NOT be visible (because Scroll is impossible).
 
-- Smooth Scroll
+- scroll-behavior: smooth; (body)
 Because some Browsers still don't support CSS "scroll-behavior: smooth", React-Scroll
 Library has also been used.
 
