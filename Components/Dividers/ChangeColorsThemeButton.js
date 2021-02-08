@@ -14,12 +14,12 @@ const StyledButton = styled.button`
   cursor: pointer;
 `;
 
-const ChangeThemeButton = ({ toggleFunction }) => {
+const ChangeColorsThemeButton = ({ changeThemeFunction }) => {
   return (
-    <StyledButton onClick={toggleFunction}>
+    <StyledButton onClick={changeThemeFunction}>
       <FaPaintBrush>Change Color</FaPaintBrush>
     </StyledButton>
   );
 };
 
-export default ChangeThemeButton;
+export default ChangeColorsThemeButton;
