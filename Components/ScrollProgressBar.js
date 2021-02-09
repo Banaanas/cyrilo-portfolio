@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 
 const StyledProgressBar = styled.div`
   position: fixed;
-  z-index: 5000;
+  z-index: 100;
   width: 100%;
   height: 5px;
   background: transparent;
@@ -37,7 +37,7 @@ const ScrollProgressBar = () => {
       document.documentElement.clientHeight;
 
     setProgress(`${(scrollY / height) * 100}%`);
-  }, 0);
+  }, 1);
 
   // useWindowScroll - CUSTOM HOOK
   // Resize Event Listener (Add AND Cleanup Event)
