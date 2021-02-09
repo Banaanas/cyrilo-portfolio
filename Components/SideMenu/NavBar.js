@@ -19,7 +19,7 @@ const StyledMenu = styled(motion.div)`
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100vh; /* cf. -> Note 3 */
   overflow: hidden;
   font-family: "Nexa Bold", sans-serif;
   text-align: left;

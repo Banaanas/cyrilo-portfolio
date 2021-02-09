@@ -12,14 +12,20 @@ import useLocalStorage from "../custom-hooks/useLocalStorage";
 import appThemesArray from "../styles/appThemesArray";
 
 const App = ({ Component, pageProps }) => {
+  // Cf. Note 1 - Flash
   // Set localStorage - useLocalStorage - Custom Hook
+  // setThemeLocalStorage : set Theme Number into localStorage
   // Initial localStorage value to 0
+  // Initial Value is NOT set to localStorage
   const [themeLocalStorage, setThemeLocalStorage] = useLocalStorage(
     "themeNumber",
     "0",
   );
+
+  // Theme Index - useState
   const [themeIndex, setThemeThemeIndex] = useState(0);
 
+  // useEffect
   useEffect(() => {
     // If SSR, Return (because Window is NOT defined on the Node.js Server)
     if (typeof window === "undefined") return;
@@ -27,28 +33,29 @@ const App = ({ Component, pageProps }) => {
     // Define if User has a Dark Mode Preference
     const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)")
       .matches;
-
     // Define if User has already toggled a Color Theme (localStorage)
     const userPreference = themeLocalStorage;
 
     // Browser set to DARK MODE preference but User did NOT already toggle any Colors Theme
-    // Then chosen Theme is the (last) one toggled
+    // Then chosen Theme is the Dark Theme (index 1 in appThemesArray)
     if (prefersDarkMode && userPreference === null) {
       setThemeThemeIndex(1);
       setThemeLocalStorage(1);
     }
 
     // User HAS already toggled a Colors Theme
-    // Then chosen Theme is the (last) one toggled (localStorage)
+    // Then chosen Theme is the (last) one toggled ( Index retrieved from localStorage)
     if (userPreference) {
       setThemeThemeIndex(userPreference);
       setThemeLocalStorage(userPreference);
     }
   }, [themeLocalStorage, setThemeLocalStorage]);
 
-  //
-  const changeThemeColors = () => {
+  // Toggle between Colors Themes
+  const changeColorsTheme = () => {
     let newThemeIndex = themeIndex + 1;
+
+    // Set new Index to 0 if the previous one corresponds to the last Theme in array
     if (newThemeIndex >= appThemesArray.length) {
       newThemeIndex = 0;
     }
@@ -66,7 +73,7 @@ const App = ({ Component, pageProps }) => {
       <Provider store={store}>
         <GlobalStyles />
         <ChangeColorsThemeButton
-          changeThemeFunction={changeThemeColors}
+          changeThemeFunction={changeColorsTheme}
           themeIndex={themeLocalStorage}
         />
         <Header />

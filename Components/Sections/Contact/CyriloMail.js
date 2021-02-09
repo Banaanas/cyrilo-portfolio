@@ -19,8 +19,8 @@ const CyriloMail = () => {
   const appTheme = useTheme();
 
   const mailColors = {
-    letters: appTheme.colors.secondary.darker,
-    line: appTheme.colors.primary.main,
+    letters: appTheme.colors.primary.main,
+    line: appTheme.colors.secondary.main,
   };
 
   return (

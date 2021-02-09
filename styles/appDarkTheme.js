@@ -1,24 +1,23 @@
 const appDarkTheme = {
   colors: {
-    backgroundColor: "#2C0000", /* #2C0000
- */
+    backgroundColor: "#020205",
     primary: {
-      darker: "#045858",
-      dark: "#0b856c",
-      main: "#17b978",
-      light: "#49d58e",
-      lighter: "#6feaa0",
-      lightest1: "#a1f8bb",
-      lightest2: "#cffbd8",
+      darker: "#776B14",
+      dark: "#B3A634",
+      main: "#F9ED69",
+      light: "#FBF38E",
+      lighter: "#FDF7A5",
+      lightest1: "#FEFBC3",
+      lightest2: "#FEFDE1",
     },
     secondary: {
-      darker: "#010627",
-      dark: "#030e3b",
-      main: "#071a52",
-      light: "#2f4c97",
-      lighter: "#5b7dcb",
-      lightest1: "#96b3ed",
-      lightest2: "#c9d9f6",
+      darker: "#220835",
+      dark: "#411650",
+      main: "#6A2C70",
+      light: "#A85CA9",
+      lighter: "#D486CE",
+      lightest1: "#F0B6E7",
+      lightest2: "#F7D9F0",
     },
     default: {
       white: "#fbf9fa",

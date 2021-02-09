@@ -33,7 +33,7 @@ const GlobalStyles = () => {
           stay the same, if User changes Default Font Size. But Zoom is still
           possible, because of REM unit use through the App */
           scroll-behavior: smooth; /* Because some Browsers still don't support CSS "scroll-behavior: smooth", React-Scroll
-          Library has also been used. */
+          Library has also been used. cf -> Note 4 */
         }
 
         body {

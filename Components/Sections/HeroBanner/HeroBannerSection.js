@@ -11,6 +11,7 @@ import navLinks from "../../../data/navLinks";
 import HeroBannerDivider from "../../Dividers/HeroBannerDivider";
 import GenericStyledH2 from "../../StyledComponents/StyledH2";
 import PlanetCyril from "./PlanetCyril";
+import { useTheme } from "@emotion/react";
 
 const StyledSection = styled(GenericStyledSection)`
   display: flex;
@@ -167,6 +168,8 @@ const HeroBannerSection = () => {
     /* if (inView) {
       updateHashNameURL("/");
     }*/
+
+
   }, [inView]);
 
   return (

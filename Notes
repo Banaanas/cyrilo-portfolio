@@ -1,15 +1,23 @@
 ***** NOTES *****
 
-- Flashing Dark Mode
+1 - Flashing Dark Mode
+There is still a short flash between colors modes on page load, when the User
+has already chosen one before or its Browser is set to prefer-color-scheme: dark.
+It's due to Next.js rendering the HTML before the JavaScript (and Emotion Theme(s)).
+It could have been resolved with the help of CSS Variables used in our Global Css Sheet and
+a Script added in the Document file, with or without a Library.
 https://blog.maximeheckel.com/posts/switching-off-the-lights-part-2-fixing-dark-mode-flashing-on-servered-rendered-website
-The Default Theme is required for the pre-rendered HTML and styles
+But because the Application toggles, not only between light and dark mode, but between
+multiple Colors Themes, it has been decided not to inject this script
+nor use CSS variables for now.
 
-- When Use with an <a> styled by Emotion, the Next.js Link Component
+
+2 - When Use with an <a> styled by Emotion, the Next.js Link Component
 does not pass the href, and Tab Key Navigation, among others, becomes impossible.
 A Work-Around is to used the passHref prop inside the Link.
 --https://nextjs.org/docs/api-reference/next/link#if-the-child-is-a-custom-component-that-wraps-an-a-tag
 
-- When Open, the Burger Menu / Side Menu (NavBar Component) cover 100 %
+3 - When Open, the Burger Menu / Side Menu (NavBar Component) cover 100 %
 of the Viewport because it has an "min-weight: 100vh" property.
 It was not possible to put "min-weight: 100vh" because in this case, the
 Header just take a -100% TranslateY when scroll down.
@@ -19,7 +27,7 @@ Header just take a -100% TranslateY when scroll down.
 But here, because Scroll is disabled when the Burger Menu is open, the Bug
 can NOT be visible (because Scroll is impossible).
 
-- scroll-behavior: smooth; (body)
+4 - scroll-behavior: smooth; (body)
 Because some Browsers still don't support CSS "scroll-behavior: smooth", React-Scroll
 Library has also been used.
 
