@@ -37,7 +37,7 @@ const ScrollProgressBar = () => {
       document.documentElement.clientHeight;
 
     setProgress(`${(scrollY / height) * 100}%`);
-  }, 1);
+  }, 0);
 
   // useWindowScroll - CUSTOM HOOK
   // Resize Event Listener (Add AND Cleanup Event)
