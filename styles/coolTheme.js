@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 
-const darkTheme = css`
+const coolTheme = css`
   --background-color: #cffbd8;
 
   --primary-darker: #045858;
@@ -24,4 +24,4 @@ const darkTheme = css`
   --svg-fill-transition: fill 500ms ease; /* PlanetCyril */
 `;
 
-export default darkTheme;
+export default coolTheme;

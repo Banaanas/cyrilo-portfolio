@@ -1,4 +1,4 @@
-const appTheme1 = {
+const appTheme = {
   colors: {
     backgroundColor: "#fff2f6",
     primary: {
@@ -50,4 +50,4 @@ const appTheme1 = {
   globalMaxWidth: "1100px",
 };
 
-export default appTheme1;
+export default appTheme;
