@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { useTheme } from "@emotion/react";
 import ExternalMailLink from "../../Links/ExternalMailLink";
 
 // Cyrilo Mail
@@ -16,11 +15,9 @@ const StyledSVG = styled.svg`
 `;
 
 const CyriloMail = () => {
-  const appTheme = useTheme();
-
   const mailColors = {
-    letters: appTheme.colors.primary.main,
-    line: appTheme.colors.secondary.main,
+    letters: "var(--primary-main)",
+    line: "var(--secondary-main)",
   };
 
   return (

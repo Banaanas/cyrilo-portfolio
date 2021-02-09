@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react/";
 import styled from "@emotion/styled";
 import { MdInvertColors as ChangeColorsThemeIcon } from "react-icons/md";
+import { useTheme } from "next-themes";
 import appThemesArray from "../../styles/appThemesArray";
 
 const StyledButton = styled.button`
@@ -62,9 +63,30 @@ const ChangeColorsThemeButton = ({ changeThemeFunction, themeIndex }) => {
     setNextThemeIndex(newThemeIndex);
   }, [themeIndex, nextThemeIndex]);
 
+  const { theme, themes, setTheme } = useTheme();
+
+  useEffect(() => {
+    console.log(theme);
+  });
+  const changeTheme = () => {
+    const themesArray = [...themes];
+    const themeIndex2 = themesArray.indexOf(theme);
+    let newThemeIndex = themeIndex2 + 1;
+
+    // Set new Index to 0 if the previous one corresponds to the last Theme in array
+    if (newThemeIndex >= themesArray.length) {
+      newThemeIndex = 0;
+    }
+    // Update theme
+    setTheme(themesArray[newThemeIndex]);
+  };
+
   return (
     <StyledButton
+      /*
       onClick={changeThemeFunction}
+*/
+      onClick={changeTheme}
       nextThemeIndex={nextThemeIndex}
       title="Change Colors Theme"
     >

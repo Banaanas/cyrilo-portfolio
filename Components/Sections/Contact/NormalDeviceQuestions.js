@@ -10,7 +10,7 @@ const StyledContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  color: ${({ theme }) => theme.colors.secondary.main};
+  color: var(--secondary-main);
   text-align: center;
 
   @media (min-width: 845px) {
@@ -20,9 +20,9 @@ const StyledContainer = styled.div`
   div:nth-of-type(2) {
     margin: 0 1rem;
     padding: 1rem;
-    color: ${({ theme }) => theme.colors.default.white};
+    color: var(--default-white);
     font-size: ${({ theme }) => theme.fontSizes.xl};
-    background-color: ${({ theme }) => theme.colors.secondary.main};
+    background-color: var(--secondary-main);
     border-radius: 4px;
   }
 `;

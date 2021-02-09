@@ -26,9 +26,9 @@ const StyledSocialIconsContainer = styled.div`
 
   svg {
     align-self: baseline;
-    color: ${({ theme }) => theme.colors.primary.dark};
+    color: var(--primary-dark);
     font-size: ${({ theme }) => theme.fontSizes.xl};
-    /* background-color: ${({ theme }) => theme.colors.secondary.main}; */
+    /* background-color: var(--secondary-main); */
     transform: scale(1);
     opacity: 0.9;
     transition: transform, opacity, 200ms ease;

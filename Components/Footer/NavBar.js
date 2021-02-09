@@ -23,7 +23,7 @@ const StyledList = styled.ul`
 `;
 
 const StyledLink = styled.a`
-  color: ${({ theme }) => theme.colors.default.white};
+  color: var(--default-white);
   font-weight: bolder;
   font-size: ${({ theme }) => theme.fontSizes.md};
   text-transform: uppercase;

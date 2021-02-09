@@ -1,4 +1,9 @@
 ***** NOTES *****
+https://www.joshwcomeau.com/react/dark-mode/
+https://dev.to/sreetamdas/the-perfect-dark-mode-2d7g
+https://blog.maximeheckel.com/posts/switching-off-the-lights-part-2-fixing-dark-mode-flashing-on-servered-rendered-website#using-css-variables-in-my-themes
+https://www.infoxicator.com/dark-mode-is-dead-here-is-an-alternative
+https://github.com/brianlovin/brian-lovin-next/pull/627
 
 1 - Flashing Dark Mode
 There is still a short flash between colors modes on page load, when the User

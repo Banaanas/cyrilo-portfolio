@@ -9,24 +9,23 @@ import StyledTextContainer from "./StyledTextContainer";
 import ExternalLink from "../../Links/ExternalLink";
 
 const StyledLongStory = styled(StyledTextContainer)`
-  overflow: hidden;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   margin: 1rem 0;
-  color: ${({ theme }) => theme.colors.secondary.dark};
-  background-color: ${({ theme }) => theme.colors.secondary.lightest1};
+  overflow: hidden;
+  color: var(--secondary-dark);
+  background-color: var(--secondary-lightest1);
 
   p {
-    color: ${({ theme }) => theme.colors.secondary.main};
+    color: var(--secondary-main);
   }
 
   a {
     text-decoration: none;
     background-image: linear-gradient(
       transparent calc(50% - 9px),
-      ${({ theme }) => theme.colors.primary.main} calc(50% - 9px)
-        calc(50% - 9px)
+      var(--primary-main) calc(50% - 9px) calc(50% - 9px)
     );
     background-size: 100% 200%;
     border-radius: 3px;
@@ -36,8 +35,7 @@ const StyledLongStory = styled(StyledTextContainer)`
   a:hover {
     background-image: linear-gradient(
       transparent calc(50% - 9px),
-      ${({ theme }) => theme.colors.primary.main} calc(50% - 9px)
-        calc(50% - 9px)
+      var(--primary-main) calc(50% - 9px) calc(50% - 9px)
     );
     background-position: 0 100%;
   }
@@ -50,10 +48,10 @@ const StyledButton = styled.button`
   justify-content: space-between;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
-  color: ${({ theme }) => theme.colors.secondary.lightest1};
+  color: var(--secondary-lightest1);
   font-family: "Nexa Bold", sans-serif;
   text-transform: uppercase;
-  background-color: ${({ theme }) => theme.colors.secondary.main};
+  background-color: var(--secondary-main);
   border: none;
   border-radius: 8px;
   cursor: pointer;

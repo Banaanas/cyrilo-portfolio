@@ -1,14 +1,14 @@
-import {useEffect} from "react";
-import {useInView} from "react-intersection-observer";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import styled from "@emotion/styled";
-import {Element as ScrollWrapper} from "react-scroll";
+import { Element as ScrollWrapper } from "react-scroll";
 import StyledTitle from "../../StyledComponents/StyledTitle";
 import GenericStyledSection from "../../StyledComponents/StyledSection";
 import ContactStar from "./ContactShapes/ContactStar";
 import SmallDeviceQuestions from "./SmallDeviceQuestions";
 import CyriloMail from "./CyriloMail";
 import NormalDeviceQuestions from "./NormalDeviceQuestions";
-import {GitHubShape, LinkedInShape} from "./ContactShapes/GitHubStar";
+import { GitHubShape, LinkedInShape } from "./ContactShapes/GitHubStar";
 
 const StyledSection = styled(GenericStyledSection)`
   display: flex;

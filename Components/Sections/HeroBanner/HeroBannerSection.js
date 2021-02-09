@@ -11,7 +11,6 @@ import navLinks from "../../../data/navLinks";
 import HeroBannerDivider from "../../Dividers/HeroBannerDivider";
 import GenericStyledH2 from "../../StyledComponents/StyledH2";
 import PlanetCyril from "./PlanetCyril";
-import { useTheme } from "@emotion/react";
 
 const StyledSection = styled(GenericStyledSection)`
   display: flex;
@@ -57,9 +56,8 @@ const StyledContainer = styled.div`
 
 const StyledH2 = styled(GenericStyledH2)`
   display: none;
-  color: ${({ theme }) => theme.colors.secondary.main};
-
-  @media (min-width: 710px) {
+  color: var(--secondary-main);
+  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
     display: flex;
   }
 `;
@@ -70,10 +68,10 @@ const StyledHalfMoonH2 = styled(GenericStyledH2)`
   top: -3rem;
   z-index: 1000;
   display: flex;
-  color: ${({ theme }) => theme.colors.secondary.main};
-  -webkit-text-stroke: 0.5px ${({ theme }) => theme.colors.secondary.darker};
+  color: var(--secondary-main);
+  -webkit-text-stroke: 0.5px var(--secondary-darker);
 
-  @media (min-width: 710px) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
     display: none;
   }
 `;
@@ -107,16 +105,16 @@ const StyledH1 = styled.h1`
   }
 
   span:nth-of-type(1) {
-    color: ${({ theme }) => theme.colors.default.white};
-    background-color: ${({ theme }) => theme.colors.secondary.main};
-    border: 4px solid ${({ theme }) => theme.colors.secondary.main};
+    color: var(--default-white);
+    background-color: var(--secondary-main);
+    border: 4px solid var(--secondary-main);
     border-bottom: none;
   }
 
   span:nth-of-type(2) {
-    color: ${({ theme }) => theme.colors.secondary.main};
-    background-color: ${({ theme }) => theme.colors.default.white};
-    border: 4px solid ${({ theme }) => theme.colors.secondary.main};
+    color: var(--secondary-main);
+    background-color: var(--default-white);
+    border: 4px solid var(--secondary-main);
     border-top: none;
   }
 `;
@@ -127,12 +125,12 @@ const StyledLink = styled.a`
   justify-content: center;
   width: 12rem;
   padding: 1rem 1rem;
-  color: ${({ theme }) => theme.colors.primary.main};
+  color: var(--primary-main);
   font-size: ${({ theme }) => theme.fontSizes.xl};
   font-family: "Nexa Black", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: ${({ theme }) => theme.colors.secondary.main};
+  background-color: var(--secondary-main);
   border: none;
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
@@ -147,7 +145,7 @@ const StyledLink = styled.a`
 `;
 
 const StyledDownArrowIcon = styled(DownArrowIcon)`
-  color: ${({ theme }) => theme.colors.default.white};
+  color: var(--default-white);
   font-size: ${({ theme }) => theme.fontSizes.xl2};
 `;
 
@@ -168,8 +166,6 @@ const HeroBannerSection = () => {
     /* if (inView) {
       updateHashNameURL("/");
     }*/
-
-
   }, [inView]);
 
   return (
@@ -198,12 +194,7 @@ const HeroBannerSection = () => {
         </StyledContainer>
 
         <PlanetCyril />
-        {/*<Image
-          src="/images/Planet-Cyril.svg"
-          width={500}
-          height={500}
-          alt="Cyril Logo"
-        />*/}
+
         <NextLink href={navLinks[1].href} passHref>
           <StyledLink
             id="second-link"

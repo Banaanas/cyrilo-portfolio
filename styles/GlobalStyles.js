@@ -1,10 +1,11 @@
-import { css, Global, useTheme } from "@emotion/react";
+import { css, Global } from "@emotion/react";
+import lightTheme from "./lightTheme";
+import darkTheme from "./darkTheme";
+import coolTheme from "./coolTheme";
 
 // Emotion Global Styles
 // Next.js authorizes Materialize.css (Global CSS) to be imported ONLY from _app.js
 const GlobalStyles = () => {
-  const theme = useTheme();
-
   return (
     <Global
       // CSS Format
@@ -13,16 +14,12 @@ const GlobalStyles = () => {
         *::before,
         *::after {
           box-sizing: inherit;
-
-          /* Use of CSS Variables to centralize Colors Transitions between appThemes */
-          --background-transition: background-color 500ms ease; /* Body */
-          --svg-fill-transition: fill 500ms ease; /* PlanetCyril */
         }
 
         /* Text Selection */
         ::selection {
-          color: ${theme.colors.secondary.lightest2};
-          background-color: ${theme.colors.primary.main};
+          color: var(--secondary-lightest2);
+          background-color: var(--primary-main);
         }
 
         html {
@@ -42,7 +39,7 @@ const GlobalStyles = () => {
           font-family: "Nexa Regular", -apple-system, BlinkMacSystemFont,
             "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
             "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-          background-color: ${theme.colors.backgroundColor};
+          background-color: var(--background-color);
           transition: var(--background-transition);
         }
 
@@ -77,6 +74,28 @@ const GlobalStyles = () => {
         @font-face {
           font-family: "Nexa Thin Italic";
           src: url("./fonts/NexaThinItalic.otf");
+        }
+
+        /* CSS Variables */
+        :root {
+          ${lightTheme}
+        }
+
+        /* @media (prefers-color-scheme: dark) {
+          :root {
+            ${darkTheme}
+          }
+        } */
+
+        .dark {
+          ${darkTheme}
+        }
+        .system {
+          ${darkTheme}
+        }
+
+        .cool {
+          ${coolTheme}
         }
       `}
     />

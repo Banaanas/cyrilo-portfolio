@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import styled from "@emotion/styled";
-import { useTheme } from "@emotion/react";
 import { motion } from "framer-motion";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import OtherProjectsStar from "./OtherProjectsStar";
@@ -37,14 +36,12 @@ const OtherProjects = ({ otherProjects }) => {
     (state) => state.otherProjects.showOtherProjects,
   );
 
-  // Project Card background color will change in function of the Inde
-  const appTheme = useTheme();
-
+  // Project Card background color will change in function of the Index
   const findIndexMultiple = (index) => {
-    if (index === 0) return appTheme.colors.primary.darker;
-    if (index % 3 === 0) return appTheme.colors.primary.darker;
-    if (index % 2 === 0) return appTheme.colors.secondary.dark;
-    return appTheme.colors.primary.dark;
+    if (index === 0) return "var(--primary-darker)";
+    if (index % 3 === 0) return "var(--primary-darker)";
+    if (index % 2 === 0) return "var(--secondary-dark)";
+    return "var(--primary-dark)";
   };
 
   return (

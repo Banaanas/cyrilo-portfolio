@@ -5,8 +5,8 @@ const StyledSVG = styled.svg`
   width: 5rem;
 
   path {
-    fill: ${({ theme, secondary }) =>
-      secondary ? theme.colors.primary.main : theme.colors.secondary.main};
+    fill: ${({ secondary }) =>
+      secondary ? "var(--primary-main)" : "var(--secondary-light)"};
   }
 `;
 

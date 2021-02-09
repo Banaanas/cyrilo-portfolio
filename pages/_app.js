@@ -1,8 +1,9 @@
 import "../scripts/wdyr";
 import "../styles/normalize.css";
-import { useEffect, useState } from "react/";
-import { Provider } from "react-redux";
-import { ThemeProvider } from "@emotion/react";
+import { useEffect, useState } from "react";
+import { Provider as ReduxProvider } from "react-redux";
+import { ThemeProvider as NextThemeProvider } from "next-themes";
+import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 import store from "../store/store";
 import GlobalStyles from "../styles/GlobalStyles";
 import Header from "../Components/Header/Header";
@@ -25,7 +26,7 @@ const App = ({ Component, pageProps }) => {
   // Theme Index - useState
   const [themeIndex, setThemeThemeIndex] = useState(0);
 
-  // useEffect
+  /*// useEffect
   useEffect(() => {
     // If SSR, Return (because Window is NOT defined on the Node.js Server)
     if (typeof window === "undefined") return;
@@ -49,7 +50,7 @@ const App = ({ Component, pageProps }) => {
       setThemeThemeIndex(userPreference);
       setThemeLocalStorage(userPreference);
     }
-  }, [themeLocalStorage, setThemeLocalStorage]);
+  }, [themeLocalStorage, setThemeLocalStorage]);*/
 
   // Toggle between Colors Themes
   const changeColorsTheme = () => {
@@ -69,18 +70,25 @@ const App = ({ Component, pageProps }) => {
   };
 
   return (
-    <ThemeProvider theme={appThemesArray[themeIndex]}>
-      <Provider store={store}>
-        <GlobalStyles />
-        <ChangeColorsThemeButton
-          changeThemeFunction={changeColorsTheme}
-          themeIndex={themeLocalStorage}
-        />
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-      </Provider>
-    </ThemeProvider>
+    <NextThemeProvider
+      attribute="class"
+      /* defaultTheme="system" */
+      enableSystem={false}
+      themes={["light", "dark", "cool"]}
+    >
+      <EmotionThemeProvider theme={appThemesArray[themeIndex]}>
+        <ReduxProvider store={store}>
+          <GlobalStyles />
+          <ChangeColorsThemeButton
+            changeThemeFunction={changeColorsTheme}
+            themeIndex={themeLocalStorage}
+          />
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+        </ReduxProvider>
+      </EmotionThemeProvider>
+    </NextThemeProvider>
   );
 };
 

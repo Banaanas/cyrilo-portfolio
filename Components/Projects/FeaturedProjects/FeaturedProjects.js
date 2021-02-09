@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { useTheme } from "@emotion/react";
 import { motion } from "framer-motion";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import FeaturedProjectsStar from "./FeaturedProjectsStar";
@@ -31,15 +30,13 @@ const StarWrapper = styled(motion.div)`
 `;
 
 const FeaturedProjects = ({ featuredProjects }) => {
-  const appTheme = useTheme();
-
   return (
     <StyledProjectsContainer>
       {featuredProjects.map((project) => (
         <ProjectCard
           project={project}
           key={project.id}
-          backgroundColor={appTheme.colors.secondary.darker}
+          backgroundColor="var(--secondary-darker)"
           otherProject={
             false
           } /* FeaturedProjectCard has different Project Name's color than OtherProjectCard  */

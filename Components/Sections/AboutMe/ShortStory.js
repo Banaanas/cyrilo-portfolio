@@ -2,15 +2,15 @@ import styled from "@emotion/styled";
 import StyledTextContainer from "./StyledTextContainer";
 
 export const StyledShortStory = styled(StyledTextContainer)`
-  color: ${({ theme }) => theme.colors.secondary.dark};
-  background-color: ${({ theme }) => theme.colors.secondary.lightest1};
+  color: var(--secondary-dark);
+  background-color: var(--secondary-lightest1);
 
   p {
-    color: ${({ theme }) => theme.colors.secondary.main};
+    color: var(--secondary-main);
   }
 
   #Cyril-name {
-    color: ${({ theme }) => theme.colors.primary.main};
+    color: var(--primary-main);
     border-radius: 4px;
   }
 `;

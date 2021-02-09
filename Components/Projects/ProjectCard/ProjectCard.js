@@ -40,12 +40,12 @@ const StyledContainer = styled.div`
 
 const StyledProjectName = styled.div`
   /* If it's Other Project's Card, then color is white */
-  color: ${({ theme, otherProject }) =>
-    otherProject ? theme.colors.default.white : theme.colors.primary.main};
+  color: ${({ otherProject }) =>
+    otherProject ? "var(--default-white)" : "var(--primary-main)"};
   font-family: "Nexa Bold", sans-serif;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 0 0 3px ${({ theme }) => theme.colors.secondary.darker}; /* To make Project's Name more readable */
+  text-shadow: 0 0 3px var(--secondary-darker); /* To make Project's Name more readable */
   word-break: break-all;
 `;
 

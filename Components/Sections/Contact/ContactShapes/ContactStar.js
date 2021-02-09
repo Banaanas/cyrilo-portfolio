@@ -5,10 +5,10 @@ const StyledSVG = styled.svg`
 
   @keyframes shiningStar {
     from {
-      fill: ${({ theme }) => theme.colors.primary.main};
+      fill: var(--primary-main);
     }
     to {
-      fill: ${({ theme }) => theme.colors.secondary.main};
+      fill: var(--secondary-main);
     }
   }
 

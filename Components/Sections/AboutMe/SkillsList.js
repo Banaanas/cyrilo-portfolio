@@ -6,15 +6,15 @@ const StyledSkillsList = styled(StyledTextContainer)`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  color: ${({ theme }) => theme.colors.primary.main};
-  background-color: ${({ theme }) => theme.colors.secondary.main};
+  color: var(--primary-main);
+  background-color: var(--secondary-main);
 
   h3 {
     align-self: flex-start;
     white-space: nowrap; /* To wrap the double colon --> ":" */
   }
   li {
-    color: ${({ theme }) => theme.colors.default.white};
+    color: var(--default-white);
   }
 
   @media (max-width: 350px) {
@@ -40,7 +40,7 @@ const StyledListItem = styled.li`
 
   ::before {
     margin-right: 0.5rem;
-    color: ${({ theme }) => theme.colors.primary.main};
+    color: var(--primary-main);
     content: "►";
   }
 `;

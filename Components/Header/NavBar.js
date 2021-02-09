@@ -37,7 +37,7 @@ const StyledLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme.colors.default.white};
+  color: var(--default-white);
   font-weight: bolder;
   font-size: ${({ theme }) => theme.fontSizes.xl};
   font-family: "Nexa Bold", sans-serif;

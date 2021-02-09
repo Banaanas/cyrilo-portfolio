@@ -16,8 +16,8 @@ const StyledFooter = styled.footer`
   padding-top: 0.5rem;
   background: linear-gradient(
     -180deg,
-    ${({ theme }) => theme.colors.secondary.main} 50%,
-    ${({ theme }) => theme.colors.secondary.dark} 50%
+    var(--secondary-main) 50%,
+    var(--secondary-dark) 50%
   );
   filter: ${({ isMenuOpen }) => (isMenuOpen ? "blur(20px)" : "blur(0)")};
   transition: filter, 300ms ease;

@@ -14,7 +14,7 @@ const StyledProgressBar = styled.div`
 const StyledProgressDiv = styled.div`
   width: ${({ progressPercentage }) => progressPercentage};
   height: 100%;
-  background: ${({ theme }) => theme.colors.primary.main};
+  background: var(--primary-main);
 `;
 
 const ScrollProgressBar = () => {

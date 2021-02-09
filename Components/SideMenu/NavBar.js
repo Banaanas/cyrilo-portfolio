@@ -25,13 +25,13 @@ const StyledMenu = styled(motion.div)`
   text-align: left;
   background: linear-gradient(
     to bottom,
-    ${({ theme }) => theme.colors.secondary.darker} 25%,
-    ${({ theme }) => theme.colors.secondary.dark} 25%,
-    ${({ theme }) => theme.colors.secondary.dark} 50%,
-    ${({ theme }) => theme.colors.primary.main} 50%,
-    ${({ theme }) => theme.colors.primary.main} 75%,
-    ${({ theme }) => theme.colors.primary.light} 75%,
-    ${({ theme }) => theme.colors.primary.light} 100%
+    var(--secondary-darker) 25%,
+    var(--secondary-dark) 25%,
+    var(--secondary-dark) 50%,
+    var(--primary-main) 50%,
+    var(--primary-main) 75%,
+    var(--primary-light) 75%,
+    var(--primary-light) 100%
   );
 `;
 
@@ -60,7 +60,7 @@ const StyledLink = styled.a`
   align-items: center;
   justify-content: center;
   padding: 1rem 0;
-  color: ${({ theme }) => theme.colors.default.white};
+  color: var(--default-white);
   font-weight: bold;
   font-size: ${({ theme }) => theme.fontSizes.xl2};
   letter-spacing: 0.2rem;
@@ -85,12 +85,12 @@ const StyledContactIconsContainer = styled(motion.div)`
     width: 2rem;
     height: 2rem;
     padding: 0.25rem;
-    color: ${({ theme }) => theme.colors.default.white};
-    background-color: ${({ theme }) => theme.colors.secondary.dark};
+    color: var(--default-white);
+    background-color: var(--secondary-dark);
     border-radius: 15px;
 
     :hover {
-      color: ${({ theme }) => theme.colors.primary.light};
+      color: var(--primary-light);
     }
   }
 `;

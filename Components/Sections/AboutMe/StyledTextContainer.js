@@ -6,7 +6,7 @@ const StyledTextContainer = styled.div`
   width: 100%;
   max-width: 40ch;
   padding: 0 2rem;
-  color: ${({ theme }) => theme.colors.secondary.darker};
+  color: var(--secondary-darker);
   line-height: 20px;
   text-align: justify;
   border-radius: 16px;

@@ -12,7 +12,7 @@ const StyledSocialIconsContainer = styled.div`
 
   svg {
     margin: 0.2rem;
-    color: ${({ theme }) => theme.colors.default.white};
+    color: var(--default-white);
     font-size: ${({ theme }) => theme.fontSizes.xl2};
     background-color: ${({ backgroundColor }) => backgroundColor};
     transform: scale(1);
