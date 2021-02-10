@@ -1,6 +1,7 @@
 import { css, Global, useTheme } from "@emotion/react";
 import lightTheme from "./lightTheme";
 import darkTheme from "./darkTheme";
+import smoothTheme from "./smoothTheme";
 import coolTheme from "./coolTheme";
 
 // Emotion Global Styles
@@ -96,6 +97,10 @@ const GlobalStyles = () => {
           ${darkTheme}
         }
 
+        .smooth {
+          ${smoothTheme}
+        }
+        
         .cool {
           ${coolTheme}
         }

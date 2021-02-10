@@ -17,7 +17,7 @@ const App = ({ Component, pageProps }) => {
         attribute="class"
         /* defaultTheme="system" */
         enableSystem={false}
-        themes={["light", "dark", "cool"]}
+        themes={["light", "dark", "smooth", "cool"]}
       >
         <ReduxProvider store={store}>
           <GlobalStyles />
