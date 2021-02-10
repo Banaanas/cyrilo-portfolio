@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import StyledTextContainer from "./StyledTextContainer";
 
 export const StyledShortStory = styled(StyledTextContainer)`
+  max-height: 999999px; /* Cf. -> Note 5 - To prevent Android Chrome from boosting font-size */
   color: var(--secondary-dark);
   background-color: var(--secondary-lightest1);
 

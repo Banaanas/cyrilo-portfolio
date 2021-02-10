@@ -12,6 +12,7 @@ const StyledLongStory = styled(StyledTextContainer)`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  max-height: 999999px; /* Cf. -> Note 5 - To prevent Android Chrome from boosting font-size */
   margin: 1rem 0;
   overflow: hidden;
   color: var(--secondary-dark);

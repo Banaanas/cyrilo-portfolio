@@ -35,3 +35,8 @@ can NOT be visible (because Scroll is impossible).
 Because some Browsers still don't support CSS "scroll-behavior: smooth", React-Scroll
 Library has also been used.
 
+5 - max-height: 999999px;
+https://stackoverflow.com/questions/11289166/chrome-on-android-resizes-font
+Android Chrome boosts (increases) font-size to elements with dynamic heights,
+making the font size higher. To prevent that, a work-around is to fix an high
+max-height (999999px)
