@@ -21,7 +21,7 @@ const StyledSVG = styled(motion.svg)`
 
   #glow {
     opacity: 0.5;
-    animation: glowing 5000ms infinite alternate-reverse;
+    animation: glowing 2s infinite alternate-reverse;
   }
 
   @keyframes glowing {
@@ -44,11 +44,11 @@ const PlanetCyril = () => {
       strokeMiterlimit="2"
       clipRule="evenodd"
       viewBox="0 0 584 546"
-      initial={{ opacity: 0.9995, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0.9995, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{
         type: "spring",
-        duration: 5,
+        duration: 1,
         repeat: Infinity,
         repeatType: "mirror",
       }}

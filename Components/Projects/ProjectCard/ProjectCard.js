@@ -17,7 +17,7 @@ const StyledProjectContainer = styled(motion.div)`
   padding: 1rem;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: var(--featured-projects-shadow);
+  box-shadow: var(--projects-shadow);
 `;
 
 const StyledImage = styled.div`
@@ -38,13 +38,9 @@ const StyledContainer = styled.div`
 `;
 
 const StyledProjectName = styled.div`
-  /* If it's Other Project's Card, then color is white */
   font-family: "Nexa Bold", sans-serif;
   text-align: center;
   text-transform: uppercase;
-  /*
-  text-shadow: 0 0 3px var(--secondary-darker); !* To make Project's Name more readable *!
-  */
   word-break: break-all;
 `;
 

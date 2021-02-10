@@ -17,17 +17,41 @@ const StyledProjectsContainer = styled(motion.div)`
   width: 100%;
   max-width: 1320px;
 
+  /* Other Projects Card - ODD */
   .project-cards:nth-of-type(odd) {
     background-color: var(--other-projects-background-odd);
+
     .project-names {
       color: var(--other-projects-name-odd);
     }
+
+    .software-stack {
+      border-top: 3px solid var(--other-projects-software-stack-odd);
+      border-bottom: 3px solid var(--other-projects-software-stack-odd);
+    }
+
+    .project-links-icons {
+      color: var(--other-projects-links-color-odd);
+      background-color: var(--other-projects-links-background-color-odd);
+    }
   }
 
+  /* Other Projects Card - EVEN */
   .project-cards:nth-of-type(even) {
     background-color: var(--other-projects-background-even);
+
     .project-names {
       color: var(--other-projects-name-even);
+    }
+
+    .software-stack {
+      border-top: 3px solid var(--other-projects-software-stack-even);
+      border-bottom: 3px solid var(--other-projects-software-stack-even);
+    }
+
+    .project-links-icons {
+      color: var(--other-projects-links-color-even);
+      background-color: var(--other-projects-links-background-color-even);
     }
   }
 `;
@@ -50,14 +74,6 @@ const OtherProjects = ({ otherProjects }) => {
     (state) => state.otherProjects.showOtherProjects,
   );
 
-  // Project Card background color will change in function of the Index
-  const findIndexMultiple = (index) => {
-    if (index === 0) return "var(--other-project-background-1)";
-    if (index % 3 === 0) return "var(--other-project-background-1)";
-    if (index % 2 === 0) return "var(--other-project-background-3)";
-    return "var(--other-project-background-2)";
-  };
-
   return (
     <>
       <OtherProjectsStar />
@@ -67,17 +83,9 @@ const OtherProjects = ({ otherProjects }) => {
         <>
           <StyledTitle>Other Projects</StyledTitle>
           <StyledProjectsContainer>
-            {otherProjects.map((project, index) => (
+            {otherProjects.map((project) => (
               <React.Fragment key={project.id}>
-                <ProjectCard
-                  project={project}
-                  key={project.id}
-                  id="gino"
-                  /*
-                  backgroundColor={findIndexMultiple(index)}
-*/
-                  otherProject
-                />
+                <ProjectCard project={project} key={project.id} />
               </React.Fragment>
             ))}
           </StyledProjectsContainer>

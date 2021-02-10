@@ -9,8 +9,6 @@ const StyledList = styled.ul`
   margin: 0;
   padding: 1rem 0;
   list-style: none;
-  border-top: 3px solid var(--default-white);
-  border-bottom: 3px solid var(--default-white);
 `;
 
 const StyledElement = styled.li`
@@ -26,7 +24,7 @@ const StyledElement = styled.li`
 
 const SoftwareStack = ({ softwareStack }) => {
   return (
-    <StyledList>
+    <StyledList className="software-stack">
       {softwareStack.map((software, index) => (
         <StyledElement key={`${index}-${software}`}>{software}</StyledElement>
       ))}

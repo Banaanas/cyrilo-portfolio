@@ -19,6 +19,16 @@ const StyledProjectsContainer = styled.div`
   .project-names {
     color: var(--featured-projects-name);
   }
+
+  .software-stack {
+    border-top: 3px solid var(--featured-projects-software-stack);
+    border-bottom: 3px solid var(--featured-projects-software-stack);
+  }
+
+  .project-links-icons {
+    color: var(--featured-projects-links-color);
+    background-color: var(--featured-projects-links-background-color);
+  }
 `;
 
 const StarWrapper = styled(motion.div)`
@@ -41,14 +51,7 @@ const FeaturedProjects = ({ featuredProjects }) => {
   return (
     <StyledProjectsContainer>
       {featuredProjects.map((project) => (
-        <ProjectCard
-          project={project}
-          key={project.id}
-          backgroundColor="var(--featured-projects-background)"
-          otherProject={
-            false
-          } /* FeaturedProjectCard has different Project Name's color than OtherProjectCard  */
-        />
+        <ProjectCard project={project} key={project.id} />
       ))}
       <StarWrapper
         animate={{ rotate: 360, scale: [1, 1.5, 2, 2.5, 2, 1.5, 1] }}

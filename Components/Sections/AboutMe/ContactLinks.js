@@ -28,7 +28,6 @@ const StyledSocialIconsContainer = styled.div`
     align-self: baseline;
     color: var(--primary-dark);
     font-size: ${({ theme }) => theme.fontSizes.xl};
-    /* background-color: var(--secondary-main); */
     transform: scale(1);
     opacity: 0.9;
     transition: transform, opacity, 200ms ease;

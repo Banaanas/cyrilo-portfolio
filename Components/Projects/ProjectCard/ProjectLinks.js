@@ -1,6 +1,6 @@
 import {
   VscGithubInverted as GitHubIcon,
-  VscLinkExternal as ExternalLinkIcon,
+  VscLinkExternal as LinkedInIcon,
 } from "react-icons/vsc";
 import styled from "@emotion/styled";
 import ExternalLink from "../../Links/ExternalLink";
@@ -12,9 +12,7 @@ const StyledSocialIconsContainer = styled.div`
 
   svg {
     margin: 0.2rem;
-    color: var(--default-white);
     font-size: ${({ theme }) => theme.fontSizes.xl2};
-    background-color: ${({ backgroundColor }) => backgroundColor};
     transform: scale(1);
     opacity: 0.9;
     transition: transform, opacity, 200ms ease;
@@ -26,20 +24,20 @@ const StyledSocialIconsContainer = styled.div`
   }
 `;
 
-const ProjectLinks = ({ project, backgroundColor }) => {
+const ProjectLinks = ({ project }) => {
   const { url, gitHubURL } = project;
 
   return (
-    <StyledSocialIconsContainer backgroundColor={backgroundColor}>
+    <StyledSocialIconsContainer>
       <ExternalLink
         ariaLabel="GitHub Repository Link"
         href={gitHubURL}
         title="GitHub Repository"
       >
-        <GitHubIcon />
+        <GitHubIcon className="project-links-icons" />
       </ExternalLink>
       <ExternalLink ariaLabel="Live Website" href={url} title={url}>
-        <ExternalLinkIcon />
+        <LinkedInIcon className="project-links-icons" />
       </ExternalLink>
     </StyledSocialIconsContainer>
   );

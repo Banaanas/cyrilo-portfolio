@@ -56,7 +56,7 @@ const StyledContainer = styled.div`
 
 const StyledH2 = styled(GenericStyledH2)`
   display: none;
-  color: var(--secondary-main);
+  color: var(--cyril-h2);
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
     display: flex;
   }
@@ -68,8 +68,10 @@ const StyledHalfMoonH2 = styled(GenericStyledH2)`
   top: -3rem;
   z-index: 1000;
   display: flex;
-  color: var(--secondary-main);
+  color: var(--cyril-h2-responsive);
   -webkit-text-stroke: 0.5px var(--secondary-darker);
+  text-shadow: 0 0 3px yellow; 
+
 
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
     display: none;
@@ -193,9 +195,7 @@ const HeroBannerSection = () => {
           </NextLink>
         </StyledContainer>
 
-{/*
         <PlanetCyril />
-*/}
 
         <NextLink href={navLinks[1].href} passHref>
           <StyledLink

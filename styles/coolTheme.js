@@ -1,16 +1,36 @@
 import { css } from "@emotion/react";
 
 const coolTheme = css`
-  /* Elements Colors */
-  --global-background-color: #cffbd8;
-  --styled-title-color: #17b978;
-  --featured-projects-background: #161012;
-  --featured-projects-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.12);
-  --other-projects-background-odd: #17b978;
-  --other-projects-background-even: #071a52;
-  --other-projects-name-odd: #071a52;
-  --other-projects-name-even: #17b978;
-  --short-story-name: #17b978;
+  /* General Elements */
+  --global-background-color: var(--primary-lightest2);
+  --styled-title-color: var(--primary-main);
+
+  /* Project Card */
+  --projects-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.12);
+
+  /* Featured Projects */
+  --featured-projects-background: var(--secondary-darker);
+  --featured-projects-name: var(--primary-main);
+  --featured-projects-software-stack: var(--default-white);
+  --featured-projects-links-background-color: var(--secondary-dark);
+  --featured-projects-links-color: var(--default-white);
+
+  /* Other Projects - nth-of-type(odd) */
+  --other-projects-background-odd: var(--primary-main);
+  --other-projects-name-odd: var(--secondary-main);
+  --other-projects-software-stack-odd: var(--secondary-main);
+  --other-projects-links-color-odd: var(--secondary-main);
+  --other-projects-links-background-color-odd: var(--primary-main);
+
+  /* Other Projects - nth-of-type(even) */
+  --other-projects-background-even: var(--secondary-main);
+  --other-projects-name-even: var(--primary-main);
+  --other-projects-software-stack-even: var(--default-white);
+  --other-projects-links-background-color-even: var(--secondary-main);
+  --other-projects-links-color-even: var(--default-white);
+  
+  /* Short Story */
+  --short-story-name: var(--primary-main);
 
   /* Default Colors */
   --default-white: #fbf9fa;
