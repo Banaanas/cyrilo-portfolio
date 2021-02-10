@@ -11,6 +11,14 @@ const StyledProjectsContainer = styled.div`
   justify-items: center;
   width: 100%;
   max-width: 850px;
+
+  .project-cards {
+    background-color: var(--featured-projects-background);
+  }
+
+  .project-names {
+    color: var(--featured-projects-name);
+  }
 `;
 
 const StarWrapper = styled(motion.div)`
@@ -36,7 +44,7 @@ const FeaturedProjects = ({ featuredProjects }) => {
         <ProjectCard
           project={project}
           key={project.id}
-          backgroundColor="var(--secondary-darker)"
+          backgroundColor="var(--featured-projects-background)"
           otherProject={
             false
           } /* FeaturedProjectCard has different Project Name's color than OtherProjectCard  */

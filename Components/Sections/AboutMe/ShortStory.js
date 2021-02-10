@@ -10,7 +10,7 @@ export const StyledShortStory = styled(StyledTextContainer)`
   }
 
   #Cyril-name {
-    color: var(--primary-main);
+    color: var(--short-story-name);
     border-radius: 4px;
   }
 `;

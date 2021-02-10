@@ -1,11 +1,13 @@
 import styled from "@emotion/styled";
 import { MdInvertColors as ChangeColorsThemeIcon } from "react-icons/md";
 import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
+import themeColorsArray from "../../styles/themeColorsArray";
 
 const StyledButton = styled.button`
   position: fixed;
-  top: 50%;
   right: 0.5rem;
+  bottom: 1rem;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -15,6 +17,8 @@ const StyledButton = styled.button`
   border-radius: 50%;
   cursor: pointer;
 
+  /* Import Next Toggled Colors Theme CSS Variables to use the next  */
+  ${({ nextThemeIndex }) => themeColorsArray[nextThemeIndex]}
   /* When click on Button */
   :focus {
     outline: none; /* Outline is unaesthetically squared because SVG has a rounded border */
@@ -32,15 +36,33 @@ const StyledButton = styled.button`
   }
 `;
 
-// Cf. Note 1 - Flash
+// Cf. -> Note 1 - Flash
 // Button to change the Colors Theme
 const ChangeColorsThemeButton = () => {
+  const [nextThemeIndex, setNextThemeIndex] = useState(0);
   const { theme, themes, setTheme } = useTheme();
+
+  // Determine what will be the Next Theme Index
+  useEffect(() => {
+    // Copy Array
+    const themesArray = [...themes];
+    // Find Index of actual Theme
+    const themeIndex = themesArray.indexOf(theme);
+
+    // Determine Nex Index
+    let newThemeIndex = themeIndex + 1;
+    // Set new Index to 0 if the previous one corresponds to the last Theme in array
+    if (newThemeIndex >= themesArray.length) {
+      newThemeIndex = 0;
+    }
+    // Update Next Index state
+    setNextThemeIndex(newThemeIndex);
+  }, [themes, theme, nextThemeIndex]);
 
   const changeTheme = () => {
     const themesArray = [...themes];
-    const themeIndex2 = themesArray.indexOf(theme);
-    let newThemeIndex = themeIndex2 + 1;
+    const themeIndex = themesArray.indexOf(theme);
+    let newThemeIndex = themeIndex + 1;
 
     // Set new Index to 0 if the previous one corresponds to the last Theme in array
     if (newThemeIndex >= themesArray.length) {
@@ -51,7 +73,11 @@ const ChangeColorsThemeButton = () => {
   };
 
   return (
-    <StyledButton onClick={changeTheme} title="Change Colors Theme">
+    <StyledButton
+      onClick={changeTheme}
+      nextThemeIndex={nextThemeIndex}
+      title="Change Colors Theme"
+    >
       <ChangeColorsThemeIcon />
     </StyledButton>
   );

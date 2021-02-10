@@ -16,6 +16,20 @@ const StyledProjectsContainer = styled(motion.div)`
   justify-items: center;
   width: 100%;
   max-width: 1320px;
+
+  .project-cards:nth-of-type(odd) {
+    background-color: var(--other-projects-background-odd);
+    .project-names {
+      color: var(--other-projects-name-odd);
+    }
+  }
+
+  .project-cards:nth-of-type(even) {
+    background-color: var(--other-projects-background-even);
+    .project-names {
+      color: var(--other-projects-name-even);
+    }
+  }
 `;
 
 const otherProjectsContainerVariants = {
@@ -38,10 +52,10 @@ const OtherProjects = ({ otherProjects }) => {
 
   // Project Card background color will change in function of the Index
   const findIndexMultiple = (index) => {
-    if (index === 0) return "var(--primary-darker)";
-    if (index % 3 === 0) return "var(--primary-darker)";
-    if (index % 2 === 0) return "var(--secondary-dark)";
-    return "var(--primary-dark)";
+    if (index === 0) return "var(--other-project-background-1)";
+    if (index % 3 === 0) return "var(--other-project-background-1)";
+    if (index % 2 === 0) return "var(--other-project-background-3)";
+    return "var(--other-project-background-2)";
   };
 
   return (
@@ -58,7 +72,10 @@ const OtherProjects = ({ otherProjects }) => {
                 <ProjectCard
                   project={project}
                   key={project.id}
+                  id="gino"
+                  /*
                   backgroundColor={findIndexMultiple(index)}
+*/
                   otherProject
                 />
               </React.Fragment>

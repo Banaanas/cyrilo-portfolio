@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Element as ScrollWrapper } from "react-scroll";
 import { useInView } from "react-intersection-observer";
 import StyledSection from "../../StyledComponents/StyledSection";
-import updateHashNameURL from "../../../utils/updateHashNameURL";
 import projectsList from "../../../data/projects-list";
 import FeaturedProjects from "../../Projects/FeaturedProjects/FeaturedProjects";
 import StyledTitle from "../../StyledComponents/StyledTitle";

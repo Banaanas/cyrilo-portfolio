@@ -16,9 +16,8 @@ const StyledProjectContainer = styled(motion.div)`
   margin: 0.5rem;
   padding: 1rem;
   overflow: hidden;
-  background-color: ${({ backgroundColor }) => backgroundColor};
   border-radius: 15px;
-  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: var(--featured-projects-shadow);
 `;
 
 const StyledImage = styled.div`
@@ -40,16 +39,16 @@ const StyledContainer = styled.div`
 
 const StyledProjectName = styled.div`
   /* If it's Other Project's Card, then color is white */
-  color: ${({ otherProject }) =>
-    otherProject ? "var(--default-white)" : "var(--primary-main)"};
   font-family: "Nexa Bold", sans-serif;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 0 0 3px var(--secondary-darker); /* To make Project's Name more readable */
+  /*
+  text-shadow: 0 0 3px var(--secondary-darker); !* To make Project's Name more readable *!
+  */
   word-break: break-all;
 `;
 
-const ProjectCard = ({ project, backgroundColor, otherProject }) => {
+const ProjectCard = ({ project, otherProject }) => {
   const { name, softwareStack } = project;
 
   const featuredProjectAnimate = {
@@ -62,8 +61,7 @@ const ProjectCard = ({ project, backgroundColor, otherProject }) => {
     <StyledProjectContainer
       whileHover={featuredProjectAnimate}
       whileTap={featuredProjectAnimate}
-      className="featured-projects"
-      backgroundColor={backgroundColor}
+      className="project-cards"
     >
       <ExternalLink
         ariaLabel="Live Website"
@@ -87,7 +85,10 @@ const ProjectCard = ({ project, backgroundColor, otherProject }) => {
           href={project.url}
           title={project.name}
         >
-          <StyledProjectName otherProject={otherProject}>
+          <StyledProjectName
+            className="project-names"
+            otherProject={otherProject}
+          >
             {name}
           </StyledProjectName>
         </ExternalLink>

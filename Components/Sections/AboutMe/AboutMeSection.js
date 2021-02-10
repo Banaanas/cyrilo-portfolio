@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import { useInView } from "react-intersection-observer";
 import { Element as ScrollWrapper } from "react-scroll";
 import StyledSection from "../../StyledComponents/StyledSection";
-import updateHashNameURL from "../../../utils/updateHashNameURL";
 import StyledTitle from "../../StyledComponents/StyledTitle";
 import ShortStory from "./ShortStory";
 import LongStory from "./LongStory";

@@ -61,6 +61,7 @@ const StyledLink = styled.a`
   justify-content: center;
   padding: 1rem 0;
   color: var(--default-white);
+  -webkit-text-stroke: var(--text-stroke-darktheme, none);
   font-weight: bold;
   font-size: ${({ theme }) => theme.fontSizes.xl2};
   letter-spacing: 0.2rem;

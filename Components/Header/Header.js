@@ -24,7 +24,7 @@ const StyledHeader = styled.header`
     var(--secondary-main) 50%
   );
   transform: translateY(${({ translateY }) => translateY});
-  transition: transform, 100ms ease-out;
+  transition: transform 100ms ease-out;
 `;
 
 const StyledHeaderWrapper = styled.div`

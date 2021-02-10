@@ -1,5 +1,5 @@
 const appTheme = {
-  colors: {
+  /* colors: {
     backgroundColor: "#fff2f6",
     primary: {
       darker: "#7f002a",
@@ -22,7 +22,7 @@ const appTheme = {
     default: {
       white: "#fbf9fa",
     },
-  },
+  },*/
   fontSizes: {
     xs: "0.75rem",
     sm: "0.875rem",
@@ -48,6 +48,11 @@ const appTheme = {
   },
   globalMinWidth: "320px",
   globalMaxWidth: "1100px",
+  transitions: {
+    themeColors: "background-color 500ms ease" /* Global Background */,
+    svgFill:
+      "fill 500ms ease;" /* Section Dividers / StyledDividerContainer.js */,
+  },
 };
 
 export default appTheme;

@@ -1,4 +1,4 @@
-import { css, Global } from "@emotion/react";
+import { css, Global, useTheme } from "@emotion/react";
 import lightTheme from "./lightTheme";
 import darkTheme from "./darkTheme";
 import coolTheme from "./coolTheme";
@@ -6,6 +6,8 @@ import coolTheme from "./coolTheme";
 // Emotion Global Styles
 // Next.js authorizes Materialize.css (Global CSS) to be imported ONLY from _app.js
 const GlobalStyles = () => {
+  const theme = useTheme();
+
   return (
     <Global
       // CSS Format
@@ -39,8 +41,8 @@ const GlobalStyles = () => {
           font-family: "Nexa Regular", -apple-system, BlinkMacSystemFont,
             "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
             "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-          background-color: var(--background-color);
-          transition: var(--background-transition);
+          background-color: var(--global-background-color);
+          transition: ${theme.transitions.themeColors};
         }
 
         #__next {

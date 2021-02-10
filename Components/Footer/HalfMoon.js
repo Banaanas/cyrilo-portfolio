@@ -9,7 +9,6 @@ const StyledDiv = styled.div`
   min-width: ${({ theme }) => theme.globalMinWidth};
   height: 8rem;
   transform: scaleY(-1); /* Vertical flip */
-  transition: ${({ theme }) => theme.colors.backgroundColorTransition};
 
   svg {
     position: absolute;
