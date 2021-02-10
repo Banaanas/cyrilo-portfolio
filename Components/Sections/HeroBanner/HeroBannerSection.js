@@ -1,10 +1,9 @@
-import { useEffect } from "react";
+import {useEffect} from "react";
 import styled from "@emotion/styled";
-import Image from "next/image";
 import NextLink from "next/link";
-import { Element as ScrollWrapper } from "react-scroll";
-import { FaArrowDown as DownArrowIcon } from "react-icons/fa";
-import { useInView } from "react-intersection-observer";
+import {Element as ScrollWrapper} from "react-scroll";
+import {FaArrowDown as DownArrowIcon} from "react-icons/fa";
+import {useInView} from "react-intersection-observer";
 import smoothScrollTo from "../../../utils/smoothScrollTo";
 import GenericStyledSection from "../../StyledComponents/StyledSection";
 import navLinks from "../../../data/navLinks";

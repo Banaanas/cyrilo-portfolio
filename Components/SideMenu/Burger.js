@@ -107,9 +107,9 @@ const Burger = ({ menuID }) => {
       aria-expanded={isExpanded}
       aria-controls={menuID}
       id="burger-button"
-      variants={buttonVariants}
+      /*variants={buttonVariants}
       initiate={isMenuOpen ? "animate" : "initiate"}
-      animate={isMenuOpen ? "initiate" : "animate"}
+      animate={isMenuOpen ? "initiate" : "animate"}*/
     >
       <span />
       <span />
