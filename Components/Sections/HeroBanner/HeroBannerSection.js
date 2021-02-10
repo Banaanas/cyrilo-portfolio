@@ -193,7 +193,9 @@ const HeroBannerSection = () => {
           </NextLink>
         </StyledContainer>
 
+{/*
         <PlanetCyril />
+*/}
 
         <NextLink href={navLinks[1].href} passHref>
           <StyledLink
