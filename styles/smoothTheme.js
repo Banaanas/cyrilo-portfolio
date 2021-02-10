@@ -2,8 +2,8 @@ import { css } from "@emotion/react";
 
 const smoothTheme = css`
   /* General Elements */
-  --global-background-color: #ffffd2;
-  --styled-title-color: var(--primary-main);
+  --global-background-color: #fffffe;
+  --styled-title-color: var(--primary-darker);
 
   /* HeroBanner Section */
   --cyril-h2: var(--primary-main);
@@ -17,50 +17,50 @@ const smoothTheme = css`
   --projects-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.12);
 
   /* Featured Projects */
-  --featured-projects-background: var(--secondary-darker);
+  --featured-projects-background: var(--secondary-dark);
   --featured-projects-name: var(--primary-main);
   --featured-projects-software-stack: var(--default-white);
-  --featured-projects-links-background-color: var(--secondary-dark);
   --featured-projects-links-color: var(--default-white);
+  --featured-projects-links-background-color: var(--secondary-dark);
 
   /* Other Projects - nth-of-type(odd) */
   --other-projects-background-odd: var(--primary-main);
-  --other-projects-name-odd: var(--secondary-main);
+  --other-projects-name-odd: var(--secondary-darker);
   --other-projects-software-stack-odd: var(--secondary-main);
-  --other-projects-links-color-odd: var(--secondary-main);
+  --other-projects-links-color-odd: var(--secondary-darker);
   --other-projects-links-background-color-odd: var(--primary-main);
 
   /* Other Projects - nth-of-type(even) */
   --other-projects-background-even: var(--secondary-main);
-  --other-projects-name-even: var(--primary-main);
+  --other-projects-name-even: var(--primary-darker);
   --other-projects-software-stack-even: var(--default-white);
+  --other-projects-links-color-even: var(--primary-darker);
   --other-projects-links-background-color-even: var(--secondary-main);
-  --other-projects-links-color-even: var(--default-white);
 
   /* Short Story */
-  --short-story-name: var(--primary-main);
+  --short-story-name: var(--secondary-dark);
 
   /* Default Colors */
   --default-white: #fbf9fa;
 
   /* Primary Color */
 
-  --primary-darker: #204470;
-  --primary-dark: #5486A8;
-  --primary-main: #A8D8EA;
-  --primary-light: #BFE7F2;
-  --primary-lighter: #CEF3F8;
-  --primary-lightest1: #E0FBFC;
-  --primary-lightest2: #EFFDFD;
+  --primary-darker: #72234D;
+  --primary-dark: #AB5E78;
+  --primary-main: #EEBBC3;
+  --primary-light: #F4CDCF;
+  --primary-lighter: #F9DAD9;
+  --primary-lightest1: #FDEAE7;
+  --primary-lightest2: #FEF5F3;
 
   /* Secondary Color */
-  --secondary-darker: #291C68;
-  --secondary-dark: #5E4B9C;
-  --secondary-main: #AA96DA;
-  --secondary-light: #C4B2E8;
-  --secondary-lighter: #D6C6F3;
-  --secondary-lightest1: #E8DBFB;
-  --secondary-lightest2: #F3EDFD;
+  --secondary-darker: #060921;
+  --secondary-dark: #111632;
+  --secondary-main: #232946;
+  --secondary-light: #596490;
+  --secondary-lighter: #8B98C7;
+  --secondary-lightest1: #BDC7EC;
+  --secondary-lightest2: #DDE3F5;
 `;
 
 export default smoothTheme;

@@ -20,8 +20,8 @@ const darkTheme = css`
   --featured-projects-background: var(--secondary-dark);
   --featured-projects-name: var(--primary-main);
   --featured-projects-software-stack: var(--default-white);
-  --featured-projects-links-background-color: var(--secondary-dark);
   --featured-projects-links-color: var(--default-white);
+  --featured-projects-links-background-color: var(--secondary-dark);
 
   /* Other Projects - nth-of-type(odd) */
   --other-projects-background-odd: var(--primary-main);
@@ -34,8 +34,8 @@ const darkTheme = css`
   --other-projects-background-even: var(--secondary-main);
   --other-projects-name-even: var(--primary-main);
   --other-projects-software-stack-even: var(--default-white);
-  --other-projects-links-background-color-even: var(--secondary-main);
   --other-projects-links-color-even: var(--default-white);
+  --other-projects-links-background-color-even: var(--secondary-main);
 
   /* Short Story */
   --short-story-name: var(--secondary-darker);

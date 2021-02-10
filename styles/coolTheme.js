@@ -20,22 +20,22 @@ const coolTheme = css`
   --featured-projects-background: var(--secondary-darker);
   --featured-projects-name: var(--primary-main);
   --featured-projects-software-stack: var(--default-white);
-  --featured-projects-links-background-color: var(--secondary-dark);
   --featured-projects-links-color: var(--default-white);
+  --featured-projects-links-background-color: var(--secondary-darker);
 
   /* Other Projects - nth-of-type(odd) */
   --other-projects-background-odd: var(--primary-main);
-  --other-projects-name-odd: var(--secondary-main);
+  --other-projects-name-odd: var(--secondary-darker);
   --other-projects-software-stack-odd: var(--secondary-main);
-  --other-projects-links-color-odd: var(--secondary-main);
+  --other-projects-links-color-odd: var(--secondary-darker);
   --other-projects-links-background-color-odd: var(--primary-main);
 
   /* Other Projects - nth-of-type(even) */
   --other-projects-background-even: var(--secondary-main);
-  --other-projects-name-even: var(--primary-main);
+  --other-projects-name-even: var(--default-white);
   --other-projects-software-stack-even: var(--default-white);
-  --other-projects-links-background-color-even: var(--secondary-main);
   --other-projects-links-color-even: var(--default-white);
+  --other-projects-links-background-color-even: var(--secondary-main);
 
   /* Short Story */
   --short-story-name: var(--primary-main);
