@@ -5,6 +5,14 @@ const coolTheme = css`
   --global-background-color: var(--primary-lightest2);
   --styled-title-color: var(--primary-main);
 
+  /* HeroBanner Section */
+  --cyril-h2: var(--primary-main);
+
+  /* HeroBanner Section - Located in the HalfMoon Shape - Responsive */
+  --cyril-h2-responsive: var(--primary-main);
+  --cyril-h2-responsive-text-stroke: 0.5px var(--secondary-darker);
+  --cyril-h2-responsive-text-shadow: 0 0 3px var(--secondary-darker);
+
   /* Project Card */
   --projects-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.12);
 
@@ -28,7 +36,7 @@ const coolTheme = css`
   --other-projects-software-stack-even: var(--default-white);
   --other-projects-links-background-color-even: var(--secondary-main);
   --other-projects-links-color-even: var(--default-white);
-  
+
   /* Short Story */
   --short-story-name: var(--primary-main);
 

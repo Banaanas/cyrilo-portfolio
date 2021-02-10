@@ -7,9 +7,11 @@ const darkTheme = css`
 
   /* HeroBanner Section */
   --cyril-h2: var(--primary-main);
-  --cyril-h2-responsive: var(
-    --primary-main
-  ); /* Located in the HalfMoon Shape - Responsive */
+
+  /* HeroBanner Section - Located in the HalfMoon Shape - Responsive */
+  --cyril-h2-responsive: var(--primary-main);
+  --cyril-h2-responsive-text-stroke: 0.5px var(--secondary-darker);
+  --cyril-h2-responsive-text-shadow: 0 0 3px var(--secondary-darker);
 
   /* Project Card */
   --projects-shadow: 0 16px 24px 0 rgba(255, 226, 39, 0.12); /* Primary Main RGBA */

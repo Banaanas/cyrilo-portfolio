@@ -47,8 +47,8 @@ const PlanetCyril = () => {
       initial={{ opacity: 0.9995, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        type: "spring",
-        duration: 1,
+        type: "tween",
+        duration: 5,
         repeat: Infinity,
         repeatType: "mirror",
       }}

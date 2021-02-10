@@ -69,9 +69,8 @@ const StyledHalfMoonH2 = styled(GenericStyledH2)`
   z-index: 1000;
   display: flex;
   color: var(--cyril-h2-responsive);
-  -webkit-text-stroke: 0.5px var(--secondary-darker);
-  text-shadow: 0 0 3px yellow; 
-
+  -webkit-text-stroke: var(--cyril-h2-responsive-text-stroke);
+  text-shadow: var(--cyril-h2-responsive-text-shadow);
 
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
     display: none;
