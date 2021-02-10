@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 
 const coolTheme = css`
   /* General Elements */
-  --global-background-color: var(--primary-lightest2);
+  --global-background-color: #ffffd2;
   --styled-title-color: var(--primary-main);
 
   /* HeroBanner Section */
@@ -44,22 +44,23 @@ const coolTheme = css`
   --default-white: #fbf9fa;
 
   /* Primary Color */
-  --primary-darker: #045858;
-  --primary-dark: #0b856c;
-  --primary-main: #17b978;
-  --primary-light: #49d58e;
-  --primary-lighter: #6feaa0;
-  --primary-lightest1: #a1f8bb;
-  --primary-lightest2: #cffbd8;
+
+  --primary-darker: #204470;
+  --primary-dark: #5486A8;
+  --primary-main: #A8D8EA;
+  --primary-light: #BFE7F2;
+  --primary-lighter: #CEF3F8;
+  --primary-lightest1: #E0FBFC;
+  --primary-lightest2: #EFFDFD;
 
   /* Secondary Color */
-  --secondary-darker: #010627;
-  --secondary-dark: #030e3b;
-  --secondary-main: #071a52;
-  --secondary-light: #2f4c97;
-  --secondary-lighter: #5b7dcb;
-  --secondary-lightest1: #96b3ed;
-  --secondary-lightest2: #c9d9f6;
+  --secondary-darker: #291C68;
+  --secondary-dark: #5E4B9C;
+  --secondary-main: #AA96DA;
+  --secondary-light: #C4B2E8;
+  --secondary-lighter: #D6C6F3;
+  --secondary-lightest1: #E8DBFB;
+  --secondary-lightest2: #F3EDFD;
 `;
 
 export default coolTheme;

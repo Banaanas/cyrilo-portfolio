@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 
 const lightTheme = css`
   /* General Elements */
-  --global-background-color: var(--primary-lightest2);
+  --global-background-color: var(--secondary-lightest2);
   --styled-title-color: var(--primary-main);
 
   /* HeroBanner Section */
@@ -12,7 +12,7 @@ const lightTheme = css`
   --cyril-h2-responsive: var(--primary-main);
   --cyril-h2-responsive-text-stroke: 0.5px var(--secondary-darker);
   --cyril-h2-responsive-text-shadow: 0 0 3px var(--secondary-darker);
-  
+
   /* Project Card */
   --projects-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.12);
 
@@ -44,22 +44,22 @@ const lightTheme = css`
   --default-white: #fbf9fa;
 
   /* Primary Color */
-  --primary-darker: #7f002a;
-  --primary-dark: #be003f;
-  --primary-main: #fd0054;
-  --primary-light: #fe7fa9;
-  --primary-lighter: #febfd4;
-  --primary-lightest1: #ffe5ee;
-  --primary-lightest2: #fff2f6;
+  --primary-darker: #6c0b3e;
+  --primary-dark: #a21f4b;
+  --primary-main: #e23e57;
+  --primary-light: #ed6c73;
+  --primary-lighter: #f68e8b;
+  --primary-lightest1: #fcbcb2;
+  --primary-lightest2: #fde0d8;
 
   /* Secondary Color */
-  --secondary-darker: #161012;
-  --secondary-dark: #20181b;
-  --secondary-main: #2b2024;
-  --secondary-light: #958f91;
-  --secondary-lighter: #cac7c8;
-  --secondary-lightest1: #e9e8e9;
-  --secondary-lightest2: #f4f4f4;
+  --secondary-darker: #0e051e;
+  --secondary-dark: #1d0e2d;
+  --secondary-main: #311d3f;
+  --secondary-light: #77538b;
+  --secondary-lighter: #b285c5;
+  --secondary-lightest1: #dfb8eb;
+  --secondary-lightest2: #f0daf5;
 `;
 
 export default lightTheme;
