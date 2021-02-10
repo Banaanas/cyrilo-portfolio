@@ -5,6 +5,15 @@ const lightTheme = css`
   --global-background-color: var(--secondary-lightest2);
   --styled-title-color: var(--primary-main);
 
+  /* Change Theme Button - Colors symbolizing those Theme Colors */
+  --change-theme-button-color: var(--primary-main);
+  --change-theme-button-background: var(--secondary-lightest2);
+
+  /* Planet Cyril - Drawing */
+  --planet-Cyril: var(--primary-main);
+  --planet-Cyril-stars-light-shade: var(--primary-main);
+  --planet-Cyril-stars-dark-shade: var(--secondary-main);
+
   /* HeroBanner Section */
   --cyril-h2: var(--primary-main);
 

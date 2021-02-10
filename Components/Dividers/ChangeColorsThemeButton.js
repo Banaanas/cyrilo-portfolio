@@ -22,16 +22,16 @@ const StyledButton = styled.button`
   /* When click on Button */
   :focus {
     outline: none; /* Outline is unaesthetically squared because SVG has a rounded border */
-    box-shadow: 0 0 3pt 2pt var(--primary-main); /* To replace the Outline */
+    box-shadow: 0 0 3pt 2pt var(--change-theme-button-background); /* To replace the Outline */
   }
 
   /* Style SVG with Next Theme Colors */
   svg {
-    color: var(--secondary-main);
+    color: var(--change-theme-button-color);
     font-size: ${({ theme }) => theme.fontSizes.xl4};
     stroke-width: 1px;
-    background-color: var(--primary-main);
-    border: solid 5px var(--secondary-main);
+    background-color: var(--change-theme-button-background);
+    border: solid 5px var(--change-theme-button-color);
     border-radius: 50%;
   }
 `;

@@ -2,8 +2,17 @@ import { css } from "@emotion/react";
 
 const coolTheme = css`
   /* General Elements */
-  --global-background-color: #311d3f;
+  --global-background-color: var(--tertiary-main);
   --styled-title-color: var(--default-white);
+
+  /* Change Theme Button - Colors symbolizing those Theme Colors */
+  --change-theme-button-color: var(--secondary-darker);
+  --change-theme-button-background: var(--primary-main);
+
+  /* Planet Cyril - Drawing */
+  --planet-Cyril: var(--primary-main);
+  --planet-Cyril-stars-light-shade: var(--primary-main);
+  --planet-Cyril-stars-dark-shade: var(--secondary-main);
 
   /* HeroBanner Section */
   --cyril-h2: var(--primary-main);
@@ -45,22 +54,25 @@ const coolTheme = css`
 
   /* Primary Color */
 
-  --primary-darker: #6C0B3E;
-  --primary-dark: #A21F4B;
-  --primary-main: #E23E57;
-  --primary-light: #ED6C73;
-  --primary-lighter: #F68E8B;
-  --primary-lightest1: #FCBCB2;
-  --primary-lightest2: #FDE0D8;
+  --primary-darker: #6c0b3e;
+  --primary-dark: #a21f4b;
+  --primary-main: #e23e57;
+  --primary-light: #ed6c73;
+  --primary-lighter: #f68e8b;
+  --primary-lightest1: #fcbcb2;
+  --primary-lightest2: #fde0d8;
 
   /* Secondary Color */
   --secondary-darker: #410932;
-  --secondary-dark: #61183F;
-  --secondary-main: #88304E;
-  --secondary-light: #B75E74;
-  --secondary-lighter: #DB8692;
-  --secondary-lightest1: #F3B4B7;
-  --secondary-lightest2: #F9DAD8;
+  --secondary-dark: #61183f;
+  --secondary-main: #88304e;
+  --secondary-light: #b75e74;
+  --secondary-lighter: #db8692;
+  --secondary-lightest1: #f3b4b7;
+  --secondary-lightest2: #f9dad8;
+
+  /* Tertiary Color */
+  --tertiary-main: #311d3f;
 `;
 
 export default coolTheme;

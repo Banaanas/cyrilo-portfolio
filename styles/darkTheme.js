@@ -5,6 +5,15 @@ const darkTheme = css`
   --global-background-color: var(--default-dark);
   --styled-title-color: var(--primary-main);
 
+  /* Change Theme Button - Colors symbolizing those Theme Colors */
+  --change-theme-button-color: var(--global-background-color);
+  --change-theme-button-background: var(--primary-main);
+
+  /* Planet Cyril - Drawing */
+  --planet-Cyril: var(--primary-main);
+  --planet-Cyril-stars-light-shade: var(--primary-main);
+  --planet-Cyril-stars-dark-shade: var(--secondary-main);
+
   /* HeroBanner Section */
   --cyril-h2: var(--primary-main);
 
