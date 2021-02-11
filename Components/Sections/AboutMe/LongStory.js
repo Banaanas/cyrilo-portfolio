@@ -49,10 +49,10 @@ const StyledButton = styled.button`
   justify-content: space-between;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
-  color: var(--secondary-lightest1);
+  color: var(--action-button-color);
   font-family: "Nexa Bold", sans-serif;
   text-transform: uppercase;
-  background-color: var(--secondary-main);
+  background-color: var(--action-button-background);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -67,6 +67,7 @@ const StyledButton = styled.button`
     bottom: 1px;
     height: 100%;
     margin-left: 6px;
+    color: var(----action-button-icon-color);
   }
 `;
 
