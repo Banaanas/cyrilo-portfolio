@@ -210,7 +210,7 @@ const HeroBannerSection = () => {
             id="second-link"
             onClick={() => smoothScrollTo(navLinks[1].scrollName)}
           >
-            <span>{translation.heroBannerLink}</span>
+            <span>{translation.heroBannerSection.link}</span>
             <StyledDownArrowIcon />
           </StyledLink>
         </NextLink>
