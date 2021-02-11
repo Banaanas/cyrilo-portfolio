@@ -40,11 +40,11 @@ const smoothTheme = css`
   --projects-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.12);
 
   /* Featured Projects */
-  --featured-projects-background: var(--secondary-darker);
+  --featured-projects-background: var(--secondary-dark);
   --featured-projects-name: var(--default-white);
   --featured-projects-software-stack: var(--default-white);
   --featured-projects-links-color: var(--default-white);
-  --featured-projects-links-background-color: var(--secondary-darker);
+  --featured-projects-links-background-color: var(--secondary-dark);
 
   /* Other Projects - nth-of-type(odd) */
   --other-projects-background-odd: var(--primary-main);

@@ -40,17 +40,17 @@ const darkTheme = css`
   --projects-shadow: 0 16px 24px 0 rgba(255, 226, 39, 0.12); /* Primary Main RGBA */
 
   /* Featured Projects */
-  --featured-projects-background: var(--secondary-dark);
+  --featured-projects-background: var(--secondary-main);
   --featured-projects-name: var(--primary-main);
   --featured-projects-software-stack: var(--default-white);
   --featured-projects-links-color: var(--default-white);
-  --featured-projects-links-background-color: var(--secondary-dark);
+  --featured-projects-links-background-color: var(--secondary-main);
 
   /* Other Projects - nth-of-type(odd) */
   --other-projects-background-odd: var(--primary-main);
-  --other-projects-software-stack-odd: var(--secondary-dark);
-  --other-projects-name-odd: var(--secondary-dark);
-  --other-projects-links-color-odd: var(--secondary-dark);
+  --other-projects-software-stack-odd: var(--secondary-darker);
+  --other-projects-name-odd: var(--secondary-darker);
+  --other-projects-links-color-odd: var(--secondary-darker);
   --other-projects-links-background-color-odd: var(--primary-main);
 
   /* Other Projects - nth-of-type(even) */

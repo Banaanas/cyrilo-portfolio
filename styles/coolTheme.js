@@ -10,7 +10,7 @@ const coolTheme = css`
   /* Action Button */
   --action-button-background: var(--default-white);
   --action-button-color: var(--tertiary-main);
-  --action-button-icon-color: var(--tertiary-main);
+  --action-button-icon-color: var(--primary-main);
 
   /* Burger Button */
   --burger-color-open: var(--default-white);
