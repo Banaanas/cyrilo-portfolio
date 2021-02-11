@@ -1,24 +1,24 @@
 import { css } from "@emotion/react";
 
-const coolTheme = css`
+const lightColors = css`
   /* General Elements */
-  --global-background-color: var(--tertiary-main);
+  --global-background-color: var(--secondary-lightest2);
 
   /* Section Title */
-  --styled-title-color: var(--default-white);
+  --styled-title-color: var(--primary-main);
 
   /* Action Button */
-  --action-button-background: var(--default-white);
-  --action-button-color: var(--tertiary-main);
-  --action-button-icon-color: var(--primary-main);
+  --action-button-background: var(--secondary-main);
+  --action-button-color: var(--primary-main);
+  --action-button-icon-color: var(--default-white);
 
   /* Burger Button */
-  --burger-color-open: var(--default-white);
+  --burger-color-open: var(--primary-main);
   --burger-color-close: var(--default-white);
 
   /* Change Theme Button - Colors symbolizing those Theme Colors */
-  --change-theme-button-color: var(--secondary-darker);
-  --change-theme-button-background: var(--primary-main);
+  --change-theme-button-color: var(--primary-main);
+  --change-theme-button-background: var(--secondary-lightest2);
 
   /* SideMenu Navbar */
   --sidemenu-navbar-text-shadow: 1px 1px 1px var(--secondary-darker);
@@ -30,7 +30,7 @@ const coolTheme = css`
 
   /* HeroBanner Section */
   --cyril-h2: var(--primary-main);
-  --cyril-h2-text-shadow: 1px 1px 3px var(--secondary-main);
+  --cyril-h2-text-shadow: 1px 1px 0.5px var(--secondary-darker);
 
   /* HeroBanner Section - Located in the HalfMoon Shape - Responsive */
   --cyril-h2-responsive: var(--primary-lightest2);
@@ -41,16 +41,16 @@ const coolTheme = css`
 
   /* Featured Projects */
   --featured-projects-background: var(--secondary-main);
-  --featured-projects-name: var(--default-white);
+  --featured-projects-name: var(--primary-main);
   --featured-projects-software-stack: var(--default-white);
   --featured-projects-links-color: var(--default-white);
   --featured-projects-links-background-color: var(--secondary-main);
 
   /* Other Projects - nth-of-type(odd) */
   --other-projects-background-odd: var(--primary-main);
-  --other-projects-name-odd: var(--default-white);
-  --other-projects-software-stack-odd: var(--secondary-main);
-  --other-projects-links-color-odd: var(--default-white);
+  --other-projects-name-odd: var(--secondary-darker);
+  --other-projects-software-stack-odd: var(--secondary-darker);
+  --other-projects-links-color-odd: var(--secondary-darker);
   --other-projects-links-background-color-odd: var(--primary-main);
 
   /* Other Projects - nth-of-type(even) */
@@ -65,9 +65,9 @@ const coolTheme = css`
 
   /* Contact Section */
   --principal-question: var(--default-white);
-  --secondary-questions: var(--secondary-lighter);
-  --cyrilo-mail-letters: var(--default-white);
-  --cyrilo-mail-line: var(--primary-main);
+  --secondary-questions: var(--secondary-main);
+  --cyrilo-mail-letters: var(--primary-main);
+  --cyrilo-mail-line: var(--secondary-main);
   --github-linkedin-background: var(--default-white);
 
   /* Default Colors */
@@ -83,16 +83,13 @@ const coolTheme = css`
   --primary-lightest2: #fde0d8;
 
   /* Secondary Color */
-  --secondary-darker: #410932;
-  --secondary-dark: #61183f;
-  --secondary-main: #88304e;
-  --secondary-light: #b75e74;
-  --secondary-lighter: #db8692;
-  --secondary-lightest1: #f3b4b7;
-  --secondary-lightest2: #f9dad8;
-
-  /* Tertiary Color */
-  --tertiary-main: #311d3f;
+  --secondary-darker: #0e051e;
+  --secondary-dark: #1d0e2d;
+  --secondary-main: #311d3f;
+  --secondary-light: #77538b;
+  --secondary-lighter: #b285c5;
+  --secondary-lightest1: #dfb8eb;
+  --secondary-lightest2: #f0daf5;
 `;
 
-export default coolTheme;
+export default lightColors;
