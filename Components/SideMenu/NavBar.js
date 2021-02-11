@@ -8,6 +8,8 @@ import ContactIcons from "./ContactIcons";
 import smoothScrollTo from "../../utils/smoothScrollTo";
 import navLinks from "../../data/navLinks";
 import { closeSideMenu } from "../../store/slices/sideMenuSlice";
+import { useRouter } from "next/router";
+import setLanguageProperty from "../../utils/setLanguageProperty";
 
 const StyledMenu = styled(motion.div)`
   position: absolute;
@@ -161,6 +163,10 @@ const NavBar = ({ menuID }) => {
     onSwipedLeft: () => handleCloseMenu(),
   });
 
+  // i18n - Next Router
+  const router = useRouter();
+  const languageProperty = setLanguageProperty(router);
+
   return (
     <StyledMenu
       isMenuOpen={isMenuOpen}
@@ -190,7 +196,7 @@ const NavBar = ({ menuID }) => {
                       smoothScrollTo(navLinks[index].scrollName);
                     }}
                   >
-                    {navLink.name}
+                    {navLink.names[languageProperty]}
                   </StyledLink>
                 </NextLink>
               </motion.li>

@@ -27,10 +27,10 @@ const StyledContainer = styled.div`
     border-radius: 8px;
   }
 
-  /* Secondary Questions */
+  /* Subsidiary Questions */
   div:nth-of-type(2),
   div:nth-of-type(3) {
-    color: var(--secondary-questions);
+    color: var(--subsidiary-questions);
 
     ::before {
       content: "- ";

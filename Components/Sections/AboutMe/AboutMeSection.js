@@ -9,6 +9,8 @@ import LongStory from "./LongStory";
 import SkillsList from "./SkillsList";
 import AboutMeDivider from "../../Dividers/AboutMeDivider";
 import AboutMeImage from "./AboutMeImage";
+import { useRouter } from "next/router";
+import setLanguageTranslation from "../../../utils/setLanguageTranslation";
 
 const StyledAboutMeContainer = styled.div`
   display: flex;
@@ -43,11 +45,15 @@ const AboutMeSection = () => {
     } */
   }, [inView]);
 
+  // i18n - Next Router
+  const router = useRouter();
+  const translation = setLanguageTranslation(router);
+
   return (
     <>
       <StyledSection id="about-me">
         <ScrollWrapper name="about-me-scroll" />
-        <StyledTitle ref={ref}>About Me</StyledTitle>
+        <StyledTitle ref={ref}>{translation.aboutMeSection.title}</StyledTitle>
         <StyledAboutMeContainer>
           <AboutMeImage />
           <StyledTextContainer>

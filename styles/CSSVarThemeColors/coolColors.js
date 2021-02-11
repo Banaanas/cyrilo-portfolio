@@ -65,7 +65,7 @@ const coolColors = css`
 
   /* Contact Section */
   --principal-question: var(--default-white);
-  --secondary-questions: var(--secondary-lighter);
+  --subsidiary-questions: var(--secondary-lighter);
   --cyrilo-mail-letters: var(--default-white);
   --cyrilo-mail-line: var(--primary-main);
   --github-linkedin-background: var(--default-white);

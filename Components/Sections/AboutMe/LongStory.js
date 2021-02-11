@@ -1,12 +1,11 @@
 import { useState } from "react";
-import NextLink from "next/link";
+import { useRouter } from "next/router";
 import styled from "@emotion/styled";
-import { motion, AnimatePresence } from "framer-motion";
-import { BiShow as ShowIcon, BiHide as HideIcon } from "react-icons/bi";
-import navLinks from "../../../data/navLinks";
-import smoothScrollTo from "../../../utils/smoothScrollTo";
+import { AnimatePresence, motion } from "framer-motion";
+import { BiHide as HideIcon, BiShow as ShowIcon } from "react-icons/bi";
 import StyledTextContainer from "./StyledTextContainer";
-import ExternalLink from "../../Links/ExternalLink";
+import setLanguageTranslation from "../../../utils/setLanguageTranslation";
+import LongStoryParagraph from "./LongStoryParagraph";
 
 const StyledLongStory = styled(StyledTextContainer)`
   flex-direction: column;
@@ -71,14 +70,6 @@ const StyledButton = styled.button`
   }
 `;
 
-const ProjectsLink = () => {
-  return (
-    <NextLink href={navLinks[1].href} passHref>
-      <a onClick={() => smoothScrollTo(navLinks[1].scrollName)}>Projects</a>
-    </NextLink>
-  );
-};
-
 const longStoryVariants = {
   initial: {
     height: 0,
@@ -93,26 +84,13 @@ const longStoryVariants = {
   },
 };
 
-const paragraphVariants = {
-  initial: {
-    opacity: 0,
-    pointerEvents: "none",
-  },
-  animate: {
-    opacity: 1,
-    pointerEvents: "auto",
-  },
-  transition: {
-    type: "spring",
-  },
-};
-
 const StyledContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
+
 const LongStory = () => {
   const [showLongStory, toggleShowLongStory] = useState(false);
 
@@ -120,12 +98,16 @@ const LongStory = () => {
     toggleShowLongStory(!showLongStory);
   };
 
+  // i18n - Next Router
+  const router = useRouter();
+  const translation = setLanguageTranslation(router);
+
   return (
     <StyledLongStory showLongStory={showLongStory}>
-      <h3>Long Story</h3>
+      <h3>{translation.aboutMeSection.longStory.title}</h3>
       {showLongStory ? null : (
         <StyledButton onClick={handleReadButtonClick}>
-          <span>Read</span>
+          <span>{translation.aboutMeSection.longStory.buttonRead}</span>
           <ShowIcon />
         </StyledButton>
       )}
@@ -138,39 +120,9 @@ const LongStory = () => {
             exit="initial"
             variants={longStoryVariants}
           >
-            <motion.p
-              initial="initial"
-              animate="animate"
-              exit="initial"
-              variants={paragraphVariants}
-            >
-              Since march 2020, I've been learning Web Development to become a
-              <strong> FullStack Developer</strong>, specialized in
-              <strong> Front-End Development</strong> .
-              <br />
-              In order to achieve this purpose, I have completed both{" "}
-              <ExternalLink
-                ariaLabel="The Odin Project Website"
-                href="https://www.theodinproject.com/"
-                title="The Odin Project"
-              >
-                The Odin Project
-              </ExternalLink>{" "}
-              and the{" "}
-              <ExternalLink
-                ariaLabel="Full Stack Open"
-                href="https://fullstackopen.com/"
-                title="Full Stack Open"
-              >
-                Full Stack Open
-              </ExternalLink>{" "}
-              curriculums. Throughout those courses, I've been learning
-              programming concepts and practical skills, realizing numerous
-              concrete <ProjectsLink />. Since then, I have deeply enjoyed
-              continuously learning and resolving problems.
-            </motion.p>
+            <LongStoryParagraph />
             <StyledButton onClick={handleReadButtonClick}>
-              <span>Hide</span>
+              <span>{translation.aboutMeSection.longStory.buttonHide}</span>
               <HideIcon />
             </StyledButton>
           </StyledContainer>

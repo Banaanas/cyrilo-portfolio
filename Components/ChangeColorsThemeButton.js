@@ -7,7 +7,7 @@ import themeColorsArray from "../styles/CSSVarThemeColors/themeColorsArray";
 const StyledButton = styled.button`
   position: fixed;
   right: 0.5rem;
-  bottom: 1rem;
+  bottom: 4rem;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -19,10 +19,11 @@ const StyledButton = styled.button`
 
   /* Import Next Toggled Colors Theme CSS Variables to use the next  */
   ${({ nextThemeIndex }) => themeColorsArray[nextThemeIndex]}
+
   /* When click on Button */
   :focus {
     outline: none; /* Outline is unaesthetically squared because SVG has a rounded border */
-    box-shadow: 0 0 3pt 2pt var(--change-theme-button-background);; /* To replace the Outline */
+    box-shadow: 0 0 3pt 2pt var(--change-theme-button-background); /* To replace the Outline */
   }
 
   /* Style SVG with Next Theme Colors */

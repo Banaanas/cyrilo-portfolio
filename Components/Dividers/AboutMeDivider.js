@@ -1,7 +1,6 @@
 import StyledDividerContainer from "../StyledComponents/StyledDividerContainer";
 
 const AboutMeDivider = () => {
-
   return (
     <StyledDividerContainer>
       <svg

@@ -1,8 +1,7 @@
-import styled from "@emotion/styled";
-import { MdInvertColors as ChangeColorsThemeIcon } from "react-icons/md";
-import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
-import themeColorsArray from "../styles/CSSVarThemeColors/themeColorsArray";
+import styled from "@emotion/styled";
+import { GrLanguage as ChangeLanguageIcon } from "react-icons/gr";
+import { useRouter } from "next/router";
 
 const StyledButton = styled.button`
   position: fixed;
@@ -17,19 +16,19 @@ const StyledButton = styled.button`
   border-radius: 50%;
   cursor: pointer;
 
-  /* Import Next Toggled Colors Theme CSS Variables to use the next  */
-  ${({ nextThemeIndex }) => themeColorsArray[nextThemeIndex]}
   /* When click on Button */
   :focus {
     outline: none; /* Outline is unaesthetically squared because SVG has a rounded border */
-    box-shadow: 0 0 3pt 2pt var(--change-theme-button-background);; /* To replace the Outline */
+    box-shadow: 0 0 3pt 2pt var(--change-theme-button-background); /* To replace the Outline */
   }
 
   /* Style SVG with Next Theme Colors */
-  svg {
+  span {
+    padding: 4px;
     color: var(--change-theme-button-color);
-    font-size: ${({ theme }) => theme.fontSizes.xl4};
+    font-size: ${({ theme }) => theme.fontSizes.lg};
     stroke-width: 1px;
+    font-family: "Nexa Black", sans-serif;
     background-color: var(--change-theme-button-background);
     border: solid 5px var(--change-theme-button-color);
     border-radius: 50%;
@@ -39,46 +38,36 @@ const StyledButton = styled.button`
 // Cf. -> Note 1 - Flash
 // Button to change the Colors Theme
 const ChangeColorsThemeButton = () => {
-  const [nextThemeIndex, setNextThemeIndex] = useState(0);
-  const { theme, themes, setTheme } = useTheme();
+  const [buttonText, setButtonText] = useState("EN");
 
-  // Determine what will be the Next Theme Index
+  // i18n - Next Router
+  const router = useRouter();
+
   useEffect(() => {
-    // Copy Array
-    const themesArray = [...themes];
-    // Find Index of actual Theme
-    const themeIndex = themesArray.indexOf(theme);
+    const { locale } = router;
+    setButtonText(locale.toUpperCase());
+  }, [router]);
 
-    // Determine Nex Index
-    let newThemeIndex = themeIndex + 1;
-    // Set new Index to 0 if the previous one corresponds to the last Theme in array
-    if (newThemeIndex >= themesArray.length) {
-      newThemeIndex = 0;
+  const changeLanguage = () => {
+    const { locale } = router;
+
+    /* "Shallow: true" to prevent Page Reload */
+    if (locale === "en") {
+      router.push("/", "/", { locale: "fr", shallow: "true" });
+      return;
     }
-    // Update Next Index state
-    setNextThemeIndex(newThemeIndex);
-  }, [themes, theme, nextThemeIndex]);
-
-  const changeTheme = () => {
-    const themesArray = [...themes];
-    const themeIndex = themesArray.indexOf(theme);
-    let newThemeIndex = themeIndex + 1;
-
-    // Set new Index to 0 if the previous one corresponds to the last Theme in array
-    if (newThemeIndex >= themesArray.length) {
-      newThemeIndex = 0;
+    if (locale === "fr") {
+      router.push("/", "/", { locale: "es", shallow: "true" });
+      return;
     }
-    // Update theme
-    setTheme(themesArray[newThemeIndex]);
+    if (locale === "es") {
+      router.push("/", "/", { locale: "en", shallow: "true" });
+    }
   };
 
   return (
-    <StyledButton
-      onClick={changeTheme}
-      nextThemeIndex={nextThemeIndex}
-      title="Change Colors Theme"
-    >
-      <ChangeColorsThemeIcon />
+    <StyledButton onClick={changeLanguage} title="Change Language">
+      <span>{buttonText}</span>
     </StyledButton>
   );
 };

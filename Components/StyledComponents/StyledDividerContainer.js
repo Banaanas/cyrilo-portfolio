@@ -11,10 +11,9 @@ const StyledDividerContainer = styled.div`
     width: 100%;
     height: 100%;
   }
-  
-  path {
-    transition: ${({ theme }) => theme.transitions.svgFill}
 
+  path {
+    transition: ${({ theme }) => theme.transitions.svgFill};
   }
 `;
 

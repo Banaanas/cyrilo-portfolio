@@ -65,7 +65,7 @@ const darkColors = css`
 
   /* Contact Section */
   --principal-question: var(--default-white);
-  --secondary-questions: var(--secondary-lighter);
+  --subsidiary-questions: var(--secondary-lighter);
   --cyrilo-mail-letters: var(--primary-main);
   --cyrilo-mail-line: var(--secondary-main);
   --github-linkedin-background: var(--primary-main);

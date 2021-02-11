@@ -1,8 +1,8 @@
 import { css, Global, useTheme } from "@emotion/react";
-import lightTheme from "./lightTheme";
-import darkTheme from "./darkTheme";
-import smoothTheme from "./smoothTheme";
-import coolTheme from "./coolTheme";
+import lightColors from "./CSSVarThemeColors/lightColors";
+import darkColors from "./CSSVarThemeColors/darkColors";
+import smoothColors from "./CSSVarThemeColors/smoothColors";
+import coolColors from "./CSSVarThemeColors/coolColors";
 
 // Emotion Global Styles
 // Next.js authorizes Materialize.css (Global CSS) to be imported ONLY from _app.js
@@ -81,28 +81,28 @@ const GlobalStyles = () => {
 
         /* CSS Variables */
         :root {
-          ${lightTheme}
+          ${lightColors}
         }
 
         /* @media (prefers-color-scheme: dark) {
           :root {
-            ${darkTheme}
+            ${darkColors}
           }
         } */
 
         .dark {
-          ${darkTheme}
+          ${darkColors}
         }
         .system {
-          ${darkTheme}
+          ${darkColors}
         }
 
         .smooth {
-          ${smoothTheme}
+          ${smoothColors}
         }
         
         .cool {
-          ${coolTheme}
+          ${coolColors}
         }
       `}
     />

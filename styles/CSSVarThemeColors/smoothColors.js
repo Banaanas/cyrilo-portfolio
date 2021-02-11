@@ -65,7 +65,7 @@ const smoothColors = css`
 
   /* Contact Section */
   --principal-question: var(--default-white);
-  --secondary-questions: var(--secondary-main);
+  --subsidiary-questions: var(--secondary-main);
   --cyrilo-mail-letters: var(--secondary-main);
   --cyrilo-mail-line: var(--primary-main);
   --github-linkedin-background: var(--primary-main);

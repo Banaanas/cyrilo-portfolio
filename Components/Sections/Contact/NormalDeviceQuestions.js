@@ -10,7 +10,7 @@ const StyledContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  color: var(--secondary-questions);
+  color: var(--subsidiary-questions);
   text-align: center;
 
   @media (min-width: 845px) {

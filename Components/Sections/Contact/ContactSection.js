@@ -9,6 +9,8 @@ import SmallDeviceQuestions from "./SmallDeviceQuestions";
 import CyriloMail from "./CyriloMail";
 import NormalDeviceQuestions from "./NormalDeviceQuestions";
 import { GitHubShape, LinkedInShape } from "./ContactShapes/GitHubStar";
+import { useRouter } from "next/router";
+import setLanguageTranslation from "../../../utils/setLanguageTranslation";
 
 const StyledSection = styled(GenericStyledSection)`
   display: flex;
@@ -44,12 +46,16 @@ const ContactSection = () => {
     }*/
   }, [inView]);
 
+  // i18n - Next Router
+  const router = useRouter();
+  const translation = setLanguageTranslation(router);
+
   return (
     <StyledSection id="contact">
       <ScrollWrapper name="contact-scroll" />
       <StyledTitleContainer ref={ref}>
         <ContactStar />
-        <StyledTitle>Contact</StyledTitle>
+        <StyledTitle>{translation.contactSection.title}</StyledTitle>
       </StyledTitleContainer>
       <SmallDeviceQuestions />
       <NormalDeviceQuestions />

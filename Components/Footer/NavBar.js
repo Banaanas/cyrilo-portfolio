@@ -1,7 +1,9 @@
 import NextLink from "next/link";
 import styled from "@emotion/styled";
+import { useRouter } from "next/router";
 import smoothScrollTo from "../../utils/smoothScrollTo";
 import navLinks from "../../data/navLinks";
+import setLanguageProperty from "../../utils/setLanguageProperty";
 
 const StyledNav = styled.nav`
   z-index: 100;
@@ -35,6 +37,10 @@ const StyledLink = styled.a`
 `;
 
 const NavBar = () => {
+  // i18n - Next Router
+  const router = useRouter();
+  const languageProperty = setLanguageProperty(router);
+
   return (
     <StyledNav>
       <StyledList>
@@ -44,7 +50,7 @@ const NavBar = () => {
               <StyledLink
                 onClick={() => smoothScrollTo(navLinks[index].scrollName)}
               >
-                {navLink.name}
+                {navLink.names[languageProperty]}
               </StyledLink>
             </NextLink>
           </li>

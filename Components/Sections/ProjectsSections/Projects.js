@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 import { Element as ScrollWrapper } from "react-scroll";
 import { useInView } from "react-intersection-observer";
 import StyledSection from "../../StyledComponents/StyledSection";
@@ -8,6 +9,7 @@ import StyledTitle from "../../StyledComponents/StyledTitle";
 import OtherProjects from "../../Projects/OtherProjects/OtherProjects";
 import FeaturedProjectsDivider from "../../Dividers/FeaturedProjectsDivider";
 import OtherProjectsDivider from "../../Dividers/OtherProjectsDivider";
+import setLanguageTranslation from "../../../utils/setLanguageTranslation";
 
 const Projects = () => {
   // React Intersection Observer
@@ -35,11 +37,17 @@ const Projects = () => {
     .slice(0, Math.max(projectsList.length - featuredProjectsNumber))
     .reverse();
 
+  // i18n - Next Router
+  const router = useRouter();
+  const translation = setLanguageTranslation(router);
+
   return (
     <>
       <StyledSection id="projects">
         <ScrollWrapper name="projects-scroll" />
-        <StyledTitle ref={ref}>Featured Projects</StyledTitle>
+        <StyledTitle ref={ref}>
+          {translation.featuredProjectsSection.title}
+        </StyledTitle>
         <FeaturedProjects featuredProjects={featuredProjects} />
       </StyledSection>
       <FeaturedProjectsDivider />

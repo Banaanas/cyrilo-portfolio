@@ -1,5 +1,8 @@
+import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 import StyledTextContainer from "./StyledTextContainer";
+import setLanguageTranslation from "../../../utils/setLanguageTranslation";
+import ShortStoryParagraph from "./ShortStoryParagraph";
 
 export const StyledShortStory = styled(StyledTextContainer)`
   max-height: 999999px; /* Cf. -> Note 5 - To prevent Android Chrome from boosting font-size */
@@ -17,16 +20,14 @@ export const StyledShortStory = styled(StyledTextContainer)`
 `;
 
 const ShortStory = () => {
+  // i18n - Next Router
+  const router = useRouter();
+  const translation = setLanguageTranslation(router);
+
   return (
     <StyledShortStory>
-      <h3>Short Story</h3>
-      <p>
-        I'm <strong id="Cyril-name">Cyril</strong>, a brand new{" "}
-        <strong>JavaScript Developer</strong> based in Lyon, France. After two
-        Master in International Law (2006-2007) and years as teacher and
-        International Law consultant, I've decided to give my career a shining
-        new direction 🌞.
-      </p>
+      <h3>{translation.aboutMeSection.shortStory.title}</h3>
+      <ShortStoryParagraph />
     </StyledShortStory>
   );
 };

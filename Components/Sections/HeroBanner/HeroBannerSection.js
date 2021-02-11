@@ -4,12 +4,17 @@ import NextLink from "next/link";
 import { Element as ScrollWrapper } from "react-scroll";
 import { FaArrowDown as DownArrowIcon } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/router";
 import smoothScrollTo from "../../../utils/smoothScrollTo";
 import GenericStyledSection from "../../StyledComponents/StyledSection";
 import navLinks from "../../../data/navLinks";
 import HeroBannerDivider from "../../Dividers/HeroBannerDivider";
 import GenericStyledH2 from "../../StyledComponents/StyledH2";
 import PlanetCyril from "./PlanetCyril";
+import englishTranslation from "../../../data/translation/english-translation";
+import frenchTranslation from "../../../data/translation/french-translation";
+import spanishTranslation from "../../../data/translation/spanish-translation";
+import setLanguageTranslation from "../../../utils/setLanguageTranslation";
 
 const StyledSection = styled(GenericStyledSection)`
   display: flex;
@@ -124,11 +129,11 @@ const StyledLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 12rem;
   padding: 1rem 1rem;
   color: var(--action-button-color);
   font-size: ${({ theme }) => theme.fontSizes.xl};
   font-family: "Nexa Black", sans-serif;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   background-color: var(--action-button-background);
@@ -169,6 +174,10 @@ const HeroBannerSection = () => {
     }*/
   }, [inView]);
 
+  // i18n - Next Router
+  const router = useRouter();
+  const translation = setLanguageTranslation(router);
+
   return (
     <>
       <ScrollWrapper name="hero-banner-scroll" />
@@ -188,7 +197,7 @@ const HeroBannerSection = () => {
               onClick={() => smoothScrollTo(navLinks[1].scrollName)}
               ref={ref}
             >
-              <span>My Work</span>
+              <span>{translation.heroBannerSection.link}</span>
               <StyledDownArrowIcon />
             </StyledLink>
           </NextLink>
@@ -201,7 +210,7 @@ const HeroBannerSection = () => {
             id="second-link"
             onClick={() => smoothScrollTo(navLinks[1].scrollName)}
           >
-            <span>My Work</span>
+            <span>{translation.heroBannerLink}</span>
             <StyledDownArrowIcon />
           </StyledLink>
         </NextLink>

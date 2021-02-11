@@ -1,10 +1,12 @@
-import styled from "@emotion/styled";
+import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import {
   MdExpandMore as ShowMoreIcon,
   MdExpandLess as ShowLessIcon,
 } from "react-icons/md";
+import styled from "@emotion/styled";
 import { toggleOtherProjects } from "../../../store/slices/otherProjectsSlice";
+import setLanguageTranslation from "../../../utils/setLanguageTranslation";
 
 const StyledButton = styled.button`
   display: flex;
@@ -45,9 +47,18 @@ const OtherProjectsButton = () => {
   const handleClick = () => {
     dispatch(toggleOtherProjects());
   };
+
+  // i18n - Next Router
+  const router = useRouter();
+  const translation = setLanguageTranslation(router);
+
   return (
     <StyledButton onClick={handleClick} showOtherProjects={showOtherProjects}>
-      <span>{showOtherProjects ? "Hide Projects" : "Other Projects"}</span>
+      <span>
+        {showOtherProjects
+          ? translation.otherProjectsSection.buttonHide
+          : translation.otherProjectsSection.buttonShow}
+      </span>
       {showOtherProjects ? <ShowLessIcon /> : <ShowMoreIcon />}
     </StyledButton>
   );

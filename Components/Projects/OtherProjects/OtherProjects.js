@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
@@ -6,6 +7,7 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 import OtherProjectsStar from "./OtherProjectsStar";
 import OtherProjectsButton from "./OtherProjectsButton";
 import StyledTitle from "../../StyledComponents/StyledTitle";
+import setLanguageTranslation from "../../../utils/setLanguageTranslation";
 
 const StyledProjectsContainer = styled(motion.div)`
   display: grid;
@@ -74,6 +76,10 @@ const OtherProjects = ({ otherProjects }) => {
     (state) => state.otherProjects.showOtherProjects,
   );
 
+  // i18n - Next Router
+  const router = useRouter();
+  const translation = setLanguageTranslation(router);
+
   return (
     <>
       <OtherProjectsStar />
@@ -81,7 +87,7 @@ const OtherProjects = ({ otherProjects }) => {
 
       {showOtherProjects ? (
         <>
-          <StyledTitle>Other Projects</StyledTitle>
+          <StyledTitle>{translation.otherProjectsSection.title}</StyledTitle>
           <StyledProjectsContainer>
             {otherProjects.map((project) => (
               <React.Fragment key={project.id}>

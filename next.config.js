@@ -7,13 +7,8 @@ module.exports = {
 
     return config;
   },
+  i18n: {
+    locales: ["en", "es", "fr"],
+    defaultLocale: "en",
+  },
 };
-
-/* module.exports = (phase, { defaultConfig }) => {
-  return {
-    i18n: {
-      locales: ["en", "es", "fr"],
-      defaultLocale: "en",
-    },
-  };
-}; */
