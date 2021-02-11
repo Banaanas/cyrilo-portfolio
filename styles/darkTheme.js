@@ -3,11 +3,25 @@ import { css } from "@emotion/react";
 const darkTheme = css`
   /* General Elements */
   --global-background-color: var(--default-dark);
+
+  /* Section Title */
   --styled-title-color: var(--primary-main);
+
+  /* Action Button */
+  --action-button-background: var(--secondary-main);
+  --action-button-color: var(--primary-main);
+  --action-button-icon-color: var(--default-white);
+
+  /* Burger Button */
+  --burger-color-open: var(--primary-main);
+  --burger-color-close: var(--default-white);
 
   /* Change Theme Button - Colors symbolizing those Theme Colors */
   --change-theme-button-color: var(--global-background-color);
   --change-theme-button-background: var(--primary-main);
+
+  /* SideMenu Navbar */
+  --sidemenu-navbar-text-shadow: 1px 1px 1px var(--secondary-darker);
 
   /* Planet Cyril - Drawing */
   --planet-Cyril: var(--primary-main);
@@ -16,11 +30,11 @@ const darkTheme = css`
 
   /* HeroBanner Section */
   --cyril-h2: var(--primary-main);
+  --cyril-h2-text-shadow: 1px 1px 3px var(--secondary-main);
 
   /* HeroBanner Section - Located in the HalfMoon Shape - Responsive */
   --cyril-h2-responsive: var(--primary-main);
-  --cyril-h2-responsive-text-stroke: 0.5px var(--secondary-darker);
-  --cyril-h2-responsive-text-shadow: 0 0 3px var(--secondary-darker);
+  --cyril-h2-responsive-text-shadow: 1px 1px 3px var(--secondary-darker);
 
   /* Project Card */
   --projects-shadow: 0 16px 24px 0 rgba(255, 226, 39, 0.12); /* Primary Main RGBA */
@@ -34,9 +48,9 @@ const darkTheme = css`
 
   /* Other Projects - nth-of-type(odd) */
   --other-projects-background-odd: var(--primary-main);
-  --other-projects-software-stack-odd: var(--secondary-main);
-  --other-projects-name-odd: var(--secondary-main);
-  --other-projects-links-color-odd: var(--secondary-main);
+  --other-projects-software-stack-odd: var(--secondary-dark);
+  --other-projects-name-odd: var(--secondary-dark);
+  --other-projects-links-color-odd: var(--secondary-dark);
   --other-projects-links-background-color-odd: var(--primary-main);
 
   /* Other Projects - nth-of-type(even) */
@@ -46,8 +60,15 @@ const darkTheme = css`
   --other-projects-links-color-even: var(--default-white);
   --other-projects-links-background-color-even: var(--secondary-main);
 
-  /* Short Story */
+  /* About Me Section - Short Story */
   --short-story-name: var(--secondary-darker);
+
+  /* Contact Section */
+  --principal-question: var(--default-white);
+  --secondary-questions: var(--secondary-lighter);
+  --cyrilo-mail-letters: var(--primary-main);
+  --cyrilo-mail-line: var(--secondary-main);
+  --github-linkedin-background: var(--primary-main);
 
   /* Default Colors */
   --default-white: #fbf9fa;
@@ -70,9 +91,6 @@ const darkTheme = css`
   --secondary-lighter: #d486ce;
   --secondary-lightest1: #f0b6e7;
   --secondary-lightest2: #f7d9f0;
-
-  /* Others - Only for DarkTheme (SideMenu Navbar) */
-  --text-stroke-darktheme: 0.8px #0f1021;
 `;
 
 export default darkTheme;

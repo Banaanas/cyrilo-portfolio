@@ -33,8 +33,8 @@ const StyledSideMenuButton = styled(motion.button)`
     display: inline-block;
     width: ${({ openMenu }) => (openMenu ? "3.5rem" : "var(--span-width)")};
     height: ${({ openMenu }) => (openMenu ? "0.4rem" : "0.25rem")};
-    background-color: ${({ openMenu, theme }) =>
-      openMenu ? "var(--default-white)" : "var(--primary-main)"};
+    background-color: ${({ openMenu }) =>
+      openMenu ? "var(--burger-color-open)" : "var(--burger-color-close)"};
     border-radius: 10px;
     transform-origin: left center;
     transition: transform, width, 300ms ease-out;
@@ -107,9 +107,9 @@ const Burger = ({ menuID }) => {
       aria-expanded={isExpanded}
       aria-controls={menuID}
       id="burger-button"
-      /*variants={buttonVariants}
+      /* variants={buttonVariants}
       initiate={isMenuOpen ? "animate" : "initiate"}
-      animate={isMenuOpen ? "initiate" : "animate"}*/
+      animate={isMenuOpen ? "initiate" : "animate"} */
     >
       <span />
       <span />

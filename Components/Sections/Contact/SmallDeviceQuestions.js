@@ -18,19 +18,19 @@ const StyledContainer = styled.div`
     display: none;
   }
 
-  /* First Question */
+  /* Important Question */
   div:nth-of-type(1) {
     padding: 1rem;
-    color: var(--primary-main);
+    color: var(--principal-question);
     font-size: ${({ theme }) => theme.fontSizes.xl};
     background-color: var(--secondary-main);
     border-radius: 8px;
   }
 
-  /* Second and third Question */
+  /* Secondary Questions */
   div:nth-of-type(2),
   div:nth-of-type(3) {
-    color: var(--secondary-main);
+    color: var(--secondary-questions);
 
     ::before {
       content: "- ";

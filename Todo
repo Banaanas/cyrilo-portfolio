@@ -1,7 +1,5 @@
 - Internationalisation
 - DarkMode Icon
-    * Attention - Darkmode localStorage bug
-    * https://github.com/vercel/next.js/discussions/12533
 - Changer Couleur Dessin Cyrilo (Couleur Visage - T-Shirt)
 - Animations
     * All Transition

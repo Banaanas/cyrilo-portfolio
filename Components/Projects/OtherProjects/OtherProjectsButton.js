@@ -12,11 +12,11 @@ const StyledButton = styled.button`
   justify-content: center;
   margin: 2rem 0;
   padding: 1rem 1rem;
-  color: var(--primary-main);
+  color: var(--action-button-color);
   font-size: ${({ theme }) => theme.fontSizes.xl};
   font-family: "Nexa Black", sans-serif;
   text-transform: uppercase;
-  background-color: var(--secondary-main);
+  background-color: var(--action-button-background);
   border: none;
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
@@ -28,7 +28,7 @@ const StyledButton = styled.button`
   }
 
   svg {
-    color: var(--default-white);
+    color: var(--action-button-icon-color);
     font-size: ${({ theme }) => theme.fontSizes.xl3};
   }
 `;

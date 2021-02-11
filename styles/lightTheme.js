@@ -3,11 +3,25 @@ import { css } from "@emotion/react";
 const lightTheme = css`
   /* General Elements */
   --global-background-color: var(--secondary-lightest2);
+
+  /* Section Title */
   --styled-title-color: var(--primary-main);
+
+  /* Action Button */
+  --action-button-background: var(--secondary-main);
+  --action-button-color: var(--primary-main);
+  --action-button-icon-color: var(--default-white);
+
+  /* Burger Button */
+  --burger-color-open: var(--primary-main);
+  --burger-color-close: var(--default-white);
 
   /* Change Theme Button - Colors symbolizing those Theme Colors */
   --change-theme-button-color: var(--primary-main);
   --change-theme-button-background: var(--secondary-lightest2);
+
+  /* SideMenu Navbar */
+  --sidemenu-navbar-text-shadow: 1px 1px 1px var(--secondary-darker);
 
   /* Planet Cyril - Drawing */
   --planet-Cyril: var(--primary-main);
@@ -16,11 +30,11 @@ const lightTheme = css`
 
   /* HeroBanner Section */
   --cyril-h2: var(--primary-main);
+  --cyril-h2-text-shadow: 1px 1px 0.5px var(--secondary-darker);
 
   /* HeroBanner Section - Located in the HalfMoon Shape - Responsive */
-  --cyril-h2-responsive: var(--primary-main);
-  --cyril-h2-responsive-text-stroke: 0.5px var(--secondary-darker);
-  --cyril-h2-responsive-text-shadow: 0 0 3px var(--secondary-darker);
+  --cyril-h2-responsive: var(--primary-lightest2);
+  --cyril-h2-responsive-text-shadow: 1px 1px 3px var(--secondary-darker);
 
   /* Project Card */
   --projects-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.12);
@@ -34,20 +48,27 @@ const lightTheme = css`
 
   /* Other Projects - nth-of-type(odd) */
   --other-projects-background-odd: var(--primary-main);
-  --other-projects-name-odd: var(--secondary-main);
-  --other-projects-software-stack-odd: var(--secondary-main);
-  --other-projects-links-color-odd: var(--secondary-main);
+  --other-projects-name-odd: var(--secondary-darker);
+  --other-projects-software-stack-odd: var(--secondary-darker);
+  --other-projects-links-color-odd: var(--secondary-darker);
   --other-projects-links-background-color-odd: var(--primary-main);
 
   /* Other Projects - nth-of-type(even) */
   --other-projects-background-even: var(--secondary-main);
-  --other-projects-name-even: var(--primary-main);
+  --other-projects-name-even: var(--default-white);
   --other-projects-software-stack-even: var(--default-white);
   --other-projects-links-color-even: var(--default-white);
   --other-projects-links-background-color-even: var(--secondary-main);
 
-  /* Short Story */
+  /* About Me Section - Short Story */
   --short-story-name: var(--primary-main);
+
+  /* Contact Section */
+  --principal-question: var(--default-white);
+  --secondary-questions: var(--secondary-main);
+  --cyrilo-mail-letters: var(--primary-main);
+  --cyrilo-mail-line: var(--secondary-main);
+  --github-linkedin-background: var(--default-white);
 
   /* Default Colors */
   --default-white: #fbf9fa;

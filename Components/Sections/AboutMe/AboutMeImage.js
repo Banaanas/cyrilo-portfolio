@@ -50,10 +50,10 @@ const AboutMeImage = () => {
           </pattern>
           <image
             id="Cyril"
-            width="1400"
-            height="690"
+            width="1425"
+            height="660"
             x="-90%"
-            y="00%"
+            y="2%"
             href="/images/Cyril.png"
           />
         </defs>

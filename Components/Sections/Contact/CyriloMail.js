@@ -16,8 +16,8 @@ const StyledSVG = styled.svg`
 
 const CyriloMail = () => {
   const mailColors = {
-    letters: "var(--primary-main)",
-    line: "var(--secondary-main)",
+    letters: "var(--cyrilo-mail-letters)",
+    line: "var(--cyrilo-mail-line)",
   };
 
   return (

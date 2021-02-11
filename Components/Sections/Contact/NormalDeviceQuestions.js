@@ -10,17 +10,18 @@ const StyledContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  color: var(--secondary-main);
+  color: var(--secondary-questions);
   text-align: center;
 
   @media (min-width: 845px) {
     display: flex;
   }
 
+  /* Important Question */
   div:nth-of-type(2) {
     margin: 0 1rem;
     padding: 1rem;
-    color: var(--default-white);
+    color: var(--principal-question);
     font-size: ${({ theme }) => theme.fontSizes.xl};
     background-color: var(--secondary-main);
     border-radius: 4px;

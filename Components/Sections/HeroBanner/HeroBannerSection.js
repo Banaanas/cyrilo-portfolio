@@ -1,9 +1,9 @@
-import {useEffect} from "react";
+import { useEffect } from "react";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
-import {Element as ScrollWrapper} from "react-scroll";
-import {FaArrowDown as DownArrowIcon} from "react-icons/fa";
-import {useInView} from "react-intersection-observer";
+import { Element as ScrollWrapper } from "react-scroll";
+import { FaArrowDown as DownArrowIcon } from "react-icons/fa";
+import { useInView } from "react-intersection-observer";
 import smoothScrollTo from "../../../utils/smoothScrollTo";
 import GenericStyledSection from "../../StyledComponents/StyledSection";
 import navLinks from "../../../data/navLinks";
@@ -56,6 +56,8 @@ const StyledContainer = styled.div`
 const StyledH2 = styled(GenericStyledH2)`
   display: none;
   color: var(--cyril-h2);
+  text-shadow: var(--cyril-h2-text-shadow);
+
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
     display: flex;
   }
@@ -68,7 +70,6 @@ const StyledHalfMoonH2 = styled(GenericStyledH2)`
   z-index: 1000;
   display: flex;
   color: var(--cyril-h2-responsive);
-  -webkit-text-stroke: var(--cyril-h2-responsive-text-stroke);
   text-shadow: var(--cyril-h2-responsive-text-shadow);
 
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
@@ -125,12 +126,12 @@ const StyledLink = styled.a`
   justify-content: center;
   width: 12rem;
   padding: 1rem 1rem;
-  color: var(--primary-main);
+  color: var(--action-button-color);
   font-size: ${({ theme }) => theme.fontSizes.xl};
   font-family: "Nexa Black", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: var(--secondary-main);
+  background-color: var(--action-button-background);
   border: none;
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
@@ -145,7 +146,7 @@ const StyledLink = styled.a`
 `;
 
 const StyledDownArrowIcon = styled(DownArrowIcon)`
-  color: var(--default-white);
+  color: var(--action-button-icon-color);
   font-size: ${({ theme }) => theme.fontSizes.xl2};
 `;
 
