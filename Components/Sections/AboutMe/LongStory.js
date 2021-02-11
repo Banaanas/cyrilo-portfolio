@@ -67,7 +67,7 @@ const StyledButton = styled.button`
     bottom: 1px;
     height: 100%;
     margin-left: 6px;
-    color: var(----action-button-icon-color);
+    color: var(--action-button-icon-color);
   }
 `;
 
