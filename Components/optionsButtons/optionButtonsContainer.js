@@ -17,8 +17,8 @@ const StyledContainer = styled.div`
 const OptionButtonsContainer = () => {
   return (
     <StyledContainer>
-      <ChangeLanguageButton />
       <ChangeColorsThemeButton />
+      <ChangeLanguageButton />
     </StyledContainer>
   );
 };
