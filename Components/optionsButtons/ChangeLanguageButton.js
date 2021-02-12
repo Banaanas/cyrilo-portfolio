@@ -33,15 +33,18 @@ const StyledButton = styled.button`
 // Cf. -> Note 1 - Flash
 // Button to change the Colors Theme
 const ChangeColorsThemeButton = () => {
-  const [buttonText, setButtonText] = useState("EN");
+  //const [buttonText, setButtonText] = useState("EN");
 
   // i18n - Next Router
   const router = useRouter();
 
-  useEffect(() => {
+/*  useEffect(() => {
     const { locale } = router;
     setButtonText(locale.toUpperCase());
-  }, [router]);
+  }, [router]);*/
+
+  const { locale } = router;
+
 
   const changeLanguage = () => {
     const { locale } = router;
@@ -62,7 +65,7 @@ const ChangeColorsThemeButton = () => {
 
   return (
     <StyledButton onClick={changeLanguage} title="Change Language">
-      <span>{buttonText}</span>
+      <span>{locale.toUpperCase()}</span>
     </StyledButton>
   );
 };
