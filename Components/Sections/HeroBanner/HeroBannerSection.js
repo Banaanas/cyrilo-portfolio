@@ -11,9 +11,6 @@ import navLinks from "../../../data/navLinks";
 import HeroBannerDivider from "../../Dividers/HeroBannerDivider";
 import GenericStyledH2 from "../../StyledComponents/StyledH2";
 import PlanetCyril from "./PlanetCyril";
-import englishTranslation from "../../../data/translation/english-translation";
-import frenchTranslation from "../../../data/translation/french-translation";
-import spanishTranslation from "../../../data/translation/spanish-translation";
 import setLanguageTranslation from "../../../utils/setLanguageTranslation";
 
 const StyledSection = styled(GenericStyledSection)`

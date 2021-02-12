@@ -1,7 +1,9 @@
 {
   "extends": [
     "stylelint-8-point-grid",
+    "stylelint-config-recommended",
     "stylelint-config-standard",
+    "stylelint-config-styled-components",
     "stylelint-config-prettier",
     "stylelint-config-rational-order"
   ],

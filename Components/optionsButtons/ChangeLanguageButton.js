@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 
@@ -38,13 +37,12 @@ const ChangeColorsThemeButton = () => {
   // i18n - Next Router
   const router = useRouter();
 
-/*  useEffect(() => {
+  /*  useEffect(() => {
     const { locale } = router;
     setButtonText(locale.toUpperCase());
   }, [router]);*/
 
   const { locale } = router;
-
 
   const changeLanguage = () => {
     const { locale } = router;

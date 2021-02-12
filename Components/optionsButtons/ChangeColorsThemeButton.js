@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { MdInvertColors as ChangeColorsThemeIcon } from "react-icons/md";
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import themeColorsArray from "../../styles/CSSVarThemeColors/themeColorsArray";
 
 const StyledButton = styled.button`

@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  MdExpandMore as ShowMoreIcon,
   MdExpandLess as ShowLessIcon,
+  MdExpandMore as ShowMoreIcon,
 } from "react-icons/md";
 import styled from "@emotion/styled";
 import { toggleOtherProjects } from "../../../store/slices/otherProjectsSlice";

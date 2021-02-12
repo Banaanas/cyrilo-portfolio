@@ -84,12 +84,6 @@ const GlobalStyles = () => {
           ${lightColors}
         }
 
-        /* @media (prefers-color-scheme: dark) {
-          :root {
-            ${darkColors}
-          }
-        } */
-
         .dark {
           ${darkColors}
         }
@@ -100,7 +94,7 @@ const GlobalStyles = () => {
         .smooth {
           ${smoothColors}
         }
-        
+
         .cool {
           ${coolColors}
         }
