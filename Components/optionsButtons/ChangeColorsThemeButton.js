@@ -2,13 +2,9 @@ import styled from "@emotion/styled";
 import { MdInvertColors as ChangeColorsThemeIcon } from "react-icons/md";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
-import themeColorsArray from "../styles/CSSVarThemeColors/themeColorsArray";
+import themeColorsArray from "../../styles/CSSVarThemeColors/themeColorsArray";
 
 const StyledButton = styled.button`
-  position: fixed;
-  right: 0.5rem;
-  bottom: 4rem;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;

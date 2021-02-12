@@ -1,13 +1,8 @@
-import { useState, useEffect } from "react";
-import styled from "@emotion/styled";
-import { GrLanguage as ChangeLanguageIcon } from "react-icons/gr";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import styled from "@emotion/styled";
 
 const StyledButton = styled.button`
-  position: fixed;
-  right: 0.5rem;
-  bottom: 1rem;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
