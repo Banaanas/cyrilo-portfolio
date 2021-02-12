@@ -1,4 +1,4 @@
-import { Provider, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Head from "next/head";
 import StyledPageMain from "../Components/StyledComponents/StyledPageMain";
 import HeroBannerSection from "../Components/Sections/HeroBanner/HeroBannerSection";

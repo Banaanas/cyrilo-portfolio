@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import { useThrottledFn, useWindowScroll } from "beautiful-react-hooks";
 import styled from "@emotion/styled";
@@ -18,34 +19,46 @@ const StyledProgressDiv = styled.div`
 `;
 
 const ScrollProgressBar = () => {
-  const [scrollY, setScrollY] = useState(null);
   const [progress, setProgress] = useState("0%");
 
   // useThrottledFn - CUSTOM HOOK
   // Throttle the callback function to optimize component performances by
   // preventing too many useless renders
-  const windowScrollHandler = useThrottledFn(() => {
-    // If SSR, Return (because Window is NOT defined on the Node.js Server)
-    if (typeof window === "undefined") return;
-
-    // Set Scroll Position
-    setScrollY(window.scrollY);
-
-    // Set Scroll Progress Percentage
-    const height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-
-    setProgress(`${(scrollY / height) * 100}%`);
-  }, 1);
+  const windowScrollHandler = useThrottledFn(() => {}, 1);
 
   // useWindowScroll - CUSTOM HOOK
   // Resize Event Listener (Add AND Cleanup Event)
-  useWindowScroll(windowScrollHandler);
+  // useWindowScroll(windowScrollHandler);
+
+  useEffect(() => {
+    const progressBarHandler = () => {
+      // If SSR, Return (because Window is NOT defined on the Node.js Server)
+      if (typeof window === "undefined") return;
+
+      const totalScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+
+      // Set Scroll Progress Percentage
+      const windowHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      setProgress(`${(totalScroll / windowHeight) * 100}%`);
+      const scrolled = (totalScroll / windowHeight) * 100;
+      setProgress(scrolled);
+      console.log("PROGRESS : ", progress);
+    };
+
+    // Add the Event Listener - MouseDown instead of click for UX purpose
+    window.addEventListener("scroll", progressBarHandler);
+
+    // Remove the Event Listener - useEffect Clean Up
+    return () => window.removeEventListener("scroll", progressBarHandler);
+  }, [progress]);
 
   return (
     <StyledProgressBar>
-      <StyledProgressDiv progressPercentage={progress} />
+      <StyledProgressDiv progressPercentage={`${progress}%`} />
     </StyledProgressBar>
   );
 };

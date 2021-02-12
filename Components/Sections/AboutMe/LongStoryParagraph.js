@@ -24,8 +24,8 @@ const ProjectsLink = () => {
   const router = useRouter();
 
   // Return "Projects" Word Translation
-  const translateProjectsWord = (router) => {
-    const { locale } = router;
+  const translateProjectsWord = (routerObj) => {
+    const { locale } = routerObj;
     let projectsWord;
 
     if (locale === "en") {
@@ -102,7 +102,7 @@ const LongStoryParagraph = () => {
       >
         Depuis mars 2020, j'apprends le Development Web pour devenir
         <strong> Développeur FullStack</strong>, spécialisé en
-        <strong> Développement Front-End</strong> .
+        <strong> Développement Front-End</strong>.
         <br />
         Pour y parvenir, j'ai complété les cours suivants :{" "}
         <ExternalLink
@@ -119,7 +119,7 @@ const LongStoryParagraph = () => {
           title="Full Stack Open"
         >
           Full Stack Open
-        </ExternalLink>{" "}
+        </ExternalLink>
         . À travers ces formations, j'ai à la fois intégré des concepts de
         programmation et acquis des compétences concrètes, tout en réalisant de
         nombreux <ProjectsLink /> effectifs. Depuis lors, je me suis pris de

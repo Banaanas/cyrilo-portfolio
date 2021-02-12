@@ -30,7 +30,7 @@ const englishTranslation = {
       buttonRead: "Read",
       buttonHide: "Hide",
     },
-    thingsIWorkWith: "Things I work with",
+    thingsICodeWith: "Things I code with",
   },
   contactSection: {
     title: "Contact",
@@ -40,4 +40,3 @@ const englishTranslation = {
 };
 
 export default englishTranslation;
-

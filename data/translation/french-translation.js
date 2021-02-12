@@ -30,7 +30,7 @@ const frenchTranslation = {
       buttonRead: "Lire",
       buttonHide: "Cacher",
     },
-    thingsIWorkWith: "Technologies",
+    thingsICodeWith: "Technologies",
   },
   contactSection: {
     title: "Contact",

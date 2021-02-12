@@ -30,11 +30,11 @@ const spanishTranslation = {
       buttonRead: "Leer",
       buttonHide: "Esconder",
     },
-    thingsIWorkWith: "Cositas con que trabajo",
+    thingsICodeWith: "Cosas con que trabajo",
   },
   contactSection: {
     title: "Contacto",
-    importantQuestion: "Algun Proyecto en la miente ?",
+    importantQuestion: "Un Proyecto en la mente ?",
     firstSubsidiaryQuestion: "Una Pregunta ?",
   },
 };

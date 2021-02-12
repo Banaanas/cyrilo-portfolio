@@ -40,6 +40,6 @@ export const ThirdQuestion = () => {
     return <StyledDiv>Échanger quelques mots ?</StyledDiv>;
   }
   if (locale === "es") {
-    return <StyledDiv>Platicar conmigo ?</StyledDiv>;
+    return <StyledDiv>Una conversación ?</StyledDiv>;
   }
 };

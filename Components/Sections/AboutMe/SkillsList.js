@@ -54,7 +54,7 @@ const SkillsList = () => {
 
   return (
     <StyledSkillsList>
-      <h3>{translation.aboutMeSection.thingsIWorkWith} :</h3>
+      <h3>{translation.aboutMeSection.thingsICodeWith} :</h3>
       <StyledList>
         {skillsList.map((skill, index) => (
           <StyledListItem key={`${index}-${skill}`}>{skill}</StyledListItem>
