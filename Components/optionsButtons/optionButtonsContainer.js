@@ -11,10 +11,9 @@ const StyledContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.5);
   padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 5px;
-  
 
   /* Gap Between the two Buttons */
   button:nth-of-type(1) {
