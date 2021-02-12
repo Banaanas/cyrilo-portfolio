@@ -19,15 +19,13 @@ const StyledProgressDiv = styled.div`
 `;
 
 const ScrollProgressBar = () => {
-  const [progress, setProgress] = useState("0%");
+  const [progress, setProgress] = useState(0);
 
   // useThrottledFn - CUSTOM HOOK
   // Throttle the callback function to optimize component performances by
   // preventing too many useless renders
   const windowScrollHandler = useThrottledFn(() => {}, 1);
-
   // useWindowScroll - CUSTOM HOOK
-  // Resize Event Listener (Add AND Cleanup Event)
   // useWindowScroll(windowScrollHandler);
 
   useEffect(() => {
@@ -43,10 +41,11 @@ const ScrollProgressBar = () => {
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
 
-      setProgress(`${(totalScroll / windowHeight) * 100}%`);
-      const scrolled = (totalScroll / windowHeight) * 100;
+      // Set Scrolled String Percentage
+      const scrolled = `${(totalScroll / windowHeight) * 100}%`;
+
+      // Update Progress State with String Percentage
       setProgress(scrolled);
-      console.log("PROGRESS : ", progress);
     };
 
     // Add the Event Listener - MouseDown instead of click for UX purpose
@@ -58,7 +57,7 @@ const ScrollProgressBar = () => {
 
   return (
     <StyledProgressBar>
-      <StyledProgressDiv progressPercentage={`${progress}%`} />
+      <StyledProgressDiv progressPercentage={progress} />
     </StyledProgressBar>
   );
 };
