@@ -1,0 +1,14 @@
+{
+  "locales": ["en", "es", "fr"],
+  "defaultLocale": "en",
+  "pages": {
+    "*": ["common"],
+    "/": [
+      "heroBannerSection",
+      "featuredProjectsSection",
+      "otherProjectsSection",
+      "aboutMeSection",
+      "contactSection"
+    ]
+  }
+}

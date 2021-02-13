@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import smoothScrollTo from "../../utils/smoothScrollTo";
 import navLinks from "../../data/navLinks";
 import setLanguageProperty from "../../utils/setLanguageProperty";
+import useTranslation from "next-translate/useTranslation";
 
 const StyledNav = styled.nav`
   z-index: 100;
@@ -37,20 +38,23 @@ const StyledLink = styled.a`
 `;
 
 const NavBar = () => {
-  // i18n - Next Router
-  const router = useRouter();
-  const languageProperty = setLanguageProperty(router);
+  // Iterate through navLinks Array
+  // And also through locales translations files
+
+  // i18n - Translation
+  const { t } = useTranslation("common");
 
   return (
     <StyledNav>
       <StyledList>
         {navLinks.map((navLink, index) => (
-          <li key={`${index}-${navLink}`}>
+          <li key={`${index}-${navLink.href}`}>
             <NextLink href={navLink.href} passHref>
               <StyledLink
                 onClick={() => smoothScrollTo(navLinks[index].scrollName)}
               >
-                {navLink.names[languageProperty]}
+                {t(`navLinks.${index}`)}
+                {/* Iterate through locales translations files */}
               </StyledLink>
             </NextLink>
           </li>

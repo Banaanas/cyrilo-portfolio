@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import smoothScrollTo from "../../utils/smoothScrollTo";
 import navLinks from "../../data/navLinks";
 import setLanguageProperty from "../../utils/setLanguageProperty";
+import useTranslation from "next-translate/useTranslation";
 
 const StyledNav = styled.nav`
   display: none;
@@ -56,29 +57,24 @@ const StyledLink = styled.a`
   }
 `;
 
+// Iterate through navLinks Array
+// And also through locales translations files
 const NavBar = () => {
-  /* i18n Translation
-    navLinks.js contains references to english, french and spanish translations of navLinks name
-    (to keep all translations centralized in language-translation.js)
-    That's why we do not import translations directly here but determine which
-    locale it is to determine the language (string) and set the navLinks.names[stringProperty].
-   */
-
-  // i18n - Next Router
-  const router = useRouter();
-  const languageProperty = setLanguageProperty(router);
+  // i18n - Translation
+  const { t } = useTranslation("common");
 
   return (
     <>
       <StyledNav>
         <StyledList>
           {navLinks.map((navLink, index) => (
-            <li key={`${index}-${navLink}`}>
+            <li key={`${index}-${navLink.ref}`}>
               <NextLink href={navLink.href} passHref>
                 <StyledLink
                   onClick={() => smoothScrollTo(navLinks[index].scrollName)}
                 >
-                  {navLink.names[languageProperty]}
+                  {t(`navLinks.${index}`)}
+                  {/* Iterate through locales translations files */}
                 </StyledLink>
               </NextLink>
             </li>

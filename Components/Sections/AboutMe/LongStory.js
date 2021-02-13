@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { useRouter } from "next/router";
+import useTranslation from "next-translate/useTranslation";
 import styled from "@emotion/styled";
 import { AnimatePresence, motion } from "framer-motion";
 import { BiHide as HideIcon, BiShow as ShowIcon } from "react-icons/bi";
 import StyledTextContainer from "./StyledTextContainer";
-import setLanguageTranslation from "../../../utils/setLanguageTranslation";
 import LongStoryParagraph from "./LongStoryParagraph";
 
 const StyledLongStory = styled(StyledTextContainer)`
@@ -98,16 +97,18 @@ const LongStory = () => {
     toggleShowLongStory(!showLongStory);
   };
 
-  // i18n - Next Router
-  const router = useRouter();
-  const translation = setLanguageTranslation(router);
+  // i18n - Translation
+  const { t } = useTranslation("aboutMeSection");
+  const title = t(`longStory.title`);
+  const buttonShow = t(`longStory.buttonRead`);
+  const buttonHide = t(`longStory.buttonHide`);
 
   return (
     <StyledLongStory showLongStory={showLongStory}>
-      <h3>{translation.aboutMeSection.longStory.title}</h3>
+      <h3>{title}</h3>
       {showLongStory ? null : (
         <StyledButton onClick={handleReadButtonClick}>
-          <span>{translation.aboutMeSection.longStory.buttonRead}</span>
+          <span>{buttonShow}</span>
           <ShowIcon />
         </StyledButton>
       )}
@@ -122,7 +123,7 @@ const LongStory = () => {
           >
             <LongStoryParagraph />
             <StyledButton onClick={handleReadButtonClick}>
-              <span>{translation.aboutMeSection.longStory.buttonHide}</span>
+              <span>{buttonHide}</span>
               <HideIcon />
             </StyledButton>
           </StyledContainer>

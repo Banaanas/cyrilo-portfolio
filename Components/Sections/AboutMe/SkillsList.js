@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
 import StyledTextContainer from "./StyledTextContainer";
 import skillsList from "../../../data/skills-list";
-import { useRouter } from "next/router";
-import setLanguageTranslation from "../../../utils/setLanguageTranslation";
+import useTranslation from "next-translate/useTranslation";
 
 const StyledSkillsList = styled(StyledTextContainer)`
   flex-direction: column;
@@ -48,13 +47,13 @@ const StyledListItem = styled.li`
 `;
 
 const SkillsList = () => {
-  // i18n - Next Router
-  const router = useRouter();
-  const translation = setLanguageTranslation(router);
+  // i18n - Translation
+  const { t } = useTranslation("aboutMeSection");
+  const title = t("thingsICodeWith");
 
   return (
     <StyledSkillsList>
-      <h3>{translation.aboutMeSection.thingsICodeWith} :</h3>
+      <h3>{title} :</h3>
       <StyledList>
         {skillsList.map((skill, index) => (
           <StyledListItem key={`${index}-${skill}`}>{skill}</StyledListItem>

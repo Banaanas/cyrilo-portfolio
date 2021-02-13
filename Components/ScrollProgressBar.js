@@ -1,6 +1,5 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import { useThrottledFn, useWindowScroll } from "beautiful-react-hooks";
+import { useEffect, useState } from "react";
+import { useThrottledFn } from "beautiful-react-hooks";
 import styled from "@emotion/styled";
 
 const StyledProgressBar = styled.div`

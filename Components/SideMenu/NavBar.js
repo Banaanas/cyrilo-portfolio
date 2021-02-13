@@ -10,6 +10,7 @@ import navLinks from "../../data/navLinks";
 import { closeSideMenu } from "../../store/slices/sideMenuSlice";
 import { useRouter } from "next/router";
 import setLanguageProperty from "../../utils/setLanguageProperty";
+import useTranslation from "next-translate/useTranslation";
 
 const StyledMenu = styled(motion.div)`
   position: absolute;
@@ -163,9 +164,11 @@ const NavBar = ({ menuID }) => {
     onSwipedLeft: () => handleCloseMenu(),
   });
 
-  // i18n - Next Router
-  const router = useRouter();
-  const languageProperty = setLanguageProperty(router);
+  // Iterate through navLinks Array
+  // And also through locales translations files
+
+  // i18n - Translation
+  const { t } = useTranslation("common");
 
   return (
     <StyledMenu
@@ -183,7 +186,7 @@ const NavBar = ({ menuID }) => {
           <StyledList>
             {navLinks.map((navLink, index) => (
               <motion.li
-                key={`${index}-${navLink.name}`}
+                key={`${index}-${navLink.href}`}
                 initial={isMenuOpen ? "visible" : "hidden"}
                 animate={isMenuOpen ? "visible" : "hidden"}
                 variants={menuItemVariant}
@@ -196,7 +199,8 @@ const NavBar = ({ menuID }) => {
                       smoothScrollTo(navLinks[index].scrollName);
                     }}
                   >
-                    {navLink.names[languageProperty]}
+                    {t(`navLinks.${index}`)}
+                    {/* Iterate through locales translations files */}
                   </StyledLink>
                 </NextLink>
               </motion.li>

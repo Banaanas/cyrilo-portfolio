@@ -1,0 +1,14 @@
+{
+  "title": "About Me",
+  "shortStory": {
+    "title": "Short Story",
+    "text": "<pTag> I'm <strongTag>Cyril</strongTag>, a brand new <strongTag>JavaScript Developer</strongTag> based in Lyon, France. After two Master in International Law (2006-2007) and years as teacher and International Law consultant, I've decided to give my career a shining new direction 🌞.</pTag>"
+  },
+  "longStory": {
+    "title": "Long Story",
+    "buttonRead": "Read",
+    "buttonHide": "Hide",
+    "text": "Since march 2020, I've been learning Web Development to become a <strongTag> FullStack Developer</strongTag>, specialized in <strongTag> Front-End Development</strongTag> . <brTag></brTag> In order to achieve this purpose, I have completed both <TheOdinProjectLink> The Odin Project </TheOdinProjectLink> and the <FullStackOpenLink> Full Stack Open</FullStackOpenLink> curriculums. Throughout those courses, I've been learning programming concepts and practical skills, realizing numerous concrete . Since then, I have deeply enjoyed continuously <ProjectsLink>Projets</ProjectsLink> learning and resolving problems. "
+  },
+  "thingsICodeWith": "Things I code with"
+}

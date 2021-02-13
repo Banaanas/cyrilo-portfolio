@@ -1,8 +1,8 @@
 import "../scripts/wdyr";
 import "../styles/normalize.css";
-import {Provider as ReduxProvider} from "react-redux";
-import {ThemeProvider as NextThemeProvider} from "next-themes";
-import {ThemeProvider as EmotionThemeProvider} from "@emotion/react";
+import { Provider as ReduxProvider } from "react-redux";
+import { ThemeProvider as NextThemeProvider } from "next-themes";
+import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 import store from "../store/store";
 import appTheme from "../styles/appTheme";
 import GlobalStyles from "../styles/GlobalStyles";

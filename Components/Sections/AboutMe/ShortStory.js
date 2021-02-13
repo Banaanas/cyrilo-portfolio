@@ -1,7 +1,6 @@
-import { useRouter } from "next/router";
 import styled from "@emotion/styled";
+import useTranslation from "next-translate/useTranslation";
 import StyledTextContainer from "./StyledTextContainer";
-import setLanguageTranslation from "../../../utils/setLanguageTranslation";
 import ShortStoryParagraph from "./ShortStoryParagraph";
 
 export const StyledShortStory = styled(StyledTextContainer)`
@@ -13,20 +12,20 @@ export const StyledShortStory = styled(StyledTextContainer)`
     color: var(--secondary-main);
   }
 
-  #Cyril-name {
+  strong {
     color: var(--short-story-name);
     border-radius: 4px;
   }
 `;
 
 const ShortStory = () => {
-  // i18n - Next Router
-  const router = useRouter();
-  const translation = setLanguageTranslation(router);
+  // i18n - Translation
+  const { t } = useTranslation("aboutMeSection");
+  const title = t(`shortStory.title`);
 
   return (
     <StyledShortStory>
-      <h3>{translation.aboutMeSection.shortStory.title}</h3>
+      <h3>{title}</h3>
       <ShortStoryParagraph />
     </StyledShortStory>
   );

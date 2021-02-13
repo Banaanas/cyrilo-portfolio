@@ -1,6 +1,6 @@
-import { useRouter } from "next/router";
+import useTranslation from "next-translate/useTranslation";
+import Trans from "next-translate/Trans";
 import styled from "@emotion/styled";
-import setLanguageTranslation from "../../../utils/setLanguageTranslation";
 
 const StyledDiv = styled.div`
   font-family: "Nexa Black", sans-serif;
@@ -8,38 +8,32 @@ const StyledDiv = styled.div`
 `;
 
 export const FirstQuestion = () => {
-  // i18n - Next Router
-  const router = useRouter();
-  const translation = setLanguageTranslation(router);
+  const { t } = useTranslation("contactSection");
+  const importantQuestion = t(`importantQuestion`);
 
-  return <StyledDiv>{translation.contactSection.importantQuestion}</StyledDiv>;
+  return <StyledDiv>{importantQuestion}</StyledDiv>;
 };
 
 export const SecondQuestion = () => {
-  // i18n - Next Router
-  const router = useRouter();
-  const translation = setLanguageTranslation(router);
-  return (
-    <StyledDiv>{translation.contactSection.firstSubsidiaryQuestion}</StyledDiv>
-  );
+  const { t } = useTranslation("contactSection");
+  const firstSubsidiaryQuestion = t(`firstSubsidiaryQuestion`);
+
+  return <StyledDiv>{firstSubsidiaryQuestion}</StyledDiv>;
 };
 
-export const ThirdQuestion = () => {
-  // i18n - Next Router
-  const router = useRouter();
-  const { locale } = router;
+/* Trans Component is used for translations with HTML Tags in it
+ *  In this case, it's ony for the English Translation ( emphasized "Hi")
+ * */
 
-  if (locale === "en") {
-    return (
-      <StyledDiv>
-        Just Want to Say <em>"Hi"</em> ?
-      </StyledDiv>
-    );
-  }
-  if (locale === "fr") {
-    return <StyledDiv>Échanger quelques mots ?</StyledDiv>;
-  }
-  if (locale === "es") {
-    return <StyledDiv>Una conversación ?</StyledDiv>;
-  }
+export const ThirdQuestion = () => {
+  return (
+    <StyledDiv>
+      <Trans
+        i18nKey="contactSection:secondSubsidiaryQuestion"
+        components={{
+          emphasize: <em />,
+        }}
+      />
+    </StyledDiv>
+  );
 };

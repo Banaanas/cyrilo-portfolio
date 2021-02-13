@@ -1,17 +1,16 @@
 import { useEffect } from "react";
-import styled from "@emotion/styled";
 import NextLink from "next/link";
+import useTranslation from "next-translate/useTranslation";
+import { useInView } from "react-intersection-observer";
+import styled from "@emotion/styled";
+import smoothScrollTo from "../../../utils/smoothScrollTo";
 import { Element as ScrollWrapper } from "react-scroll";
 import { FaArrowDown as DownArrowIcon } from "react-icons/fa";
-import { useInView } from "react-intersection-observer";
-import { useRouter } from "next/router";
-import smoothScrollTo from "../../../utils/smoothScrollTo";
 import GenericStyledSection from "../../StyledComponents/StyledSection";
 import navLinks from "../../../data/navLinks";
 import HeroBannerDivider from "../../Dividers/HeroBannerDivider";
 import GenericStyledH2 from "../../StyledComponents/StyledH2";
 import PlanetCyril from "./PlanetCyril";
-import setLanguageTranslation from "../../../utils/setLanguageTranslation";
 
 const StyledSection = styled(GenericStyledSection)`
   display: flex;
@@ -158,6 +157,10 @@ const StyledWrapper = styled.div`
 `;
 
 const HeroBannerSection = () => {
+  // i18n - Translation
+  const { t } = useTranslation("heroBannerSection");
+  const ProjectsLink = t("link");
+
   // React Intersection Observer
   const { ref, inView, entry } = useInView({
     triggerOnce: false,
@@ -170,10 +173,6 @@ const HeroBannerSection = () => {
       updateHashNameURL("/");
     }*/
   }, [inView]);
-
-  // i18n - Next Router
-  const router = useRouter();
-  const translation = setLanguageTranslation(router);
 
   return (
     <>
@@ -194,7 +193,7 @@ const HeroBannerSection = () => {
               onClick={() => smoothScrollTo(navLinks[1].scrollName)}
               ref={ref}
             >
-              <span>{translation.heroBannerSection.link}</span>
+              <span>{ProjectsLink}</span>
               <StyledDownArrowIcon />
             </StyledLink>
           </NextLink>
@@ -207,7 +206,7 @@ const HeroBannerSection = () => {
             id="second-link"
             onClick={() => smoothScrollTo(navLinks[1].scrollName)}
           >
-            <span>{translation.heroBannerSection.link}</span>
+            <span>{ProjectsLink}</span>
             <StyledDownArrowIcon />
           </StyledLink>
         </NextLink>
