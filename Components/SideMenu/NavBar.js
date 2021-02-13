@@ -165,7 +165,7 @@ const NavBar = ({ menuID }) => {
   });
 
   // Iterate through navLinks Array
-  // And also through locales translations files
+  // And also through translation array in Locales Directory
 
   // i18n - Translation
   const { t } = useTranslation("common");
@@ -200,7 +200,7 @@ const NavBar = ({ menuID }) => {
                     }}
                   >
                     {t(`navLinks.${index}`)}
-                    {/* Iterate through locales translations files */}
+                    {/* Iterate through translation array in Locales directory */}
                   </StyledLink>
                 </NextLink>
               </motion.li>

@@ -39,7 +39,7 @@ const StyledLink = styled.a`
 
 const NavBar = () => {
   // Iterate through navLinks Array
-  // And also through locales translations files
+  // And also through translation array in Locales Directory
 
   // i18n - Translation
   const { t } = useTranslation("common");
@@ -54,7 +54,7 @@ const NavBar = () => {
                 onClick={() => smoothScrollTo(navLinks[index].scrollName)}
               >
                 {t(`navLinks.${index}`)}
-                {/* Iterate through locales translations files */}
+                {/* Iterate through translation array in Locales directory */}
               </StyledLink>
             </NextLink>
           </li>

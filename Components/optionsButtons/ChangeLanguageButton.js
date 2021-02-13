@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import NextLink from "next/link";
 import styled from "@emotion/styled";
 
-const StyledLink = styled.a`
+const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,73 +23,30 @@ const StyledLink = styled.a`
   }
 `;
 
-// Cf. -> Note 1 - Flash
-// Button to change the Language
 const ChangeLanguageButton = () => {
   // i18n - Next Router
   const router = useRouter();
-  const { locale } = router;
-
-  const returnNextLocale = (routerObj) => {
-    const { locale } = routerObj;
-
-    // Return Next Language
-    if (locale === "en") return "fr";
-    if (locale === "fr") return "es";
-    if (locale === "es") return "en";
-  };
-
-  return (
-    <NextLink
-      href={router.asPath}
-      locale={returnNextLocale(router)}
-      scroll={false}
-    >
-      <StyledLink>{locale.toUpperCase()}</StyledLink>
-    </NextLink>
-  );
-};
-
-export default ChangeLanguageButton;
-
-/*
-
-const ChangeLanguageButton = () => {
-  //const [buttonText, setButtonText] = useState("EN");
-
-  // i18n - Next Router
-  const router = useRouter();
-
-  /!*  useEffect(() => {
-    const { locale } = router;
-    setButtonText(locale.toUpperCase());
-  }, [router]);*!/
 
   const { locale } = router;
 
   const changeLanguage = () => {
     const { locale } = router;
 
-    /!* "Shallow: true" to prevent Page Reload *!/
-    if (locale === "en") {
-      router.push("/", "/", { locale: "fr", shallow: "true" });
-      return;
-    }
-    if (locale === "fr") {
-      router.push("/", "/", { locale: "es", shallow: "true" });
-      return;
-    }
-    if (locale === "es") {
-      router.push("/", "/", { locale: "en", shallow: "true" });
-    }
+    // Return Next Language
+    let nextLocale;
+    if (locale === "en") nextLocale = "fr";
+    if (locale === "fr") nextLocale = "es";
+    if (locale === "es") nextLocale = "en";
+
+    // Change Locale to Next Language
+    router.push("/", "/", { locale: `${nextLocale}`, scroll: false });
   };
 
   return (
-      <StyledButton onClick={changeLanguage} title="Change Language">
-        <span>{locale.toUpperCase()}</span>
-      </StyledButton>
+    <StyledButton onClick={changeLanguage} title="Change Language">
+      {locale.toUpperCase()}
+    </StyledButton>
   );
 };
 
 export default ChangeLanguageButton;
-*/
