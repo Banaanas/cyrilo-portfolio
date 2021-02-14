@@ -3,9 +3,9 @@ import NextLink from "next/link";
 import useTranslation from "next-translate/useTranslation";
 import { useInView } from "react-intersection-observer";
 import styled from "@emotion/styled";
-import smoothScrollTo from "../../../utils/smoothScrollTo";
 import { Element as ScrollWrapper } from "react-scroll";
 import { FaArrowDown as DownArrowIcon } from "react-icons/fa";
+import smoothScrollTo from "../../../utils/smoothScrollTo";
 import GenericStyledSection from "../../StyledComponents/StyledSection";
 import navLinks from "../../../data/navLinks";
 import HeroBannerDivider from "../../Dividers/HeroBannerDivider";
@@ -30,6 +30,7 @@ const StyledSection = styled(GenericStyledSection)`
 
   #first-link {
     display: none;
+
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
       display: flex;
     }
@@ -37,6 +38,7 @@ const StyledSection = styled(GenericStyledSection)`
 
   #second-link {
     display: flex;
+
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
       display: none;
     }
@@ -131,8 +133,6 @@ const HeroBannerSection = () => {
   // i18n - Translation
   const { t } = useTranslation("heroBannerSection");
   const ProjectsLink = t("link");
-  const titleFromOtherNamespace = t("ns2:common.example");
-  console.log(titleFromOtherNamespace);
 
   // React Intersection Observer
   const { ref, inView, entry } = useInView({

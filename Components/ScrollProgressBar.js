@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 
 const StyledProgressBar = styled.div`
   position: fixed;
+  top: 0;
   z-index: 100;
   width: 100%;
   height: 5px;
