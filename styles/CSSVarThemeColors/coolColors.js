@@ -70,6 +70,10 @@ const coolColors = css`
   --cyrilo-mail-line: var(--primary-main);
   --github-linkedin-background: var(--default-white);
 
+  /* 404 Page */
+  --404-h1-color: var(--primary-main);
+  --404-r-letter: var(--default-white);
+
   /* Default Colors */
   --default-white: #fbf9fa;
 

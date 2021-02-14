@@ -2,13 +2,14 @@
   "locales": ["en", "es", "fr"],
   "defaultLocale": "en",
   "pages": {
-    "*": ["common"],
+    "*": ["common", "aboutMeSection"],
     "/": [
       "heroBannerSection",
       "featuredProjectsSection",
       "otherProjectsSection",
       "aboutMeSection",
       "contactSection"
-    ]
+    ],
+    "/404": ["404"]
   }
 }

@@ -70,6 +70,10 @@ const smoothColors = css`
   --cyrilo-mail-line: var(--primary-main);
   --github-linkedin-background: var(--primary-main);
 
+  /* 404 Page */
+  --404-h1-color: var(--primary-main);
+  --404-r-letter: var(--secondary-main);
+
   /* Default Colors */
   --default-white: #fffffe;
 

@@ -11,6 +11,7 @@ import navLinks from "../../../data/navLinks";
 import HeroBannerDivider from "../../Dividers/HeroBannerDivider";
 import GenericStyledH2 from "../../StyledComponents/StyledH2";
 import PlanetCyril from "./PlanetCyril";
+import StyledLink from "../../StyledComponents/StyledLink";
 
 const StyledSection = styled(GenericStyledSection)`
   display: flex;
@@ -121,36 +122,6 @@ const StyledH1 = styled.h1`
   }
 `;
 
-const StyledLink = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 1rem;
-  color: var(--action-button-color);
-  font-size: ${({ theme }) => theme.fontSizes.xl};
-  font-family: "Nexa Black", sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: var(--action-button-background);
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
-  cursor: pointer;
-
-  span {
-    display: inline-flex;
-    align-items: center;
-    margin: 0 0.5rem;
-    line-height: 100%; /* To Align Span and Icon */
-  }
-`;
-
-const StyledDownArrowIcon = styled(DownArrowIcon)`
-  color: var(--action-button-icon-color);
-  font-size: ${({ theme }) => theme.fontSizes.xl2};
-`;
-
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -160,6 +131,8 @@ const HeroBannerSection = () => {
   // i18n - Translation
   const { t } = useTranslation("heroBannerSection");
   const ProjectsLink = t("link");
+  const titleFromOtherNamespace = t("ns2:common.example");
+  console.log(titleFromOtherNamespace);
 
   // React Intersection Observer
   const { ref, inView, entry } = useInView({
@@ -194,7 +167,7 @@ const HeroBannerSection = () => {
               ref={ref}
             >
               <span>{ProjectsLink}</span>
-              <StyledDownArrowIcon />
+              <DownArrowIcon />
             </StyledLink>
           </NextLink>
         </StyledContainer>
@@ -207,7 +180,7 @@ const HeroBannerSection = () => {
             onClick={() => smoothScrollTo(navLinks[1].scrollName)}
           >
             <span>{ProjectsLink}</span>
-            <StyledDownArrowIcon />
+            <DownArrowIcon />
           </StyledLink>
         </NextLink>
       </StyledSection>
