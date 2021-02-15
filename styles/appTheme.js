@@ -24,6 +24,9 @@ const appTheme = {
   },
   globalMinWidth: "320px",
   globalMaxWidth: "1100px",
+  letterSpacing: {
+    heroBanner: "0.125rem",
+  },
   transitions: {
     themeColors: "background-color 500ms ease" /* Global Background */,
     svgFill:

@@ -9,7 +9,6 @@ import smoothScrollTo from "../../../utils/smoothScrollTo";
 import GenericStyledSection from "../../StyledComponents/StyledSection";
 import navLinks from "../../../data/navLinks";
 import HeroBannerDivider from "../../Dividers/HeroBannerDivider";
-import GenericStyledH2 from "../../StyledComponents/StyledH2";
 import PlanetCyril from "./PlanetCyril";
 import StyledLink from "../../StyledComponents/StyledLink";
 
@@ -66,8 +65,9 @@ const StyledH1 = styled.h1`
   overflow: hidden;
   border-radius: 8px;
 
+  /* JavaScript Developer */
   span {
-    --letter-spacing: 0.125rem;
+    --letter-spacing: ${({ theme }) => theme.letterSpacing.heroBanner};
 
     display: flex;
     align-items: center;
@@ -76,7 +76,7 @@ const StyledH1 = styled.h1`
     height: 100%;
     margin-right: calc(
       -1 * var(--letter-spacing)
-    ); /* To counterbalance the last letter's spacing */
+    ); /* CSS Var above. To counterbalance the last letter's spacing */
     margin: 0;
     padding: 1rem 1.5rem;
     font-size: ${({ theme }) => theme.fontSizes.xl2};

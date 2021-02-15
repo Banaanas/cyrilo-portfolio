@@ -8,7 +8,7 @@ const StyledSVG = styled.svg`
   z-index: -1;
   width: 100%;
   min-width: ${({ theme }) => theme.globalMinWidth};
-  height: 8rem;
+  height: 6rem; /* 3 Rectangles Shades (2rem) */
   transform: scaleY(-1); /* Vertical flip */
 `;
 
@@ -16,8 +16,9 @@ const HalfMoon = () => {
   return (
     <StyledSVG
       width="1440"
-      height="240"
-      viewBox="0 0 1440 240"
+      height="180"
+      viewBox="0 0 1440 180"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="none"
     >
@@ -28,17 +29,20 @@ const HalfMoon = () => {
         x="0"
         y="0"
         width="1440"
-        height="240"
+        height="180"
       >
-        <path d="M1440 0H0V160C0 170.506 18.623 180.909 54.8066 190.615C90.9902 200.321 144.025 209.14 210.883 216.568C277.741 223.997 357.113 229.89 444.468 233.91C531.822 237.931 625.448 240 720 240C814.552 240 908.178 237.931 995.532 233.91C1082.89 229.89 1162.26 223.997 1229.12 216.569C1295.97 209.14 1349.01 200.321 1385.19 190.615C1421.38 180.909 1440 170.506 1440 160V0Z" />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M1440 0H0V120C-8.26597e-06 127.879 18.6233 135.681 54.8067 142.961C90.9901 150.241 144.025 156.855 210.883 162.426C277.741 167.998 357.113 172.417 444.468 175.433C531.822 178.448 625.448 180 720 180C814.552 180 908.178 178.448 995.532 175.433C1082.89 172.417 1162.26 167.998 1229.12 162.426C1295.98 156.855 1349.01 150.241 1385.19 142.961C1421.38 135.681 1440 127.879 1440 120V0Z"
+          fill="#f00"
+        />
       </mask>
       <g mask="url(#mask0)">
         <rect width="1440" height="60" fill="var(--secondary-dark)" />
-
         <rect y="60" width="1440" height="60" fill="var(--secondary-main)" />
-        <rect y="120" width="1440" height="60" fill="var(--secondary-light)" />
         <rect
-          y="180"
+          y="120"
           width="1440"
           height="60"
           fill="var(--secondary-lighter)"

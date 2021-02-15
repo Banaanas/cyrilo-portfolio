@@ -1,12 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import useTranslation from "next-translate/useTranslation";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import OtherProjectsStar from "./OtherProjectsStar";
 import OtherProjectsButton from "./OtherProjectsButton";
 import StyledTitle from "../../StyledComponents/StyledTitle";
-import useTranslation from "next-translate/useTranslation";
 
 const StyledProjectsContainer = styled(motion.div)`
   display: grid;
