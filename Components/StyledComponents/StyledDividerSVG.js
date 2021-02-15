@@ -1,14 +1,17 @@
 import styled from "@emotion/styled";
 
-const StyledDividerContainer = styled.div`
+const StyledDividerSVG = styled.div`
   position: relative;
   width: 100vw;
   min-width: ${({ theme }) => theme.globalMinWidth};
   height: 8rem;
+  background: yellow;
 
   svg {
     position: absolute;
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
+
     height: 100%;
   }
 
@@ -17,4 +20,4 @@ const StyledDividerContainer = styled.div`
   }
 `;
 
-export default StyledDividerContainer;
+export default StyledDividerSVG;
