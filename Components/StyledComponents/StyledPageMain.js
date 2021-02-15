@@ -8,7 +8,6 @@ const StyledPageMain = styled(motion.main)`
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: ${({ theme }) => theme.globalMaxWidth};
   height: auto;
   font-weight: bold;
   text-align: justify;

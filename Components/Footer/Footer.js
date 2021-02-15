@@ -26,6 +26,7 @@ const StyledFooter = styled.footer`
 const StyledContainer = styled.div`
   position: absolute;
   bottom: 0;
+  padding: 0;
 `;
 
 const Footer = () => {
@@ -35,9 +36,7 @@ const Footer = () => {
   return (
     <>
       <StyledFooter isMenuOpen={isMenuOpen}>
-        <StyledContainer>
-          <HalfMoon />
-        </StyledContainer>
+        <HalfMoon />
         <NavBar />
         <SubFooter />
       </StyledFooter>

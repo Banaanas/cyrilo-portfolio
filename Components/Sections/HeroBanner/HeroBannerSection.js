@@ -57,30 +57,6 @@ const StyledContainer = styled.div`
   }
 `;
 
-const StyledH2 = styled(GenericStyledH2)`
-  display: none;
-  color: var(--cyril-h2);
-  text-shadow: var(--cyril-h2-text-shadow);
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
-    display: flex;
-  }
-`;
-
-/* Cyril H2 located in the Header's Half Moon */
-const StyledHalfMoonH2 = styled(GenericStyledH2)`
-  position: absolute;
-  top: -3rem;
-  z-index: 1000;
-  display: flex;
-  color: var(--cyril-h2-responsive);
-  text-shadow: var(--cyril-h2-responsive-text-shadow);
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
-    display: none;
-  }
-`;
-
 const StyledH1 = styled.h1`
   display: flex;
   flex-direction: column;
@@ -150,11 +126,9 @@ const HeroBannerSection = () => {
   return (
     <>
       <ScrollWrapper name="hero-banner-scroll" />
-      <StyledHalfMoonH2>Cyril</StyledHalfMoonH2>
       <StyledSection>
         <StyledContainer>
           <StyledWrapper>
-            <StyledH2>Cyril</StyledH2>
             <StyledH1>
               <span>JavaScript</span>
               <span>Developer</span>

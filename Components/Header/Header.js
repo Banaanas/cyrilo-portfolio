@@ -14,10 +14,10 @@ const StyledHeader = styled.header`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 100vw;
+  width: 100%;
   min-width: ${({ theme }) => theme.globalMinWidth};
   height: 4rem;
-  padding: 0 0.5rem;
+  padding: 0.5rem;
   background: linear-gradient(
     180deg,
     var(--secondary-dark) 50%,

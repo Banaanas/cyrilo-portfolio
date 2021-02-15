@@ -6,6 +6,7 @@ const StyledSection = styled.section`
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-width: ${({ theme }) => theme.globalMaxWidth};
   padding: 1rem;
 `;
 

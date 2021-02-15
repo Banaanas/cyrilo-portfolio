@@ -4,6 +4,10 @@ const coolColors = css`
   /* General Elements */
   --global-background-color: var(--tertiary-main);
 
+  /* CyriLogo */
+  --cyrilogo-color-1: var(--primary-main);
+  --cyrilogo-color-2: var(--secondary-lightest1);
+
   /* Section Title */
   --styled-title-color: var(--default-white);
 
@@ -27,14 +31,6 @@ const coolColors = css`
   --planet-Cyril: var(--primary-main);
   --planet-Cyril-stars-light-shade: var(--primary-main);
   --planet-Cyril-stars-dark-shade: var(--secondary-main);
-
-  /* HeroBanner Section */
-  --cyril-h2: var(--primary-main);
-  --cyril-h2-text-shadow: 1px 1px 3px var(--secondary-main);
-
-  /* HeroBanner Section - Located in the HalfMoon Shape - Responsive */
-  --cyril-h2-responsive: var(--primary-lightest2);
-  --cyril-h2-responsive-text-shadow: 1px 1px 3px var(--secondary-darker);
 
   /* Project Card */
   --projects-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.12);

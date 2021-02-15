@@ -9,6 +9,7 @@ import GlobalStyles from "../styles/GlobalStyles";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
 import OptionButtonsContainer from "../Components/optionsButtons/optionButtonsContainer";
+import HalfMoon from "../Components/Footer/HalfMoon";
 
 const App = ({ Component, pageProps }) => {
   return (

@@ -1,19 +1,17 @@
-import { useRouter } from "next/router";
 import NextLink from "next/link";
+import useTranslation from "next-translate/useTranslation";
 import styled from "@emotion/styled";
 import smoothScrollTo from "../../utils/smoothScrollTo";
 import navLinks from "../../data/navLinks";
-import setLanguageProperty from "../../utils/setLanguageProperty";
-import useTranslation from "next-translate/useTranslation";
 
 const StyledNav = styled.nav`
   display: none;
+  height: 100%;
 
   @media (min-width: 710px) {
     display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
     min-width: 450px;
     margin-left: auto;
   }
@@ -27,11 +25,12 @@ const StyledList = styled.ul`
   display: inline-flex;
   justify-content: space-around;
   width: 100%;
+  height: 100%;
   list-style: none;
 
   li {
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
   }
 `;
