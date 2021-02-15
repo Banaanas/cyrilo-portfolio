@@ -7,6 +7,7 @@ import StyledPageMain from "../Components/StyledComponents/StyledPageMain";
 import StyledLink from "../Components/StyledComponents/StyledLink";
 import StyledSection from "../Components/StyledComponents/StyledSection";
 import { pageTransition, pageVariants } from "../styles/animations";
+import { AnimatePresence } from "framer-motion";
 
 const StyledH1 = styled.h1`
   margin-bottom: 5rem; /* Margin between H1 and Link */
@@ -40,26 +41,21 @@ const Custom404 = () => {
   const textLink = t("textLink");
 
   return (
-    <StyledPageMain
-      variants={pageVariants}
-      transition={pageTransition}
-      initial="initial"
-      animate="animate"
-      exit="initial"
-      isMenuOpen={isMenuOpen}
-    >
-      <StyledSection>
-        <StyledH1>
-          404 - Er<span id="r-letter">r</span>or
-        </StyledH1>
-        <NextLink href="/" passHref>
-          <StyledLink>
-            <span>{textLink}</span>
-            <HomeIcon />
-          </StyledLink>
-        </NextLink>
-      </StyledSection>
-    </StyledPageMain>
+    <AnimatePresence exitBeforeEnter>
+      <StyledPageMain isMenuOpen={isMenuOpen}>
+        <StyledSection>
+          <StyledH1>
+            404 - Er<span id="r-letter">r</span>or
+          </StyledH1>
+          <NextLink href="/" passHref>
+            <StyledLink>
+              <span>{textLink}</span>
+              <HomeIcon />
+            </StyledLink>
+          </NextLink>
+        </StyledSection>
+      </StyledPageMain>
+    </AnimatePresence>
   );
 };
 

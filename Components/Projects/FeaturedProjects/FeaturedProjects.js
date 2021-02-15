@@ -35,14 +35,11 @@ const StarWrapper = styled(motion.div)`
   display: none;
   grid-row: 2/3;
   grid-column: 1/3;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
   opacity: 0;
   transition: opacity 10s ease-in-out;
 
   @media (min-width: 628px) {
-    display: block;
+    display: flex;
     opacity: 1;
   }
 `;
@@ -54,14 +51,14 @@ const FeaturedProjects = ({ featuredProjects }) => {
         <ProjectCard project={project} key={project.id} />
       ))}
       <StarWrapper
-        animate={{ rotate: 360, scale: [1, 1.5, 2, 2.5, 2, 1.5, 1] }}
+       /* animate={{ rotate: 360, scale: [1, 1.5, 2, 2.5, 2, 1.5, 1] }}
         transition={{
           duration: 5,
           type: "tween",
           stiffness: 260,
           damping: 20,
           repeat: Infinity,
-        }}
+        }}*/
       >
         <FeaturedProjectsStar />
       </StarWrapper>

@@ -6,7 +6,6 @@ import Projects from "../Components/Sections/ProjectsSections/Projects";
 import AboutMeSection from "../Components/Sections/AboutMe/AboutMeSection";
 import ContactSection from "../Components/Sections/Contact/ContactSection";
 import ScrollProgressBar from "../Components/ScrollProgressBar";
-import { pageTransition, pageVariants } from "../styles/animations";
 
 const Home = () => {
   // SIDE MENU - REDUX STATE
@@ -18,14 +17,7 @@ const Home = () => {
         <title key="title">Cyrilo - JavaScript Dev</title>
       </Head>
       <ScrollProgressBar />
-      <StyledPageMain
-        isMenuOpen={isMenuOpen}
-        variants={pageVariants}
-        transition={pageTransition}
-        initial="initial"
-        animate="animate"
-        exit="initial"
-      >
+      <StyledPageMain isMenuOpen={isMenuOpen}>
         <HeroBannerSection />
         <Projects />
         <AboutMeSection />

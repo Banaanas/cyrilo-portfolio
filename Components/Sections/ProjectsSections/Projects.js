@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Element as ScrollWrapper } from "react-scroll";
+import useTranslation from "next-translate/useTranslation";
 import { useInView } from "react-intersection-observer";
 import StyledSection from "../../StyledComponents/StyledSection";
 import projectsList from "../../../data/projects-list";
@@ -8,7 +9,6 @@ import StyledTitle from "../../StyledComponents/StyledTitle";
 import OtherProjects from "../../Projects/OtherProjects/OtherProjects";
 import FeaturedProjectsDivider from "../../Dividers/FeaturedProjectsDivider";
 import OtherProjectsDivider from "../../Dividers/OtherProjectsDivider";
-import useTranslation from "next-translate/useTranslation";
 
 const Projects = () => {
   // React Intersection Observer
