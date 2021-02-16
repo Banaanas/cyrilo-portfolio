@@ -17,7 +17,9 @@ const StyledSection = styled(GenericStyledSection)`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  min-height: calc(100vh - 12rem); /* 8rem (Halfmoon) + 8rem (Divider) */
+  min-height: calc(
+    100vh - 12rem
+  ); /* 8rem (Halfmoon) + 4rem (Half of Divider <-- Divider : 8rem) */
   padding-right: 0;
   padding-left: 0;
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
@@ -77,7 +79,7 @@ const StyledH1 = styled.h1`
     margin-right: calc(
       -1 * var(--letter-spacing)
     ); /* CSS Var above. To counterbalance the last letter's spacing */
-    font-size: ${({ theme }) => theme.fontSizes.xl};
+    font-size: ${({ theme }) => theme.fontSizes.xl2};
     font-family: "Nexa Black", sans-serif;
     letter-spacing: var(--letter-spacing);
     text-transform: uppercase;
