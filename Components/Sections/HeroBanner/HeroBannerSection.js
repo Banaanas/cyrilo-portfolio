@@ -20,7 +20,6 @@ const StyledSection = styled(GenericStyledSection)`
   min-height: calc(100vh - 12rem); /* 8rem (Halfmoon) + 8rem (Divider) */
   padding-right: 0;
   padding-left: 0;
-
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
     flex-direction: row;
     justify-content: space-around;
@@ -29,18 +28,14 @@ const StyledSection = styled(GenericStyledSection)`
     ); /* 6rem (Halfmoon) + 8rem HeroBannerDivider */
     padding: 1rem;
   }
-
   #first-link {
     display: none;
-
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
       display: flex;
     }
   }
-
   #second-link {
     display: flex;
-
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
       display: none;
     }
@@ -54,7 +49,6 @@ const StyledContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   width: min-content;
-
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
     height: 500px;
   }
@@ -67,11 +61,9 @@ const StyledH1 = styled.h1`
   justify-content: center;
   margin: 0;
   border-radius: 8px;
-
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
     flex-direction: column;
   }
-
   /* JavaScript Developer */
   span {
     --letter-spacing: ${({ theme }) => theme.letterSpacing.heroBanner};
@@ -85,34 +77,29 @@ const StyledH1 = styled.h1`
     margin-right: calc(
       -1 * var(--letter-spacing)
     ); /* CSS Var above. To counterbalance the last letter's spacing */
-    font-size: ${({ theme }) => theme.fontSizes.lg};
+    font-size: ${({ theme }) => theme.fontSizes.xl};
     font-family: "Nexa Black", sans-serif;
     letter-spacing: var(--letter-spacing);
     text-transform: uppercase;
-
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection3}) {
       padding: 0.5rem 1rem;
       font-size: ${({ theme }) => theme.fontSizes.xl};
     }
-
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
       padding: 0.5rem 1rem;
       font-size: ${({ theme }) => theme.fontSizes.xl};
     }
-
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
       padding: 1rem 1.5rem;
       font-size: ${({ theme }) => theme.fontSizes.xl2};
     }
   }
-
   span:nth-of-type(1) {
     color: var(--default-white);
     background-color: var(--secondary-main);
     border: 4px solid var(--secondary-main);
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
       border-bottom: none;
       border-top-left-radius: 8px;
@@ -120,7 +107,6 @@ const StyledH1 = styled.h1`
       border-bottom-left-radius: 0;
     }
   }
-
   span:nth-of-type(2) {
     color: var(--secondary-main);
     background-color: var(--default-white);
@@ -128,7 +114,6 @@ const StyledH1 = styled.h1`
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border-color: var(--default-white);
-
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
       border-top: none;
       border-top-right-radius: 0;
