@@ -5,8 +5,8 @@ const coolColors = css`
   --global-background-color: var(--tertiary-main);
 
   /* CyriLogo */
-  --cyrilogo-color-1: var(--primary-main);
-  --cyrilogo-color-2: var(--secondary-lightest1);
+  --cyrilogo-color-1: var(--secondary-light);
+  --cyrilogo-color-2: var(--default-white);
 
   /* Section Title */
   --styled-title-color: var(--default-white);

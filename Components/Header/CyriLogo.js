@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
 const StyledSVG = styled.svg`
+  fill: aqua;
   width: auto;
   height: 3rem;
 `;
@@ -11,7 +12,6 @@ const CyriLogo = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="1860"
       height="630"
-      fill="none"
       viewBox="0 0 1860 630"
     >
       <path

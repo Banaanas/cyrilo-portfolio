@@ -17,7 +17,9 @@ const StyledSection = styled(GenericStyledSection)`
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  min-height: calc(100vh - 16rem);
+  min-height: calc(
+    100vh - 14rem
+  ); /* 6rem (Halfmoon) + 8rem HeroBannerDivider */
   padding-right: 0;
   padding-left: 0;
 
