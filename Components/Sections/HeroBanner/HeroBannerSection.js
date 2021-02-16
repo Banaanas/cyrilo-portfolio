@@ -17,7 +17,7 @@ const StyledSection = styled(GenericStyledSection)`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  min-height: calc(100vh - 16rem); /* 8rem (Halfmoon) + 8rem (Divider) */
+  min-height: calc(100vh - 12rem); /* 8rem (Halfmoon) + 8rem (Divider) */
   padding-right: 0;
   padding-left: 0;
 
