@@ -20,8 +20,8 @@ const StyledHeader = styled.header`
   padding: 0.5rem;
   background: linear-gradient(
     180deg,
-    var(--secondary-dark) 50%,
-    var(--secondary-main) 50%
+    var(--header-halfmoon-shade-1) 50%,
+    var(--header-halfmoon-shade-2) 50%
   );
   transform: translateY(${({ translateY }) => translateY});
   transition: transform 100ms ease-out;

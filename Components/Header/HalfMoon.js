@@ -36,13 +36,18 @@ const HalfMoon = () => {
         />
       </mask>
       <g mask="url(#mask0)">
-        <rect width="1440" height="60" fill="var(--secondary-dark)" />
-        <rect y="60" width="1440" height="60" fill="var(--secondary-main)" />
+        <rect width="1440" height="60" fill="var(--header-halfmoon-shade-1)" />
+        <rect
+          y="60"
+          width="1440"
+          height="60"
+          fill="var(--header-halfmoon-shade-2)"
+        />
         <rect
           y="120"
           width="1440"
           height="60"
-          fill="var(--secondary-lighter)"
+          fill="var(--header-halfmoon-shade-3)"
         />
       </g>
     </StyledSVG>

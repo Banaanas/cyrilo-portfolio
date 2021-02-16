@@ -16,16 +16,17 @@ const StyledSection = styled(GenericStyledSection)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
-  min-height: calc(
-    100vh - 14rem
-  ); /* 6rem (Halfmoon) + 8rem HeroBannerDivider */
+  justify-content: space-around;
+  min-height: calc(100vh - 6rem); /* 6rem (Halfmoon) */
   padding-right: 0;
   padding-left: 0;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
     flex-direction: row;
     justify-content: space-around;
+    min-height: calc(
+      100vh - 14rem
+    ); /* 6rem (Halfmoon) + 8rem HeroBannerDivider */
     padding: 1rem;
   }
 
@@ -46,6 +47,7 @@ const StyledSection = styled(GenericStyledSection)`
   }
 `;
 
+/* Container for H1 + First Link */
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -60,12 +62,15 @@ const StyledContainer = styled.div`
 
 const StyledH1 = styled.h1`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin: 0;
-  overflow: hidden;
   border-radius: 8px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
+    flex-direction: column;
+  }
 
   /* JavaScript Developer */
   span {
@@ -76,35 +81,50 @@ const StyledH1 = styled.h1`
     justify-content: center;
     width: 100%;
     height: 100%;
+    padding: 0.25rem 0.5rem;
     margin-right: calc(
       -1 * var(--letter-spacing)
     ); /* CSS Var above. To counterbalance the last letter's spacing */
-    margin: 0;
-    padding: 1rem 1.5rem;
-    font-size: ${({ theme }) => theme.fontSizes.xl2};
+    font-size: ${({ theme }) => theme.fontSizes.md};
     font-family: "Nexa Black", sans-serif;
     letter-spacing: var(--letter-spacing);
     text-transform: uppercase;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
+      padding: 1rem 1.5rem;
+      font-size: ${({ theme }) => theme.fontSizes.xl2};
+    }
   }
 
   span:nth-of-type(1) {
     color: var(--default-white);
     background-color: var(--secondary-main);
     border: 4px solid var(--secondary-main);
-    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
+      border-bottom: none;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      border-bottom-left-radius: 0;
+    }
   }
 
   span:nth-of-type(2) {
     color: var(--secondary-main);
     background-color: var(--default-white);
     border: 4px solid var(--secondary-main);
-    border-top: none;
-  }
-`;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 
-const StyledWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
+      border-top: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+  }
 `;
 
 const HeroBannerSection = () => {
@@ -122,7 +142,7 @@ const HeroBannerSection = () => {
   useEffect(() => {
     /* if (inView) {
       updateHashNameURL("/");
-    }*/
+    } */
   }, [inView]);
 
   return (
@@ -130,12 +150,10 @@ const HeroBannerSection = () => {
       <ScrollWrapper name="hero-banner-scroll" />
       <StyledSection>
         <StyledContainer>
-          <StyledWrapper>
-            <StyledH1>
-              <span>JavaScript</span>
-              <span>Developer</span>
-            </StyledH1>
-          </StyledWrapper>
+          <StyledH1>
+            <span>JavaScript</span>
+            <span>Developer</span>
+          </StyledH1>
           <NextLink href={navLinks[1].href} passHref>
             <StyledLink
               id="first-link"

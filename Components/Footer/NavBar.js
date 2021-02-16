@@ -1,10 +1,8 @@
 import NextLink from "next/link";
+import useTranslation from "next-translate/useTranslation";
 import styled from "@emotion/styled";
-import { useRouter } from "next/router";
 import smoothScrollTo from "../../utils/smoothScrollTo";
 import navLinks from "../../data/navLinks";
-import setLanguageProperty from "../../utils/setLanguageProperty";
-import useTranslation from "next-translate/useTranslation";
 
 const StyledNav = styled.nav`
   z-index: 100;

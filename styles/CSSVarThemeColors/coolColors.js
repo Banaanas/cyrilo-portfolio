@@ -4,8 +4,18 @@ const coolColors = css`
   /* General Elements */
   --global-background-color: var(--tertiary-main);
 
+  /* Header - HalfMoon */
+  --header-halfmoon-shade-1: var(--secondary-darker);
+  --header-halfmoon-shade-2: var(--secondary-dark);
+  --header-halfmoon-shade-3: var(--secondary-main);
+
+  /* Footer - HalfMoon */
+  --footer-halfmoon-shade-1: var(--header-halfmoon-shade-1);
+  --footer-halfmoon-shade-2: var(--header-halfmoon-shade-2);
+  --footer-halfmoon-shade-3: var(--header-halfmoon-shade-3);
+
   /* CyriLogo */
-  --cyrilogo-color-1: var(--secondary-light);
+  --cyrilogo-color-1: var(--primary-main);
   --cyrilogo-color-2: var(--default-white);
 
   /* Section Title */
