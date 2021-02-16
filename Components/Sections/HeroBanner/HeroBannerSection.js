@@ -81,14 +81,24 @@ const StyledH1 = styled.h1`
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem 0.2rem;
     margin-right: calc(
       -1 * var(--letter-spacing)
     ); /* CSS Var above. To counterbalance the last letter's spacing */
-    font-size: ${({ theme }) => theme.fontSizes.md};
+    font-size: ${({ theme }) => theme.fontSizes.lg};
     font-family: "Nexa Black", sans-serif;
     letter-spacing: var(--letter-spacing);
     text-transform: uppercase;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection3}) {
+      padding: 0.5rem 1rem;
+      font-size: ${({ theme }) => theme.fontSizes.xl};
+    }
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
+      padding: 0.5rem 1rem;
+      font-size: ${({ theme }) => theme.fontSizes.xl};
+    }
 
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
       padding: 1rem 1.5rem;
@@ -117,6 +127,7 @@ const StyledH1 = styled.h1`
     border: 4px solid var(--secondary-main);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+    border-color: var(--default-white);
 
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
       border-top: none;
