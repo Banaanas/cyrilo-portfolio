@@ -6,7 +6,6 @@ import Projects from "../Components/Sections/ProjectsSections/Projects";
 import AboutMeSection from "../Components/Sections/AboutMe/AboutMeSection";
 import ContactSection from "../Components/Sections/Contact/ContactSection";
 import ScrollProgressBar from "../Components/ScrollProgressBar";
-import HeroBannerDivider from "../Components/Dividers/HeroBannerDivider";
 
 const Home = () => {
   // SIDE MENU - REDUX STATE

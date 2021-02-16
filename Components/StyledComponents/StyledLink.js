@@ -4,7 +4,7 @@ const StyledLink = styled.a`
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: 1rem 1rem;
+  padding: 1rem;
   color: var(--action-button-color);
   font-size: ${({ theme }) => theme.fontSizes.xl};
   font-family: "Nexa Black", sans-serif;

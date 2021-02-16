@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import styled from "@emotion/styled";
+import useTranslation from "next-translate/useTranslation";
 import NextLink from "next/link";
+import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 import enablePageScroll from "../../utils/enablePageScroll";
@@ -8,9 +9,6 @@ import ContactIcons from "./ContactIcons";
 import smoothScrollTo from "../../utils/smoothScrollTo";
 import navLinks from "../../data/navLinks";
 import { closeSideMenu } from "../../store/slices/sideMenuSlice";
-import { useRouter } from "next/router";
-import setLanguageProperty from "../../utils/setLanguageProperty";
-import useTranslation from "next-translate/useTranslation";
 
 const StyledMenu = styled(motion.div)`
   position: absolute;
@@ -101,7 +99,7 @@ const StyledContactIconsContainer = styled(motion.div)`
 
 const navBarVariants = {
   hidden: {
-    opacity: 1,
+    opacity: 0,
     y: "-100vh",
     transition: {
       delay: 0.2,

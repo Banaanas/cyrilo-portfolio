@@ -8,7 +8,7 @@ const StyledSVG = styled(motion.svg)`
   padding: 1rem;
   overflow: visible; /* To make the Glow visible */
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     min-width: 32rem;
     max-width: 40rem;
   }

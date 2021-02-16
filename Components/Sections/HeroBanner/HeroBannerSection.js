@@ -22,7 +22,7 @@ const StyledSection = styled(GenericStyledSection)`
   ); /* 8rem (Halfmoon) + 4rem (Half of Divider <-- Divider : 8rem) */
   padding-right: 0;
   padding-left: 0;
-  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     flex-direction: row;
     justify-content: space-around;
     min-height: calc(
@@ -32,13 +32,13 @@ const StyledSection = styled(GenericStyledSection)`
   }
   #first-link {
     display: none;
-    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
+    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
       display: flex;
     }
   }
   #second-link {
     display: flex;
-    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
+    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
       display: none;
     }
   }
@@ -51,7 +51,7 @@ const StyledContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   width: min-content;
-  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     height: 500px;
   }
 `;
@@ -63,7 +63,7 @@ const StyledH1 = styled.h1`
   justify-content: center;
   margin: 0;
   border-radius: 8px;
-  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     flex-direction: column;
   }
   /* JavaScript Developer */
@@ -75,23 +75,20 @@ const StyledH1 = styled.h1`
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 0.5rem 0.2rem;
+    padding: 1rem 0.1rem;
     margin-right: calc(
       -1 * var(--letter-spacing)
     ); /* CSS Var above. To counterbalance the last letter's spacing */
-    font-size: ${({ theme }) => theme.fontSizes.xl2};
+    font-size: ${({ theme }) => theme.fontSizes.xl};
     font-family: "Nexa Black", sans-serif;
     letter-spacing: var(--letter-spacing);
     text-transform: uppercase;
-    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection3}) {
-      padding: 0.5rem 1rem;
-      font-size: ${({ theme }) => theme.fontSizes.xl};
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection1}) {
+      padding: 1rem;
     }
+
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
-      padding: 0.5rem 1rem;
-      font-size: ${({ theme }) => theme.fontSizes.xl};
-    }
-    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
       padding: 1rem 1.5rem;
       font-size: ${({ theme }) => theme.fontSizes.xl2};
     }
@@ -102,7 +99,7 @@ const StyledH1 = styled.h1`
     border: 4px solid var(--secondary-main);
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
+    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
       border-bottom: none;
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
