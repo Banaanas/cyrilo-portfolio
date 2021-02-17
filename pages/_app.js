@@ -1,33 +1,12 @@
 import "../scripts/wdyr";
-import "../styles/normalize.css";
-import { Provider as ReduxProvider } from "react-redux";
-import { ThemeProvider as NextThemeProvider } from "next-themes";
-import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
-import store from "../store/store";
-import appTheme from "../styles/appTheme";
-import GlobalStyles from "../styles/GlobalStyles";
-import Header from "../Components/Header/Header";
-import Footer from "../Components/Footer/Footer";
-import OptionButtonsContainer from "../Components/optionsButtons/optionButtonsContainer";
-import HalfMoon from "../Components/Footer/HalfMoon";
+import "../styles/normalize.css"; // Next.js authorizes Materialize.css (Global CSS) to be imported ONLY from _app.js
+import Layout from "../Components/Layout";
 
 const App = ({ Component, pageProps }) => {
   return (
-    <EmotionThemeProvider theme={appTheme}>
-      <NextThemeProvider /* Cf. -> Note 1 - Flash */
-        attribute="class"
-        enableSystem={false}
-        themes={["light", "dark", "smooth", "cool"]}
-      >
-        <ReduxProvider store={store}>
-          <GlobalStyles />
-          <OptionButtonsContainer />
-          <Header />
-          <Component {...pageProps} />
-          <Footer />
-        </ReduxProvider>
-      </NextThemeProvider>
-    </EmotionThemeProvider>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 };
 

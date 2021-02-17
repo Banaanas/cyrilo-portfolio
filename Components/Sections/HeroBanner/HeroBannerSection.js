@@ -22,6 +22,7 @@ const StyledSection = styled(GenericStyledSection)`
   ); /* 8rem (Halfmoon) + 4rem (Half of Divider <-- Divider : 8rem) */
   padding-right: 0;
   padding-left: 0;
+
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     flex-direction: row;
     justify-content: space-around;
@@ -30,14 +31,18 @@ const StyledSection = styled(GenericStyledSection)`
     ); /* 6rem (Halfmoon) + 8rem HeroBannerDivider */
     padding: 1rem;
   }
+
   #first-link {
     display: none;
+
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
       display: flex;
     }
   }
+
   #second-link {
     display: flex;
+
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
       display: none;
     }
@@ -51,6 +56,7 @@ const StyledContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   width: min-content;
+  
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     height: 500px;
   }
@@ -63,9 +69,11 @@ const StyledH1 = styled.h1`
   justify-content: center;
   margin: 0;
   border-radius: 8px;
+  
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     flex-direction: column;
   }
+
   /* JavaScript Developer */
   span {
     --letter-spacing: ${({ theme }) => theme.letterSpacing.heroBanner};
@@ -164,7 +172,9 @@ const HeroBannerSection = () => {
           </NextLink>
         </StyledContainer>
 
+{/*
         <PlanetCyril />
+*/}
 
         <NextLink href={navLinks[1].href} passHref>
           <StyledLink
