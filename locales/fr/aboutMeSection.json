@@ -2,13 +2,13 @@
   "title": "À Propos",
   "shortStory": {
     "title": "Short Story",
-    "text": "I'm <strongTag>Cyril</strongTag>, a brand new <strongTag>JavaScript Developer</strongTag> based in Lyon, France. After two Master in International Law (2006-2007) and years as teacher and International Law consultant, I've decided to give my career a shining new direction 🌞."
+    "text": "Je suis <strongTag>Cyril</strongTag>, <strongTag> Développeur JavaScript</strongTag> établi à Lyon (France). Après deux Master en Droit International (2006-2007) et des années en tant qu'enseignant et consultant en droit, j'ai décidé d'imprimer à ma vie professionnelle une direction nouvelle ☀️."
   },
   "longStory": {
     "title": "Long Story",
     "buttonRead": "Lire",
     "buttonHide": "Cacher",
-    "text": "Since march 2020, I've been learning Web Development to become a <strongTag> FullStack Developer</strongTag>, specialized in <strongTag> Front-End Development</strongTag> . <brTag></brTag> In order to achieve this purpose, I have completed both <TheOdinProjectLink> The Odin Project </TheOdinProjectLink> and the <FullStackOpenLink> Full Stack Open</FullStackOpenLink> curriculums. Throughout those courses, I've been learning programming concepts and practical skills, realizing numerous concrete <ProjectsLink>Projets</ProjectsLink>. Since then, I have deeply enjoyed continuously learning and resolving problems. "
+    "text": "Depuis mars 2020, j'apprends le Development Web pour devenir <strongTag> Développeur FullStack</strongTag>, spécialisé <strongTag> Front-End</strongTag>. <brTag></brTag>Pour ce faire, j'ai suivi et complété - en autodidacte - deux cours, <TheOdinProjectLink> The Odin Project </TheOdinProjectLink> et <FullStackOpenLink> Full Stack Open</FullStackOpenLink>, à l'occasion desquels j'ai pu à la fois apprendre les concepts de la programmation et acquérir des compétences concrètes, en réalisant notamment de nombreux <ProjectsLink>Projets</ProjectsLink> effectifs. Depuis lors, je me passionne pour l'apprentissage permanent et la résolution de problèmes. "
   },
   "thingsICodeWith": "Technologies"
 }

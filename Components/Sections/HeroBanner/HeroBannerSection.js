@@ -93,12 +93,14 @@ const StyledH1 = styled.h1`
       font-size: ${({ theme }) => theme.fontSizes.xl2};
     }
   }
+
   span:nth-of-type(1) {
     color: var(--default-white);
     background-color: var(--secondary-main);
     border: 4px solid var(--secondary-main);
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
       border-bottom: none;
       border-top-left-radius: 8px;
@@ -110,9 +112,10 @@ const StyledH1 = styled.h1`
     color: var(--secondary-main);
     background-color: var(--default-white);
     border: 4px solid var(--secondary-main);
+    border-color: var(--default-white);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    border-color: var(--default-white);
+
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
       border-top: none;
       border-top-right-radius: 0;

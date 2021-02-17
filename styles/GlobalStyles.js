@@ -45,16 +45,7 @@ const GlobalStyles = () => {
           background-color: var(--global-background-color);
           transition: ${theme.transitions.themeColors};
         }
-/*
-        body::-webkit-scrollbar {
-          width: 12px; !* width of the entire scrollbar *!
-        }
 
-        body::-webkit-scrollbar-thumb {
-          background-color: var(--primary-main); !* color of the scroll thumb *!
-          border-radius
-          : 20px; !* roundness of the scroll thumb *!
-        }*/
         #__next {
           display: flex;
           flex-direction: column;
@@ -69,10 +60,12 @@ const GlobalStyles = () => {
           font-family: "Nexa Black";
           src: url("./fonts/NexaBlack.otf");
         }
+
         @font-face {
           font-family: "Nexa Bold";
           src: url("./fonts/NexaBold.otf");
         }
+
         @font-face {
           font-family: "Nexa Regular";
           src: url("./fonts/NexaRegular.otf");

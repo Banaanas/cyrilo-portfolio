@@ -2,13 +2,13 @@
   "title": "Acerca",
   "shortStory": {
     "title": "Short Story",
-    "text": "Soy <strongTag>Cyril</strongTag>, nuevo <strongTag>Desarrollador JavaScript</strongTag>, establecido en Lyon, Francia. Despues de dos Master 2 en Derecho Internacional (2006-2007) y años como docente y consultor en Derecho Internacional, decidí darle a mi vida profesional un nuevo giro."
+    "text": "Soy <strongTag>Cyril</strongTag>, nuevo <strongTag>Desarrollador JavaScript</strongTag>, establecido en Lyon, Francia. Despues de dos Master 2 en Derecho Internacional (2006-2007) y años como docente y consultor en Derecho Internacional, decidí darle a mi vida profesional un nuevo giro ☀️."
   },
   "longStory": {
     "title": "Long Story",
     "buttonRead": "Leer",
     "buttonHide": "Esconder",
-    "text": "Desde el mes de marzo de 2020, estuve aprendiendo el Desarrollo Web con el fin de volverme <strongTag> Desarrollador FullStack</strongTag>, specialized in <strongTag> Front-End Development</strongTag>.<brTag></brTag>Para cumplir con esta meta, complete los dos cursos siguientes : <TheOdinProjectLink> The Odin Project </TheOdinProjectLink> y <FullStackOpenLink> Full Stack Open </FullStackOpenLink>. A través de estos, aprendí conceptos de programación y competencias concretas, llevando a cabo muchos <ProjectsLink>Proyectos</ProjectsLink> efectivos. Desde entonces, me apasionan el aprendizaje permanente y la resolución de problemas."
+    "text": "Desde el mes de marzo de 2020, estuve aprendiendo el Desarrollo Web con el fin de volverme <strongTag>Desarrollador FullStack</strongTag>, especializado en <strongTag> Front-End</strongTag>.<brTag></brTag>Para cumplir con esta meta, complete los dos cursos siguientes : <TheOdinProjectLink> The Odin Project </TheOdinProjectLink> y <FullStackOpenLink> Full Stack Open </FullStackOpenLink>. A través de estos, aprendí conceptos de programación y competencias concretas, llevando a cabo muchos <ProjectsLink>Proyectos</ProjectsLink> efectivos. Desde entonces, me apasionan el aprendizaje permanente y la resolución de problemas."
   },
   "thingsICodeWith": "Cosas con que trabajo"
 }
