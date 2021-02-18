@@ -98,6 +98,7 @@ const OtherProjects = ({ otherProjects }) => {
               animate="animate"
               exit="initial"
               variants={otherProjectsContainerVariants}
+              key="container"
             >
               {otherProjects.map((project) => (
                 <ProjectCard project={project} key={project.id} />

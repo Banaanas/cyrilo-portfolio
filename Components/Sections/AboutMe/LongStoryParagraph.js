@@ -13,6 +13,9 @@ const paragraphVariants = {
   animate: {
     opacity: 1,
     scale: 1,
+    transition: {
+      duration: 2,
+    },
   },
 };
 
