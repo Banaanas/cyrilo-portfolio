@@ -124,7 +124,7 @@ const StyledH1 = styled.h1`
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 
-    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection}) {
+    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
       border-top: none;
       border-top-right-radius: 0;
       border-bottom-right-radius: 8px;
@@ -153,7 +153,6 @@ const HeroBannerSection = () => {
 
   return (
     <>
-      <ScrollWrapper name="hero-banner-scroll" />
       <StyledSection>
         <StyledContainer>
           <StyledH1>

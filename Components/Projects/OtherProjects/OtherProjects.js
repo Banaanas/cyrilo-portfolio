@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import useTranslation from "next-translate/useTranslation";
 import styled from "@emotion/styled";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import OtherProjectsStar from "./OtherProjectsStar";
 import OtherProjectsButton from "./OtherProjectsButton";
@@ -58,11 +58,20 @@ const StyledProjectsContainer = styled(motion.div)`
 `;
 
 const otherProjectsContainerVariants = {
+  initial: { opacity: 0, height: 0 },
+  animate: { opacity: 1, height: "auto" },
+  transition: {
+    type: "spring",
+    duration: 10,
+  },
+};
+
+const projectCardVariants = {
   initial: {
-    height: 0,
+    opacity: 0,
   },
   animate: {
-    height: "auto",
+    opacity: 1,
   },
   transition: {
     type: "spring",
@@ -89,9 +98,7 @@ const OtherProjects = ({ otherProjects }) => {
           <StyledTitle>{sectionTitle}</StyledTitle>
           <StyledProjectsContainer>
             {otherProjects.map((project) => (
-              <React.Fragment key={project.id}>
-                <ProjectCard project={project} key={project.id} />
-              </React.Fragment>
+              <ProjectCard project={project} key={project.id} />
             ))}
           </StyledProjectsContainer>
           <OtherProjectsButton />

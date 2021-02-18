@@ -8,11 +8,9 @@ const StyledSVG = styled.svg`
 
 const groupVariants = {
   initial: {
-    y: "-100vh",
     rotate: -180,
   },
   animate: {
-    y: 0,
     rotate: 0,
     transition: {
       duration: 1,

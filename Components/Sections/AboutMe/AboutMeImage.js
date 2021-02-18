@@ -6,7 +6,7 @@ const StyledSVG = styled.svg`
   height: auto;
   margin: 2rem 0;
 
-  @media (min-width: 710px) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     align-self: flex-start;
     justify-self: flex-start;
     max-width: 25rem;

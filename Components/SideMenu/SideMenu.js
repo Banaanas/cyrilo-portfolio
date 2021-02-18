@@ -10,7 +10,7 @@ import enablePageScroll from "../../utils/enablePageScroll";
 import { closeSideMenu } from "../../store/slices/sideMenuSlice";
 
 const StyledRefDiv = styled.div`
-  @media (min-width: 710px) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     display: none;
   }
 `;

@@ -1,4 +1,3 @@
-import "../scripts/wdyr";
 import { Provider as ReduxProvider } from "react-redux";
 import { ThemeProvider as NextThemeProvider } from "next-themes";
 import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";

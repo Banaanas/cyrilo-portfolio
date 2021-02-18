@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import styled from "@emotion/styled";
 import { useInView } from "react-intersection-observer";
 import { Element as ScrollWrapper } from "react-scroll";
+import useTranslation from "next-translate/useTranslation";
 import StyledSection from "../../StyledComponents/StyledSection";
 import StyledTitle from "../../StyledComponents/StyledTitle";
 import ShortStory from "./ShortStory";
@@ -9,7 +10,6 @@ import LongStory from "./LongStory";
 import SkillsList from "./SkillsList";
 import AboutMeDivider from "../../Dividers/AboutMeDivider";
 import AboutMeImage from "./AboutMeImage";
-import useTranslation from "next-translate/useTranslation";
 
 const StyledAboutMeContainer = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ const StyledAboutMeContainer = styled.div`
   justify-content: space-around;
   width: 100%;
 
-  @media (min-width: 710px) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     flex-direction: row;
   }
 `;

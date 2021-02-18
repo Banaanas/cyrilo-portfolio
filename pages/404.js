@@ -41,21 +41,25 @@ const Custom404 = () => {
   const textLink = t("textLink");
 
   return (
-    <AnimatePresence exitBeforeEnter>
-      <StyledPageMain isMenuOpen={isMenuOpen}>
-        <StyledSection>
-          <StyledH1>
-            404 - Er<span id="r-letter">r</span>or
-          </StyledH1>
-          <NextLink href="/" passHref>
-            <StyledLink>
-              <span>{textLink}</span>
-              <HomeIcon />
-            </StyledLink>
-          </NextLink>
-        </StyledSection>
-      </StyledPageMain>
-    </AnimatePresence>
+    <StyledPageMain
+      isMenuOpen={isMenuOpen}
+      initial="initial"
+      animate="animate"
+      exit="initial"
+      variants={pageVariants}
+    >
+      <StyledSection>
+        <StyledH1>
+          404 - Er<span id="r-letter">r</span>or
+        </StyledH1>
+        <NextLink href="/" passHref>
+          <StyledLink>
+            <span>{textLink}</span>
+            <HomeIcon />
+          </StyledLink>
+        </NextLink>
+      </StyledSection>
+    </StyledPageMain>
   );
 };
 

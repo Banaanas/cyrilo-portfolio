@@ -6,6 +6,7 @@ import SideMenu from "../SideMenu/SideMenu";
 import NavBar from "./NavBar";
 import HalfMoon from "./HalfMoon";
 import CyriLogo from "./CyriLogo";
+import { Element as ScrollWrapper } from "react-scroll";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -89,6 +90,8 @@ const Header = () => {
           <SideMenu />
         </StyledHeaderWrapper>
       </StyledHeader>
+      <ScrollWrapper name="hero-banner-scroll" />{" "}
+      {/* ScrollWrapper not in bannerHeroSection in order to include the top of the page */}
       <HalfMoon />
     </>
   );

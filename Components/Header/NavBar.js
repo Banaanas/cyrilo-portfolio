@@ -8,11 +8,11 @@ const StyledNav = styled.nav`
   display: none;
   height: 100%;
 
-  @media (min-width: 710px) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    min-width: 450px;
+    min-width: 480px;
     margin-left: auto;
   }
 
@@ -30,8 +30,21 @@ const StyledList = styled.ul`
 
   li {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    ::after {
+      width: 100%;
+      height: 3px;
+      background: var(--primary-main);
+      transform: scale(0);
+      transition: transform 250ms ease-out;
+      content: "";
+    }
+    :hover::after {
+      transform: scale(1);
+    }
   }
 `;
 
@@ -45,11 +58,6 @@ const StyledLink = styled.a`
   font-family: "Nexa Bold", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
-  opacity: 1;
-
-  :hover {
-    opacity: 0.6;
-  }
 
   @media (min-width: 850px) {
     font-size: ${({ theme }) => theme.fontSizes.xl};
