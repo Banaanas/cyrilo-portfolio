@@ -62,14 +62,14 @@ const otherProjectsContainerVariants = {
     opacity: 1,
     height: 0,
     transition: {
-      duration: 2,
+      duration: 1,
     },
   },
   animate: {
     opacity: 1,
     height: "auto",
     transition: {
-      duration: 2,
+      duration: 1,
     },
   },
 };
@@ -106,6 +106,10 @@ const OtherProjects = ({ otherProjects }) => {
             <OtherProjectsButton />
           </>
         ) : null}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {showOtherProjects ? <OtherProjectsButton /> : null}
       </AnimatePresence>
       <OtherProjectsStar secondary />
     </>
