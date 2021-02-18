@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import useTranslation from "next-translate/useTranslation";
 import styled from "@emotion/styled";
@@ -17,6 +16,7 @@ const StyledProjectsContainer = styled(motion.div)`
   justify-items: center;
   width: 100%;
   max-width: 1320px;
+  overflow: hidden;
 
   /* Other Projects Card - ODD */
   .project-cards:nth-of-type(odd) {
@@ -58,23 +58,19 @@ const StyledProjectsContainer = styled(motion.div)`
 `;
 
 const otherProjectsContainerVariants = {
-  initial: { opacity: 0, height: 0 },
-  animate: { opacity: 1, height: "auto" },
-  transition: {
-    type: "spring",
-    duration: 10,
-  },
-};
-
-const projectCardVariants = {
   initial: {
-    opacity: 0,
+    opacity: 1,
+    height: 0,
+    transition: {
+      duration: 2,
+    },
   },
   animate: {
     opacity: 1,
-  },
-  transition: {
-    type: "spring",
+    height: "auto",
+    transition: {
+      duration: 2,
+    },
   },
 };
 
@@ -93,17 +89,24 @@ const OtherProjects = ({ otherProjects }) => {
       <OtherProjectsStar />
       {showOtherProjects ? null : <OtherProjectsButton />}
 
-      {showOtherProjects ? (
-        <>
-          <StyledTitle>{sectionTitle}</StyledTitle>
-          <StyledProjectsContainer>
-            {otherProjects.map((project) => (
-              <ProjectCard project={project} key={project.id} />
-            ))}
-          </StyledProjectsContainer>
-          <OtherProjectsButton />
-        </>
-      ) : null}
+      <AnimatePresence>
+        {showOtherProjects ? (
+          <>
+            <StyledTitle>{sectionTitle}</StyledTitle>
+            <StyledProjectsContainer
+              initial="initial"
+              animate="animate"
+              exit="initial"
+              variants={otherProjectsContainerVariants}
+            >
+              {otherProjects.map((project) => (
+                <ProjectCard project={project} key={project.id} />
+              ))}
+            </StyledProjectsContainer>
+            <OtherProjectsButton />
+          </>
+        ) : null}
+      </AnimatePresence>
       <OtherProjectsStar secondary />
     </>
   );
