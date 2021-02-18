@@ -34,14 +34,16 @@ const StyledList = styled.ul`
     align-items: center;
     justify-content: center;
 
+    /* Hover Effect */
     ::after {
-      width: 100%;
+      width: 90%;
       height: 3px;
       background: var(--primary-main);
       transform: scale(0);
       transition: transform 250ms ease-out;
       content: "";
     }
+
     :hover::after {
       transform: scale(1);
     }

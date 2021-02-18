@@ -71,6 +71,7 @@ const ProjectCard = ({ project, otherProject }) => {
             objectFit="fill"
             quality={100}
             alt={`${project.name} Screenshot`}
+            eager /* !== Lazy load */
           />
         </StyledImage>
       </ExternalLink>
