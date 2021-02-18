@@ -69,6 +69,14 @@ const StyledButton = styled.button`
   }
 `;
 
+const StyledContainer = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* AnimatePresence */
+`;
+
 const longStoryVariants = {
   initial: {
     height: 0,
@@ -78,17 +86,7 @@ const longStoryVariants = {
     opacity: 1,
     height: "auto",
   },
-  transition: {
-    type: "spring",
-  },
 };
-
-const StyledContainer = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
 
 const LongStory = () => {
   const [showLongStory, toggleShowLongStory] = useState(false);

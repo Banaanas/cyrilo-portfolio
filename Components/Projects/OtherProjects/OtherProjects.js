@@ -108,9 +108,24 @@ const OtherProjects = ({ otherProjects }) => {
         ) : null}
       </AnimatePresence>
 
-      <AnimatePresence>
-        {showOtherProjects ? <OtherProjectsButton /> : null}
-      </AnimatePresence>
+      {/* <AnimatePresence>
+        {showOtherProjects ? (
+          <>
+            <StyledTitle>{sectionTitle}</StyledTitle>
+            <StyledProjectsContainer
+              initial="initial"
+              animate="animate"
+              exit="initial"
+              variants={otherProjectsContainerVariants}
+            >
+              {otherProjects.map((project) => (
+                <ProjectCard project={project} key={project.id} />
+              ))}
+            </StyledProjectsContainer>
+            <OtherProjectsButton />
+          </>
+        ) : null}
+      </AnimatePresence> */}
       <OtherProjectsStar secondary />
     </>
   );

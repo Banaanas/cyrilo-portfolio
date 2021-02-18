@@ -175,7 +175,7 @@ const NavBar = ({ menuID }) => {
       aria-hidden={!isMenuDisplayed}
       /* eslint-disable-next-line react/jsx-props-no-spreading */
       {...handlers}
-      initial={isMenuOpen ? "visible" : "hidden"}
+      initial="hidden"
       animate={isMenuOpen ? "visible" : "hidden"}
       variants={navBarVariants}
     >
@@ -185,7 +185,7 @@ const NavBar = ({ menuID }) => {
             {navLinks.map((navLink, index) => (
               <motion.li
                 key={`${index}-${navLink.href}`}
-                initial={isMenuOpen ? "visible" : "hidden"}
+                initial="visible"
                 animate={isMenuOpen ? "visible" : "hidden"}
                 variants={menuItemVariant}
               >
@@ -206,7 +206,7 @@ const NavBar = ({ menuID }) => {
           </StyledList>
         </StyledNav>
         <StyledContactIconsContainer
-          initial={isMenuOpen ? "hidden" : "visible"}
+          initial="visible"
           animate={isMenuOpen ? "visible" : "hidden"}
           variants={menuItemVariant}
         >

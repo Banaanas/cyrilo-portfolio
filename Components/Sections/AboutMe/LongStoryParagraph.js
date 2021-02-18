@@ -8,14 +8,11 @@ import smoothScrollTo from "../../../utils/smoothScrollTo";
 const paragraphVariants = {
   initial: {
     opacity: 0,
-    pointerEvents: "none",
+    scale: 0,
   },
   animate: {
     opacity: 1,
-    pointerEvents: "auto",
-  },
-  transition: {
-    type: "spring",
+    scale: 1,
   },
 };
 
@@ -28,7 +25,7 @@ const ProjectsLink = ({ children }) => {
 };
 
 /* Trans Component is used for translations with HTML Tags in it */
-const LongStoryParagraph = () => {
+const LongStoryParagraph = ({ showLongStory }) => {
   return (
     <motion.p
       initial="initial"
