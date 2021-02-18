@@ -3,7 +3,6 @@ import NextLink from "next/link";
 import useTranslation from "next-translate/useTranslation";
 import { useInView } from "react-intersection-observer";
 import styled from "@emotion/styled";
-import { Element as ScrollWrapper } from "react-scroll";
 import { FaArrowDown as DownArrowIcon } from "react-icons/fa";
 import smoothScrollTo from "../../../utils/smoothScrollTo";
 import GenericStyledSection from "../../StyledComponents/StyledSection";
@@ -19,7 +18,7 @@ const StyledSection = styled(GenericStyledSection)`
   justify-content: space-around;
   min-height: calc(
     100vh - 12rem
-  ); /* 8rem (Halfmoon) + 4rem (Half of Divider <-- Divider : 8rem) */
+  ); /* 8rem (HalfMoon) + 4rem (Half of Divider <-- Divider : 8rem) */
   padding-right: 0;
   padding-left: 0;
 
@@ -56,7 +55,7 @@ const StyledContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   width: min-content;
-  
+
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     height: 500px;
   }
@@ -69,7 +68,8 @@ const StyledH1 = styled.h1`
   justify-content: center;
   margin: 0;
   border-radius: 8px;
-  
+  overflow: hidden;
+
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     flex-direction: column;
   }
@@ -83,7 +83,7 @@ const StyledH1 = styled.h1`
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 1rem 0.1rem;
+    padding: 1rem 0.3rem;
     margin-right: calc(
       -1 * var(--letter-spacing)
     ); /* CSS Var above. To counterbalance the last letter's spacing */
@@ -104,32 +104,12 @@ const StyledH1 = styled.h1`
 
   span:nth-of-type(1) {
     color: var(--default-white);
-    background-color: var(--secondary-main);
-    border: 4px solid var(--secondary-main);
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-
-    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
-      border-bottom: none;
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
-      border-bottom-left-radius: 0;
-    }
+    background: radial-gradient(var(--primary-darker), var(--secondary-main));
   }
+
   span:nth-of-type(2) {
     color: var(--secondary-main);
     background-color: var(--default-white);
-    border: 4px solid var(--secondary-main);
-    border-color: var(--default-white);
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-
-    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
-      border-top: none;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 8px;
-      border-bottom-left-radius: 8px;
-    }
   }
 `;
 
