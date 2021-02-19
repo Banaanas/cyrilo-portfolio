@@ -7,7 +7,18 @@ import OtherProjectsStar from "./OtherProjectsStar";
 import OtherProjectsButton from "./OtherProjectsButton";
 import StyledTitle from "../../StyledComponents/StyledTitle";
 
-const StyledProjectsContainer = styled(motion.div)`
+// AnimatePresence does not work with React.Fragment because it needs
+// an exit animation from the first animatable child
+const StyledAnimatePresenceContainer = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden; /* Framer Motion - Height Animation */
+`;
+
+const StyledProjectsContainer = styled.div`
   display: grid;
   grid-row-gap: 3rem;
   grid-column-gap: 1rem;
@@ -16,7 +27,6 @@ const StyledProjectsContainer = styled(motion.div)`
   justify-items: center;
   width: 100%;
   max-width: 1320px;
-  overflow: hidden; /* Framer Motion - Height Animation */
 
   /* Other Projects Card - ODD */
   .project-cards:nth-of-type(odd) {
@@ -63,7 +73,6 @@ const otherProjectsContainerVariants = {
     height: 0,
     transition: {
       duration: 1,
-      delay: 1,
     },
   },
   animate: {
@@ -72,6 +81,18 @@ const otherProjectsContainerVariants = {
     transition: {
       duration: 1,
     },
+  },
+};
+
+const buttonVariants = {
+  initial: {
+    opacity: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+  animate: {
+    opacity: 1,
   },
 };
 
@@ -88,24 +109,35 @@ const OtherProjects = ({ otherProjects }) => {
   return (
     <>
       <OtherProjectsStar />
-      {showOtherProjects ? null : <OtherProjectsButton />}
+
+      <AnimatePresence>
+        {showOtherProjects ? null : (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+          >
+            <OtherProjectsButton />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <AnimatePresence>
         {showOtherProjects ? (
-          <>
+          <StyledAnimatePresenceContainer
+            initial="initial"
+            animate="animate"
+            exit="initial"
+            variants={otherProjectsContainerVariants}
+          >
             <StyledTitle>{sectionTitle}</StyledTitle>
-            <StyledProjectsContainer
-              initial="initial"
-              animate="animate"
-              exit="initial"
-              variants={otherProjectsContainerVariants}
-            >
+            <StyledProjectsContainer>
               {otherProjects.map((project) => (
                 <ProjectCard project={project} key={project.id} />
               ))}
             </StyledProjectsContainer>
             <OtherProjectsButton />
-          </>
+          </StyledAnimatePresenceContainer>
         ) : null}
       </AnimatePresence>
       <OtherProjectsStar secondary />

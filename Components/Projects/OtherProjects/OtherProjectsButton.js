@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
+import useTranslation from "next-translate/useTranslation";
+import { motion } from "framer-motion";
+import styled from "@emotion/styled";
 import {
   MdExpandLess as ShowLessIcon,
   MdExpandMore as ShowMoreIcon,
 } from "react-icons/md";
-import styled from "@emotion/styled";
 import { toggleOtherProjects } from "../../../store/slices/otherProjectsSlice";
-import useTranslation from "next-translate/useTranslation";
 
 const StyledButton = styled.button`
   display: flex;
