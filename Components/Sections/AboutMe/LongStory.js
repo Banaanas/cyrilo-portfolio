@@ -74,7 +74,7 @@ const StyledContainer = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* AnimatePresence */
+  overflow: hidden; /* Framer Motion - Height Animation */
 `;
 
 const longStoryVariants = {

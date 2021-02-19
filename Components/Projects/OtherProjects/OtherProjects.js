@@ -16,7 +16,7 @@ const StyledProjectsContainer = styled(motion.div)`
   justify-items: center;
   width: 100%;
   max-width: 1320px;
-  overflow: hidden;
+  overflow: hidden; /* Framer Motion - Height Animation */
 
   /* Other Projects Card - ODD */
   .project-cards:nth-of-type(odd) {
@@ -87,30 +87,26 @@ const OtherProjects = ({ otherProjects }) => {
   return (
     <>
       <OtherProjectsStar />
-      {showOtherProjects ? null : (
-        <>
-          <OtherProjectsButton />
-          <StyledTitle>{sectionTitle}</StyledTitle>
-        </>
-      )}
+      {showOtherProjects ? null : <OtherProjectsButton />}
 
       <AnimatePresence>
         {showOtherProjects ? (
-          <StyledProjectsContainer
-            initial="initial"
-            animate="animate"
-            exit="initial"
-            variants={otherProjectsContainerVariants}
-            key="container"
-          >
-            {otherProjects.map((project) => (
-              <ProjectCard project={project} key={project.id} />
-            ))}
-          </StyledProjectsContainer>
+          <>
+            <StyledTitle>{sectionTitle}</StyledTitle>
+            <StyledProjectsContainer
+              initial="initial"
+              animate="animate"
+              exit="initial"
+              variants={otherProjectsContainerVariants}
+            >
+              {otherProjects.map((project) => (
+                <ProjectCard project={project} key={project.id} />
+              ))}
+            </StyledProjectsContainer>
+            <OtherProjectsButton />
+          </>
         ) : null}
       </AnimatePresence>
-
-      {showOtherProjects ? <OtherProjectsButton /> : null}
       <OtherProjectsStar secondary />
     </>
   );
