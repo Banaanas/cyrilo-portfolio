@@ -51,9 +51,10 @@ const StyledNav = styled.nav`
   justify-content: center;
 `;
 
-const StyledList = styled.ul`
+const StyledList = styled(motion.ul)`
   padding: 0;
   list-style: none;
+  background: yellow;
 `;
 
 const StyledLink = styled.a`
@@ -102,17 +103,17 @@ const navBarVariants = {
     opacity: 0,
     y: "-100vh",
     transition: {
-      type: "tween",
       ease: "easeIn",
       delay: 0.2,
+      staggerChildren: 5,
     },
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      type: "tween",
       ease: "easeOut",
+      staggerChildren: 5,
     },
   },
 };
@@ -120,15 +121,25 @@ const navBarVariants = {
 const menuItemVariant = {
   hidden: {
     x: "-100vh",
-    transition: {
-      type: "spring",
-    },
   },
   visible: {
     x: "0",
+  },
+};
+
+const listVariant = {
+  hidden: {
+    opacity: 0,
     transition: {
-      type: "spring",
-      delay: 0.2,
+      duration: 10,
+      staggerChildren: 5,
+    },
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 10,
+      staggerChildren: 5,
     },
   },
 };
@@ -177,7 +188,11 @@ const NavBar = ({ menuID }) => {
     >
       <StyledNavContainer>
         <StyledNav>
-          <StyledList>
+          <StyledList
+            initial="hidden"
+            animate={isMenuOpen ? "visible" : "hidden"}
+            variants={listVariant}
+          >
             {navLinks.map((navLink, index) => (
               <motion.li
                 key={`${index}-${navLink.href}`}

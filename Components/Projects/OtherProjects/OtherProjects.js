@@ -18,7 +18,7 @@ const StyledAnimatePresenceContainer = styled(motion.div)`
   overflow: hidden; /* Framer Motion - Height Animation */
 `;
 
-const StyledProjectsContainer = styled.div`
+const StyledProjectsContainer = styled(motion.div)`
   display: grid;
   grid-row-gap: 3rem;
   grid-column-gap: 1rem;
@@ -69,30 +69,34 @@ const StyledProjectsContainer = styled.div`
 
 const otherProjectsContainerVariants = {
   initial: {
-    opacity: 1,
+    opacity: 0,
     height: 0,
     transition: {
-      duration: 1,
+      duration: 0.5,
     },
   },
   animate: {
     opacity: 1,
     height: "auto",
     transition: {
-      duration: 1,
+      duration: 0.5,
     },
   },
 };
 
-const buttonVariants = {
-  initial: {
+const container = {
+  hidden: {
     opacity: 0,
     transition: {
-      duration: 1,
+      staggerChildren: 0.5,
+      delayChildren: 1,
     },
   },
-  animate: {
+  show: {
     opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
   },
 };
 
@@ -111,35 +115,28 @@ const OtherProjects = ({ otherProjects }) => {
       <OtherProjectsStar />
 
       <AnimatePresence>
-        {showOtherProjects ? null : (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-          >
-            <OtherProjectsButton />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
         {showOtherProjects ? (
           <StyledAnimatePresenceContainer
             initial="initial"
             animate="animate"
             exit="initial"
             variants={otherProjectsContainerVariants}
+            key="StyledAnimatePresenceContainer" /* AnimatePresence Key */
           >
             <StyledTitle>{sectionTitle}</StyledTitle>
-            <StyledProjectsContainer>
+            <StyledProjectsContainer
+              variants={container}
+              initial="hidden"
+              animate="show"
+            >
               {otherProjects.map((project) => (
                 <ProjectCard project={project} key={project.id} />
               ))}
             </StyledProjectsContainer>
-            <OtherProjectsButton />
           </StyledAnimatePresenceContainer>
         ) : null}
       </AnimatePresence>
+      <OtherProjectsButton />
       <OtherProjectsStar secondary />
     </>
   );

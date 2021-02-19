@@ -53,11 +53,17 @@ const ProjectCard = ({ project, otherProject }) => {
     rotate: -10,
   };
 
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  };
+
   return (
     <StyledProjectContainer
       whileHover={featuredProjectAnimate}
       whileTap={featuredProjectAnimate}
       className="project-cards"
+      variants={item}
     >
       <ExternalLink
         ariaLabel="Live Website"
