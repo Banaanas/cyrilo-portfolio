@@ -4,7 +4,6 @@
     * SideMenu Animation
     * Burger Menu
     --> https://www.akufen.ca/
-    Enlever l'animation du début
     * Observer Animations
     --> https://www.smashingmagazine.com/2020/10/introduction-to-framer-motion/
     * Down Arrows Work Link
@@ -16,9 +15,7 @@
 - Borders https://freefrontend.com/css-border-examples/
 
 - Animations : Burger, SideMenu, Planet, Logo, Cards, Observer
-*** Buttons Position***
 
-*** Create Layout ***
 
 *** PROBLEMES FIREFOX ***
 
@@ -46,14 +43,6 @@
 https://www.youtube.com/watch?v=G0cOQ79WKZE&t=436s&ab_channel=LeeRobinson
 
 
-
-CSS ->
-scroll-behavior: smooth;
-scroll-snap-type: y mandatory;
-scroll-snap-align: center;
-Compatibilité : installer Librairie.
-Tester si la librairie fonctionne et APRÈS modifier le Global CSS en ajoutant "scroll-behavior: smooth"
-- Up Arrow
 
 // SEO
 - Général

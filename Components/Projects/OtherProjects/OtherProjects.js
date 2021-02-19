@@ -87,46 +87,30 @@ const OtherProjects = ({ otherProjects }) => {
   return (
     <>
       <OtherProjectsStar />
-      {showOtherProjects ? null : <OtherProjectsButton />}
+      {showOtherProjects ? null : (
+        <>
+          <OtherProjectsButton />
+          <StyledTitle>{sectionTitle}</StyledTitle>
+        </>
+      )}
 
       <AnimatePresence>
         {showOtherProjects ? (
-          <>
-            <StyledTitle>{sectionTitle}</StyledTitle>
-            <StyledProjectsContainer
-              initial="initial"
-              animate="animate"
-              exit="initial"
-              variants={otherProjectsContainerVariants}
-              key="container"
-            >
-              {otherProjects.map((project) => (
-                <ProjectCard project={project} key={project.id} />
-              ))}
-            </StyledProjectsContainer>
-            <OtherProjectsButton />
-          </>
+          <StyledProjectsContainer
+            initial="initial"
+            animate="animate"
+            exit="initial"
+            variants={otherProjectsContainerVariants}
+            key="container"
+          >
+            {otherProjects.map((project) => (
+              <ProjectCard project={project} key={project.id} />
+            ))}
+          </StyledProjectsContainer>
         ) : null}
       </AnimatePresence>
 
-      {/* <AnimatePresence>
-        {showOtherProjects ? (
-          <>
-            <StyledTitle>{sectionTitle}</StyledTitle>
-            <StyledProjectsContainer
-              initial="initial"
-              animate="animate"
-              exit="initial"
-              variants={otherProjectsContainerVariants}
-            >
-              {otherProjects.map((project) => (
-                <ProjectCard project={project} key={project.id} />
-              ))}
-            </StyledProjectsContainer>
-            <OtherProjectsButton />
-          </>
-        ) : null}
-      </AnimatePresence> */}
+      {showOtherProjects ? <OtherProjectsButton /> : null}
       <OtherProjectsStar secondary />
     </>
   );

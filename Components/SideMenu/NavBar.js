@@ -102,36 +102,32 @@ const navBarVariants = {
     opacity: 0,
     y: "-100vh",
     transition: {
+      type: "tween",
+      ease: "easeIn",
       delay: 0.2,
-      type: "spring",
-      stiffness: 200,
     },
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
-      stiffness: 200,
+      type: "tween",
+      ease: "easeOut",
     },
   },
 };
 
 const menuItemVariant = {
   hidden: {
-    y: "-100vh",
-
+    x: "-100vh",
     transition: {
       type: "spring",
-      stiffness: 200,
     },
   },
   visible: {
-    y: "0",
-
+    x: "0",
     transition: {
       type: "spring",
-      stiffness: 250,
       delay: 0.2,
     },
   },
@@ -185,7 +181,7 @@ const NavBar = ({ menuID }) => {
             {navLinks.map((navLink, index) => (
               <motion.li
                 key={`${index}-${navLink.href}`}
-                initial="visible"
+                initial="hidden"
                 animate={isMenuOpen ? "visible" : "hidden"}
                 variants={menuItemVariant}
               >
@@ -206,7 +202,7 @@ const NavBar = ({ menuID }) => {
           </StyledList>
         </StyledNav>
         <StyledContactIconsContainer
-          initial="visible"
+          initial="hidden"
           animate={isMenuOpen ? "visible" : "hidden"}
           variants={menuItemVariant}
         >
