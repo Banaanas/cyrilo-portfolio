@@ -90,14 +90,14 @@ const PlanetCyril = () => {
           transform="translate(48.646 75.499)"
           href="#Cyril-drawing"
         />
-        <defs>
+     {/*   <defs>
           <image
             id="Cyril-drawing"
             width="448"
             height="437"
             href="/images/Cyrilo-drawing.svg"
           />
-        </defs>
+        </defs>*/}
       </g>
     </StyledSVG>
   );
