@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 import useTranslation from "next-translate/useTranslation";
-import { motion } from "framer-motion";
 import styled from "@emotion/styled";
 import {
   MdExpandLess as ShowLessIcon,

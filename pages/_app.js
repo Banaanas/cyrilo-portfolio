@@ -6,7 +6,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <Layout>
       <AnimatePresence initial={false} exitBeforeEnter>
-        <Component {...pageProps} />
+        <Component {...pageProps}  />
       </AnimatePresence>
     </Layout>
   );

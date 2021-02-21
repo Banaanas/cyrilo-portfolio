@@ -54,7 +54,6 @@ const StyledNav = styled.nav`
 const StyledList = styled(motion.ul)`
   padding: 0;
   list-style: none;
-  background: yellow;
 `;
 
 const StyledLink = styled.a`
@@ -104,8 +103,8 @@ const navBarVariants = {
     y: "-100vh",
     transition: {
       ease: "easeIn",
-      delay: 0.2,
-      staggerChildren: 5,
+      when: "afterChildren",
+      delay: 0.6,
     },
   },
   visible: {
@@ -113,7 +112,7 @@ const navBarVariants = {
     y: 0,
     transition: {
       ease: "easeOut",
-      staggerChildren: 5,
+      when: "afterChildren",
     },
   },
 };
@@ -121,25 +120,31 @@ const navBarVariants = {
 const menuItemVariant = {
   hidden: {
     x: "-100vh",
+    transition: {
+      delayChildren: 0.2,
+    },
   },
   visible: {
     x: "0",
+    transition: {
+      delayChildren: 0.2,
+    },
   },
 };
 
 const listVariant = {
   hidden: {
-    opacity: 0,
     transition: {
-      duration: 10,
-      staggerChildren: 5,
+      staggerChildren: 0.2,
+      delayChildren: 0.2,
+      staggerDirection: -1,
     },
   },
   visible: {
-    opacity: 1,
     transition: {
-      duration: 10,
-      staggerChildren: 5,
+      staggerChildren: 0.2,
+      delayChildren: 0.2,
+      staggerDirection: 1,
     },
   },
 };
@@ -196,8 +201,6 @@ const NavBar = ({ menuID }) => {
             {navLinks.map((navLink, index) => (
               <motion.li
                 key={`${index}-${navLink.href}`}
-                initial="hidden"
-                animate={isMenuOpen ? "visible" : "hidden"}
                 variants={menuItemVariant}
               >
                 <NextLink href={navLink.href} passHref>

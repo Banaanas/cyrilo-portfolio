@@ -51,9 +51,14 @@ const FeaturedProjects = ({ featuredProjects }) => {
         <ProjectCard project={project} key={project.id} />
       ))}
       <StarWrapper
-        animate={{ rotate: 360, scale: [1, 1.5, 2, 2.5, 2, 1.5, 1] }}
+        animate={{
+          rotate: [0, 360],
+          scale: [0.1, 0.2, 1.5, 2, 2.5, 2, 1.5, 0.2, 0.1],
+          x: [0, 10, 20, 10, 0, -10, -20, -10, 0],
+          y: [0, 10, 20, 10, 0, -10, -20, -10, 0],
+        }}
         transition={{
-          duration: 5,
+          duration: 15,
           type: "tween",
           stiffness: 260,
           damping: 20,

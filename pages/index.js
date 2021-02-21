@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import StyledPageMain from "../Components/StyledComponents/StyledPageMain";
 import HeroBannerSection from "../Components/Sections/HeroBanner/HeroBannerSection";
@@ -12,6 +13,9 @@ const Home = () => {
   // SIDE MENU - REDUX STATE
   const isMenuOpen = useSelector((state) => state.sideMenu.isMenuOpen);
 
+  // AnimatePresence Key
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -24,6 +28,7 @@ const Home = () => {
         animate="animate"
         exit="initial"
         variants={pageVariants}
+        key={router} /* AnimatePresence Key */
       >
         <HeroBannerSection />
         <Projects />

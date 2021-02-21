@@ -6,8 +6,8 @@ import { TiHome as HomeIcon } from "react-icons/ti";
 import StyledPageMain from "../Components/StyledComponents/StyledPageMain";
 import StyledLink from "../Components/StyledComponents/StyledLink";
 import StyledSection from "../Components/StyledComponents/StyledSection";
-import { pageTransition, pageVariants } from "../styles/animations";
-import { AnimatePresence } from "framer-motion";
+import { pageVariants } from "../styles/animations";
+import { useRouter } from "next/router";
 
 const StyledH1 = styled.h1`
   margin-bottom: 5rem; /* Margin between H1 and Link */
@@ -40,6 +40,9 @@ const Custom404 = () => {
   const { t } = useTranslation("404");
   const textLink = t("textLink");
 
+  // AnimatePresence Key
+  const router = useRouter();
+
   return (
     <StyledPageMain
       isMenuOpen={isMenuOpen}
@@ -47,6 +50,7 @@ const Custom404 = () => {
       animate="animate"
       exit="initial"
       variants={pageVariants}
+      key={router} /* AnimatePresence Key */
     >
       <StyledSection>
         <StyledH1>

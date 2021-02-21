@@ -8,7 +8,8 @@ import OtherProjectsButton from "./OtherProjectsButton";
 import StyledTitle from "../../StyledComponents/StyledTitle";
 
 // AnimatePresence does not work with React.Fragment because it needs
-// an exit animation from the first animatable child
+// an exit animation from the first animatable child. That's why this
+// Container Div was set up
 const StyledAnimatePresenceContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
@@ -67,35 +68,34 @@ const StyledProjectsContainer = styled(motion.div)`
   }
 `;
 
-const otherProjectsContainerVariants = {
+const StyledAnimatePresenceContainerVariants = {
   initial: {
     opacity: 0,
     height: 0,
     transition: {
       duration: 0.5,
+      when: "afterChildren",
     },
   },
   animate: {
     opacity: 1,
     height: "auto",
     transition: {
+      type: "spring",
       duration: 0.5,
     },
   },
 };
 
-const container = {
+const StyledProjectsContainerVariants = {
   hidden: {
-    opacity: 0,
     transition: {
       staggerChildren: 0.5,
-      delayChildren: 1,
     },
   },
   show: {
-    opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -113,19 +113,21 @@ const OtherProjects = ({ otherProjects }) => {
   return (
     <>
       <OtherProjectsStar />
-
+      {/* AnimatePresence does not work with React.Fragment because it needs
+      an exit animation from the first animatable child. That's why this
+      Container Div was set up */}
       <AnimatePresence>
         {showOtherProjects ? (
           <StyledAnimatePresenceContainer
             initial="initial"
             animate="animate"
             exit="initial"
-            variants={otherProjectsContainerVariants}
-            key="StyledAnimatePresenceContainer" /* AnimatePresence Key */
+            variants={StyledAnimatePresenceContainerVariants}
+            key="StyledAnimatePresenceContainerVariants" /* AnimatePresence Key */
           >
             <StyledTitle>{sectionTitle}</StyledTitle>
             <StyledProjectsContainer
-              variants={container}
+              variants={StyledProjectsContainerVariants}
               initial="hidden"
               animate="show"
             >

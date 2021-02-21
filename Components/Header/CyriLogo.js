@@ -1,23 +1,9 @@
-import { motion } from "framer-motion";
 import styled from "@emotion/styled";
 
 const StyledSVG = styled.svg`
   width: 8rem;
   height: 4rem;
 `;
-
-const groupVariants = {
-  initial: {
-    rotate: -180,
-  },
-  animate: {
-    rotate: 0,
-    transition: {
-      duration: 1,
-      type: "spring",
-    },
-  },
-};
 
 const CyriLogo = () => {
   return (
@@ -27,7 +13,7 @@ const CyriLogo = () => {
       height="630"
       viewBox="0 0 1860 630"
     >
-      <motion.g initial="initial" animate="animate" variants={groupVariants}>
+      <g>
         <path
           fill="var(--cyrilogo-color-1)"
           d="M1647.87 551.693c-18.03-14.081-20.9-40.24-6.35-57.88l147.39-178.707 57.4-69.56a54.64 54.64 0 0113.61 36.08v66.907c0 13.32-4.85 26.16-13.67 36.146l-142.93 161.88c-14.21 16.107-38.52 18.361-55.45 5.134"
@@ -48,7 +34,7 @@ const CyriLogo = () => {
           fill="var(--cyrilogo-color-1)"
           d="M212.059 78.607c18.021 14.067 20.886 40.227 6.341 57.867L71.013 315.194 13.62 384.741A54.595 54.595 0 010 348.661v-66.907c0-13.307 4.86-26.16 13.668-36.133l142.927-161.88c14.222-16.107 38.528-18.36 55.464-5.134z"
         />
-      </motion.g>
+      </g>
     </StyledSVG>
   );
 };

@@ -47,23 +47,23 @@ const StyledProjectName = styled.div`
 const ProjectCard = ({ project, otherProject }) => {
   const { name, softwareStack } = project;
 
-  const featuredProjectAnimate = {
+  const projectGestures = {
     scale: 1.05,
     rotateX: -10,
     rotate: -10,
   };
 
-  const item = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 },
+  const projectVariants = {
+    hidden: { opacity: 0.8, scale: 0 },
+    show: { opacity: 1, scale: 1 },
   };
 
   return (
     <StyledProjectContainer
-      whileHover={featuredProjectAnimate}
-      whileTap={featuredProjectAnimate}
+      whileHover={projectGestures}
+      whileTap={projectGestures}
       className="project-cards"
-      variants={item}
+      variants={projectVariants}
     >
       <ExternalLink
         ariaLabel="Live Website"

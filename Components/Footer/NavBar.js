@@ -26,12 +26,16 @@ const StyledList = styled.ul`
 const StyledLink = styled.a`
   color: var(--default-white);
   font-weight: bolder;
-  font-size: ${({ theme }) => theme.fontSizes.md};
+  font-size: ${({ theme }) => theme.fontSizes.sm};
   text-transform: uppercase;
   text-decoration: none;
 
   :hover {
     opacity: 0.6;
+  }
+
+  @media (min-width: 340px) {
+    font-size: ${({ theme }) => theme.fontSizes.md};
   }
 `;
 

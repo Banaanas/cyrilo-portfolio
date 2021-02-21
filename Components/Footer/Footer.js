@@ -23,12 +23,6 @@ const StyledFooter = styled.footer`
   transition: filter, 300ms ease;
 `;
 
-const StyledContainer = styled.div`
-  position: absolute;
-  bottom: 0;
-  padding: 0;
-`;
-
 const Footer = () => {
   // SIDE MENU - REDUX STATE
   const isMenuOpen = useSelector((state) => state.sideMenu.isMenuOpen);

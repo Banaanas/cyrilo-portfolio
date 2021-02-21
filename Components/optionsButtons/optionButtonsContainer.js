@@ -1,11 +1,14 @@
+import { useState } from "react/";
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
+import { useThrottledFn, useWindowScroll } from "beautiful-react-hooks";
 import ChangeLanguageButton from "./ChangeLanguageButton";
 import ChangeColorsThemeButton from "./ChangeColorsThemeButton";
 
-const StyledContainer = styled.div`
+const StyledContainer = styled(motion.div)`
   position: fixed;
   right: 0.5rem;
-  bottom: 2rem;
+  bottom: ${({ bottom }) => bottom};
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -22,8 +25,31 @@ const StyledContainer = styled.div`
 `;
 
 const OptionButtonsContainer = () => {
+  const [bottom, setBottom] = useState("0.5rem");
+  // useThrottledFn - CUSTOM HOOK
+  // Throttle the callback function to optimize component performances by
+  // preventing too many useless renders
+  const windowScrollHandler = useThrottledFn(() => {
+    // If SSR, Return (because Window is NOT defined on the Node.js Server)
+    if (typeof window === "undefined") return;
+
+    // Set Button Bottom position in function of scrollY
+    const { scrollY } = window;
+
+    // Change Bottom Position when reach Footer
+    if (window.innerHeight + scrollY + 64 >= document.body.scrollHeight) {
+      setBottom("6rem");
+    } else {
+      setBottom("0.5rem");
+    }
+  }, 50);
+
+  // useWindowScroll - CUSTOM HOOK
+  // Resize Event Listener (Add AND Cleanup Event)
+  useWindowScroll(windowScrollHandler);
+
   return (
-    <StyledContainer>
+    <StyledContainer layout bottom={bottom}>
       <ChangeColorsThemeButton />
       <ChangeLanguageButton />
     </StyledContainer>

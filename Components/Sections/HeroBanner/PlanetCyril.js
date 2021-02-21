@@ -58,14 +58,14 @@ const PlanetCyril = () => {
         </feMerge>
       </filter>
       <motion.g
-        initial={{ opacity: 0.9995, y: -10 }}
+     /*   initial={{ opacity: 0.9995, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           type: "tween",
           duration: 5,
           repeat: Infinity,
           repeatType: "mirror",
-        }}
+        }}*/
       >
         <ellipse
           filter="url(#glow-filter)"

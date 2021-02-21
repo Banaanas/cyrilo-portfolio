@@ -21,13 +21,6 @@ const StyledProgressDiv = styled.div`
 const ScrollProgressBar = () => {
   const [progress, setProgress] = useState(0);
 
-  // useThrottledFn - CUSTOM HOOK
-  // Throttle the callback function to optimize component performances by
-  // preventing too many useless renders
-  const windowScrollHandler = useThrottledFn(() => {}, 1);
-  // useWindowScroll - CUSTOM HOOK
-  // useWindowScroll(windowScrollHandler);
-
   useEffect(() => {
     const progressBarHandler = () => {
       // If SSR, Return (because Window is NOT defined on the Node.js Server)

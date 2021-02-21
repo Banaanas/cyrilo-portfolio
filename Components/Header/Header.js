@@ -2,11 +2,12 @@ import { useState } from "react";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
 import { useThrottledFn, useWindowScroll } from "beautiful-react-hooks";
+import { Element as ScrollWrapper } from "react-scroll";
 import SideMenu from "../SideMenu/SideMenu";
 import NavBar from "./NavBar";
 import HalfMoon from "./HalfMoon";
 import CyriLogo from "./CyriLogo";
-import { Element as ScrollWrapper } from "react-scroll";
+import { motion } from "framer-motion";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -37,6 +38,21 @@ const StyledHeaderWrapper = styled.div`
   min-width: ${({ theme }) => theme.globalMinWidth};
   max-width: ${({ theme }) => theme.globalMaxWidth};
 `;
+
+const groupVariants = {
+  initial: {
+    scale: 0.5,
+    rotate: -180,
+  },
+  animate: {
+    scale: 1,
+    rotate: 0,
+    transition: {
+      duration: 1,
+      type: "spring",
+    },
+  },
+};
 
 const Header = () => {
   const [scrollDirection, setScrollDirection] = useState(null);
@@ -82,9 +98,16 @@ const Header = () => {
       <StyledHeader translateY={translateY}>
         <StyledHeaderWrapper>
           <NextLink href="/" passHref>
-            <a>
+            <motion.a
+              initial="initial"
+              animate="animate"
+              variants={groupVariants}
+              whileHover={{
+                scale: 1.1,
+              }}
+            >
               <CyriLogo />
-            </a>
+            </motion.a>
           </NextLink>
           <NavBar />
           <SideMenu />
