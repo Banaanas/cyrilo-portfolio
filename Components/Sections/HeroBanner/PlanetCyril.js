@@ -45,7 +45,7 @@ const PlanetCyril = () => {
       clipRule="evenodd"
       viewBox="0 0 584 546"
     >
-      <filter id="glow-filter">
+{/*      <filter id="glow-filter">
         <feFlood id="glow" in="SourceGraphic" />
         <feComposite operator="in" in2="SourceGraphic" />
         <feGaussianBlur id="gaussian-blur" stdDeviation="10" />
@@ -56,7 +56,7 @@ const PlanetCyril = () => {
           <feMergeNode in="glow1" />
           <feMergeNode in="SourceGraphic" />
         </feMerge>
-      </filter>
+      </filter>*/}
       <g>
         <ellipse
           filter="url(#glow-filter)"
@@ -90,14 +90,14 @@ const PlanetCyril = () => {
           transform="translate(48.646 75.499)"
           href="#Cyril-drawing"
         />
-     {/*   <defs>
+        <defs>
           <image
             id="Cyril-drawing"
             width="448"
             height="437"
             href="/images/Cyrilo-drawing.svg"
           />
-        </defs>*/}
+        </defs>
       </g>
     </StyledSVG>
   );
