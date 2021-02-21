@@ -59,7 +59,9 @@ const PlanetCyril = () => {
       </filter>
       <g>
         <ellipse
+/*
           filter="url(#glow-filter)"
+*/
           rx="272"
           ry="252"
           transform="matrix(1 0 .00256 1 272.646 293.999)"
