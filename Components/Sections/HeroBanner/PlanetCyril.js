@@ -45,7 +45,7 @@ const PlanetCyril = () => {
       clipRule="evenodd"
       viewBox="0 0 584 546"
     >
-{/*      <filter id="glow-filter">
+      <filter id="glow-filter">
         <feFlood id="glow" in="SourceGraphic" />
         <feComposite operator="in" in2="SourceGraphic" />
         <feGaussianBlur id="gaussian-blur" stdDeviation="10" />
@@ -56,7 +56,7 @@ const PlanetCyril = () => {
           <feMergeNode in="glow1" />
           <feMergeNode in="SourceGraphic" />
         </feMerge>
-      </filter>*/}
+      </filter>
       <g>
         <ellipse
           filter="url(#glow-filter)"
