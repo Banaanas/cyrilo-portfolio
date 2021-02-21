@@ -46,13 +46,13 @@ const PlanetCyril = () => {
       viewBox="0 0 584 546"
     >
       <filter id="glow-filter">
-        <feFlood id="glow" in="SourceGraphic" />
+      {/*  <feFlood id="glow" in="SourceGraphic" />
         <feComposite operator="in" in2="SourceGraphic" />
         <feGaussianBlur id="gaussian-blur" stdDeviation="10" />
         <feComponentTransfer result="glow1">
           <feFuncA id="fe-funca" type="linear" slope="1" intercept="0" />
         </feComponentTransfer>
-       {/* <feMerge>
+        <feMerge>
           <feMergeNode in="glow1" />
           <feMergeNode in="SourceGraphic" />
         </feMerge>*/}
