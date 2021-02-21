@@ -16,7 +16,6 @@ const StyledSVG = styled.svg`
   ellipse {
     transition: ${({ theme }) => theme.transitions.svgFill};
     fill: var(--planet-Cyril);
-    stroke: none;
   }
 
   #glow {
@@ -45,21 +44,8 @@ const PlanetCyril = () => {
       clipRule="evenodd"
       viewBox="0 0 584 546"
     >
-      <filter id="glow-filter">
-      {/*  <feFlood id="glow" in="SourceGraphic" />
-        <feComposite operator="in" in2="SourceGraphic" />
-        <feGaussianBlur id="gaussian-blur" stdDeviation="10" />
-        <feComponentTransfer result="glow1">
-          <feFuncA id="fe-funca" type="linear" slope="1" intercept="0" />
-        </feComponentTransfer>
-        <feMerge>
-          <feMergeNode in="glow1" />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>*/}
-      </filter>
       <g>
         <ellipse
-          filter="url(#glow-filter)"
           rx="272"
           ry="252"
           transform="matrix(1 0 .00256 1 272.646 293.999)"
