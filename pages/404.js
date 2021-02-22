@@ -1,13 +1,14 @@
 import NextLink from "next/link";
 import { useSelector } from "react-redux";
 import useTranslation from "next-translate/useTranslation";
+import Head from "next/head";
 import styled from "@emotion/styled";
 import { TiHome as HomeIcon } from "react-icons/ti";
+import { useRouter } from "next/router";
 import StyledPageMain from "../Components/StyledComponents/StyledPageMain";
 import StyledLink from "../Components/StyledComponents/StyledLink";
 import StyledSection from "../Components/StyledComponents/StyledSection";
 import { pageVariants } from "../styles/animations";
-import { useRouter } from "next/router";
 
 const StyledH1 = styled.h1`
   margin-bottom: 5rem; /* Margin between H1 and Link */
@@ -44,26 +45,31 @@ const Custom404 = () => {
   const router = useRouter();
 
   return (
-    <StyledPageMain
-      isMenuOpen={isMenuOpen}
-      initial="initial"
-      animate="animate"
-      exit="initial"
-      variants={pageVariants}
-      key={router} /* AnimatePresence Key */
-    >
-      <StyledSection>
-        <StyledH1>
-          404 - Er<span id="r-letter">r</span>or
-        </StyledH1>
-        <NextLink href="/" passHref>
-          <StyledLink>
-            <span>{textLink}</span>
-            <HomeIcon />
-          </StyledLink>
-        </NextLink>
-      </StyledSection>
-    </StyledPageMain>
+    <>
+      <Head>
+        <title key="title">Cyrilo Dev | 404 - Not Found</title>
+      </Head>
+      <StyledPageMain
+        isMenuOpen={isMenuOpen}
+        initial="initial"
+        animate="animate"
+        exit="initial"
+        variants={pageVariants}
+        key={router} /* AnimatePresence Key */
+      >
+        <StyledSection>
+          <StyledH1>
+            404 - Er<span id="r-letter">r</span>or
+          </StyledH1>
+          <NextLink href="/" passHref>
+            <StyledLink>
+              <span>{textLink}</span>
+              <HomeIcon />
+            </StyledLink>
+          </NextLink>
+        </StyledSection>
+      </StyledPageMain>
+    </>
   );
 };
 

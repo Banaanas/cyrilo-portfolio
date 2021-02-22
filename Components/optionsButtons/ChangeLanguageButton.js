@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import NextLink from "next/link";
 import styled from "@emotion/styled";
 
 const StyledButton = styled.button`
@@ -44,7 +43,7 @@ const ChangeLanguageButton = () => {
 
   return (
     <StyledButton onClick={changeLanguage} title="Change Language">
-      {locale.toUpperCase()}
+      {locale?.toUpperCase()}
     </StyledButton>
   );
 };

@@ -18,9 +18,6 @@ const Home = () => {
 
   return (
     <>
-      <Head>
-        <title key="title">Cyrilo - JavaScript Dev</title>
-      </Head>
       <ScrollProgressBar />
       <StyledPageMain
         isMenuOpen={isMenuOpen}

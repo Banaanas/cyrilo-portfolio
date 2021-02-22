@@ -11,10 +11,6 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <meta
-            name="description"
-            content="Cyrilo Dev | Fullstack JavaScript Developper | France"
-          />
           <meta name="theme-color" content="#ffffff" />
           <link rel="icon" href="./images/favicons/favicon.ico" />
           <link
