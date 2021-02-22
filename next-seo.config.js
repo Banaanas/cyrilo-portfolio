@@ -1,11 +1,15 @@
+const siteDescription = "Cyrilo Dev | Fullstack JavaScript Developper | France";
+
 export default {
   title: "Cyrilo Dev",
-  description: "Cyrilo Dev | Fullstack JavaScript Developper | France",
+  description: siteDescription,
   openGraph: {
     type: "website",
     url: "https://www.cyrilo.dev/",
+    name: "Cyrilo Dev",
     title: "Cyrilo Dev",
-    description: "Cyrilo Dev | Fullstack JavaScript Developper | France",
+    description: siteDescription,
+    locale: "en",
     images: [
       {
         url: "https://cyrilo.dev/images/CyriLogo-OG.png",
@@ -13,12 +17,30 @@ export default {
         height: 630,
         alt: "Og Image Alt",
       },
-      {
-        url: "https://www.example.ie/og-image-2.jpg",
-        width: 800,
-        height: 600,
-        alt: "Og Image Alt 2",
-      },
     ],
   },
+  languageAlternates: [
+    {
+      hrefLang: "en",
+      href: "https://www.cyrilo.dev/",
+    },
+    {
+      hrefLang: "fr",
+      href: "https://www.cyrilo.dev/fr/",
+    },
+    {
+      hrefLang: "es",
+      href: "https://www.cyrilo.dev/es/",
+    },
+  ],
+  additionalMetaTags: [
+    {
+      property: "og:locale:alternate",
+      content: "fr",
+    },
+    {
+      property: "og:locale:alternate",
+      content: "es",
+    },
+  ],
 };

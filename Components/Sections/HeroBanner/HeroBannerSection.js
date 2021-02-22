@@ -67,8 +67,8 @@ const StyledH1 = styled.h1`
   align-items: center;
   justify-content: center;
   margin: 0;
-  border-radius: 8px;
   overflow: hidden;
+  border-radius: 8px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     flex-direction: column;
@@ -137,6 +137,7 @@ const HeroBannerSection = () => {
         <StyledContainer>
           <StyledH1>
             <span>JavaScript</span>
+            {""}
             <span>Developer</span>
           </StyledH1>
           <NextLink href={navLinks[1].href} passHref>

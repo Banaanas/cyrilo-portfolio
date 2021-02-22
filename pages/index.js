@@ -8,6 +8,7 @@ import AboutMeSection from "../Components/Sections/AboutMe/AboutMeSection";
 import ContactSection from "../Components/Sections/Contact/ContactSection";
 import ScrollProgressBar from "../Components/ScrollProgressBar";
 import { pageVariants } from "../styles/animations";
+import useTranslation from "next-translate/useTranslation";
 
 const Home = () => {
   // SIDE MENU - REDUX STATE
@@ -16,8 +17,17 @@ const Home = () => {
   // AnimatePresence Key
   const router = useRouter();
 
+  // i18n - Translation
+  const { t } = useTranslation("SEO");
+  const metaDescription = t("description");
+
   return (
     <>
+      <Head>
+        <title key="title">Cyrilo - JavaScript Dev</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="canonical" href="https://cyrilo.dev/" />
+      </Head>
       <ScrollProgressBar />
       <StyledPageMain
         isMenuOpen={isMenuOpen}

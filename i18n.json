@@ -2,7 +2,7 @@
   "locales": ["en", "es", "fr"],
   "defaultLocale": "en",
   "pages": {
-    "*": ["common", "aboutMeSection"],
+    "*": ["common", "SEO"],
     "/": [
       "heroBannerSection",
       "featuredProjectsSection",
