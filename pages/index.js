@@ -27,22 +27,31 @@ const Home = () => {
       {/* Cf. -> Note 6 - SEO */}
       <Head>
         {/* Primary Meta Tags */}
-        <title>{pageTitle}</title>
+        <title key="title">{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <link
-          key="canonical"
           rel="canonical"
           href={`https://cyrilo.dev${router.asPath}`}
+          key="canonical"
         />
         {/* Open Graph */}
-        <meta property="og:title" content={pageTitle} />
+        <meta property="og:title" content={pageTitle} key="og-title" />
         <meta
           property="og:url"
           content={`https://cyrilo.dev${router.asPath}`}
+          key="og-url"
         />
-        <meta property="og:locale" content="en" />
-        <meta property="og:locale:alternate" content="fr" />
-        <meta property="og:locale:alternate" content="es" />
+        <meta property="og:locale" content="en" key="og-locale" />
+        <meta
+          property="og:locale:alternate"
+          content="fr"
+          key="og-locale-alternate-1"
+        />
+        <meta
+          property="og:locale:alternate"
+          content="es"
+          key="og-locale-alternate-2"
+        />
       </Head>
       <ScrollProgressBar />
       <StyledPageMain
