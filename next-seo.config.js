@@ -24,4 +24,7 @@ export default {
       },
     ],
   },
+  twitter: {
+    cardType: "summary_large_image",
+  },
 };
