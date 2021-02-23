@@ -184,6 +184,7 @@ const NavBar = ({ menuID }) => {
     <StyledMenu
       isMenuOpen={isMenuOpen}
       id={menuID}
+      aria-modal
       aria-hidden={!isMenuDisplayed}
       /* eslint-disable-next-line react/jsx-props-no-spreading */
       {...handlers}
