@@ -42,8 +42,10 @@ making the font size higher. To prevent that, a work-around is to fix an high
 max-height (999999px)
 
 6 - SEO;
-next-seo.config.js (next-seo Library) is used to set a DefaultSEO in _app.js.
+next-seo.config.js (next-seo Library) is used to set a DefaultSEO in _app.js
+with Default Tag for the whole App, like Hreflang Tags or OG Image tag.
 Dynamic meta tags are defined in <Head> component used in Index.js as <head>.
 For next-seo.config.js, only 1 unique Additional Meta tag as Open Graph "og:locale:alternate"
 was possible. So it was decided to put locale and locale:alternate tags into the
-Index.js <Head> Component.
+Index.js <Head> Component even if they are Default Tags (ie. valid through all the App).
+--> https://github.com/garmeeh/next-seo/issues/638
