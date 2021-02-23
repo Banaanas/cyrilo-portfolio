@@ -1,21 +1,13 @@
-const siteDescription = "Cyrilo Dev | Fullstack JavaScript Developper | France";
-
 export default {
-  title: "Cyrilo Dev",
-  description: siteDescription,
   openGraph: {
     type: "website",
-    url: "https://www.cyrilo.dev/",
-    name: "Cyrilo Dev",
-    title: "Cyrilo Dev",
-    description: siteDescription,
     locale: "en",
     images: [
       {
         url: "https://cyrilo.dev/images/CyriLogo-OG.png",
         width: 1200,
         height: 630,
-        alt: "Og Image Alt",
+        alt: "Cyrilo Logo",
       },
     ],
   },

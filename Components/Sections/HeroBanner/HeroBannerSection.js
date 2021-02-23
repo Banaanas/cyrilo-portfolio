@@ -137,7 +137,6 @@ const HeroBannerSection = () => {
         <StyledContainer>
           <StyledH1>
             <span>JavaScript</span>
-            {""}
             <span>Developer</span>
           </StyledH1>
           <NextLink href={navLinks[1].href} passHref>
