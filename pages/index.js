@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
-import { NextSeo } from "next-seo";
+import Head from "next/head";
 import useTranslation from "next-translate/useTranslation";
 import StyledPageMain from "../Components/StyledComponents/StyledPageMain";
 import HeroBannerSection from "../Components/Sections/HeroBanner/HeroBannerSection";
@@ -24,16 +24,26 @@ const Home = () => {
 
   return (
     <>
-      <NextSeo
-        title={pageTitle}
-        description={pageDescription}
-        canonical="https://cyrilo.dev/"
-        openGraph={{
-          title: { pageTitle },
-          description: { pageDescription },
-          url: "https://www.cyrilo.dev/",
-        }}
-      />
+      {/* Cf. -> Note 6 - SEO */}
+      <Head>
+        {/* Primary Meta Tags */}
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link
+          key="canonical"
+          rel="canonical"
+          href={`https://cyrilo.dev${router.asPath}`}
+        />
+        {/* Open Graph */}
+        <meta property="og:title" content={pageTitle} />
+        <meta
+          property="og:url"
+          content={`https://cyrilo.dev${router.asPath}`}
+        />
+        <meta property="og:locale" content="en" />
+        <meta property="og:locale:alternate" content="fr" />
+        <meta property="og:locale:alternate" content="es" />
+      </Head>
       <ScrollProgressBar />
       <StyledPageMain
         isMenuOpen={isMenuOpen}

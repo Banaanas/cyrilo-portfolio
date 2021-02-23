@@ -1,16 +1,4 @@
 export default {
-  openGraph: {
-    type: "website",
-    locale: "en",
-    images: [
-      {
-        url: "https://cyrilo.dev/images/CyriLogo-OG.png",
-        width: 1200,
-        height: 630,
-        alt: "Cyrilo Logo",
-      },
-    ],
-  },
   languageAlternates: [
     {
       hrefLang: "en",
@@ -25,14 +13,15 @@ export default {
       href: "https://www.cyrilo.dev/es/",
     },
   ],
-  additionalMetaTags: [
-    {
-      property: "og:locale:alternate",
-      content: "fr",
-    },
-    {
-      property: "og:locale:alternate",
-      content: "es",
-    },
-  ],
+  openGraph: {
+    type: "website",
+    images: [
+      {
+        url: "https://cyrilo.dev/images/CyriLogo-OG.png",
+        width: 1200,
+        height: 630,
+        alt: "Cyrilo Logo",
+      },
+    ],
+  },
 };
