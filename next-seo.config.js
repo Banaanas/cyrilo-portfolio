@@ -17,7 +17,7 @@ export default {
     type: "website",
     images: [
       {
-        url: "https://cyrilo.dev/images/CyriLogo-meta-image.png",
+        url: "https://cyrilo.dev/images/Cyrilo-meta-image.png",
         width: 1200,
         height: 630,
         alt: "Cyrilo Logo",
