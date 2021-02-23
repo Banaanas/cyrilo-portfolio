@@ -99,6 +99,7 @@ const Header = () => {
         <StyledHeaderWrapper>
           <NextLink href="/" passHref>
             <motion.a
+              aria-label="Cyrilo Logo"
               initial="initial"
               animate="animate"
               variants={groupVariants}

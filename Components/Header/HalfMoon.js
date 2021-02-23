@@ -20,7 +20,7 @@ const HalfMoon = () => {
       preserveAspectRatio="none"
     >
       <mask
-        id="mask0"
+        id="mask-HalfMoon-Header"
         mask-type="alpha"
         maskUnits="userSpaceOnUse"
         x="0"
@@ -35,7 +35,7 @@ const HalfMoon = () => {
           fill="#f00"
         />
       </mask>
-      <g mask="url(#mask0)">
+      <g mask="url(#mask-HalfMoon-Header)">
         <rect width="1440" height="60" fill="var(--header-halfmoon-shade-1)" />
         <rect
           y="60"

@@ -10,6 +10,14 @@ import smoothScrollTo from "../../utils/smoothScrollTo";
 import navLinks from "../../data/navLinks";
 import { closeSideMenu } from "../../store/slices/sideMenuSlice";
 
+const StyledNavContainer = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 24rem;
+`;
+
 const StyledMenu = styled(motion.div)`
   position: absolute;
   top: 0;
@@ -34,14 +42,6 @@ const StyledMenu = styled(motion.div)`
     var(--primary-light) 75%,
     var(--primary-light) 100%
   );
-`;
-
-const StyledNavContainer = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 24rem;
 `;
 
 const StyledNav = styled.nav`
@@ -186,6 +186,7 @@ const NavBar = ({ menuID }) => {
       id={menuID}
       aria-hidden={!isMenuDisplayed}
       aria-modal="true"
+      tabIndex={tabIndex}
       /* eslint-disable-next-line react/jsx-props-no-spreading */
       {...handlers}
       initial="hidden"
@@ -193,7 +194,7 @@ const NavBar = ({ menuID }) => {
       variants={navBarVariants}
     >
       <StyledNavContainer>
-        <StyledNav>
+        <StyledNav aria-label="mobile navigation">
           <StyledList
             initial="hidden"
             animate={isMenuOpen ? "visible" : "hidden"}
