@@ -61,7 +61,7 @@ My Developer Portfolio.
 
 <p align="center">
   <a href="https://http://cyrilo.dev/">
-    <img src="./public/images/README/animated-gif-1.gif" alt="Animated Gif" width="380" height="300">
+    <img src="./public/images/README/animated-gif-1.gif" alt="Animated Gif" width="380" height="280">
   </a>
 </p>
 
