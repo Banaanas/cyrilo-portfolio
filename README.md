@@ -27,7 +27,7 @@
 <br/>
 <p align="center">
     <a href="https://http://cyrilo.dev/">
-        <img src="./public/images/README/Cyrilo-drawing.svg" alt="Project's Logo" width="120" height="120">
+        <img src="./public/images/README/Cyrilo-drawing.svg" alt="Project's Logo" width="300">
     </a>
 </p>
 
@@ -57,11 +57,11 @@
 
 ## About the Project
 
-<a href="https://www.theodinproject.com/">My own JavaScript Developer Portfolio</a>.
+My Developer Portfolio.
 
 <p align="center">
   <a href="https://http://cyrilo.dev/">
-    <img src="./src/images/README/animated-gif-1.gif" alt="Animated Gif" width="455" height="300">
+    <img src="./public/images/README/animated-gif-1.gif" alt="Animated Gif" width="455" height="300">
   </a>
 </p>
 
@@ -82,7 +82,7 @@
 
 <p align="center">
   <a href="https://http://cyrilo.dev/">
-    <img src="./src/images/README/animated-gif-2.gif" alt="Animated Gif" width="240" height="400">
+    <img src="./public/images/README/animated-gif-2.gif" alt="Animated Gif" width="240" height="400">
   </a>
 </p>
 
@@ -102,7 +102,6 @@
 - [lint-staged](https://github.com/okonet/lint-staged)
 - [Next.js](https://nextjs.org/)
 - [Next SEO](https://github.com/garmeeh/next-seo)
-- [next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
 - [next-themes](https://github.com/pacocoursey/next-themes)
 - [next-translate](https://github.com/vinissimus/next-translate)
 - [Next.js](https://nextjs.org/)
@@ -172,7 +171,7 @@ Distributed under the MIT License. See <a href="./LICENSE">`LICENSE`</a> for mor
 
 ## Project Link
 
-[https://github.com/Banaanas/battleship-TOP](https://github.com/Banaanas/battleship-TOP)
+[https://github.com/Banaanas/cyrilo-portfolio](https://github.com/Banaanas/cyrilo-portfolio)
 
 
 <!-- ACKNOWLEDGEMENTS -->
@@ -180,6 +179,7 @@ Distributed under the MIT License. See <a href="./LICENSE">`LICENSE`</a> for mor
 ## Acknowledgements
 
 - [The Odin Project](https://www.theodinproject.com/)
+- [Full Stack Open](https://fullstackopen.com/en/)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
