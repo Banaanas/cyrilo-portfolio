@@ -34,7 +34,7 @@
 <h1 align="center">☺️ cyrilo.dev ✨</h1>
 
 <p align="center">
-    Simple, fun and elegant Developer Portfolio.<br/><br/>
+    Simple, Creative and Elegant Developer Portfolio.<br/><br/>
     <a href="https://cyrilo.dev/">:computer: Live Demo :eyes:</a><br/><br/>
 </p>
 
@@ -61,7 +61,7 @@ My Developer Portfolio.
 
 <p align="center">
   <a href="https://http://cyrilo.dev/">
-    <img src="./public/images/README/animated-gif-1.gif" alt="Animated Gif" width="455" height="300">
+    <img src="./public/images/README/animated-gif-1.gif" alt="Animated Gif" width="380" height="300">
   </a>
 </p>
 
