@@ -8,14 +8,9 @@ import smoothScrollTo from "../../../utils/smoothScrollTo";
 const paragraphVariants = {
   initial: {
     opacity: 0,
-    scale: 0,
   },
   animate: {
     opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 2,
-    },
   },
 };
 
@@ -28,38 +23,36 @@ const ProjectsLink = ({ children }) => {
 };
 
 /* Trans Component is used for translations with HTML Tags in it */
-const LongStoryParagraph = ({ showLongStory }) => {
-  return (
-    <motion.p
-      initial="initial"
-      animate="animate"
-      exit="initial"
-      variants={paragraphVariants}
-    >
-      <Trans
-        i18nKey="aboutMeSection:longStory.text"
-        components={{
-          TheOdinProjectLink: (
-            <ExternalLink
-              ariaLabel="The Odin Project Website"
-              href="https://www.theodinproject.com/"
-              title="The Odin Project"
-            />
-          ),
-          FullStackOpenLink: (
-            <ExternalLink
-              ariaLabel="Full Stack Open"
-              href="https://fullstackopen.com/"
-              title="Full Stack Open"
-            />
-          ),
-          ProjectsLink: <ProjectsLink />,
-          strongTag: <strong />,
-          brTag: <br />,
-        }}
-      />
-    </motion.p>
-  );
-};
+const LongStoryParagraph = () => (
+  <motion.p
+    initial="initial"
+    animate="animate"
+    exit="initial"
+    variants={paragraphVariants}
+  >
+    <Trans
+      i18nKey="aboutMeSection:longStory.text"
+      components={{
+        TheOdinProjectLink: (
+          <ExternalLink
+            ariaLabel="The Odin Project Website"
+            href="https://www.theodinproject.com/"
+            title="The Odin Project"
+          />
+        ),
+        FullStackOpenLink: (
+          <ExternalLink
+            ariaLabel="Full Stack Open"
+            href="https://fullstackopen.com/"
+            title="Full Stack Open"
+          />
+        ),
+        ProjectsLink: <ProjectsLink />,
+        strongTag: <strong />,
+        brTag: <br />,
+      }}
+    />
+  </motion.p>
+);
 
 export default LongStoryParagraph;

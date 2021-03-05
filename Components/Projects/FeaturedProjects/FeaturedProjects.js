@@ -35,8 +35,6 @@ const StarWrapper = styled(motion.div)`
   display: none;
   grid-row: 2/3;
   grid-column: 1/3;
-  opacity: 0;
-  transition: opacity 10s ease-in-out;
 
   @media (min-width: 628px) {
     display: flex;
@@ -51,7 +49,7 @@ const FeaturedProjects = ({ featuredProjects }) => {
         <ProjectCard project={project} key={project.id} />
       ))}
       <StarWrapper
-        animate={{
+        /* animate={{
           rotate: [0, 360],
           scale: [0.1, 0.2, 1.5, 2, 2.5, 2, 1.5, 0.2, 0.1],
           x: [0, 10, 20, 10, 0, -10, -20, -10, 0],
@@ -63,6 +61,10 @@ const FeaturedProjects = ({ featuredProjects }) => {
           stiffness: 260,
           damping: 20,
           repeat: Infinity,
+        }}*/
+        initiate={{ scale: 0 }}
+        animate={{
+          scale: [1.5, 1.2, 3],
         }}
       >
         <FeaturedProjectsStar />
