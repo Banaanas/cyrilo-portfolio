@@ -77,8 +77,7 @@ My Developer Portfolio.
 - JavaScript and CSS Animations ;
 - Page Scroll Progress Bar ;
 - Accessibility ;
-- Responsive Design ; 
-- Funny Design.
+- Responsive and Creative Design. 
 
 <p align="center">
   <a href="https://http://cyrilo.dev/">
