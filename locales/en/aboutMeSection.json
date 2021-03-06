@@ -8,7 +8,7 @@
     "title": "Long Story",
     "buttonRead": "Read",
     "buttonHide": "Hide",
-    "text": "Since march 2020, I've been learning Web Development to become a <strongTag> FullStack Developer</strongTag>, specialized in <strongTag> Front-End</strongTag>. <brTag></brTag> In order to achieve this purpose, I have completed both <TheOdinProjectLink> The Odin Project </TheOdinProjectLink> and the <FullStackOpenLink> Full Stack Open</FullStackOpenLink> curriculums. Throughout those courses, I've been learning programming concepts and practical skills, realizing numerous concrete <ProjectsLink>Projects</ProjectsLink>. Since then, I have deeply enjoyed continuously learning and resolving problems."
+    "text": "Since march 2020, I've been learning Web Development to become a <strongTag> Full-Stack Developer</strongTag>, specialized in <strongTag> Front End</strongTag>. <brTag></brTag> In order to achieve this purpose, I have completed both <TheOdinProjectLink> The Odin Project </TheOdinProjectLink> and the <FullStackOpenLink> Full Stack Open</FullStackOpenLink> curriculums. Throughout those courses, I've been learning programming concepts and practical skills, realizing numerous concrete <ProjectsLink>Projects</ProjectsLink>. Since then, I have deeply enjoyed continuously learning and resolving problems."
   },
   "thingsICodeWith": "Things I code with"
 }
