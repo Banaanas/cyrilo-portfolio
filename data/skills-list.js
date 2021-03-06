@@ -1,6 +1,8 @@
 // Skills List - About Me
 
 const skillsList = [
+  "HTML5",
+  "CSS3",
   "JavaScript (ES6+)",
   "React",
   "Next.js",
