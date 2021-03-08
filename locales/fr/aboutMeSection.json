@@ -2,7 +2,7 @@
   "title": "À Propos",
   "shortStory": {
     "title": "Short Story",
-    "text": "Je suis <strongTag>Cyril</strongTag>, <strongTag> Développeur JavaScript</strongTag> établi à Lyon (France). Après deux Master en Droit International (2006-2007) et des années en tant qu'enseignant et consultant en droit, j'ai décidé d'imprimer à ma vie professionnelle une direction nouvelle ☀️."
+    "text": "Je suis <strongTag>Cyril</strongTag>, <strongTag> Développeur Web</strongTag> établi à Lyon (France). Je conçois et réalise des <strongTag>Applications Web</strongTag> performantes, fiables, élégantes et responsive. J’utilise l’écosystème <strongTag>JavaScript</strongTag>, notamment <strongTag>React</strongTag> et <strongTag>Next.js</strongTag>.  ☀️."
   },
   "longStory": {
     "title": "Long Story",

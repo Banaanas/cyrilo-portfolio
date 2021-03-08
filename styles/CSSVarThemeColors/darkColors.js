@@ -67,7 +67,7 @@ const darkColors = css`
   --other-projects-links-background-color-even: var(--secondary-main);
 
   /* About Me Section - Short Story */
-  --short-story-name: var(--secondary-darker);
+  --short-story-strong: var(--secondary-darker);
 
   /* Contact Section */
   --principal-question: var(--default-white);

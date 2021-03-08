@@ -3,11 +3,11 @@ import styled from "@emotion/styled";
 import NextLink from "next/link";
 import { useThrottledFn, useWindowScroll } from "beautiful-react-hooks";
 import { Element as ScrollWrapper } from "react-scroll";
+import { motion } from "framer-motion";
 import SideMenu from "../SideMenu/SideMenu";
 import NavBar from "./NavBar";
 import HalfMoon from "./HalfMoon";
 import CyriLogo from "./CyriLogo";
-import { motion } from "framer-motion";
 
 const StyledHeader = styled.header`
   position: fixed;

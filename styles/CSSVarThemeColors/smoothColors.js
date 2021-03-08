@@ -67,7 +67,7 @@ const smoothColors = css`
   --other-projects-links-background-color-even: var(--secondary-main);
 
   /* About Me Section - Short Story */
-  --short-story-name: var(--default-white);
+  --short-story-strong: var(--primary-darker);
 
   /* Contact Section */
   --principal-question: var(--default-white);

@@ -67,7 +67,7 @@ const coolColors = css`
   --other-projects-links-background-color-even: var(--secondary-main);
 
   /* About Me Section - Short Story */
-  --short-story-name: var(--primary-main);
+  --short-story-strong: var(--secondary-darker);
 
   /* Contact Section */
   --principal-question: var(--default-white);

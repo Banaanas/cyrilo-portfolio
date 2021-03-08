@@ -2,7 +2,7 @@
   "title": "About Me",
   "shortStory": {
     "title": "Short Story",
-    "text": "<pTag> I'm<strongTag>Cyril</strongTag>, a brand new <strongTag>JavaScript Developer</strongTag> based in Lyon, France. After two Master in International Law (2006-2007) and years as teacher and International Law consultant, I've decided to give my career a shining new direction ☀️.</pTag>"
+    "text": "<pTag> I'm <strongTag>Cyril</strongTag>, <strongTag>Web Developer</strongTag> based in Lyon, France. I design and build high-performance, reliable, elegant and responsive <strongTag>Web Applications</strongTag>. I work with the <strongTag>JavaScript</strongTag>, ecosystem, including <strongTag>React</strongTag> and <strongTag>Next.js</strongTag>. ☀️.</pTag>"
   },
   "longStory": {
     "title": "Long Story",
