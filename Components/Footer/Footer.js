@@ -13,7 +13,7 @@ const StyledFooter = styled.footer`
   width: 100%;
   height: 4rem;
   margin-top: 4rem; /* For HalfMoon */
-  padding-top: 0.5rem;
+  padding-top: 0.4rem;
   background: linear-gradient(
     -180deg,
     var(--secondary-main) 50%,
