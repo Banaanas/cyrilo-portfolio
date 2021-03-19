@@ -1,5 +1,8 @@
 // All NavLinks
 // NavLinks Names are located in Locales Directory to be translated
+// https://github.com/vercel/next.js/issues/20160
+// Also, instead of displaying "https://cyrilo.dev/es/#about-me"
+// we had "https://cyrilo.dev/es#about-me"
 
 const navLinks = [
   {
@@ -7,15 +10,15 @@ const navLinks = [
     scrollName: "hero-banner-scroll",
   },
   {
-    href: "/#projects",
+    href: "/",
     scrollName: "projects-scroll",
   },
   {
-    href: "/#about-me",
+    href: "/",
     scrollName: "about-me-scroll",
   },
   {
-    href: "/#contact",
+    href: "/",
     scrollName: "contact-scroll",
   },
 ];
