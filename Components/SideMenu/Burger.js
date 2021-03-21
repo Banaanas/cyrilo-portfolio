@@ -62,21 +62,6 @@ const StyledSideMenuButton = styled(motion.button)`
   }
 `;
 
-const buttonVariants = {
-  initiate: {
-    rotate: 0,
-    transition: {
-      duration: 0.2,
-    },
-  },
-  animate: {
-    rotate: 180,
-    transition: {
-      duration: 0.2,
-    },
-  },
-};
-
 const Burger = ({ menuID }) => {
   // SIDE MENU - REDUX STATE
   const isMenuOpen = useSelector((state) => state.sideMenu.isMenuOpen);

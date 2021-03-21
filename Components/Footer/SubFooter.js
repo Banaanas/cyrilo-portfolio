@@ -37,6 +37,7 @@ const StyledAumIcon = styled(AumIcon)`
   color: var(--default-white);
   font-size: ${({ theme }) => theme.fontSizes.md};
 `;
+
 const SubFooter = () => (
   <StyledContainer>
     <StyledSpan>
