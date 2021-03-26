@@ -6,9 +6,10 @@ class MyDocument extends Document {
     return { ...initialProps };
   }
 
+  /* lang="en" */
   render() {
     return (
-      <Html lang="en">
+      <Html>
         <Head>
           <meta charSet="utf-8" />
           <meta name="theme-color" content="#ffffff" />
