@@ -6,7 +6,8 @@ class MyDocument extends Document {
     return { ...initialProps };
   }
 
-  /* lang="en" */
+  /* <Html/> default lang="en" attribute has been removed.
+   * Next.js automatically add the lang attribute to the <html> tag. */
   render() {
     return (
       <Html>
