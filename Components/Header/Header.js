@@ -1,6 +1,6 @@
 import { useState } from "react";
-import styled from "@emotion/styled";
 import NextLink from "next/link";
+import styled from "@emotion/styled";
 import { useThrottledFn, useWindowScroll } from "beautiful-react-hooks";
 import { Element as ScrollWrapper } from "react-scroll";
 import { motion } from "framer-motion";
