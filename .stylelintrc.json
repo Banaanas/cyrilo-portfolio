@@ -15,7 +15,7 @@
   },
   "@comment rules": {
     "plugin/8-point-grid": {
-      "base": "Base of 0.5 in order to align with the 8pt Grid and keep using rem, "
+      "base": "Base of 0.5 in order to align with the 8pt Grid and keep using rem"
     }
   }
 }
