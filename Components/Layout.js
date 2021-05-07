@@ -4,7 +4,7 @@ import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 import GlobalStyles from "../styles/GlobalStyles";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
-import OptionButtonsContainer from "./optionsButtons/optionButtonsContainer";
+import OptionButtonsContainer from "./OptionsButtons/OptionButtonsContainer";
 import store from "../store/store";
 import appTheme from "../styles/appTheme";
 
