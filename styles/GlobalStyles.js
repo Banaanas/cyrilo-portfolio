@@ -1,10 +1,10 @@
 import { css, Global, useTheme } from "@emotion/react";
-import globalColors from "./CSSVariables/theme-colors/global-colors";
-import lightColors from "./CSSVariables/theme-colors/light-colors";
-import darkColors from "./CSSVariables/theme-colors/dark-colors";
-import smoothColors from "./CSSVariables/theme-colors/smooth-colors";
-import coolColors from "./CSSVariables/theme-colors/cool-colors";
-import fontProperties from "./CSSVariables/font-properties";
+import globalColors from "./CSS-variables/theme-colors/global-colors";
+import lightColors from "./CSS-variables/theme-colors/light-colors";
+import darkColors from "./CSS-variables/theme-colors/dark-colors";
+import smoothColors from "./CSS-variables/theme-colors/smooth-colors";
+import coolColors from "./CSS-variables/theme-colors/cool-colors";
+import fontProperties from "./CSS-variables/font-properties";
 
 // Emotion Global Styles
 const GlobalStyles = () => {
