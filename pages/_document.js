@@ -39,7 +39,7 @@ class MyDocument extends Document {
           />
           <link rel="manifest" href="./images/favicons/site.webmanifest" />
           <meta name="msapplication-TileColor" content="#da532c" />
-          <meta name="theme-color" content="#ffffff" />
+          <meta name="theme-color" content="hsl(14deg, 5%, 30%)" />
         </Head>
         <body>
           <Main />
