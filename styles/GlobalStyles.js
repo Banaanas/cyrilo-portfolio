@@ -20,7 +20,7 @@ const GlobalStyles = () => {
         *,
         *::before,
         *::after {
-          box-sizing: border-box;
+          box-sizing: inherit;
           line-height: 1.45;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: auto;
