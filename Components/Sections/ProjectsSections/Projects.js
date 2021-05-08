@@ -1,7 +1,5 @@
-import { useEffect } from "react";
 import { Element as ScrollWrapper } from "react-scroll";
 import useTranslation from "next-translate/useTranslation";
-import { useInView } from "react-intersection-observer";
 import StyledSection from "../../StyledComponents/StyledSection";
 import projectsList from "../../../data/projects-list";
 import FeaturedProjects from "../../Projects/FeaturedProjects/FeaturedProjects";
@@ -11,19 +9,6 @@ import FeaturedProjectsDivider from "../../Dividers/FeaturedProjectsDivider";
 import OtherProjectsDivider from "../../Dividers/OtherProjectsDivider";
 
 const Projects = () => {
-  // React Intersection Observer
-  const { ref, inView, entry } = useInView({
-    triggerOnce: false,
-    rootMargin: "0px 0px",
-  });
-
-  // Update HashName when Element Scrolled
-  useEffect(() => {
-    /* if (inView) {
-      updateHashNameURL("projects");
-    }*/
-  }, [inView]);
-
   // 4 Featured FeaturedProjects
   const featuredProjectsNumber = 4;
 
@@ -44,7 +29,7 @@ const Projects = () => {
     <>
       <StyledSection id="projects">
         <ScrollWrapper name="projects-scroll" />
-        <StyledTitle ref={ref}>{sectionTitle}</StyledTitle>
+        <StyledTitle>{sectionTitle}</StyledTitle>
         <FeaturedProjects featuredProjects={featuredProjects} />
       </StyledSection>
       <FeaturedProjectsDivider />

@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import styled from "@emotion/styled";
-import { useInView } from "react-intersection-observer";
 import { Element as ScrollWrapper } from "react-scroll";
 import useTranslation from "next-translate/useTranslation";
 import StyledSection from "../../StyledComponents/StyledSection";
@@ -31,19 +29,6 @@ const StyledTextContainer = styled.div`
 `;
 
 const AboutMeSection = () => {
-  // React Intersection Observer
-  const { ref, inView, entry } = useInView({
-    triggerOnce: false,
-    rootMargin: "0px 0px",
-  });
-
-  // Update HashName when Element Scrolled
-  useEffect(() => {
-    /* if (inView) {
-      updateHashNameURL("about-me");
-    } */
-  }, [inView]);
-
   // i18n - Translation
   const { t } = useTranslation("aboutMeSection");
   const sectionTitle = t("title");
@@ -52,7 +37,7 @@ const AboutMeSection = () => {
     <>
       <StyledSection id="about-me">
         <ScrollWrapper name="about-me-scroll" />
-        <StyledTitle ref={ref}>{sectionTitle}</StyledTitle>
+        <StyledTitle>{sectionTitle}</StyledTitle>
         <StyledAboutMeContainer>
           <AboutMeImage />
           <StyledTextContainer>

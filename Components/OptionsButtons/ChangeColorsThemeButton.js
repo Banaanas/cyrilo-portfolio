@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { MdInvertColors as ChangeColorsThemeIcon } from "react-icons/md";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import themeColorsArray from "../../styles/CSSVarThemeColors/themeColorsArray";
+import themeColorsArray from "../../styles/CSSVariables/theme-colors/themeColorsArray";
 
 const StyledButton = styled.button`
   display: flex;

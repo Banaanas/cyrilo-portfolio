@@ -75,6 +75,12 @@ const StyledContainer = styled(motion.div)`
   align-items: center;
   justify-content: center;
   overflow: hidden; /* Framer Motion - Height Animation */
+  
+  strong {
+    color: var(--short-story-strong);
+    border-radius: 4px;
+    font-family: "Nexa Bold";
+  }
 `;
 
 const longStoryVariants = {

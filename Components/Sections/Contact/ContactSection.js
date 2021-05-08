@@ -1,7 +1,6 @@
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 import styled from "@emotion/styled";
 import { Element as ScrollWrapper } from "react-scroll";
+import useTranslation from "next-translate/useTranslation";
 import StyledTitle from "../../StyledComponents/StyledTitle";
 import GenericStyledSection from "../../StyledComponents/StyledSection";
 import ContactStar from "./ContactShapes/ContactStar";
@@ -9,7 +8,6 @@ import SmallDeviceQuestions from "./SmallDeviceQuestions";
 import CyriloMail from "./CyriloMail";
 import NormalDeviceQuestions from "./NormalDeviceQuestions";
 import { GitHubShape, LinkedInShape } from "./ContactShapes/GitHubStar";
-import useTranslation from "next-translate/useTranslation";
 
 const StyledSection = styled(GenericStyledSection)`
   display: flex;
@@ -32,19 +30,6 @@ const StyledSocialMediaContainer = styled.div`
 `;
 
 const ContactSection = () => {
-  // React Intersection Observer
-  const { ref, inView, entry } = useInView({
-    triggerOnce: false,
-    rootMargin: "0px 0px",
-  });
-
-  // Update HashName when Element Scrolled
-  useEffect(() => {
-    /*  if (inView) {
-      updateHashNameURL("contact");
-    }*/
-  }, [inView]);
-
   // i18n - Translation
   const { t } = useTranslation("contactSection");
   const title = t(`title`);
@@ -52,7 +37,7 @@ const ContactSection = () => {
   return (
     <StyledSection id="contact">
       <ScrollWrapper name="contact-scroll" />
-      <StyledTitleContainer ref={ref}>
+      <StyledTitleContainer>
         <ContactStar />
         <StyledTitle>{title}</StyledTitle>
       </StyledTitleContainer>

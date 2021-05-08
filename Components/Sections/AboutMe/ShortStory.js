@@ -15,6 +15,7 @@ export const StyledShortStory = styled(StyledTextContainer)`
   strong {
     color: var(--short-story-strong);
     border-radius: 4px;
+    font-family: "Nexa Bold";
   }
 `;
 

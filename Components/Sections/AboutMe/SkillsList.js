@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
+import useTranslation from "next-translate/useTranslation";
 import StyledTextContainer from "./StyledTextContainer";
 import skillsList from "../../../data/skills-list";
-import useTranslation from "next-translate/useTranslation";
 
 const StyledSkillsList = styled(StyledTextContainer)`
   flex-direction: column;
@@ -16,6 +16,7 @@ const StyledSkillsList = styled(StyledTextContainer)`
   }
   li {
     color: var(--default-white);
+    font-family: "Nexa", sans-serif;
   }
 
   @media (max-width: 350px) {

@@ -1,7 +1,5 @@
-import { useEffect } from "react";
 import NextLink from "next/link";
 import useTranslation from "next-translate/useTranslation";
-import { useInView } from "react-intersection-observer";
 import styled from "@emotion/styled";
 import { FaArrowDown as DownArrowIcon } from "react-icons/fa";
 import smoothScrollTo from "../../../utils/smoothScrollTo";
@@ -118,19 +116,6 @@ const HeroBannerSection = () => {
   const { t } = useTranslation("heroBannerSection");
   const ProjectsLink = t("link");
 
-  // React Intersection Observer
-  const { ref, inView, entry } = useInView({
-    triggerOnce: false,
-    rootMargin: "0px 0px",
-  });
-
-  // Update HashName when Element Scrolled
-  useEffect(() => {
-    /* if (inView) {
-      updateHashNameURL("/");
-    } */
-  }, [inView]);
-
   return (
     <>
       <StyledSection>
@@ -143,7 +128,6 @@ const HeroBannerSection = () => {
             <StyledLink
               id="first-link"
               onClick={() => smoothScrollTo(navLinks[1].scrollName)}
-              ref={ref}
             >
               <span>{ProjectsLink}</span>
               <DownArrowIcon />
