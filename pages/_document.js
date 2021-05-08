@@ -13,7 +13,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta charSet="utf-8" />
-          <meta name="theme-color" content="#ffffff" />
+          <meta name="theme-color" content="red" />
           <link rel="icon" href="./images/favicons/favicon.ico" />
           <link
             rel="icon"
