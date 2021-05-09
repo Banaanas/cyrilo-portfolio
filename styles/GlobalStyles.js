@@ -133,27 +133,27 @@ const GlobalStyles = () => {
 
         @font-face {
           font-family: "Nexa Black";
-          src: url("./fonts/NexaBlack.otf");
+          src: url("./fonts/Nexa-Black.otf");
         }
 
         @font-face {
           font-family: "Nexa Bold";
-          src: url("./fonts/NexaBold.otf");
+          src: url("./fonts/Nexa-Bold.otf");
         }
 
         @font-face {
           font-family: "Nexa Regular";
-          src: url("./fonts/NexaRegular.otf");
+          src: url("./fonts/Nexa-Regular.otf");
         }
 
         @font-face {
           font-family: "Nexa Thin";
-          src: url("./fonts/NexaThin.otf");
+          src: url("./fonts/Nexa-Thin.otf");
         }
 
         @font-face {
           font-family: "Nexa Thin Italic";
-          src: url("./fonts/NexaThinItalic.otf");
+          src: url("./fonts/Nexa-ThinItalic.otf");
         }
 
         /* CSS Variables */
