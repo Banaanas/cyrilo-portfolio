@@ -131,6 +131,8 @@ const GlobalStyles = () => {
           }
         }
 
+        /* Fonts */
+
         @font-face {
           font-family: "Nexa Black";
           src: url("./fonts/Nexa-Black.otf");
