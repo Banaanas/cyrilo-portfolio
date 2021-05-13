@@ -6,6 +6,9 @@ const fontProperties = css`
   --font-weight-medium: 500;
   --font-weight-bold: 600;
 
+  /* Base Font Size */
+  --base-font-size: 16px;
+
   /* Font Family */
   --alternative-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
