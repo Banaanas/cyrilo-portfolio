@@ -10,10 +10,4 @@ const pageVariants = {
   },
 };
 
-// Page Transition
-const pageTransition = {
-  type: "spring",
-  duration: 10,
-};
-
-export { pageVariants, pageTransition };
+export default pageVariants;

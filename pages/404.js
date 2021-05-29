@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import StyledPageMain from "../Components/StyledComponents/StyledPageMain";
 import StyledLink from "../Components/StyledComponents/StyledLink";
 import StyledSection from "../Components/StyledComponents/StyledSection";
-import { pageVariants } from "../styles/animations";
+import pageVariants from "../styles/animations";
 
 const StyledH1 = styled.h1`
   margin-bottom: 5rem; /* Margin between H1 and Link */

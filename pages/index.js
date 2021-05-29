@@ -8,7 +8,7 @@ import Projects from "../Components/Sections/ProjectsSections/Projects";
 import AboutMeSection from "../Components/Sections/AboutMe/AboutMeSection";
 import ContactSection from "../Components/Sections/Contact/ContactSection";
 import ScrollProgressBar from "../Components/ScrollProgressBar";
-import { pageVariants } from "../styles/animations";
+import pageVariants from "../styles/animations";
 
 const Home = () => {
   // SIDE MENU - REDUX STATE
