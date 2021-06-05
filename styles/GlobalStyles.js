@@ -110,8 +110,8 @@ const GlobalStyles = () => (
 
       /* Scrollbar and Selection styles */
       ::selection {
-        color: white;
-        background-color: var(--primary-main);
+        color: var(--color-selection);
+        background-color: var(--color-selection-background);
       }
 
       @media (orientation: landscape) {
@@ -132,7 +132,6 @@ const GlobalStyles = () => (
       }
 
       /* Fonts */
-
       @font-face {
         font-family: "Nexa Black";
         src: url("./fonts/Nexa-Black.otf");

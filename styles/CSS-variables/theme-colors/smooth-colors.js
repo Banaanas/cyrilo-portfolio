@@ -80,26 +80,31 @@ const smoothColors = css`
   --404-h1-color: var(--primary-main);
   --404-r-letter: var(--secondary-main);
 
+  /* Selection */
+  --color-selection: var(--default-white);
+  --color-selection-background: var(--secondary-light);
+
   /* Default Colors */
-  --default-white: #fffffe;
+  --default-white: hsl(60, 100%, 100%);
+  --default-black: hsl(237, 38%, 9%);
 
   /* Primary Color */
-  --primary-darker: #72234d;
-  --primary-dark: #ab5e78;
-  --primary-main: #eebbc3;
-  --primary-light: #f4cdcf;
-  --primary-lighter: #f9dad9;
-  --primary-lightest1: #fdeae7;
-  --primary-lightest2: #fef5f3;
+  --primary-darker: hsl(328, 53%, 29%);
+  --primary-dark: hsl(340, 31%, 52%);
+  --primary-main: hsl(351, 60%, 83%);
+  --primary-light: hsl(357, 64%, 88%);
+  --primary-lighter: hsl(2, 73%, 91%);
+  --primary-lightest1: hsl(8, 85%, 95%);
+  --primary-lightest2: hsl(11, 85%, 97%);
 
   /* Secondary Color */
-  --secondary-darker: #060921;
-  --secondary-dark: #111632;
-  --secondary-main: #232946;
-  --secondary-light: #596490;
-  --secondary-lighter: #8b98c7;
-  --secondary-lightest1: #bdc7ec;
-  --secondary-lightest2: #dde3f5;
+  --secondary-darker: hsl(233, 69%, 8%);
+  --secondary-dark: hsl(231, 49%, 13%);
+  --secondary-main: hsl(230, 33%, 21%);
+  --secondary-light: hsl(228, 24%, 46%);
+  --secondary-lighter: hsl(227, 35%, 66%);
+  --secondary-lightest1: hsl(227, 55%, 83%);
+  --secondary-lightest2: hsl(225, 55%, 91%);
 `;
 
 export default smoothColors;

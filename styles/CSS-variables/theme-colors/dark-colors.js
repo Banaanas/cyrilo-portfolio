@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 
 const darkColors = css`
   /* General Elements */
-  --global-background-color: var(--default-dark);
+  --global-background-color: var(--default-black);
 
   /* Header - HalfMoon */
   --header-halfmoon-shade-1: var(--secondary-darker);
@@ -80,27 +80,31 @@ const darkColors = css`
   --404-h1-color: var(--primary-main);
   --404-r-letter: var(--secondary-main);
 
+  /* Selection */
+  --color-selection: var(--default-white);
+  --color-selection-background: var(--secondary-dark);
+
   /* Default Colors */
-  --default-white: #fbf9fa;
-  --default-dark: #0f1021;
+  --default-white: hsl(330, 20%, 98%);
+  --default-black: hsl(237, 38%, 9%);
 
   /* Primary Color */
-  --primary-darker: #7a6407;
-  --primary-dark: #b79c13;
-  --primary-main: #ffe227;
-  --primary-light: #ffeb5d;
-  --primary-lighter: #fff17d;
-  --primary-lightest1: #fff7a8;
-  --primary-lightest2: #fffbd3;
+  --primary-darker: hsl(49, 89%, 25%);
+  --primary-dark: hsl(50, 81%, 40%);
+  --primary-main: hsl(52, 100%, 58%);
+  --primary-light: hsl(53, 100%, 68%);
+  --primary-lighter: hsl(54, 100%, 75%);
+  --primary-lightest1: hsl(54, 100%, 83%);
+  --primary-lightest2: hsl(55, 100%, 91%);
 
   /* Secondary Color */
-  --secondary-darker: #220835;
-  --secondary-dark: #411650;
-  --secondary-main: #6a2c70;
-  --secondary-light: #a85ca9;
-  --secondary-lighter: #d486ce;
-  --secondary-lightest1: #f0b6e7;
-  --secondary-lightest2: #f7d9f0;
+  --secondary-darker: hsl(275, 74%, 12%);
+  --secondary-dark: hsl(284, 57%, 20%);
+  --secondary-main: hsl(295, 44%, 31%);
+  --secondary-light: hsl(299, 31%, 51%);
+  --secondary-lighter: hsl(305, 48%, 68%);
+  --secondary-lightest1: hsl(309, 66%, 83%);
+  --secondary-lightest2: hsl(314, 65%, 91%);
 `;
 
 export default darkColors;
