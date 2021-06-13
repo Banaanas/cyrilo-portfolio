@@ -26,5 +26,9 @@ export default {
   },
   twitter: {
     cardType: "summary_large_image",
+    url: "https://cyrilo.dev/images/Cyrilo-meta-image.png",
+    width: 1200,
+    height: 630,
+    alt: "Cyrilo Logo",
   },
 };
