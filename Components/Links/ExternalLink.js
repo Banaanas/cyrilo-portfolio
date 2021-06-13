@@ -1,12 +1,8 @@
-import styled from "@emotion/styled";
-
-const StyledLink = styled.a`
-  text-decoration: none;
-`;
+import LongStoryLink from "./LongStoryLink";
 
 const ExternalLink = ({ children, ariaLabel, href, title }) => {
   return (
-    <StyledLink
+    <LongStoryLink
       aria-label={ariaLabel}
       href={href}
       target="_blank"
@@ -14,7 +10,7 @@ const ExternalLink = ({ children, ariaLabel, href, title }) => {
       title={title}
     >
       {children}
-    </StyledLink>
+    </LongStoryLink>
   );
 };
 

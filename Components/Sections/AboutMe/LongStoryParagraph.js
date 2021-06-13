@@ -1,9 +1,7 @@
-import NextLink from "next/link";
 import Trans from "next-translate/Trans";
 import { motion } from "framer-motion";
 import ExternalLink from "../../Links/ExternalLink";
-import navLinks from "../../../data/navLinks";
-import smoothScrollTo from "../../../utils/smoothScrollTo";
+import ProjectsScrollLink from "../../Links/ProjectsScrollLink";
 
 const paragraphVariants = {
   initial: {
@@ -12,14 +10,6 @@ const paragraphVariants = {
   animate: {
     opacity: 1,
   },
-};
-
-const ProjectsLink = ({ children }) => {
-  return (
-    <NextLink href={navLinks[1].href} passHref>
-      <a onClick={() => smoothScrollTo(navLinks[1].scrollName)}>{children}</a>
-    </NextLink>
-  );
 };
 
 /* Trans Component is used for translations with HTML Tags in it */
@@ -47,7 +37,7 @@ const LongStoryParagraph = () => (
             title="Full Stack Open"
           />
         ),
-        ProjectsLink: <ProjectsLink />,
+        ProjectsLink: <ProjectsScrollLink />,
         strongTag: <strong />,
         brTag: <br />,
       }}

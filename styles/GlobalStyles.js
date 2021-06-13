@@ -118,7 +118,7 @@ const GlobalStyles = () => (
         ::-webkit-scrollbar {
           width: 9px;
           height: 11px;
-          background-color: transparent;
+          background-color: yellow;
         }
         ::-webkit-scrollbar-track {
           background-color: transparent;

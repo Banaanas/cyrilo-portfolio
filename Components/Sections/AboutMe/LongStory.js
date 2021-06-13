@@ -19,25 +19,6 @@ const StyledLongStory = styled(StyledTextContainer)`
   p {
     color: var(--secondary-main);
   }
-
-  a {
-    text-decoration: none;
-    background-image: linear-gradient(
-      transparent calc(50% - 9px),
-      var(--primary-main) calc(50% - 9px) calc(50% - 9px)
-    );
-    background-size: 100% 200%;
-    border-radius: 3px;
-    transition: background-position 120ms ease-in-out 0s;
-  }
-
-  a:hover {
-    background-image: linear-gradient(
-      transparent calc(50% - 9px),
-      var(--primary-main) calc(50% - 9px) calc(50% - 9px)
-    );
-    background-position: 0 100%;
-  }
 `;
 
 const StyledButton = styled.button`
@@ -75,11 +56,11 @@ const StyledContainer = styled(motion.div)`
   align-items: center;
   justify-content: center;
   overflow: hidden; /* Framer Motion - Height Animation */
-  
+
   strong {
     color: var(--short-story-strong);
-    border-radius: 4px;
     font-family: "Nexa Bold";
+    border-radius: 4px;
   }
 `;
 
