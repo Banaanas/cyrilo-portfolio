@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
-const LongStoryLink = styled.a`
-  text-decoration: none;
+export const linkHoverEffect = css`
   background-image: linear-gradient(
     transparent calc(50% - 9px),
     var(--primary-main) calc(50% - 9px) calc(50% - 9px)
@@ -20,4 +20,23 @@ const LongStoryLink = styled.a`
   }
 `;
 
-export default LongStoryLink;
+const Link = styled.a`
+  text-decoration: none;
+  ${linkHoverEffect}
+`;
+
+const LongStoryExternalLink = ({ children, ariaLabel, href, title }) => {
+  return (
+    <Link
+      aria-label={ariaLabel}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={title}
+    >
+      {children}
+    </Link>
+  );
+};
+
+export default LongStoryExternalLink;

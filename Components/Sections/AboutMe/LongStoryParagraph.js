@@ -1,7 +1,7 @@
 import Trans from "next-translate/Trans";
 import { motion } from "framer-motion";
-import ExternalLink from "../../Links/ExternalLink";
-import ProjectsScrollLink from "../../Links/ProjectsScrollLink";
+import ProjectsScrollLink from "./ProjectsScrollLink";
+import LongStoryExternalLink from "./LongStoryExternalLink";
 
 const paragraphVariants = {
   initial: {
@@ -24,14 +24,14 @@ const LongStoryParagraph = () => (
       i18nKey="aboutMeSection:longStory.text"
       components={{
         TheOdinProjectLink: (
-          <ExternalLink
+          <LongStoryExternalLink
             ariaLabel="The Odin Project Website"
             href="https://www.theodinproject.com/"
             title="The Odin Project"
           />
         ),
         FullStackOpenLink: (
-          <ExternalLink
+          <LongStoryExternalLink
             ariaLabel="Full Stack Open"
             href="https://fullstackopen.com/"
             title="Full Stack Open"
