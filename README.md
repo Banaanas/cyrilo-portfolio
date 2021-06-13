@@ -128,7 +128,7 @@ My Developer Portfolio.
 1 - Clone the Project's repository
 
 ```sh
-git https://github.com/Banaanas/battleship-TOP.git
+git https://github.com/Banaanas/cyrilo-portfolio.git
 ```
 
 2 - Install NPM Packages / Dependencies
