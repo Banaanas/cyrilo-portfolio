@@ -26,7 +26,7 @@
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
-    <a href="https://http://cyrilo.dev/">
+    <a href="https://cyrilo.dev/">
         <img src="./public/images/README/Cyrilo-drawing.svg" alt="Project's Logo" width="300">
     </a>
 </p>
@@ -60,7 +60,7 @@
 My Developer Portfolio.
 
 <p align="center">
-  <a href="https://http://cyrilo.dev/">
+  <a href="https://cyrilo.dev/">
     <img src="./public/images/README/animated-gif-1.gif" alt="Animated Gif" width="380" height="280">
   </a>
 </p>
@@ -80,7 +80,7 @@ My Developer Portfolio.
 - Responsive and Creative Design. 
 
 <p align="center">
-  <a href="https://http://cyrilo.dev/">
+  <a href="https://cyrilo.dev/">
     <img src="./public/images/README/animated-gif-2.gif" alt="Animated Gif" width="240" height="400">
   </a>
 </p>

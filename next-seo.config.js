@@ -1,3 +1,4 @@
+/* Default SEO - All Pages */
 export default {
   languageAlternates: [
     {

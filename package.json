@@ -1,7 +1,11 @@
 {
   "name": "cyrilo-portfolio",
   "version": "0.1.0",
-  "private": true,
+  "author": {
+    "name": "Cyrilo",
+    "email": "cyrilo.dev@gmail.com",
+    "url": "https://cyrilo.dev"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
