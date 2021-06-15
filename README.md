@@ -140,7 +140,7 @@ npm install
 3 - Development Server
 
 ```sh
-npm run start
+npm run dev
 ```
 
 4 - Production build
