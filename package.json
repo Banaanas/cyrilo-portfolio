@@ -9,8 +9,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.1.0",
@@ -19,13 +20,13 @@
     "@popperjs/core": "^2.9.2",
     "@reduxjs/toolkit": "^1.6.0",
     "@svgr/webpack": "^5.5.0",
-    "@welldone-software/why-did-you-render": "^6.1.4",
+    "@welldone-software/why-did-you-render": "^6.2.0",
     "beautiful-react-hooks": "^0.35.0",
     "emotion": "^11.0.0",
     "framer-motion": "4.1.17",
-    "next": "10.2.3",
-    "next-seo": "^4.24.0",
-    "next-sitemap": "^1.6.111",
+    "next": "11.0.0",
+    "next-seo": "^4.25.1",
+    "next-sitemap": "^1.6.116",
     "next-themes": "^0.0.14",
     "next-translate": "^1.0.7",
     "npm": "^7.17.0",
@@ -47,6 +48,7 @@
     "babel-plugin-emotion": "^11.0.0",
     "eslint": "^7.28.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-next": "11.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-eslint-comments": "^3.2.0",

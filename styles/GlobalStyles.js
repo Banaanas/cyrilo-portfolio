@@ -108,17 +108,15 @@ const GlobalStyles = () => (
         outline: 5px auto var(--primary-main);
       }
 
-      /* Scrollbar and Selection styles */
+      /* Selection and Scrollbar styles */
       ::selection {
         color: var(--color-selection);
         background-color: var(--color-selection-background);
       }
 
-      @media (orientation: landscape) {
+      @media (orientation: portrait) {
         ::-webkit-scrollbar {
-          width: 9px;
-          height: 11px;
-          background-color: yellow;
+          background-color: var(--secondary-lightest1);
         }
         ::-webkit-scrollbar-track {
           background-color: transparent;
@@ -128,6 +126,18 @@ const GlobalStyles = () => (
           background-color: var(--primary-main);
           border: 2px solid var(--primary-main);
           border-radius: 10px;
+        }
+      }
+
+      @media (orientation: landscape) {
+        ::-webkit-scrollbar {
+          width: 8px;
+          height: 16px;
+          background-color: var(--secondary-lightest1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background-color: var(--primary-main);
         }
       }
 
