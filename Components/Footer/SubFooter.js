@@ -33,7 +33,7 @@ const StyledSpan = styled.span`
 `;
 
 const StyledAumIcon = styled(AumIcon)`
-  margin: 0 0.5rem;
+  margin: 0 4px;
   color: var(--default-white);
   font-size: ${({ theme }) => theme.fontSizes.md};
 `;
