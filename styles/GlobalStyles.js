@@ -136,8 +136,14 @@ const GlobalStyles = () => (
           background-color: var(--secondary-lightest1);
         }
 
+        ::-webkit-scrollbar-track {
+          background-color: transparent;
+          border-radius: 3px;
+        }
+
         ::-webkit-scrollbar-thumb {
           background-color: var(--primary-main);
+          border-radius: 10px;
         }
       }
 
