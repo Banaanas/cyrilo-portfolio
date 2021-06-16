@@ -4,15 +4,15 @@ import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config";
 import Layout from "../Components/Layout";
 
-const App = ({ Component, pageProps }) => {
-  return (
-    <Layout>
-      <DefaultSeo {...SEO} />
-      <AnimatePresence initial={false} exitBeforeEnter>
-        <Component {...pageProps} />
-      </AnimatePresence>
-    </Layout>
-  );
-};
+const App = ({ Component, pageProps }) => (
+  <Layout>
+    {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+    <DefaultSeo {...SEO} />
+    <AnimatePresence initial={false} exitBeforeEnter>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <Component {...pageProps} />
+    </AnimatePresence>
+  </Layout>
+);
 
 export default App;
