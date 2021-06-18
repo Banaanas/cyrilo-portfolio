@@ -112,6 +112,14 @@ const projectsList = [
     softwareStack: ["React", "Next.js", "Redux", "Framer Motion"],
     imageSource: "/images/featured-projects/14-cyrilo-portfolio.png",
   },
+  {
+    id: 15,
+    name: "President of the World",
+    url: "https://president-of-the-world.cyrilo.app/",
+    gitHubURL: "https://github.com/Banaanas/president-of-the-world-frontend",
+    softwareStack: ["React", "Node.js", "MongoDB", "GraphQL", "Redux"],
+    imageSource: "/images/featured-projects/15-president-of-the-world.png",
+  },
 ];
 
 export default projectsList;
