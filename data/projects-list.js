@@ -114,7 +114,7 @@ const projectsList = [
   },
   {
     id: 15,
-    name: "President of the World ",
+    name: "President of the World",
     url: "https://president-of-the-world.cyrilo.app/",
     gitHubURL: "https://github.com/Banaanas/president-of-the-world-frontend",
     softwareStack: ["React", "Node.js", "MongoDB", "GraphQL", "Redux"],
