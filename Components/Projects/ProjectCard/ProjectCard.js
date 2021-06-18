@@ -38,10 +38,10 @@ const StyledContainer = styled.div`
 `;
 
 const StyledProjectName = styled.div`
+  padding: 8px 0 ;
   font-family: "Nexa Bold", sans-serif;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
-  word-break: break-all;
 `;
 
 const ProjectCard = ({ project, otherProject }) => {
