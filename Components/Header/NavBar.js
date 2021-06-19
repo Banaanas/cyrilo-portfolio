@@ -39,6 +39,7 @@ const StyledList = styled.ul`
       width: 90%;
       height: 3px;
       background: var(--primary-main);
+      border-radius: 4px;
       transform: scale(0);
       transition: transform 250ms ease-out;
       content: "";
