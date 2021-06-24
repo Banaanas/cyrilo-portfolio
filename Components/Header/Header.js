@@ -114,7 +114,7 @@ const Header = () => {
           <SideMenu />
         </StyledHeaderWrapper>
       </StyledHeader>
-      <ScrollWrapper name="hero-banner-scroll" />{" "}
+      <ScrollWrapper name="hero-banner-scroll" />
       {/* ScrollWrapper not in bannerHeroSection in order to include the top of the page */}
       <HalfMoon />
     </>
