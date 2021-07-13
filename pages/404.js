@@ -10,7 +10,7 @@ import StyledLink from "../Components/StyledComponents/StyledLink";
 import StyledSection from "../Components/StyledComponents/StyledSection";
 import pageVariants from "../styles/animations";
 
-const StyledH1 = styled.h1`
+const TitleH1 = styled.h1`
   margin-bottom: 5rem; /* Margin between H1 and Link */
   color: var(--404-h1-color);
   font-size: ${({ theme }) => theme.fontSizes.xl4};
@@ -58,9 +58,9 @@ const Custom404 = () => {
         key={router} /* AnimatePresence Key */
       >
         <StyledSection>
-          <StyledH1>
+          <TitleH1>
             404 - Er<span id="r-letter">r</span>or
-          </StyledH1>
+          </TitleH1>
           <NextLink href="/" passHref>
             <StyledLink>
               <span>{textLink}</span>

@@ -15,13 +15,13 @@ const StyledSection = styled(GenericStyledSection)`
   width: 100%;
 `;
 
-const StyledTitleContainer = styled.div`
+const TitleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
 `;
 
-const StyledSocialMediaContainer = styled.div`
+const SocialMediaContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -37,17 +37,17 @@ const ContactSection = () => {
   return (
     <StyledSection id="contact">
       <ScrollWrapper name="contact-scroll" />
-      <StyledTitleContainer>
+      <TitleContainer>
         <ContactStar />
         <StyledTitle>{title}</StyledTitle>
-      </StyledTitleContainer>
+      </TitleContainer>
       <SmallDeviceQuestions />
       <NormalDeviceQuestions />
       <CyriloMail />
-      <StyledSocialMediaContainer>
+      <SocialMediaContainer>
         <GitHubShape />
         <LinkedInShape />
-      </StyledSocialMediaContainer>
+      </SocialMediaContainer>
     </StyledSection>
   );
 };

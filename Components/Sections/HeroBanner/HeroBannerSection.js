@@ -47,7 +47,7 @@ const StyledSection = styled(GenericStyledSection)`
 `;
 
 /* Container for H1 + First Link */
-const StyledContainer = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,7 +59,7 @@ const StyledContainer = styled.div`
   }
 `;
 
-const StyledH1 = styled.h1`
+const TitleH1 = styled.h1`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -119,11 +119,11 @@ const HeroBannerSection = () => {
   return (
     <>
       <StyledSection>
-        <StyledContainer>
-          <StyledH1>
+        <Container>
+          <TitleH1>
             <span>JavaScript</span>
             <span>Developer</span>
-          </StyledH1>
+          </TitleH1>
           <NextLink href={navLinks[1].href} passHref>
             <StyledLink
               id="first-link"
@@ -133,7 +133,7 @@ const HeroBannerSection = () => {
               <DownArrowIcon />
             </StyledLink>
           </NextLink>
-        </StyledContainer>
+        </Container>
 
         <PlanetCyril />
 

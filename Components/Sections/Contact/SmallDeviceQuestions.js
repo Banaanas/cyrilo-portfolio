@@ -1,11 +1,7 @@
 import styled from "@emotion/styled";
-import {
-  FirstQuestion,
-  SecondQuestion,
-  ThirdQuestion,
-} from "./ContactQuestions";
+import { FirstQuestion, SecondQuestion, ThirdQuestion } from "./ContactQuestions";
 
-const StyledContainer = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,12 +45,12 @@ const StyledContainer = styled.div`
 
 const SmallDeviceQuestions = () => {
   return (
-    <StyledContainer>
+    <Container>
       <FirstQuestion />
       <hr />
       <SecondQuestion />
       <ThirdQuestion />
-    </StyledContainer>
+    </Container>
   );
 };
 

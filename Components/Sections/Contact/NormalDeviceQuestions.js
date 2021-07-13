@@ -1,11 +1,7 @@
 import styled from "@emotion/styled";
-import {
-  FirstQuestion,
-  SecondQuestion,
-  ThirdQuestion,
-} from "./ContactQuestions";
+import { FirstQuestion, SecondQuestion, ThirdQuestion } from "./ContactQuestions";
 
-const StyledContainer = styled.div`
+const Container = styled.div`
   display: none;
   flex-direction: row;
   align-items: center;
@@ -30,11 +26,11 @@ const StyledContainer = styled.div`
 
 const NormalDeviceQuestions = () => {
   return (
-    <StyledContainer>
+    <Container>
       <SecondQuestion />
       <FirstQuestion />
       <ThirdQuestion />
-    </StyledContainer>
+    </Container>
   );
 };
 
