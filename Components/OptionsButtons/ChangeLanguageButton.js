@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 
-const StyledButton = styled.button`
+const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,9 +42,9 @@ const ChangeLanguageButton = () => {
   };
 
   return (
-    <StyledButton onClick={changeLanguage} title="Change Language">
+    <Button onClick={changeLanguage} title="Change Language">
       {locale?.toUpperCase()}
-    </StyledButton>
+    </Button>
   );
 };
 

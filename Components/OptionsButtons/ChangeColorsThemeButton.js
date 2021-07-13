@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import themeColorsArray from "../../styles/CSS-variables/theme-colors/themeColorsArray";
 
-const StyledButton = styled.button`
+const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,6 +14,7 @@ const StyledButton = styled.button`
   cursor: pointer;
 
   /* Import Next Toggled Colors Theme CSS Variables to use the next  */
+
   ${({ nextThemeIndex }) => themeColorsArray[nextThemeIndex]}
 
   /* When click on Button */
@@ -70,13 +71,13 @@ const ChangeColorsThemeButton = () => {
   };
 
   return (
-    <StyledButton
+    <Button
       onClick={changeTheme}
       nextThemeIndex={nextThemeIndex}
       title="Change Colors Theme"
     >
       <ChangeColorsThemeIcon />
-    </StyledButton>
+    </Button>
   );
 };
 

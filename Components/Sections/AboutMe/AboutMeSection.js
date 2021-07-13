@@ -5,7 +5,7 @@ import StyledSection from "../../StyledComponents/StyledSection";
 import StyledTitle from "../../StyledComponents/StyledTitle";
 import ShortStory from "./ShortStory";
 import LongStory from "./LongStory";
-import SkillsList from "./SkillsList";
+import SkillsList from "./StyledSkillsList";
 import AboutMeDivider from "../../Dividers/AboutMeDivider";
 import AboutMeImage from "./AboutMeImage";
 

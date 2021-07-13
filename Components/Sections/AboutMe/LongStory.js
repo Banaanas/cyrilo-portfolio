@@ -3,10 +3,10 @@ import useTranslation from "next-translate/useTranslation";
 import styled from "@emotion/styled";
 import { AnimatePresence, motion } from "framer-motion";
 import { BiHide as HideIcon, BiShow as ShowIcon } from "react-icons/bi";
-import StyledTextContainer from "./StyledTextContainer";
+import TextContainer from "./TextContainer";
 import LongStoryParagraph from "./LongStoryParagraph";
 
-const StyledLongStory = styled(StyledTextContainer)`
+const StyledLongStory = styled(TextContainer)`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -21,7 +21,7 @@ const StyledLongStory = styled(StyledTextContainer)`
   }
 `;
 
-const StyledButton = styled.button`
+const Button = styled.button`
   display: flex;
   align-items: center;
   align-self: center;
@@ -50,7 +50,7 @@ const StyledButton = styled.button`
   }
 `;
 
-const StyledContainer = styled(motion.div)`
+const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,26 +92,26 @@ const LongStory = () => {
     <StyledLongStory showLongStory={showLongStory}>
       <h3>{title}</h3>
       {showLongStory ? null : (
-        <StyledButton onClick={handleReadButtonClick}>
+        <Button onClick={handleReadButtonClick}>
           <span>{buttonShow}</span>
           <ShowIcon />
-        </StyledButton>
+        </Button>
       )}
 
       <AnimatePresence>
         {showLongStory ? (
-          <StyledContainer
+          <Container
             initial="initial"
             animate="animate"
             exit="initial"
             variants={longStoryVariants}
           >
             <LongStoryParagraph />
-            <StyledButton onClick={handleReadButtonClick}>
+            <Button onClick={handleReadButtonClick}>
               <span>{buttonHide}</span>
               <HideIcon />
-            </StyledButton>
-          </StyledContainer>
+            </Button>
+          </Container>
         ) : null}
       </AnimatePresence>
     </StyledLongStory>

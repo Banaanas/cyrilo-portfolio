@@ -3,7 +3,7 @@ import { VscGithubInverted as GitHubIcon } from "react-icons/vsc";
 import { ImLinkedin as LinkedInIcon } from "react-icons/im";
 import ExternalLink from "../../Links/ExternalLink";
 
-const StyledSocialIconsContainer = styled.div`
+const SocialIconsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -40,7 +40,7 @@ const StyledSocialIconsContainer = styled.div`
 `;
 
 const ContactLinks = () => (
-  <StyledSocialIconsContainer>
+  <SocialIconsContainer>
     <ExternalLink
       ariaLabel="LinkedIn Profile"
       href="https://www.linkedin.com/in/cyril-dev/"
@@ -57,7 +57,7 @@ const ContactLinks = () => (
       <GitHubIcon />
       <span>Github</span>
     </ExternalLink>
-  </StyledSocialIconsContainer>
+  </SocialIconsContainer>
 );
 
 export default ContactLinks;

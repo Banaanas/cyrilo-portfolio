@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import smoothScrollTo from "../../utils/smoothScrollTo";
 import navLinks from "../../data/navLinks";
 
-const StyledNav = styled.nav`
+const Nav = styled.nav`
   display: none;
   height: 100%;
 
@@ -21,7 +21,7 @@ const StyledNav = styled.nav`
   }
 `;
 
-const StyledList = styled.ul`
+const List = styled.ul`
   display: inline-flex;
   justify-content: space-around;
   width: 100%;
@@ -51,7 +51,7 @@ const StyledList = styled.ul`
   }
 `;
 
-const StyledLink = styled.a`
+const Link = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,22 +75,23 @@ const NavBar = () => {
 
   return (
     <>
-      <StyledNav>
-        <StyledList>
+      <Nav>
+        <List>
           {navLinks.map((navLink, index) => (
             <li key={`${index}-${navLink.ref}`}>
               <NextLink href={navLink.href} passHref>
-                <StyledLink
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                <Link
                   onClick={() => smoothScrollTo(navLinks[index].scrollName)}
                 >
                   {t(`navLinks.${index}`)}
                   {/* Iterate through translation array in Locales directory */}
-                </StyledLink>
+                </Link>
               </NextLink>
             </li>
           ))}
-        </StyledList>
-      </StyledNav>
+        </List>
+      </Nav>
     </>
   );
 };

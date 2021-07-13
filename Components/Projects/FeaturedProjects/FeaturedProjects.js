@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import FeaturedProjectsStar from "./FeaturedProjectsStar";
 
-const StyledProjectsContainer = styled.div`
+const ProjectsContainer = styled.div`
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -44,14 +44,14 @@ const StarWrapper = styled(motion.div)`
 
 const FeaturedProjects = ({ featuredProjects }) => {
   return (
-    <StyledProjectsContainer>
+    <ProjectsContainer>
       {featuredProjects.map((project) => (
         <ProjectCard project={project} key={project.id} />
       ))}
       <StarWrapper>
         <FeaturedProjectsStar />
       </StarWrapper>
-    </StyledProjectsContainer>
+    </ProjectsContainer>
   );
 };
 

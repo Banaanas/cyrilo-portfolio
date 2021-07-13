@@ -10,7 +10,7 @@ import StyledTitle from "../../StyledComponents/StyledTitle";
 // AnimatePresence does not work with React.Fragment because it needs
 // an exit animation from the first animatable child. That's why this
 // Container Div was set up
-const StyledAnimatePresenceContainer = styled(motion.div)`
+const AnimatePresenceContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,7 @@ const StyledAnimatePresenceContainer = styled(motion.div)`
   overflow: hidden; /* Framer Motion - Height Animation */
 `;
 
-const StyledProjectsContainer = styled(motion.div)`
+const ProjectsContainer = styled(motion.div)`
   display: grid;
   grid-row-gap: 3rem;
   grid-column-gap: 1rem;
@@ -118,7 +118,7 @@ const OtherProjects = ({ otherProjects }) => {
       Container Div was set up */}
       <AnimatePresence>
         {showOtherProjects ? (
-          <StyledAnimatePresenceContainer
+          <AnimatePresenceContainer
             initial="initial"
             animate="animate"
             exit="initial"
@@ -126,7 +126,7 @@ const OtherProjects = ({ otherProjects }) => {
             key="StyledAnimatePresenceContainerVariants" /* AnimatePresence Key */
           >
             <StyledTitle>{sectionTitle}</StyledTitle>
-            <StyledProjectsContainer
+            <ProjectsContainer
               variants={StyledProjectsContainerVariants}
               initial="hidden"
               animate="show"
@@ -134,8 +134,8 @@ const OtherProjects = ({ otherProjects }) => {
               {otherProjects.map((project) => (
                 <ProjectCard project={project} key={project.id} />
               ))}
-            </StyledProjectsContainer>
-          </StyledAnimatePresenceContainer>
+            </ProjectsContainer>
+          </AnimatePresenceContainer>
         ) : null}
       </AnimatePresence>
       <OtherProjectsButton />

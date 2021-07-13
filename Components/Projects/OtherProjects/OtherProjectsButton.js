@@ -1,13 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import useTranslation from "next-translate/useTranslation";
 import styled from "@emotion/styled";
-import {
-  MdExpandLess as ShowLessIcon,
-  MdExpandMore as ShowMoreIcon,
-} from "react-icons/md";
+import { MdExpandLess as ShowLessIcon, MdExpandMore as ShowMoreIcon } from "react-icons/md";
 import { toggleOtherProjects } from "../../../store/slices/otherProjectsSlice";
 
-const StyledButton = styled.button`
+const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,10 +50,10 @@ const OtherProjectsButton = () => {
   const buttonHideText = t("buttonHide");
 
   return (
-    <StyledButton onClick={handleClick} showOtherProjects={showOtherProjects}>
+    <Button onClick={handleClick} showOtherProjects={showOtherProjects}>
       <span>{showOtherProjects ? buttonHideText : buttonShowText}</span>
       {showOtherProjects ? <ShowLessIcon /> : <ShowMoreIcon />}
-    </StyledButton>
+    </Button>
   );
 };
 

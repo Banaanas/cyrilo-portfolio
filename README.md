@@ -21,7 +21,6 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![MIT License][license-shield]][license-url]
 
-
 <br/>
 <!-- PROJECT LOGO -->
 <br/>
@@ -38,7 +37,6 @@
     <a href="https://cyrilo.dev/">:computer: Live Demo :eyes:</a><br/><br/>
 </p>
 
-
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
@@ -52,7 +50,6 @@
 - [License](#license)
 - [Contact](#contact)
 
-
 <!-- ABOUT THE PROJECT -->
 
 ## About the Project
@@ -65,7 +62,6 @@ My Developer Portfolio.
   </a>
 </p>
 
-
 <!-- PRINCIPAL FEATURES -->
 
 #### Principal Features
@@ -77,7 +73,7 @@ My Developer Portfolio.
 - JavaScript and CSS Animations ;
 - Page Scroll Progress Bar ;
 - Accessibility ;
-- Responsive and Creative Design. 
+- Responsive and Creative Design.
 
 <p align="center">
   <a href="https://cyrilo.dev/">
@@ -85,11 +81,9 @@ My Developer Portfolio.
   </a>
 </p>
 
-
 <!-- BUILT WITH -->
 
 #### Built With
-
 
 - [CSS3](https://www.w3.org/Style/CSS/Overview.html)
 - [Cypress](https://www.cypress.io/)
@@ -110,9 +104,6 @@ My Developer Portfolio.
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [Redux](https://redux.js.org/)
 - [stylelint](https://stylelint.io/)
-
-
-
 
 <!-- GETTING STARTED -->
 
@@ -149,13 +140,11 @@ npm run dev
 npm run build
 ```
 
-
 <!-- LICENSE -->
 
 ## License
 
 Distributed under the MIT License. See <a href="./LICENSE">`LICENSE`</a> for more information.
-
 
 <!-- CONTACT -->
 
@@ -165,13 +154,11 @@ Distributed under the MIT License. See <a href="./LICENSE">`LICENSE`</a> for mor
 [![Mail][personal-email-shield]](mailto:cyrilo.dev@gmail.com)
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
 <!-- PROJECT LINK -->
 
 ## Project Link
 
 [https://github.com/Banaanas/cyrilo-portfolio](https://github.com/Banaanas/cyrilo-portfolio)
-
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -179,7 +166,6 @@ Distributed under the MIT License. See <a href="./LICENSE">`LICENSE`</a> for mor
 
 - [The Odin Project](https://www.theodinproject.com/)
 - [Full Stack Open](https://fullstackopen.com/en/)
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

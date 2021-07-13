@@ -12,6 +12,7 @@ const Link = styled.a`
 const ProjectsScrollLink = ({ children }) => {
   return (
     <NextLink href={navLinks[1].href} passHref>
+      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <Link onClick={() => smoothScrollTo(navLinks[1].scrollName)}>
         {children}
       </Link>

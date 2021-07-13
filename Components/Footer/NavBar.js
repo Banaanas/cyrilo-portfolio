@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import smoothScrollTo from "../../utils/smoothScrollTo";
 import navLinks from "../../data/navLinks";
 
-const StyledNav = styled.nav`
+const Nav = styled.nav`
   z-index: 100;
   display: flex;
   flex-direction: row;
@@ -15,7 +15,7 @@ const StyledNav = styled.nav`
   height: 50%;
 `;
 
-const StyledList = styled.ul`
+const List = styled.ul`
   display: inline-flex;
   justify-content: space-around;
   width: 100%;
@@ -23,7 +23,7 @@ const StyledList = styled.ul`
   list-style: none;
 `;
 
-const StyledLink = styled.a`
+const Link = styled.a`
   color: var(--default-white);
   font-weight: bolder;
   font-size: ${({ theme }) => theme.fontSizes.sm};
@@ -47,22 +47,20 @@ const NavBar = () => {
   const { t } = useTranslation("common");
 
   return (
-    <StyledNav>
-      <StyledList>
+    <Nav>
+      <List>
         {navLinks.map((navLink, index) => (
           <li key={`${index}-${navLink.href}`}>
             <NextLink href={navLink.href} passHref>
-              <StyledLink
-                onClick={() => smoothScrollTo(navLinks[index].scrollName)}
-              >
+              <Link onClick={() => smoothScrollTo(navLinks[index].scrollName)}>
                 {t(`navLinks.${index}`)}
                 {/* Iterate through translation array in Locales directory */}
-              </StyledLink>
+              </Link>
             </NextLink>
           </li>
         ))}
-      </StyledList>
-    </StyledNav>
+      </List>
+    </Nav>
   );
 };
 

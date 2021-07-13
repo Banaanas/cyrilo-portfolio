@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import useTranslation from "next-translate/useTranslation";
-import StyledTextContainer from "./StyledTextContainer";
+import TextContainer from "./TextContainer";
 import ShortStoryParagraph from "./ShortStoryParagraph";
 
-export const StyledShortStory = styled(StyledTextContainer)`
+export const StyledShortStory = styled(TextContainer)`
   max-height: 999999px; /* Cf. -> Note 5 - To prevent Android Chrome from boosting font-size */
   color: var(--secondary-dark);
   background-color: var(--secondary-lightest1);

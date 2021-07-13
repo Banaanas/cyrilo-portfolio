@@ -5,7 +5,7 @@ import { useThrottledFn, useWindowScroll } from "beautiful-react-hooks";
 import ChangeLanguageButton from "./ChangeLanguageButton";
 import ChangeColorsThemeButton from "./ChangeColorsThemeButton";
 
-const StyledContainer = styled(motion.div)`
+const Container = styled(motion.div)`
   position: fixed;
   right: 0.5rem;
   bottom: ${({ bottom }) => bottom};
@@ -49,10 +49,10 @@ const OptionButtonsContainer = () => {
   useWindowScroll(windowScrollHandler);
 
   return (
-    <StyledContainer layout bottom={bottom}>
+    <Container layout bottom={bottom}>
       <ChangeColorsThemeButton />
       <ChangeLanguageButton />
-    </StyledContainer>
+    </Container>
   );
 };
 

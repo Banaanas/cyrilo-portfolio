@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const StyledList = styled.ul`
+const List = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -11,7 +11,7 @@ const StyledList = styled.ul`
   list-style: none;
 `;
 
-const StyledElement = styled.li`
+const ListElement = styled.li`
   margin: 0.2rem;
   padding: 6px 8px;
   color: var(--secondary-darker);
@@ -24,11 +24,11 @@ const StyledElement = styled.li`
 
 const SoftwareStack = ({ softwareStack }) => {
   return (
-    <StyledList className="software-stack">
+    <List className="software-stack">
       {softwareStack.map((software, index) => (
-        <StyledElement key={`${index}-${software}`}>{software}</StyledElement>
+        <ListElement key={`${index}-${software}`}>{software}</ListElement>
       ))}
-    </StyledList>
+    </List>
   );
 };
 

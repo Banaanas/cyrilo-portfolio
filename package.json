@@ -11,12 +11,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "globalLint": "eslint './'",
+    "prettier": "prettier --write .",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.1.0",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "@next/eslint-plugin-next": "^11.0.0",
     "@popperjs/core": "^2.9.2",
     "@reduxjs/toolkit": "^1.6.0",
     "@svgr/webpack": "^5.5.0",

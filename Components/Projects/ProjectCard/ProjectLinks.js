@@ -1,11 +1,8 @@
-import {
-  VscGithubInverted as GitHubIcon,
-  VscLinkExternal as LinkedInIcon,
-} from "react-icons/vsc";
+import { VscGithubInverted as GitHubIcon, VscLinkExternal as LinkedInIcon } from "react-icons/vsc";
 import styled from "@emotion/styled";
 import ExternalLink from "../../Links/ExternalLink";
 
-const StyledSocialIconsContainer = styled.div`
+const SocialIconsContainer = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
@@ -28,7 +25,7 @@ const ProjectLinks = ({ project }) => {
   const { url, gitHubURL } = project;
 
   return (
-    <StyledSocialIconsContainer>
+    <SocialIconsContainer>
       <ExternalLink
         ariaLabel="GitHub Repository Link"
         href={gitHubURL}
@@ -39,7 +36,7 @@ const ProjectLinks = ({ project }) => {
       <ExternalLink ariaLabel="Live Website" href={url} title={url}>
         <LinkedInIcon className="project-links-icons" />
       </ExternalLink>
-    </StyledSocialIconsContainer>
+    </SocialIconsContainer>
   );
 };
 

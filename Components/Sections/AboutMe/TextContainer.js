@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const StyledTextContainer = styled.div`
+const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -23,4 +23,4 @@ const StyledTextContainer = styled.div`
   }
 `;
 
-export default StyledTextContainer;
+export default TextContainer;

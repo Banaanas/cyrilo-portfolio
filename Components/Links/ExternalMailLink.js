@@ -3,20 +3,20 @@
 
 import styled from "@emotion/styled";
 
-const StyledLink = styled.a`
+const Link = styled.a`
   text-decoration: none;
 `;
 
 const ExternalMailLink = ({ children, ariaLabel, href, title }) => {
   return (
-    <StyledLink
+    <Link
       aria-label={ariaLabel}
       href={href}
       rel="noopener noreferrer"
       title={title}
     >
       {children}
-    </StyledLink>
+    </Link>
   );
 };
 

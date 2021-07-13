@@ -8,7 +8,8 @@
     "plugin:eslint-comments/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "prettier"
   ],
   "parser": "babel-eslint",
   "plugins": [
@@ -25,7 +26,6 @@
       "error",
       {
         // Comma-dangle for all MULTILINE Arrays, Objects
-        "arrays": "always-multiline",
         "objects": "always-multiline",
         // Comma-dangle for all MULTILINE Imports, Exports
         "imports": "always-multiline",

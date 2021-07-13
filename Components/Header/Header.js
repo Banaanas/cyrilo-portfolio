@@ -29,7 +29,7 @@ const StyledHeader = styled.header`
   transition: transform 100ms ease-out;
 `;
 
-const StyledHeaderWrapper = styled.div`
+const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -96,7 +96,7 @@ const Header = () => {
   return (
     <>
       <StyledHeader translateY={translateY}>
-        <StyledHeaderWrapper>
+        <HeaderWrapper>
           <NextLink href="/" passHref>
             <motion.a
               aria-label="Cyrilo Logo"
@@ -104,7 +104,7 @@ const Header = () => {
               animate="animate"
               variants={groupVariants}
               whileHover={{
-                scale: 1.1,
+                scale: 1.1
               }}
             >
               <CyriLogo />
@@ -112,7 +112,7 @@ const Header = () => {
           </NextLink>
           <NavBar />
           <SideMenu />
-        </StyledHeaderWrapper>
+        </HeaderWrapper>
       </StyledHeader>
       <ScrollWrapper name="hero-banner-scroll" />
       {/* ScrollWrapper not in bannerHeroSection in order to include the top of the page */}

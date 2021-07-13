@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import useTranslation from "next-translate/useTranslation";
-import StyledTextContainer from "./StyledTextContainer";
+import TextContainer from "./TextContainer";
 import skillsList from "../../../data/skills-list";
 
-const StyledSkillsList = styled(StyledTextContainer)`
+const StyledSkillsList = styled(TextContainer)`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -25,7 +25,7 @@ const StyledSkillsList = styled(StyledTextContainer)`
   }
 `;
 
-const StyledList = styled.ul`
+const List = styled.ul`
   align-self: center;
   max-width: 50rem;
   padding-left: 2rem;
@@ -35,7 +35,7 @@ const StyledList = styled.ul`
   list-style: none;
 `;
 
-const StyledListItem = styled.li`
+const ListElement = styled.li`
   margin-right: 0.8rem;
   line-height: 1.8rem;
   text-align: left;
@@ -55,11 +55,11 @@ const SkillsList = () => {
   return (
     <StyledSkillsList>
       <h3>{title} :</h3>
-      <StyledList>
+      <List>
         {skillsList.map((skill, index) => (
-          <StyledListItem key={`${index}-${skill}`}>{skill}</StyledListItem>
+          <ListElement key={`${index}-${skill}`}>{skill}</ListElement>
         ))}
-      </StyledList>
+      </List>
     </StyledSkillsList>
   );
 };

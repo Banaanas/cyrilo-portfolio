@@ -2,12 +2,12 @@ import styled from "@emotion/styled";
 import { FaOm as AumIcon } from "react-icons/fa";
 import ExternalLink from "../Links/ExternalLink";
 
-const StyledContainer = styled.div`
+const Container = styled.div`
   display: flex;
   height: 50%;
 `;
 
-const StyledSpan = styled.span`
+const Span = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,8 +39,8 @@ const StyledAumIcon = styled(AumIcon)`
 `;
 
 const SubFooter = () => (
-  <StyledContainer>
-    <StyledSpan>
+  <Container>
+    <Span>
       <span>
         <ExternalLink
           ariaLabel="Personal Website"
@@ -53,8 +53,8 @@ const SubFooter = () => (
       <span>|</span>
       <span>Imagined with</span>
       <StyledAumIcon />
-    </StyledSpan>
-  </StyledContainer>
+    </Span>
+  </Container>
 );
 
 export default SubFooter;

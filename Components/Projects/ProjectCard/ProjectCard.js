@@ -1,11 +1,11 @@
-import Image from "next/image";
+import NextImage from "next/image";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import SoftwareStack from "./SoftwareStack";
 import ProjectLinks from "./ProjectLinks";
 import ExternalLink from "../../Links/ExternalLink";
 
-const StyledProjectContainer = styled(motion.div)`
+const ProjectContainer = styled(motion.div)`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -20,7 +20,7 @@ const StyledProjectContainer = styled(motion.div)`
   box-shadow: var(--projects-shadow);
 `;
 
-const StyledImage = styled.div`
+const ImageWrapper = styled.div`
   position: relative;
   width: 15rem;
   height: 10rem;
@@ -29,7 +29,7 @@ const StyledImage = styled.div`
   filter: contrast(110%);
 `;
 
-const StyledContainer = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -37,8 +37,8 @@ const StyledContainer = styled.div`
   width: 100%;
 `;
 
-const StyledProjectName = styled.div`
-  padding: 8px 0 ;
+const ProjectName = styled.div`
+  padding: 8px 0;
   font-family: "Nexa Bold", sans-serif;
   text-align: left;
   text-transform: uppercase;
@@ -59,7 +59,7 @@ const ProjectCard = ({ project, otherProject }) => {
   };
 
   return (
-    <StyledProjectContainer
+    <ProjectContainer
       whileHover={projectGestures}
       whileTap={projectGestures}
       className="project-cards"
@@ -70,8 +70,8 @@ const ProjectCard = ({ project, otherProject }) => {
         href={project.url}
         title={project.name}
       >
-        <StyledImage>
-          <Image
+        <ImageWrapper>
+          <NextImage
             src={project.imageSource}
             layout="fill"
             objectFit="fill"
@@ -79,25 +79,22 @@ const ProjectCard = ({ project, otherProject }) => {
             alt={`${project.name} Screenshot`}
             loading="eager" /* !== Lazy load */
           />
-        </StyledImage>
+        </ImageWrapper>
       </ExternalLink>
       <SoftwareStack softwareStack={softwareStack} />
-      <StyledContainer>
+      <Container>
         <ExternalLink
           ariaLabel="Live Website"
           href={project.url}
           title={project.name}
         >
-          <StyledProjectName
-            className="project-names"
-            otherProject={otherProject}
-          >
+          <ProjectName className="project-names" otherProject={otherProject}>
             {name}
-          </StyledProjectName>
+          </ProjectName>
         </ExternalLink>
         <ProjectLinks project={project} />
-      </StyledContainer>
-    </StyledProjectContainer>
+      </Container>
+    </ProjectContainer>
   );
 };
 
