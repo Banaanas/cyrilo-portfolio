@@ -16,9 +16,9 @@ https://www.infoxicator.com/dark-mode-is-dead-here-is-an-alternative
 https://github.com/brianlovin/brian-lovin-next/pull/627
 
 
-2 - When Use with an <a> styled by Emotion, the Next.js Link Component
+2 - When used with an <a> styled by Emotion, the Next.js Link Component
 does not pass the href, and Tab Key Navigation, among others, becomes impossible.
-A Work-Around is to used the passHref prop inside the Link.
+A Work-Around is to use the passHref prop inside the Link.
 --https://nextjs.org/docs/api-reference/next/link#if-the-child-is-a-custom-component-that-wraps-an-a-tag
 
 3 - When Open, the Burger Menu / Side Menu (NavBar Component) cover 100 %
