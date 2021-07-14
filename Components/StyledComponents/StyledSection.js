@@ -7,7 +7,7 @@ const StyledSection = styled.section`
   justify-content: center;
   width: 100%;
   max-width: ${({ theme }) => theme.globalMaxWidth};
-  padding: 1rem;
+  padding: 16px;
 `;
 
 export default StyledSection;

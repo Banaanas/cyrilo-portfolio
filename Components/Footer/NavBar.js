@@ -11,7 +11,7 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  max-width: 350px;
+  max-width: 352px;
   height: 50%;
 `;
 

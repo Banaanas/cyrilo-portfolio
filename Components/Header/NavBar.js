@@ -78,6 +78,7 @@ const NavBar = () => {
       <Nav>
         <List>
           {navLinks.map((navLink, index) => (
+            // eslint-disable-next-line react/no-array-index-key
             <li key={`${index}-${navLink.ref}`}>
               <NextLink href={navLink.href} passHref>
                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}

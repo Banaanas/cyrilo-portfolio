@@ -4,7 +4,7 @@ const StyledLink = styled.a`
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: 1rem;
+  padding: 16px;
   color: var(--action-button-color);
   font-size: ${({ theme }) => theme.fontSizes.xl};
   font-family: "Nexa Black", sans-serif;
@@ -18,10 +18,11 @@ const StyledLink = styled.a`
   cursor: pointer;
 
   /* Link Text */
+
   span {
     display: inline-flex;
     align-items: center;
-    margin: 0 0.5rem;
+    margin: 0 8px;
     line-height: 100%; /* To Align Span and Icon */
   }
 

@@ -5,7 +5,7 @@ import FeaturedProjectsStar from "./FeaturedProjectsStar";
 
 const ProjectsContainer = styled.div`
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 16px;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   align-items: stretch;
   justify-items: center;

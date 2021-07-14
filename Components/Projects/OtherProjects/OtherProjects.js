@@ -21,8 +21,8 @@ const AnimatePresenceContainer = styled(motion.div)`
 
 const ProjectsContainer = styled(motion.div)`
   display: grid;
-  grid-row-gap: 3rem;
-  grid-column-gap: 1rem;
+  grid-row-gap: 48px;
+  grid-column-gap: 16px;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   align-items: stretch;
   justify-items: center;

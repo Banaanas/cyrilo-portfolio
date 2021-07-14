@@ -18,13 +18,11 @@ const StyledHeader = styled.header`
   justify-content: space-around;
   width: 100%;
   min-width: ${({ theme }) => theme.globalMinWidth};
-  height: 4rem;
-  padding: 0.5rem;
-  background: linear-gradient(
-    180deg,
-    var(--header-halfmoon-shade-1) 50%,
-    var(--header-halfmoon-shade-2) 50%
-  );
+  height: 64px;
+  padding: 8px;
+  background: linear-gradient(180deg,
+  var(--header-halfmoon-shade-1) 50%,
+  var(--header-halfmoon-shade-2) 50%);
   transform: translateY(${({ translateY }) => translateY});
   transition: transform 100ms ease-out;
 `;

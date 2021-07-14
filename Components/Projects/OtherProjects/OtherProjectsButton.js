@@ -8,8 +8,8 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem 0;
-  padding: 1rem 1rem;
+  margin: 32px 0;
+  padding: 16px 16px;
   color: var(--action-button-color);
   font-size: ${({ theme }) => theme.fontSizes.xl};
   font-family: "Nexa Black", sans-serif;

@@ -7,25 +7,25 @@ import ChangeColorsThemeButton from "./ChangeColorsThemeButton";
 
 const Container = styled(motion.div)`
   position: fixed;
-  right: 0.5rem;
+  right: 8px;
   bottom: ${({ bottom }) => bottom};
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.2rem;
+  padding: 0.32px;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 15px;
 
   /* Gap Between the two Buttons */
   button:nth-of-type(1) {
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
   }
 `;
 
 const OptionButtonsContainer = () => {
-  const [bottom, setBottom] = useState("0.5rem");
+  const [bottom, setBottom] = useState("8px");
   // useThrottledFn - CUSTOM HOOK
   // Throttle the callback function to optimize component performances by
   // preventing too many useless renders
@@ -38,9 +38,9 @@ const OptionButtonsContainer = () => {
 
     // Change Bottom Position when reach Footer
     if (window.innerHeight + scrollY + 64 >= document.body.scrollHeight) {
-      setBottom("6rem");
+      setBottom("96px");
     } else {
-      setBottom("0.5rem");
+      setBottom("8px");
     }
   }, 50);
 

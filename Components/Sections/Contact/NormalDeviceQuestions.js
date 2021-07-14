@@ -15,8 +15,8 @@ const Container = styled.div`
 
   /* Important Question */
   div:nth-of-type(2) {
-    margin: 0 1rem;
-    padding: 1rem;
+    margin: 0 16px;
+    padding: 16px;
     color: var(--principal-question);
     font-size: ${({ theme }) => theme.fontSizes.xl};
     background-color: var(--secondary-main);

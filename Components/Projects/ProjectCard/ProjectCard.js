@@ -11,10 +11,10 @@ const ProjectContainer = styled(motion.div)`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 18.5rem;
-  min-height: 22.5rem; /* Minimal Height in order to harmonize between one and multiple lines SoftwareStack */
-  margin: 0.5rem;
-  padding: 1rem;
+  width: 296px;
+  min-height: 360px; /* Minimal Height in order to harmonize between one and multiple lines SoftwareStack */
+  margin: 8px;
+  padding: 16px;
   overflow: hidden;
   border-radius: 15px;
   box-shadow: var(--projects-shadow);
@@ -22,8 +22,8 @@ const ProjectContainer = styled(motion.div)`
 
 const ImageWrapper = styled.div`
   position: relative;
-  width: 15rem;
-  height: 10rem;
+  width: 240px;
+  height: 160px;
   overflow: hidden;
   border-radius: 10px;
   filter: contrast(110%);

@@ -12,7 +12,7 @@ const Span = styled.span`
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 0.5rem 0;
+  padding: 8px 0;
   color: var(--default-white);
   font-size: ${({ theme }) => theme.fontSizes.md};
 
@@ -22,7 +22,7 @@ const Span = styled.span`
   }
 
   span:nth-of-type(2) {
-    margin: 0 0.5rem;
+    margin: 0 8px;
     color: var(--default-white);
     text-decoration: none;
   }

@@ -47,7 +47,7 @@ const StyledContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 50%;
-  height: 15rem;
+  height: 240px;
 `;
 
 export const GitHubShape = () => {

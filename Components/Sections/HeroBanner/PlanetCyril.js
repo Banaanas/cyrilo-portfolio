@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 const StyledSVG = styled(motion.svg)`
   position: relative;
   width: 100%;
-  padding: 1rem;
-  max-width: 32rem;
+  padding: 16px;
+  max-width: 332px;
   overflow: visible; /* To make the Glow visible */
 
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
-    min-width: 32rem;
+    min-width: 332px;
     max-width: 40rem;
   }
 

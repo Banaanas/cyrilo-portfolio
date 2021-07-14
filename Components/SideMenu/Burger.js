@@ -27,20 +27,21 @@ const StyledSideMenuButton = styled(motion.button)`
   /*** Burger Span ***/
 
   /* CSS Variable for Span Width */
-  --span-width: 2.5rem;
+  --span-width: 40px;
 
   span {
     display: inline-block;
-    width: ${({ openMenu }) => (openMenu ? "3.5rem" : "var(--span-width)")};
-    height: ${({ openMenu }) => (openMenu ? "0.4rem" : "0.25rem")};
+    width: ${({ openMenu }) => (openMenu ? "56px" : "var(--span-width)")};
+    height: ${({ openMenu }) => (openMenu ? "6.4px" : "4px")};
     background-color: ${({ openMenu }) =>
-      openMenu ? "var(--burger-color-open)" : "var(--burger-color-close)"};
+            openMenu ? "var(--burger-color-open)" : "var(--burger-color-close)"};
     border-radius: 10px;
     transform-origin: left center;
     transition: transform, width, 300ms ease-out;
   }
 
   /* First Burger Span */
+
   span:first-of-type {
     transform: ${({ openMenu }) =>
       openMenu ? "translateX(4px) rotate(30deg)" : "rotate(0)"};
@@ -50,10 +51,11 @@ const StyledSideMenuButton = styled(motion.button)`
   span:nth-of-type(2n) {
     width: ${({ openMenu }) =>
       openMenu ? "0" : "calc(var(--span-width)/3*2)"};
-    margin: 0.5rem 0;
+    margin: 8px 0;
   }
 
   /* Third Burger Span */
+
   span:nth-of-type(3n) {
     transform: ${({ openMenu }) =>
       openMenu

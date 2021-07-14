@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 const StyledSVG = styled.svg`
-  width: 5rem;
+  width: 80px;
 
   @keyframes shiningStar {
     from {

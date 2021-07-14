@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 const StyledSVG = styled.svg`
   align-self: ${({ secondary }) => (secondary ? "flex-end" : "flex-start")};
-  width: 5rem;
+  width: 80px;
 
   path {
     fill: ${({ secondary }) =>

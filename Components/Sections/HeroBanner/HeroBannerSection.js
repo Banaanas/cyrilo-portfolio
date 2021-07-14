@@ -14,19 +14,16 @@ const StyledSection = styled(GenericStyledSection)`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  min-height: calc(
-    100vh - 12rem
-  ); /* 8rem (HalfMoon) + 4rem (Half of Divider <-- Divider : 8rem) */
+  min-height: calc(100vh - 192px); /* 128px (HalfMoon) + 64px(Half of Divider <-- Divider : 64px) */
+
   padding-right: 0;
   padding-left: 0;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     flex-direction: row;
     justify-content: space-around;
-    min-height: calc(
-      100vh - 14rem
-    ); /* 6rem (Halfmoon) + 8rem HeroBannerDivider */
-    padding: 1rem;
+    min-height: calc(100vh - 224px); /* 96px (Halfmoon) + 128px HeroBannerDivider */
+    padding: 16px;
   }
 
   #first-link {
@@ -81,21 +78,19 @@ const TitleH1 = styled.h1`
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 1rem 0.3rem;
-    margin-right: calc(
-      -1 * var(--letter-spacing)
-    ); /* CSS Var above. To counterbalance the last letter's spacing */
+    padding: 16px 4.8px;
+    margin-right: calc(-1 * var(--letter-spacing)); /* CSS Var above. To counterbalance the last letter's spacing */
     font-size: ${({ theme }) => theme.fontSizes.xl};
     font-family: "Nexa Black", sans-serif;
     letter-spacing: var(--letter-spacing);
     text-transform: uppercase;
 
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection1}) {
-      padding: 1rem;
+      padding: 16px;
     }
 
     @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
-      padding: 1rem 1.5rem;
+      padding: 16px 24px;
       font-size: ${({ theme }) => theme.fontSizes.xl2};
     }
   }

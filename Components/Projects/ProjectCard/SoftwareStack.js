@@ -7,12 +7,12 @@ const List = styled.ul`
   justify-content: center;
   width: 100%;
   margin: 0;
-  padding: 1rem 0;
+  padding: 16px 0;
   list-style: none;
 `;
 
 const ListElement = styled.li`
-  margin: 0.2rem;
+  margin: 0.32px;
   padding: 6px 8px;
   color: var(--secondary-darker);
   font-size: ${({ theme }) => theme.fontSizes.sm};

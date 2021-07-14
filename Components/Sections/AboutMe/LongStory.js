@@ -11,7 +11,7 @@ const StyledLongStory = styled(TextContainer)`
   align-items: flex-start;
   justify-content: flex-start;
   max-height: 999999px; /* Cf. -> Note 5 - To prevent Android Chrome from boosting font-size */
-  margin: 1rem 0;
+  margin: 16px 0;
   overflow: hidden;
   color: var(--secondary-dark);
   background-color: var(--secondary-lightest1);
@@ -26,8 +26,8 @@ const Button = styled.button`
   align-items: center;
   align-self: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
-  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  padding: 8px 16px;
   color: var(--action-button-color);
   font-family: "Nexa Bold", sans-serif;
   text-transform: uppercase;

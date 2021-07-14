@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
 const StyledSVG = styled.svg`
-  width: 5rem;
-  height: 5rem;
+  width: 80px;
+  height: 80px;
 `;
 
 const AboutMeStar = () => {

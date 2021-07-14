@@ -10,8 +10,8 @@ const StyledSVG = styled.svg`
   min-width: 20rem;
   max-width: 50rem;
   height: 100%;
-  min-height: 5rem;
-  margin: 2rem 0;
+  min-height: 80px;
+  margin: 32px 0;
 `;
 
 const CyriloMail = () => {

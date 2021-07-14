@@ -15,7 +15,7 @@ const StyledNavContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 24rem;
+  height: 384px;
 `;
 
 const StyledMenu = styled(motion.div)`
@@ -60,11 +60,11 @@ const StyledLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 0;
+  padding: 16px 0;
   color: var(--default-white);
   font-weight: bold;
   font-size: ${({ theme }) => theme.fontSizes.xl2};
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.32px;
   text-transform: uppercase;
   text-decoration: none;
   text-shadow: var(--sidemenu-navbar-text-shadow);
@@ -76,7 +76,7 @@ const StyledLink = styled.a`
 
 const StyledContactIconsContainer = styled(motion.div)`
   position: absolute;
-  bottom: -2rem;
+  bottom: -32px;
   left: -50%;
   display: flex;
   align-items: center;
@@ -84,9 +84,9 @@ const StyledContactIconsContainer = styled(motion.div)`
   width: 20rem;
 
   svg {
-    width: 2rem;
-    height: 2rem;
-    padding: 0.25rem;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
     color: var(--default-white);
     background-color: var(--secondary-dark);
     border-radius: 15px;

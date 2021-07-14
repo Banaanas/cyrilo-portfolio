@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
 const StyledSVG = styled.svg`
-  width: 8rem;
-  height: 4rem;
+  width: 128px;
+  height: 64px;
 `;
 
 const CyriLogo = () => {

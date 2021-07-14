@@ -6,7 +6,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 20rem;
+  min-width: 320px;
   color: var(--secondary-main);
   text-align: center;
 
@@ -16,7 +16,7 @@ const Container = styled.div`
 
   /* Important Question */
   div:nth-of-type(1) {
-    padding: 1rem;
+    padding: 16px;
     color: var(--principal-question);
     font-size: ${({ theme }) => theme.fontSizes.xl};
     background-color: var(--secondary-main);
@@ -36,7 +36,7 @@ const Container = styled.div`
   hr {
     width: 50%;
     height: 3px;
-    margin: 1rem 0;
+    margin: 16px 0;
     background-color: var(--secondary-main);
     border: none;
     border-radius: 8px;

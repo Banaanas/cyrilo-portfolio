@@ -7,20 +7,20 @@ const SocialIconsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 1rem;
+  padding: 16px;
 
   a {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: flex-end;
-    margin: 0 0.5rem;
+    margin: 0 8px;
     text-decoration: none;
   }
 
   span {
     align-self: baseline;
-    margin-left: 0.5rem;
+    margin-left: 8px;
     vertical-align: middle;
   }
 

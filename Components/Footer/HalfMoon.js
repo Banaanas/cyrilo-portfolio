@@ -8,7 +8,7 @@ const StyledSVG = styled.svg`
   z-index: -1;
   width: 100%;
   min-width: ${({ theme }) => theme.globalMinWidth};
-  height: 6rem; /* 3 Rectangles Shades (2rem) */
+  height: 96px; /* 3 Rectangles Shades (32px) */
   transform: scaleY(-1); /* Vertical flip */
 `;
 

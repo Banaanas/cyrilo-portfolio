@@ -20,15 +20,15 @@ const StyledSkillsList = styled(TextContainer)`
   }
 
   @media (max-width: 350px) {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 `;
 
 const List = styled.ul`
   align-self: center;
   max-width: 50rem;
-  padding-left: 2rem;
+  padding-left: 32px;
   text-align: left;
   text-indent: -1.8rem;
   columns: 2;
@@ -41,7 +41,7 @@ const ListElement = styled.li`
   text-align: left;
 
   ::before {
-    margin-right: 0.5rem;
+    margin-right: 8px;
     color: var(--primary-main);
     content: "►";
   }

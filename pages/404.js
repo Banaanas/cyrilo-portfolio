@@ -11,7 +11,7 @@ import StyledSection from "../Components/StyledComponents/StyledSection";
 import pageVariants from "../styles/animations";
 
 const TitleH1 = styled.h1`
-  margin-bottom: 5rem; /* Margin between H1 and Link */
+  margin-bottom: 80px; /* Margin between H1 and Link */
   color: var(--404-h1-color);
   font-size: ${({ theme }) => theme.fontSizes.xl4};
   font-family: "Nexa Black", sans-serif;

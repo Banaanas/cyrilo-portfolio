@@ -4,13 +4,13 @@ const StyledSVG = styled.svg`
   width: 100%;
   max-width: 20rem;
   height: auto;
-  margin: 2rem 0;
+  margin: 32px 0;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     align-self: flex-start;
     justify-self: flex-start;
-    max-width: 25rem;
-    margin-right: 2rem;
+    max-width: 400px;
+    margin-right: 32px;
   }
 `;
 
