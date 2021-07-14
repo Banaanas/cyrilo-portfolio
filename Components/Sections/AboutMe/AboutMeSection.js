@@ -5,9 +5,9 @@ import StyledSection from "../../StyledComponents/StyledSection";
 import StyledTitle from "../../StyledComponents/StyledTitle";
 import ShortStory from "./ShortStory";
 import LongStory from "./LongStory";
-import SkillsList from "./StyledSkillsList";
 import AboutMeDivider from "../../Dividers/AboutMeDivider";
 import AboutMeImage from "./AboutMeImage";
+import SkillsList from "./SkillsList";
 
 const StyledAboutMeContainer = styled.div`
   display: flex;

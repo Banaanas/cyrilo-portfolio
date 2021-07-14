@@ -8,7 +8,7 @@ const SocialIconsContainer = styled.div`
   justify-content: flex-end;
 
   svg {
-    margin: 0.32px;
+    margin: 4px;
     font-size: ${({ theme }) => theme.fontSizes.xl2};
     transform: scale(1);
     opacity: 0.9;

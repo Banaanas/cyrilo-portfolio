@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import styled from "@emotion/styled";
+import buttonFocusStyle from "../../styles/css-composition";
 
 const Button = styled.button`
   display: flex;
@@ -16,9 +17,9 @@ const Button = styled.button`
   cursor: pointer;
 
   /* When click on Link */
+
   :focus {
-    outline: none; /* Outline is unaesthetically squared because SVG has a rounded border */
-    box-shadow: 0 0 3pt 2pt var(--change-theme-button-background); /* To replace the Outline */
+    ${buttonFocusStyle}
   }
 `;
 

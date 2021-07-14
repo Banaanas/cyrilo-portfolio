@@ -3,6 +3,7 @@ import { MdInvertColors as ChangeColorsThemeIcon } from "react-icons/md";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import themeColorsArray from "../../styles/CSS-variables/theme-colors/themeColorsArray";
+import buttonFocusStyle from "../../styles/css-composition";
 
 const Button = styled.button`
   display: flex;
@@ -16,14 +17,13 @@ const Button = styled.button`
   /* Import Next Toggled Colors Theme CSS Variables to use the next  */
 
   ${({ nextThemeIndex }) => themeColorsArray[nextThemeIndex]}
-
-  /* When click on Button */
+    /* When click on Button */
   :focus {
-    outline: none; /* Outline is unaesthetically squared because SVG has a rounded border */
-    box-shadow: 0 0 3pt 2pt var(--change-theme-button-background); /* To replace the Outline */
+    ${buttonFocusStyle}
   }
 
   /* Style SVG with Next Theme Colors */
+
   svg {
     color: var(--change-theme-button-color);
     font-size: ${({ theme }) => theme.fontSizes.xl4};

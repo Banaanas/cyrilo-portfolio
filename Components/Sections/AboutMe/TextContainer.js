@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import appTheme from "../../../styles/appTheme";
 
 const TextContainer = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ const TextContainer = styled.div`
   line-height: 20px;
   text-align: justify;
   border-radius: 16px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: ${appTheme.elevation.xl};
 
   h3 {
     margin: 16px 0;

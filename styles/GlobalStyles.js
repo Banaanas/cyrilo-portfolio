@@ -6,6 +6,7 @@ import darkColors from "./CSS-variables/theme-colors/dark-colors";
 import smoothColors from "./CSS-variables/theme-colors/smooth-colors";
 import coolColors from "./CSS-variables/theme-colors/cool-colors";
 import fontProperties from "./CSS-variables/font-properties";
+import elevations from "./CSS-variables/elevations";
 
 // Emotion Global Styles
 const GlobalStyles = () => (
@@ -179,7 +180,8 @@ const GlobalStyles = () => (
       :root {
         ${fontProperties}
         ${globalColors}
-          ${lightColors}
+        ${lightColors}
+        ${elevations}
       }
 
       /* Dark Theme */

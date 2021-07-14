@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import appTheme from "../../styles/appTheme";
 
 const StyledLink = styled.a`
   display: flex;
@@ -14,7 +15,7 @@ const StyledLink = styled.a`
   background-color: var(--action-button-background);
   border: none;
   border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: ${appTheme.elevation.md};
   cursor: pointer;
 
   /* Link Text */

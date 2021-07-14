@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import ExternalLink from "../../../Links/ExternalLink";
 
 const StyledSVG = styled.svg`
-  width: 7rem;
+  width: 112px;
 `;
 
 const LinkedInCircle = () => {

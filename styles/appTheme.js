@@ -1,4 +1,11 @@
 const appTheme = {
+  elevation: {
+    sm: "var(--elevation-1)",
+    md: "var(--elevation-2)",
+    lg: "var(--elevation-3)",
+    xl: "var(--elevation-4)",
+    projectCard: "var(--elevation-project-card)"
+  },
   fontSizes: {
     xs: "12px",
     sm: "14px",

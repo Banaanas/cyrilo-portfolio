@@ -4,7 +4,7 @@ import StyledVerticalLine from "../../../StyledComponents/StyledVerticalLine";
 import ExternalLink from "../../../Links/ExternalLink";
 
 const StyledSVG = styled.svg`
-  width: 7rem;
+  width: 112px;
 `;
 
 const GitHubStar = () => {

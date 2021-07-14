@@ -12,14 +12,14 @@ const List = styled.ul`
 `;
 
 const ListElement = styled.li`
-  margin: 0.32px;
-  padding: 6px 8px;
+  margin: 4px;
+  padding: 4px 8px;
   color: var(--secondary-darker);
   font-size: ${({ theme }) => theme.fontSizes.sm};
   font-family: "Nexa Thin Italic", sans-serif;
   text-align: center;
   background-color: var(--default-white);
-  border-radius: 50px;
+  border-radius: 8px;
 `;
 
 const SoftwareStack = ({ softwareStack }) => {

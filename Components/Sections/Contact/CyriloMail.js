@@ -7,8 +7,8 @@ import ExternalMailLink from "../../Links/ExternalMailLink";
 
 const StyledSVG = styled.svg`
   width: 100%;
-  min-width: 20rem;
-  max-width: 50rem;
+  min-width: 320px;
+  max-width: 800px;
   height: 100%;
   min-height: 80px;
   margin: 32px 0;

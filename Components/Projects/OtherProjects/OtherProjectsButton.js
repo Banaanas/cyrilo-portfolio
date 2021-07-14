@@ -3,6 +3,7 @@ import useTranslation from "next-translate/useTranslation";
 import styled from "@emotion/styled";
 import { MdExpandLess as ShowLessIcon, MdExpandMore as ShowMoreIcon } from "react-icons/md";
 import { toggleOtherProjects } from "../../../store/slices/otherProjectsSlice";
+import appTheme from "../../../styles/appTheme";
 
 const Button = styled.button`
   display: flex;
@@ -17,7 +18,7 @@ const Button = styled.button`
   background-color: var(--action-button-background);
   border: none;
   border-radius: 4px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: ${appTheme.elevation.xl};
   cursor: pointer;
 
   span {

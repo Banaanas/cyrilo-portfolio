@@ -27,17 +27,17 @@ const StyledSkillsList = styled(TextContainer)`
 
 const List = styled.ul`
   align-self: center;
-  max-width: 50rem;
+  max-width: 800px;
   padding-left: 32px;
   text-align: left;
-  text-indent: -1.8rem;
+  text-indent: -30px;
   columns: 2;
   list-style: none;
 `;
 
 const ListElement = styled.li`
-  margin-right: 0.8rem;
-  line-height: 1.8rem;
+  margin-right: 12.8px;
+  line-height: 28.8px;
   text-align: left;
 
   ::before {
@@ -57,6 +57,7 @@ const SkillsList = () => {
       <h3>{title} :</h3>
       <List>
         {skillsList.map((skill, index) => (
+          // eslint-disable-next-line react/no-array-index-key
           <ListElement key={`${index}-${skill}`}>{skill}</ListElement>
         ))}
       </List>

@@ -10,7 +10,7 @@ const StyledSVG = styled(motion.svg)`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
     min-width: 332px;
-    max-width: 40rem;
+    max-width: 640px;
   }
 
   ellipse {

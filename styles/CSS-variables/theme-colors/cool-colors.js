@@ -42,8 +42,8 @@ const coolColors = css`
   --planet-Cyril-stars-light-shade: var(--primary-main);
   --planet-Cyril-stars-dark-shade: var(--secondary-main);
 
-  /* Project Card */
-  --projects-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.12);
+  /* Project Card - With Primary Main Color RGBA */
+  --projects-shadow: 0 8px 24px 0 rgba(243, 180, 184, 0.12);
 
   /* Featured Projects */
   --featured-projects-background: var(--secondary-main);

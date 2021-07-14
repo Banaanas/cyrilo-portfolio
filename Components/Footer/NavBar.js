@@ -11,7 +11,7 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  max-width: 352px;
+  max-width: 400px;
   height: 50%;
 `;
 
@@ -52,6 +52,7 @@ const NavBar = () => {
         {navLinks.map((navLink, index) => (
           <li key={`${index}-${navLink.href}`}>
             <NextLink href={navLink.href} passHref>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <Link onClick={() => smoothScrollTo(navLinks[index].scrollName)}>
                 {t(`navLinks.${index}`)}
                 {/* Iterate through translation array in Locales directory */}

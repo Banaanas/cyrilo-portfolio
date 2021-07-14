@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 const StyledSVG = styled.svg`
   width: 100%;
-  max-width: 20rem;
+  max-width: 320px;
   height: auto;
   margin: 32px 0;
 

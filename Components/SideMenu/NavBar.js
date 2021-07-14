@@ -11,7 +11,6 @@ import navLinks from "../../data/navLinks";
 import { closeSideMenu } from "../../store/slices/sideMenuSlice";
 
 const StyledNavContainer = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,17 +26,16 @@ const StyledMenu = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
   width: 100%;
-  min-height: 100vh; /* cf. -> Note 3 */
   overflow: hidden;
   font-family: "Nexa Bold", sans-serif;
   text-align: left;
-  background: linear-gradient(
-    to bottom,
-    var(--secondary-darker) 25%,
-    var(--secondary-dark) 25%,
-    var(--secondary-dark) 50%,
-    var(--primary-main) 50%,
+  background: linear-gradient(to bottom,
+  var(--secondary-darker) 25%,
+  var(--secondary-dark) 25%,
+  var(--secondary-dark) 50%,
+  var(--primary-main) 50%,
     var(--primary-main) 75%,
     var(--primary-light) 75%,
     var(--primary-light) 100%
@@ -76,12 +74,12 @@ const StyledLink = styled.a`
 
 const StyledContactIconsContainer = styled(motion.div)`
   position: absolute;
-  bottom: -32px;
-  left: -50%;
+  top: 80%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 20rem;
+  width: 320px;
+  padding: 0;
 
   svg {
     width: 32px;
@@ -221,14 +219,14 @@ const NavBar = ({ menuID }) => {
             ))}
           </StyledList>
         </StyledNav>
-        <StyledContactIconsContainer
-          initial="hidden"
-          animate={isMenuOpen ? "visible" : "hidden"}
-          variants={menuItemVariant}
-        >
-          <ContactIcons />
-        </StyledContactIconsContainer>
       </StyledNavContainer>
+      <StyledContactIconsContainer
+        initial="hidden"
+        animate={isMenuOpen ? "visible" : "hidden"}
+        variants={menuItemVariant}
+      >
+        <ContactIcons />
+      </StyledContactIconsContainer>
     </StyledMenu>
   );
 };
