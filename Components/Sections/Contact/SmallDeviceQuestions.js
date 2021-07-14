@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { FirstQuestion, SecondQuestion, ThirdQuestion } from "./ContactQuestions";
+import appTheme from "../../../styles/appTheme";
 
 const Container = styled.div`
   display: flex;
@@ -7,7 +8,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   min-width: 320px;
-  color: var(--secondary-main);
+  color: ${appTheme.colors.secondary.default};
   text-align: center;
 
   @media (min-width: 845px) {
@@ -15,18 +16,20 @@ const Container = styled.div`
   }
 
   /* Important Question */
+
   div:nth-of-type(1) {
     padding: 16px;
-    color: var(--principal-question);
-    font-size: ${({ theme }) => theme.fontSizes.xl};
-    background-color: var(--secondary-main);
+    color: ${appTheme.colors.principalQuestion};
+    font-size: ${appTheme.fontSizes.xl};
+    background-color: ${appTheme.colors.secondary.default};
     border-radius: 8px;
   }
 
   /* Subsidiary Questions */
+
   div:nth-of-type(2),
   div:nth-of-type(3) {
-    color: var(--subsidiary-questions);
+    color: ${appTheme.colors.subsidiaryQuestions};
 
     ::before {
       content: "- ";
@@ -37,7 +40,7 @@ const Container = styled.div`
     width: 50%;
     height: 3px;
     margin: 16px 0;
-    background-color: var(--secondary-main);
+    background-color: ${appTheme.colors.secondary.default};
     border: none;
     border-radius: 8px;
   }

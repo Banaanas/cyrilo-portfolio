@@ -11,11 +11,12 @@ const Button = styled.button`
   justify-content: center;
   margin: 32px 0;
   padding: 16px 16px;
-  color: var(--action-button-color);
-  font-size: ${({ theme }) => theme.fontSizes.xl};
-  font-family: "Nexa Black", sans-serif;
+  color: ${appTheme.colors.actionButtonColor};
+  font-size: ${appTheme.fontSizes.xl};
+  font-family: ${appTheme.fontFamily.nexaBlack},
+  ${appTheme.fontFamily.alternativeFonts};
   text-transform: uppercase;
-  background-color: var(--action-button-background);
+  background-color: ${appTheme.colors.actionButtonBackground};
   border: none;
   border-radius: 4px;
   box-shadow: ${appTheme.elevation.xl};
@@ -27,8 +28,8 @@ const Button = styled.button`
   }
 
   svg {
-    color: var(--action-button-icon-color);
-    font-size: ${({ theme }) => theme.fontSizes.xl3};
+    color: ${appTheme.colors.actionButtonIconColor};
+    font-size: ${appTheme.fontSizes.xl3};
   }
 `;
 

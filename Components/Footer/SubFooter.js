@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { FaOm as AumIcon } from "react-icons/fa";
 import ExternalLink from "../Links/ExternalLink";
+import appTheme from "../../styles/appTheme";
 
 const Container = styled.div`
   display: flex;
@@ -13,29 +14,29 @@ const Span = styled.span`
   justify-content: center;
   width: 100%;
   padding: 8px 0;
-  color: var(--default-white);
-  font-size: ${({ theme }) => theme.fontSizes.md};
+  color: ${appTheme.colors.white};
+  font-size: ${appTheme.fontSizes.md};
 
   a {
-    color: var(--primary-main);
+    color: ${appTheme.colors.primary.default};
     text-decoration: none;
   }
 
   span:nth-of-type(2) {
     margin: 0 8px;
-    color: var(--default-white);
+    color: ${appTheme.colors.white};
     text-decoration: none;
   }
   span:nth-of-type(3) {
-    color: var(--primary-main);
+    color: ${appTheme.colors.primary.default};
     text-decoration: none;
   }
 `;
 
 const StyledAumIcon = styled(AumIcon)`
   margin: 0 4px;
-  color: var(--default-white);
-  font-size: ${({ theme }) => theme.fontSizes.md};
+  color: ${appTheme.colors.white};
+  font-size: ${appTheme.fontSizes.md};
 `;
 
 const SubFooter = () => (

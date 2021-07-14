@@ -9,6 +9,7 @@ import ContactIcons from "./ContactIcons";
 import smoothScrollTo from "../../utils/smoothScrollTo";
 import navLinks from "../../data/navLinks";
 import { closeSideMenu } from "../../store/slices/sideMenuSlice";
+import appTheme from "../../styles/appTheme";
 
 const StyledNavContainer = styled.div`
   display: flex;
@@ -26,20 +27,20 @@ const StyledMenu = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   width: 100%;
+  height: 100vh;
   overflow: hidden;
-  font-family: "Nexa Bold", sans-serif;
+  font-family: ${appTheme.fontFamily.nexaBold},
+  ${appTheme.fontFamily.alternativeFonts};
   text-align: left;
   background: linear-gradient(to bottom,
-  var(--secondary-darker) 25%,
-  var(--secondary-dark) 25%,
-  var(--secondary-dark) 50%,
-  var(--primary-main) 50%,
-    var(--primary-main) 75%,
-    var(--primary-light) 75%,
-    var(--primary-light) 100%
-  );
+  ${appTheme.colors.secondary.darker} 25%,
+  ${appTheme.colors.secondary.dark} 25%,
+  ${appTheme.colors.secondary.dark} 50%,
+  ${appTheme.colors.primary.default} 50%,
+  ${appTheme.colors.primary.default} 75%,
+  ${appTheme.colors.primary.light} 75%,
+  ${appTheme.colors.primary.light} 100%);
 `;
 
 const StyledNav = styled.nav`
@@ -59,13 +60,13 @@ const StyledLink = styled.a`
   align-items: center;
   justify-content: center;
   padding: 16px 0;
-  color: var(--default-white);
+  color: ${appTheme.colors.white};
   font-weight: bold;
-  font-size: ${({ theme }) => theme.fontSizes.xl2};
+  font-size: ${appTheme.fontSizes.xl2};
   letter-spacing: 0.32px;
   text-transform: uppercase;
   text-decoration: none;
-  text-shadow: var(--sidemenu-navbar-text-shadow);
+  text-shadow: ${appTheme.elevation.sideMenuNavBarTextShadow};
 
   :hover {
     opacity: 0.8;
@@ -85,12 +86,12 @@ const StyledContactIconsContainer = styled(motion.div)`
     width: 32px;
     height: 32px;
     padding: 4px;
-    color: var(--default-white);
-    background-color: var(--secondary-dark);
+    color: ${appTheme.colors.white};
+    background-color: ${appTheme.colors.secondary.dark};
     border-radius: 15px;
 
     :hover {
-      color: var(--primary-light);
+      color: ${appTheme.colors.primary.light};
     }
   }
 `;

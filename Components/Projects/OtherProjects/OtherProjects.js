@@ -6,6 +6,7 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 import OtherProjectsStar from "./OtherProjectsStar";
 import OtherProjectsButton from "./OtherProjectsButton";
 import StyledTitle from "../../StyledComponents/StyledTitle";
+import appTheme from "../../../styles/appTheme";
 
 // AnimatePresence does not work with React.Fragment because it needs
 // an exit animation from the first animatable child. That's why this
@@ -30,40 +31,43 @@ const ProjectsContainer = styled(motion.div)`
   max-width: 1320px;
 
   /* Other Projects Card - ODD */
+
   .project-cards:nth-of-type(odd) {
-    background-color: var(--other-projects-background-odd);
+    background-color: ${appTheme.colors.otherProjectsBackgroundOdd};
 
     .project-names {
-      color: var(--other-projects-name-odd);
+      color: ${appTheme.colors.otherProjectsNameOdd};
     }
 
     .software-stack {
-      border-top: 3px solid var(--other-projects-software-stack-odd);
-      border-bottom: 3px solid var(--other-projects-software-stack-odd);
+      border-top: 3px solid ${appTheme.colors.otherProjectsSoftwareStackOdd};
+      border-bottom: 3px solid ${appTheme.colors.otherProjectsSoftwareStackOdd};
     }
 
     .project-links-icons {
-      color: var(--other-projects-links-color-odd);
-      background-color: var(--other-projects-links-background-color-odd);
+      color: ${appTheme.colors.otherProjectsLinksColorOdd};
+      background-color: ${appTheme.colors.otherProjectsLinksBackgroundColorOdd};
     }
   }
 
   /* Other Projects Card - EVEN */
+
   .project-cards:nth-of-type(even) {
-    background-color: var(--other-projects-background-even);
+    background-color: ${appTheme.colors.otherProjectsBackgroundEven};
 
     .project-names {
-      color: var(--other-projects-name-even);
+      color: ${appTheme.colors.otherProjectsNameEven};
     }
 
     .software-stack {
-      border-top: 3px solid var(--other-projects-software-stack-even);
-      border-bottom: 3px solid var(--other-projects-software-stack-even);
+      border-top: 3px solid ${appTheme.colors.otherProjectsSoftwareStackEven};
+      border-bottom: 3px solid ${appTheme.colors.otherProjectsSoftwareStackEven};
     }
 
     .project-links-icons {
-      color: var(--other-projects-links-color-even);
-      background-color: var(--other-projects-links-background-color-even);
+      color: ${appTheme.colors.otherProjectsLinksColorEven};
+      background-color: ${appTheme.colors
+              .otherProjectsLinksBackgroundColorEven};
     }
   }
 `;

@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { BiHide as HideIcon, BiShow as ShowIcon } from "react-icons/bi";
 import TextContainer from "./TextContainer";
 import LongStoryParagraph from "./LongStoryParagraph";
+import appTheme from "../../../styles/appTheme";
 
 const StyledLongStory = styled(TextContainer)`
   flex-direction: column;
@@ -13,11 +14,11 @@ const StyledLongStory = styled(TextContainer)`
   max-height: 999999px; /* Cf. -> Note 5 - To prevent Android Chrome from boosting font-size */
   margin: 16px 0;
   overflow: hidden;
-  color: var(--secondary-dark);
-  background-color: var(--secondary-lightest1);
+  color: ${appTheme.colors.secondary.dark};
+  background-color: ${appTheme.colors.secondary.lightest1};
 
   p {
-    color: var(--secondary-main);
+    color: ${appTheme.colors.secondary.default};
   }
 `;
 
@@ -28,10 +29,11 @@ const Button = styled.button`
   justify-content: space-between;
   margin-bottom: 16px;
   padding: 8px 16px;
-  color: var(--action-button-color);
-  font-family: "Nexa Bold", sans-serif;
+  color: ${appTheme.colors.actionButtonColor};
+  font-family: ${appTheme.fontFamily.nexaBold},
+  ${appTheme.fontFamily.alternativeFonts};
   text-transform: uppercase;
-  background-color: var(--action-button-background);
+  background-color: ${appTheme.colors.actionButtonBackground};
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -46,7 +48,7 @@ const Button = styled.button`
     bottom: 1px;
     height: 100%;
     margin-left: 6px;
-    color: var(--action-button-icon-color);
+    color: ${appTheme.colors.actionButtonIconColor};
   }
 `;
 
@@ -58,8 +60,9 @@ const Container = styled(motion.div)`
   overflow: hidden; /* Framer Motion - Height Animation */
 
   strong {
-    color: var(--short-story-strong);
-    font-family: "Nexa Bold";
+    color: ${appTheme.colors.shortStoryStrong};
+    font-family: ${appTheme.fontFamily.nexaBold},
+    ${appTheme.fontFamily.alternativeFonts};
     border-radius: 4px;
   }
 `;

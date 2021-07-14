@@ -1,10 +1,11 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
+import appTheme from "../../../styles/appTheme";
 
 export const linkHoverEffect = css`
   background-image: linear-gradient(
     transparent calc(50% - 9px),
-    var(--primary-main) calc(50% - 9px) calc(50% - 9px)
+    ${appTheme.colors.primary.default} calc(50% - 9px) calc(50% - 9px)
   );
   background-size: 100% 200%;
   border-radius: 3px;
@@ -14,7 +15,7 @@ export const linkHoverEffect = css`
   :hover {
     background-image: linear-gradient(
       transparent calc(50% - 9px),
-      var(--primary-main) calc(50% - 9px) calc(50% - 9px)
+      ${appTheme.colors.primary.default} calc(50% - 9px) calc(50% - 9px)
     );
     background-position: 0 100%;
   }

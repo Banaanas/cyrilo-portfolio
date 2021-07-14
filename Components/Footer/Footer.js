@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import NavBar from "./NavBar";
 import SubFooter from "./SubFooter";
 import HalfMoon from "./HalfMoon";
+import appTheme from "../../styles/appTheme";
 
 const StyledFooter = styled.footer`
   position: relative;
@@ -14,13 +15,13 @@ const StyledFooter = styled.footer`
   height: 64px;
   margin-top: 64px; /* For HalfMoon */
   padding-top: 8px;
-  background: linear-gradient(
-    -180deg,
-    var(--secondary-main) 50%,
-    var(--secondary-dark) 50%
-  );
-  filter: ${({ isMenuOpen }) => (isMenuOpen ? "blur(20px)" : "blur(0)")};
-  transition: filter, 300ms ease;
+  background: linear-gradient(-180deg,
+  ${appTheme.colors.secondary.default};
+50%,
+${appTheme.colors.secondary.dark};
+50 %);
+filter: ${({ isMenuOpen }) => (isMenuOpen ? "blur(20px)" : "blur(0)")};
+transition: filter, 300 ms ease;
 `;
 
 const Footer = () => {

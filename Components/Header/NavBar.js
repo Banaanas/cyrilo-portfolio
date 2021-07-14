@@ -3,12 +3,13 @@ import useTranslation from "next-translate/useTranslation";
 import styled from "@emotion/styled";
 import smoothScrollTo from "../../utils/smoothScrollTo";
 import navLinks from "../../data/navLinks";
+import appTheme from "../../styles/appTheme";
 
 const Nav = styled.nav`
   display: none;
   height: 100%;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
+  @media (min-width: ${appTheme.breakpoints.heroBannerSection2}) {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -35,10 +36,11 @@ const List = styled.ul`
     justify-content: center;
 
     /* Hover Effect */
+
     ::after {
       width: 90%;
       height: 3px;
-      background: var(--primary-main);
+      background: ${appTheme.colors.primary.default};
       border-radius: 4px;
       transform: scale(0);
       transition: transform 250ms ease-out;
@@ -55,15 +57,16 @@ const Link = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--default-white);
+  color: ${appTheme.colors.white};
   font-weight: bolder;
-  font-size: ${({ theme }) => theme.fontSizes.xl};
-  font-family: "Nexa Bold", sans-serif;
+  font-size: ${appTheme.fontSizes.xl};
+  font-family: ${appTheme.fontFamily.nexaBold},
+  ${appTheme.fontFamily.alternativeFonts};
   text-transform: uppercase;
   text-decoration: none;
 
   @media (min-width: 850px) {
-    font-size: ${({ theme }) => theme.fontSizes.xl};
+    font-size: ${appTheme.fontSizes.xl};
   }
 `;
 

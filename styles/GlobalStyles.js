@@ -42,8 +42,8 @@ const GlobalStyles = () => (
       body {
         min-width: ${appTheme.globalMinWidth};
         height: 100%;
-        font-family: "Nexa Regular", var(--alternative-fonts);
-        background-color: var(--global-background-color);
+        font-family: "Nexa Regular", ${appTheme.fontFamily.alternativeFonts};
+        background-color: ${appTheme.colors.globalBackgroundColor};
         transition: ${appTheme.transitions.themeColors};
       }
 
@@ -106,26 +106,26 @@ const GlobalStyles = () => (
       }
 
       a:focus {
-        outline: 5px auto var(--primary-main);
+        outline: 5px auto ${appTheme.colors.primary.default};
       }
 
       /* Selection and Scrollbar styles */
       ::selection {
-        color: var(--color-selection);
-        background-color: var(--color-selection-background);
+        color: ${appTheme.colors.secondary};
+        background-color: ${appTheme.colors.selectionBackground};
       }
 
       @media (orientation: portrait) {
         ::-webkit-scrollbar {
-          background-color: var(--secondary-lightest1);
+          background-color: var(--secondary-lightest-1);
         }
         ::-webkit-scrollbar-track {
           background-color: transparent;
           border-radius: 3px;
         }
         ::-webkit-scrollbar-thumb {
-          background-color: var(--primary-main);
-          border: 2px solid var(--primary-main);
+          background-color: ${appTheme.colors.primary.default};
+          border: 2px solid ${appTheme.colors.primary.default};
           border-radius: 10px;
         }
       }
@@ -134,7 +134,7 @@ const GlobalStyles = () => (
         ::-webkit-scrollbar {
           width: 8px;
           height: 16px;
-          background-color: var(--secondary-lightest1);
+          background-color: var(--secondary-lightest-1);
         }
 
         ::-webkit-scrollbar-track {
@@ -143,7 +143,7 @@ const GlobalStyles = () => (
         }
 
         ::-webkit-scrollbar-thumb {
-          background-color: var(--primary-main);
+          background-color: ${appTheme.colors.primary.default};
           border-radius: 10px;
         }
       }
@@ -155,7 +155,7 @@ const GlobalStyles = () => (
       }
 
       @font-face {
-        font-family: "Nexa Bold";
+        font-family: ${appTheme.fontFamily.nexaBold};
         src: url("./fonts/Nexa-Bold.otf");
       }
 

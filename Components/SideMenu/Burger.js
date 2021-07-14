@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { toggleSideMenu } from "../../store/slices/sideMenuSlice";
 import enablePageScroll from "../../utils/enablePageScroll";
+import appTheme from "../../styles/appTheme";
 
 const StyledSideMenuButton = styled(motion.button)`
   display: flex;
@@ -16,7 +17,7 @@ const StyledSideMenuButton = styled(motion.button)`
   transition: transform, 100ms ease-out;
 
   :focus {
-    color: var(--primary-dark);
+    color: ${appTheme.colors.primary.darker};
     outline: thin dotted;
   }
 
@@ -26,15 +27,15 @@ const StyledSideMenuButton = styled(motion.button)`
 
   /*** Burger Span ***/
 
-  /* CSS Variable for Span Width */
-  --span-width: 40px;
-
   span {
     display: inline-block;
-    width: ${({ openMenu }) => (openMenu ? "56px" : "var(--span-width)")};
+    width: ${({ openMenu }) =>
+            openMenu ? "56px" : `${appTheme.burgerSpanWidth}`};
     height: ${({ openMenu }) => (openMenu ? "6.4px" : "4px")};
     background-color: ${({ openMenu }) =>
-            openMenu ? "var(--burger-color-open)" : "var(--burger-color-close)"};
+            openMenu
+                    ? `${appTheme.colors.burgerOpenColor}`
+                    : `${appTheme.colors.burgerCloseColor}`};
     border-radius: 10px;
     transform-origin: left center;
     transition: transform, width, 300ms ease-out;
@@ -44,13 +45,14 @@ const StyledSideMenuButton = styled(motion.button)`
 
   span:first-of-type {
     transform: ${({ openMenu }) =>
-      openMenu ? "translateX(4px) rotate(30deg)" : "rotate(0)"};
+            openMenu ? "translateX(4px) rotate(30deg)" : "rotate(0)"};
   }
 
   /* Second Burger Span */
+
   span:nth-of-type(2n) {
     width: ${({ openMenu }) =>
-      openMenu ? "0" : "calc(var(--span-width)/3*2)"};
+            openMenu ? "0" : `calc(${appTheme.burgerSpanWidth}/3*2)`};
     margin: 8px 0;
   }
 
@@ -58,9 +60,9 @@ const StyledSideMenuButton = styled(motion.button)`
 
   span:nth-of-type(3n) {
     transform: ${({ openMenu }) =>
-      openMenu
-        ? "translateX(4px) rotate(-30deg) translateX(0px)"
-        : "rotate(0)"};
+            openMenu
+                    ? "translateX(4px) rotate(-30deg) translateX(0px)"
+                    : "rotate(0)"};
   }
 `;
 

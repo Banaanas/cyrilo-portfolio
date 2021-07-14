@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import SoftwareStack from "./SoftwareStack";
 import ProjectLinks from "./ProjectLinks";
 import ExternalLink from "../../Links/ExternalLink";
+import appTheme from "../../../styles/appTheme";
 
 const ProjectContainer = styled(motion.div)`
   display: flex;
@@ -17,7 +18,7 @@ const ProjectContainer = styled(motion.div)`
   padding: 16px;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: var(--projects-shadow);
+  box-shadow: ${appTheme.elevation.projectCard};
 `;
 
 const ImageWrapper = styled.div`
@@ -39,7 +40,8 @@ const Container = styled.div`
 
 const ProjectName = styled.div`
   padding: 8px 0;
-  font-family: "Nexa Bold", sans-serif;
+  font-family: ${appTheme.fontFamily.nexaBold},
+  ${appTheme.fontFamily.alternativeFonts};
   text-align: left;
   text-transform: uppercase;
 `;

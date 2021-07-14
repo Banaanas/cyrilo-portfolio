@@ -3,6 +3,7 @@ import useTranslation from "next-translate/useTranslation";
 import styled from "@emotion/styled";
 import smoothScrollTo from "../../utils/smoothScrollTo";
 import navLinks from "../../data/navLinks";
+import appTheme from "../../styles/appTheme";
 
 const Nav = styled.nav`
   z-index: 100;
@@ -24,9 +25,9 @@ const List = styled.ul`
 `;
 
 const Link = styled.a`
-  color: var(--default-white);
+  color: ${appTheme.colors.white};
   font-weight: bolder;
-  font-size: ${({ theme }) => theme.fontSizes.sm};
+  font-size: ${appTheme.fontSizes.sm};
   text-transform: uppercase;
   text-decoration: none;
 
@@ -35,7 +36,7 @@ const Link = styled.a`
   }
 
   @media (min-width: 340px) {
-    font-size: ${({ theme }) => theme.fontSizes.md};
+    font-size: ${appTheme.fontSizes.md};
   }
 `;
 

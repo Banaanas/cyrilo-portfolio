@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useThrottledFn } from "beautiful-react-hooks";
 import styled from "@emotion/styled";
+import appTheme from "../styles/appTheme";
 
 const StyledProgressBar = styled.div`
   position: fixed;
@@ -15,7 +15,7 @@ const StyledProgressBar = styled.div`
 const StyledProgressDiv = styled.div`
   width: ${({ progressPercentage }) => progressPercentage};
   height: 100%;
-  background: var(--primary-main);
+  background: ${appTheme.colors.primary.default};
 `;
 
 const ScrollProgressBar = () => {

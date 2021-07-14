@@ -2,20 +2,22 @@ import styled from "@emotion/styled";
 import useTranslation from "next-translate/useTranslation";
 import TextContainer from "./TextContainer";
 import ShortStoryParagraph from "./ShortStoryParagraph";
+import appTheme from "../../../styles/appTheme";
 
 export const StyledShortStory = styled(TextContainer)`
   max-height: 999999px; /* Cf. -> Note 5 - To prevent Android Chrome from boosting font-size */
-  color: var(--secondary-dark);
-  background-color: var(--secondary-lightest1);
+  color: ${appTheme.colors.secondary.dark};
+  background-color: ${appTheme.colors.secondary.lightest1};
 
   p {
-    color: var(--secondary-main);
+    color: ${appTheme.colors.secondary.default};
   }
 
   strong {
-    color: var(--short-story-strong);
+    color: ${appTheme.colors.shortStoryStrong};
     border-radius: 4px;
-    font-family: "Nexa Bold";
+    font-family: ${appTheme.fontFamily.nexaBold},
+    ${appTheme.fontFamily.alternativeFonts};
   }
 `;
 

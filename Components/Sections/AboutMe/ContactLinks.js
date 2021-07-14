@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { VscGithubInverted as GitHubIcon } from "react-icons/vsc";
 import { ImLinkedin as LinkedInIcon } from "react-icons/im";
 import ExternalLink from "../../Links/ExternalLink";
+import appTheme from "../../../styles/appTheme";
 
 const SocialIconsContainer = styled.div`
   display: flex;
@@ -26,8 +27,8 @@ const SocialIconsContainer = styled.div`
 
   svg {
     align-self: baseline;
-    color: var(--primary-dark);
-    font-size: ${({ theme }) => theme.fontSizes.xl};
+    color: ${appTheme.colors.primary.dark};
+    font-size: ${appTheme.fontSizes.xl};
     transform: scale(1);
     opacity: 0.9;
     transition: transform, opacity, 200ms ease;

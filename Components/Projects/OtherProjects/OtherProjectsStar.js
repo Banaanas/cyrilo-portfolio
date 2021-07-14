@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import appTheme from "../../../styles/appTheme";
 
 const StyledSVG = styled.svg`
   align-self: ${({ secondary }) => (secondary ? "flex-end" : "flex-start")};
@@ -6,8 +7,9 @@ const StyledSVG = styled.svg`
 
   path {
     fill: ${({ secondary }) =>
-      secondary ? "var(--primary-main)" : "var(--secondary-light)"};
-  }
+            secondary
+                    ? `${appTheme.colors.primary.default}`
+                    : `${appTheme.colors.secondary.light}`}
 `;
 
 const OtherProjectsStar = ({ secondary }) => {

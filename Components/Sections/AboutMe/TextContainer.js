@@ -7,7 +7,7 @@ const TextContainer = styled.div`
   width: 100%;
   max-width: 40ch;
   padding: 0 32px;
-  color: var(--secondary-darker);
+  color: ${appTheme.colors.secondary.darker};
   line-height: 20px;
   text-align: justify;
   border-radius: 16px;
@@ -15,8 +15,9 @@ const TextContainer = styled.div`
 
   h3 {
     margin: 16px 0;
-    font-size: ${({ theme }) => theme.fontSizes.xl2};
-    font-family: "Nexa Bold", sans-serif;
+    font-size: ${appTheme.fontSizes.xl2};
+    font-family: ${appTheme.fontFamily.nexaBold},
+    ${appTheme.fontFamily.alternativeFonts};
   }
 
   p {

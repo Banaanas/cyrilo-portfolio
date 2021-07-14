@@ -9,27 +9,29 @@ import StyledPageMain from "../Components/StyledComponents/StyledPageMain";
 import StyledLink from "../Components/StyledComponents/StyledLink";
 import StyledSection from "../Components/StyledComponents/StyledSection";
 import pageVariants from "../styles/animations";
+import appTheme from "../styles/appTheme";
 
 const TitleH1 = styled.h1`
   margin-bottom: 80px; /* Margin between H1 and Link */
-  color: var(--404-h1-color);
-  font-size: ${({ theme }) => theme.fontSizes.xl4};
-  font-family: "Nexa Black", sans-serif;
+  color: ${appTheme.colors.h1Color404};
+  font-size: ${appTheme.fontSizes.xl4};
+  font-family: ${appTheme.fontFamily.nexaBlack},
+  ${appTheme.fontFamily.alternativeFonts};
   text-align: center;
   text-transform: uppercase;
   text-wrap: normal;
 
   #r-letter {
     display: inline-flex;
-    color: var(--404-r-letter);
+    color: ${appTheme.colors.rLetter404};
     transform: scaleX(-1);
   }
 
   @media (min-width: 360px) {
-    font-size: ${({ theme }) => theme.fontSizes.xl5};
+    font-size: ${appTheme.fontSizes.xl5};
   }
   @media (min-width: 448px) {
-    font-size: ${({ theme }) => theme.fontSizes.xl6};
+    font-size: ${appTheme.fontSizes.xl6};
   }
 `;
 

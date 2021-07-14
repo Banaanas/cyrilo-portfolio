@@ -8,6 +8,7 @@ import SideMenu from "../SideMenu/SideMenu";
 import NavBar from "./NavBar";
 import HalfMoon from "./HalfMoon";
 import CyriLogo from "./CyriLogo";
+import appTheme from "../../styles/appTheme";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -17,12 +18,12 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  min-width: ${({ theme }) => theme.globalMinWidth};
+  min-width: ${appTheme.globalMinWidth};
   height: 64px;
   padding: 8px;
   background: linear-gradient(180deg,
-  var(--header-halfmoon-shade-1) 50%,
-  var(--header-halfmoon-shade-2) 50%);
+  ${appTheme.colors.headerHalfMoonShade1} 50%,
+  ${appTheme.colors.headerHalfMoonShade2} 50%);
   transform: translateY(${({ translateY }) => translateY});
   transition: transform 100ms ease-out;
 `;
@@ -33,8 +34,8 @@ const HeaderWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-width: ${({ theme }) => theme.globalMinWidth};
-  max-width: ${({ theme }) => theme.globalMaxWidth};
+  min-width: ${appTheme.globalMinWidth};
+  max-width: ${appTheme.globalMaxWidth};
 `;
 
 const groupVariants = {

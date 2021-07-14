@@ -6,13 +6,14 @@ const StyledLink = styled.a`
   align-items: flex-end;
   justify-content: center;
   padding: 16px;
-  color: var(--action-button-color);
-  font-size: ${({ theme }) => theme.fontSizes.xl};
-  font-family: "Nexa Black", sans-serif;
+  color: ${appTheme.colors.actionButtonColor};
+  font-size: ${appTheme.fontSizes.xl};
+  font-family: ${appTheme.fontFamily.nexaBlack},
+  ${appTheme.fontFamily.alternativeFonts};
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: var(--action-button-background);
+  background-color: ${appTheme.colors.actionButtonBackground};
   border: none;
   border-radius: 8px;
   box-shadow: ${appTheme.elevation.md};
@@ -28,8 +29,8 @@ const StyledLink = styled.a`
   }
 
   svg {
-    color: var(--action-button-icon-color);
-    font-size: ${({ theme }) => theme.fontSizes.xl2};
+    color: ${appTheme.colors.actionButtonIconColor};
+    font-size: ${appTheme.fontSizes.xl2};
   }
 `;
 

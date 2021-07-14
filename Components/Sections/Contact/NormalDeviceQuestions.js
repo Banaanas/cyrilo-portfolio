@@ -1,12 +1,13 @@
 import styled from "@emotion/styled";
 import { FirstQuestion, SecondQuestion, ThirdQuestion } from "./ContactQuestions";
+import appTheme from "../../../styles/appTheme";
 
 const Container = styled.div`
   display: none;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  color: var(--subsidiary-questions);
+  color: ${appTheme.colors.subsidiaryQuestions};
   text-align: center;
 
   @media (min-width: 845px) {
@@ -14,12 +15,13 @@ const Container = styled.div`
   }
 
   /* Important Question */
+
   div:nth-of-type(2) {
     margin: 0 16px;
     padding: 16px;
-    color: var(--principal-question);
-    font-size: ${({ theme }) => theme.fontSizes.xl};
-    background-color: var(--secondary-main);
+    color: ${appTheme.colors.principalQuestion};
+    font-size: ${appTheme.fontSizes.xl};
+    background-color: ${appTheme.colors.secondary.default};
     border-radius: 4px;
   }
 `;

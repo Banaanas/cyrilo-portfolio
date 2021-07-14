@@ -8,9 +8,10 @@ import Burger from "./Burger";
 import NavBar from "./NavBar";
 import enablePageScroll from "../../utils/enablePageScroll";
 import { closeSideMenu } from "../../store/slices/sideMenuSlice";
+import appTheme from "../../styles/appTheme";
 
 const StyledRefDiv = styled.div`
-  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
+  @media (min-width: ${appTheme.breakpoints.heroBannerSection2}) {
     display: none;
   }
 `;

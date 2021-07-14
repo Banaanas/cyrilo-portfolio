@@ -8,6 +8,7 @@ import navLinks from "../../../data/navLinks";
 import HeroBannerDivider from "../../Dividers/HeroBannerDivider";
 import PlanetCyril from "./PlanetCyril";
 import StyledLink from "../../StyledComponents/StyledLink";
+import appTheme from "../../../styles/appTheme";
 
 const StyledSection = styled(GenericStyledSection)`
   display: flex;
@@ -19,7 +20,7 @@ const StyledSection = styled(GenericStyledSection)`
   padding-right: 0;
   padding-left: 0;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
+  @media (min-width: ${appTheme.breakpoints.heroBannerSection2}) {
     flex-direction: row;
     justify-content: space-around;
     min-height: calc(100vh - 224px); /* 96px (Halfmoon) + 128px HeroBannerDivider */
@@ -29,7 +30,7 @@ const StyledSection = styled(GenericStyledSection)`
   #first-link {
     display: none;
 
-    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
+    @media (min-width: ${appTheme.breakpoints.heroBannerSection2}) {
       display: flex;
     }
   }
@@ -37,7 +38,7 @@ const StyledSection = styled(GenericStyledSection)`
   #second-link {
     display: flex;
 
-    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
+    @media (min-width: ${appTheme.breakpoints.heroBannerSection2}) {
       display: none;
     }
   }
@@ -51,7 +52,7 @@ const Container = styled.div`
   justify-content: space-around;
   width: min-content;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
+  @media (min-width: ${appTheme.breakpoints.heroBannerSection2}) {
     height: 500px;
   }
 `;
@@ -65,44 +66,47 @@ const TitleH1 = styled.h1`
   overflow: hidden;
   border-radius: 8px;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
+  @media (min-width: ${appTheme.breakpoints.heroBannerSection2}) {
     flex-direction: column;
   }
 
   /* JavaScript Developer */
+
   span {
-    --letter-spacing: ${({ theme }) => theme.letterSpacing.heroBanner};
+    --letter-spacing: ${appTheme.letterSpacing.heroBanner};
 
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 16px 4.8px;
-    margin-right: calc(-1 * var(--letter-spacing)); /* CSS Var above. To counterbalance the last letter's spacing */
-    font-size: ${({ theme }) => theme.fontSizes.xl};
-    font-family: "Nexa Black", sans-serif;
-    letter-spacing: var(--letter-spacing);
+    padding: 16px 4px;
+    margin-right: calc(-1 * ${appTheme.letterSpacing.heroBanner};); /* CSS Var above. To counterbalance the last letter's spacing */
+    font-size: ${appTheme.fontSizes.xl};
+    font-family: ${appTheme.fontFamily.nexaBlack},
+    ${appTheme.fontFamily.alternativeFonts};
+    letter-spacing: ${appTheme.letterSpacing.heroBanner};
     text-transform: uppercase;
 
-    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection1}) {
+    @media (min-width: ${appTheme.breakpoints.heroBannerSection1}) {
       padding: 16px;
     }
 
-    @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
+    @media (min-width: ${appTheme.breakpoints.heroBannerSection2}) {
       padding: 16px 24px;
-      font-size: ${({ theme }) => theme.fontSizes.xl2};
+      font-size: ${appTheme.fontSizes.xl2};
     }
   }
 
   span:nth-of-type(1) {
-    color: var(--default-white);
-    background: radial-gradient(var(--primary-darker), var(--secondary-main));
+    color: ${appTheme.colors.white};
+    background: radial-gradient(${appTheme.colors.primary.darker},
+    ${appTheme.colors.secondary.default});
   }
 
   span:nth-of-type(2) {
-    color: var(--secondary-main);
-    background-color: var(--default-white);
+    color: ${appTheme.colors.secondary.default};
+    background-color: ${appTheme.colors.white};
   }
 `;
 

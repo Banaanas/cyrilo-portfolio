@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import appTheme from "../../styles/appTheme";
 
 const StyledSection = styled.section`
   display: flex;
@@ -6,7 +7,7 @@ const StyledSection = styled.section`
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: ${({ theme }) => theme.globalMaxWidth};
+  max-width: ${appTheme.globalMaxWidth};
   padding: 16px;
 `;
 

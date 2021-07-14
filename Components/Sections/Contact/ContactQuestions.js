@@ -1,9 +1,11 @@
 import useTranslation from "next-translate/useTranslation";
 import Trans from "next-translate/Trans";
 import styled from "@emotion/styled";
+import appTheme from "../../../styles/appTheme";
 
 const StyledDiv = styled.div`
-  font-family: "Nexa Black", sans-serif;
+  font-family: ${appTheme.fontFamily.nexaBlack},
+  ${appTheme.fontFamily.alternativeFonts};
   text-transform: uppercase;
 `;
 

@@ -8,6 +8,7 @@ import LongStory from "./LongStory";
 import AboutMeDivider from "../../Dividers/AboutMeDivider";
 import AboutMeImage from "./AboutMeImage";
 import SkillsList from "./SkillsList";
+import appTheme from "../../../styles/appTheme";
 
 const StyledAboutMeContainer = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ const StyledAboutMeContainer = styled.div`
   justify-content: space-around;
   width: 100%;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.heroBannerSection2}) {
+  @media (min-width: ${appTheme.breakpoints.heroBannerSection2}) {
     flex-direction: row;
   }
 `;

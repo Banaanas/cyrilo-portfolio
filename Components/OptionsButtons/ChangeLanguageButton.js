@@ -1,18 +1,20 @@
 import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 import buttonFocusStyle from "../../styles/css-composition";
+import appTheme from "../../styles/appTheme";
 
 const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  color: var(--change-theme-button-color);
-  font-size: ${({ theme }) => theme.fontSizes.md};
+  color: ${appTheme.colors.changeLanguageButtonColor};
+  font-size: ${appTheme.fontSizes.md};
   stroke-width: 1px;
-  font-family: "Nexa Black", sans-serif;
-  background-color: var(--change-theme-button-background);
-  border: solid 5px var(--change-theme-button-background);
+  font-family: ${appTheme.fontFamily.nexaBlack},
+  ${appTheme.fontFamily.alternativeFonts};
+  background-color: ${appTheme.colors.changeLanguageButtonBackground};
+  border: solid 5px ${appTheme.colors.changeLanguageButtonBackground};
   border-radius: 50%;
   cursor: pointer;
 

@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
+import appTheme from "../../styles/appTheme";
 
 //* ** Half Moon Shape for Header ***//
 
 const StyledSVG = styled.svg`
   z-index: -1;
   width: 100%;
-  min-width: ${({ theme }) => theme.globalMinWidth};
+  min-width: ${appTheme.globalMinWidth};
   height: 96px; /* 3 Rectangles Shades (32px) */
 `;
 
@@ -36,18 +37,22 @@ const HalfMoon = () => {
         />
       </mask>
       <g mask="url(#mask-HalfMoon-Header)">
-        <rect width="1440" height="60" fill="var(--header-halfmoon-shade-1)" />
+        <rect
+          width="1440"
+          height="60"
+          fill={appTheme.colors.headerHalfMoonShade1}
+        />
         <rect
           y="60"
           width="1440"
           height="60"
-          fill="var(--header-halfmoon-shade-2)"
+          fill={appTheme.colors.headerHalfMoonShade2}
         />
         <rect
           y="120"
           width="1440"
           height="60"
-          fill="var(--header-halfmoon-shade-3)"
+          fill={appTheme.colors.headerHalfMoonShade3}
         />
       </g>
     </StyledSVG>

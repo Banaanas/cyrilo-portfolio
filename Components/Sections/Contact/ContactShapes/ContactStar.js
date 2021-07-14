@@ -1,14 +1,15 @@
 import styled from "@emotion/styled";
+import appTheme from "../../../../styles/appTheme";
 
 const StyledSVG = styled.svg`
   width: 80px;
 
   @keyframes shiningStar {
     from {
-      fill: var(--primary-main);
+      fill: ${appTheme.colors.primary.default};
     }
     to {
-      fill: var(--secondary-main);
+      fill: ${appTheme.colors.secondary.default};
     }
   }
 

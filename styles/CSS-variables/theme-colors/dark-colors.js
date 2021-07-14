@@ -2,12 +2,12 @@ import { css } from "@emotion/react";
 
 const darkColors = css`
   /* General Elements */
-  --global-background-color: var(--default-black);
+  --global-background-color: var(--color-black-default);
 
   /* Header - HalfMoon */
-  --header-halfmoon-shade-1: var(--secondary-darker);
-  --header-halfmoon-shade-2: var(--secondary-dark);
-  --header-halfmoon-shade-3: var(--secondary-main);
+  --header-halfmoon-shade-1: var(--color-secondary-darker);
+  --header-halfmoon-shade-2: var(--color-secondary-dark);
+  --header-halfmoon-shade-3: var(--color-secondary-default);
 
   /* Footer - HalfMoon */
   --footer-halfmoon-shade-1: var(--header-halfmoon-shade-1);
@@ -15,96 +15,100 @@ const darkColors = css`
   --footer-halfmoon-shade-3: var(--header-halfmoon-shade-3);
 
   /* CyriLogo */
-  --cyrilogo-color-1: var(--primary-main);
-  --cyrilogo-color-2: var(--default-white);
+  --cyrilogo-color-1: var(--color-primary-default);
+  --cyrilogo-color-2: var(--color-white-default);
 
   /* Section Title */
-  --styled-title-color: var(--primary-main);
+  --styled-title-color: var(--color-primary-default);
 
   /* Action Button */
-  --action-button-background: var(--secondary-main);
-  --action-button-color: var(--primary-main);
-  --action-button-icon-color: var(--default-white);
+  --action-button-background: var(--color-secondary-default);
+  --action-button-color: var(--color-primary-default);
+  --action-button-icon-color: var(--color-white-default);
 
   /* Burger Button */
-  --burger-color-open: var(--primary-main);
-  --burger-color-close: var(--default-white);
+  --burger-open-color: var(--color-primary-default);
+  --burger-close-color: var(--color-white-default);
 
   /* Change Theme Button - Colors symbolizing those Theme Colors */
-  --change-theme-button-color: var(--global-background-color);
-  --change-theme-button-background: var(--primary-main);
+  --change-theme-button-color: var(--color-primary-default);
+  --change-theme-button-background: var(--color-secondary-default);
+
+  /* Change Language Button */
+  --change-language-button-clr: var(--global-background-color);
+  --change-language-button-bckgd: var(--color-primary-default);
 
   /* SideMenu Navbar */
-  --sidemenu-navbar-text-shadow: 1px 1px 1px var(--secondary-darker);
+  --sidemenu-navbar-text-shadow: 1px 1px 1px var(--color-secondary-darker);
 
   /* Planet Cyril - Drawing */
-  --planet-Cyril: var(--primary-main);
-  --planet-Cyril-stars-light-shade: var(--primary-main);
-  --planet-Cyril-stars-dark-shade: var(--secondary-main);
+  --planet-Cyril: var(--color-primary-default);
+  --planet-Cyril-stars-light-shade: var(--color-primary-default);
+  --planet-Cyril-stars-dark-shade: var(--color-secondary-default);
 
   /* Project Card - With Primary Main Color RGBA */
-  --projects-shadow: 0 16px 24px 0 rgba(255, 226, 41, 0.12);
+  --elevation-project-card: 0 16px 24px 0 rgba(255, 226, 41, 0.12);
 
   /* Featured Projects */
-  --featured-projects-background: var(--secondary-main);
-  --featured-projects-name: var(--primary-main);
-  --featured-projects-software-stack: var(--default-white);
-  --featured-projects-links-color: var(--default-white);
-  --featured-projects-links-background-color: var(--secondary-main);
+  --featured-projects-background: var(--color-secondary-default);
+  --featured-projects-name: var(--color-primary-default);
+  --featured-projects-software-stack: var(--color-white-default);
+  --featured-projects-links-color: var(--color-white-default);
+  --featured-projects-links-background-color: var(--color-secondary-default);
 
   /* Other Projects - nth-of-type(odd) */
-  --other-projects-background-odd: var(--primary-main);
-  --other-projects-software-stack-odd: var(--secondary-darker);
-  --other-projects-name-odd: var(--secondary-darker);
-  --other-projects-links-color-odd: var(--secondary-darker);
-  --other-projects-links-background-color-odd: var(--primary-main);
+  --other-projects-background-odd: var(--color-primary-default);
+  --other-projects-software-stack-odd: var(--color-secondary-darker);
+  --other-projects-name-odd: var(--color-secondary-darker);
+  --other-projects-links-color-odd: var(--color-secondary-darker);
+  --other-projects-links-background-color-odd: var(--color-primary-default);
 
   /* Other Projects - nth-of-type(even) */
-  --other-projects-background-even: var(--secondary-main);
-  --other-projects-name-even: var(--primary-main);
-  --other-projects-software-stack-even: var(--default-white);
-  --other-projects-links-color-even: var(--default-white);
-  --other-projects-links-background-color-even: var(--secondary-main);
+  --other-projects-background-even: var(--color-secondary-default);
+  --other-projects-name-even: var(--color-primary-default);
+  --other-projects-software-stack-even: var(--color-white-default);
+  --other-projects-links-color-even: var(--color-white-default);
+  --other-projects-links-background-color-even: var(--color-secondary-default);
 
   /* About Me Section - Short Story */
-  --short-story-strong: var(--secondary-darker);
+  --short-story-strong: var(--color-secondary-darker);
 
   /* Contact Section */
-  --principal-question: var(--default-white);
-  --subsidiary-questions: var(--secondary-lighter);
-  --cyrilo-mail-letters: var(--primary-main);
-  --cyrilo-mail-line: var(--secondary-main);
-  --github-linkedin-background: var(--primary-main);
+  --principal-question: var(--color-white-default);
+  --subsidiary-questions: var(--color-secondary-lighter);
+  --cyrilo-mail-letters: var(--color-primary-default);
+  --cyrilo-mail-line: var(--color-secondary-default);
+  --github-linkedin-background: var(--color-primary-default);
 
   /* 404 Page */
-  --404-h1-color: var(--primary-main);
-  --404-r-letter: var(--secondary-main);
+  --404-h1-color: var(--color-primary-default);
+  --404-r-letter: var(--color-secondary-default);
 
   /* Selection */
-  --color-selection: var(--default-white);
-  --color-selection-background: var(--secondary-dark);
+  --color-selection: var(--color-white-default);
+  --color-selection-background: var(--color-secondary-dark);
 
   /* Default Colors */
-  --default-white: hsl(330, 20%, 98%);
-  --default-black: hsl(237, 38%, 9%);
+  --color-white-default: hsl(330, 20%, 98%);
+  --color-black-default: hsl(237, 38%, 9%);
 
   /* Primary Color */
-  --primary-darker: hsl(49, 89%, 25%);
-  --primary-dark: hsl(50, 81%, 40%);
-  --primary-main: hsl(52, 100%, 58%);
-  --primary-light: hsl(53, 100%, 68%);
-  --primary-lighter: hsl(54, 100%, 75%);
-  --primary-lightest1: hsl(54, 100%, 83%);
-  --primary-lightest2: hsl(55, 100%, 91%);
+  --color-primary-darker: hsl(49, 89%, 25%);
+  --color-primary-dark: hsl(50, 81%, 40%);
+  --color-primary-default: hsl(52, 100%, 58%);
+  --color-primary-light: hsl(53, 100%, 68%);
+  --color-primary-lighter: hsl(54, 100%, 75%);
+  --color-primary-lightest-1: hsl(54, 100%, 83%);
+  --color-primary-lightest-2: hsl(55, 100%, 91%);
 
   /* Secondary Color */
-  --secondary-darker: hsl(275, 74%, 12%);
-  --secondary-dark: hsl(284, 57%, 20%);
-  --secondary-main: hsl(295, 44%, 31%);
-  --secondary-light: hsl(299, 31%, 51%);
-  --secondary-lighter: hsl(305, 48%, 68%);
-  --secondary-lightest1: hsl(309, 66%, 83%);
-  --secondary-lightest2: hsl(314, 65%, 91%);
+  --color-secondary-darker: hsl(275, 74%, 12%);
+  --color-secondary-dark: hsl(284, 57%, 20%);
+  --color-secondary-default: hsl(295, 44%, 31%);
+  --color-secondary-light: hsl(299, 31%, 51%);
+  --color-secondary-lighter: hsl(305, 48%, 68%);
+  --color-secondary-lightest-1: hsl(309, 66%, 83%);
+  --color-secondary-lightest-2: hsl(314, 65%, 91%);
 `;
 
 export default darkColors;

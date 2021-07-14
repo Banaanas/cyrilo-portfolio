@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import FeaturedProjectsStar from "./FeaturedProjectsStar";
+import appTheme from "../../../styles/appTheme";
 
 const ProjectsContainer = styled.div`
   display: grid;
@@ -13,21 +14,21 @@ const ProjectsContainer = styled.div`
   max-width: 850px;
 
   .project-cards {
-    background-color: var(--featured-projects-background);
+    background-color: ${appTheme.colors.featuredProjectsBackground};
   }
 
   .project-names {
-    color: var(--featured-projects-name);
+    color: ${appTheme.colors.featuredProjectsName};
   }
 
   .software-stack {
-    border-top: 3px solid var(--featured-projects-software-stack);
-    border-bottom: 3px solid var(--featured-projects-software-stack);
+    border-top: 3px solid ${appTheme.colors.featuredProjectsSoftwareStack};
+    border-bottom: 3px solid ${appTheme.colors.featuredProjectsSoftwareStack};
   }
 
   .project-links-icons {
-    color: var(--featured-projects-links-color);
-    background-color: var(--featured-projects-links-background-color);
+    color: ${appTheme.colors.featuredProjectsLinksColor};
+    background-color: ${appTheme.colors.featuredProjectsLinksBackground};
   }
 `;
 

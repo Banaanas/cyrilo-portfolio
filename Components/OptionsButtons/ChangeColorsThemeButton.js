@@ -4,6 +4,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import themeColorsArray from "../../styles/CSS-variables/theme-colors/themeColorsArray";
 import buttonFocusStyle from "../../styles/css-composition";
+import appTheme from "../../styles/appTheme";
 
 const Button = styled.button`
   display: flex;
@@ -25,11 +26,11 @@ const Button = styled.button`
   /* Style SVG with Next Theme Colors */
 
   svg {
-    color: var(--change-theme-button-color);
-    font-size: ${({ theme }) => theme.fontSizes.xl4};
+    color: ${appTheme.colors.changeThemeButtonColor};
+    font-size: ${appTheme.fontSizes.xl4};
     stroke-width: 1px;
-    background-color: var(--change-theme-button-background);
-    border: solid 5px var(--change-theme-button-color);
+    background-color: ${appTheme.colors.changeThemeButtonBackground};
+    border: solid 5px ${appTheme.colors.changeThemeButtonColor};
     border-radius: 50%;
   }
 `;

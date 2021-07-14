@@ -6,7 +6,9 @@ const elevations = css`
   --elevation-2: 0 4px 8px rgba(0, 0, 0, 0.16);
   --elevation-3: 0 8px 16px rgba(0, 0, 0, 0.12);
   --elevation-4: 0 16px 24px rgba(0, 0, 0, 0.12);
-  --elevation-project-card: 0 16px 24px 0 rgba(0, 0, 0, 0.12);
+
+  /* SideMenu Navbar Text Shadow */
+  --sidemenu-navbar-text-shadow: 1px 1px 1px var(--color-secondary-darker);
 `;
 
 export default elevations;

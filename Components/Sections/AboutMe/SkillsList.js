@@ -2,20 +2,22 @@ import styled from "@emotion/styled";
 import useTranslation from "next-translate/useTranslation";
 import TextContainer from "./TextContainer";
 import skillsList from "../../../data/skills-list";
+import appTheme from "../../../styles/appTheme";
 
 const StyledSkillsList = styled(TextContainer)`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  color: var(--primary-main);
-  background-color: var(--secondary-main);
+  color: ${appTheme.colors.primary.default};
+  background-color: ${appTheme.colors.secondary.default};
 
   h3 {
     align-self: flex-start;
     white-space: nowrap; /* To wrap the double colon --> ":" */
   }
+
   li {
-    color: var(--default-white);
+    color: ${appTheme.colors.white};
     font-family: "Nexa", sans-serif;
   }
 
@@ -42,7 +44,7 @@ const ListElement = styled.li`
 
   ::before {
     margin-right: 8px;
-    color: var(--primary-main);
+    color: ${appTheme.colors.primary.default};
     content: "►";
   }
 `;
