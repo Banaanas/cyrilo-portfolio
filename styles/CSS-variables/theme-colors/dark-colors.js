@@ -30,13 +30,16 @@ const darkColors = css`
   --burger-open-color: var(--color-primary-default);
   --burger-close-color: var(--color-white-default);
 
-  /* Change Theme Button - Colors symbolizing those Theme Colors */
+  /* Change Theme Colors Button
+  /* cf. ChangeColorsThemeButton.tsx - Line 20
+  /* Here, the CSS Colors Variables used is not the same as the rest
+  /* of the Application, but the next in the themeColorsArray order. */
   --change-theme-button-color: var(--color-primary-default);
   --change-theme-button-background: var(--color-secondary-default);
 
   /* Change Language Button */
-  --change-language-button-clr: var(--global-background-color);
-  --change-language-button-bckgd: var(--color-primary-default);
+  --change-language-button-color: var(--global-background-color);
+  --change-language-button-background: var(--color-primary-default);
 
   /* SideMenu Navbar */
   --sidemenu-navbar-text-shadow: 1px 1px 1px var(--color-secondary-darker);

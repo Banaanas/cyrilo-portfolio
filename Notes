@@ -50,3 +50,8 @@ was possible. So it was decided to put locale and locale:alternate tags into the
 Index.js <Head> Component even if they are Default Tags (ie. valid through all the App).
 --> https://github.com/garmeeh/next-seo/issues/638
 --> https://github.com/garmeeh/next-seo#additional-meta-tags
+
+7 - ChangeColorsThemeButton
+cf. ChangeColorsThemeButton.tsx - Line 20
+Here, the CSS Colors Variables used is not the same as the rest
+of the Application, but the next in the themeColorsArray order.

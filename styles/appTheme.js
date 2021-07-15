@@ -54,8 +54,8 @@ const appTheme = {
     burgerCloseColor: "var(--burger-close-color)",
 
     /* Change Theme Button - Colors symbolizing those Theme Colors */
-    changeThemeButtonColor: "var(--change-theme-button-clr)",
-    changeThemeButtonBackground: "var(--change-theme-button-bckgd)",
+    changeThemeButtonColor: "var(--change-theme-button-color)",
+    changeThemeButtonBackground: "var(--change-theme-button-background)",
 
     /* Change Theme Button - Colors symbolizing those Theme Colors */
     changeLanguageButtonColor: "var(--change-language-button-color)",

@@ -15,7 +15,7 @@ const Button = styled.button`
   border-radius: 50%;
   cursor: pointer;
 
-  /* Import Next Toggled Colors Theme CSS Variables to use the next  */
+  /* Import Next Toggled Colors Theme CSS Variables to use the next  in the themeColorsArray order */
 
   ${({ nextThemeIndex }) => themeColorsArray[nextThemeIndex]}
     /* When click on Button */

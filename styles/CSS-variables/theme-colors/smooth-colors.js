@@ -30,9 +30,12 @@ const smoothColors = css`
   --burger-open-color: var(--color-white-default);
   --burger-close-color: var(--color-white-default);
 
-  /* Change Theme Button - Colors symbolizing those Theme Colors */
-  --change-theme-button-clr: var(--color-primary-default);
-  --change-theme-button-bckgd: var(--color-secondary-default);
+  /* Change Theme Colors Button
+  /* cf. ChangeColorsThemeButton.tsx - Line 20
+  /* Here, the CSS Colors Variables used is not the same as the rest
+  /* of the Application, but the next in the themeColorsArray order. */
+  --change-theme-button-color: var(--color-primary-default);
+  --change-theme-button-background: var(--color-secondary-default);
 
   /* Change Language Button */
   --change-language-button-color: var(--color-primary-default);
